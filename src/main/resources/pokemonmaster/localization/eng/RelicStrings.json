@@ -1,0 +1,72 @@
+{
+  "${modID}:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "${modID}:ShortFuse": {
+  "NAME": "ShortFuse",
+  "FLAVOR": "It's about to blow!",
+  "DESCRIPTIONS": [
+    "At the end of your turn #yExhaust a random card in your discard pile and gain 1 #ypokemonmaster:Spark."
+  ]
+},
+  "${modID}:Pokeball": {
+    "NAME": "Pokeball",
+    "FLAVOR": "Gotta catch 'em all!!",
+    "DESCRIPTIONS": [
+      "Right-click this relic to Capture an enemy with 10 or less current HP."
+    ]
+  },
+  "${modID}:SafariBall": {
+    "NAME": "Safari Ball",
+    "FLAVOR": "Gotta catch 'em all!!",
+    "DESCRIPTIONS": [
+      "Right-click this relic to Capture an enemy with 20 or less current HP."
+    ]
+  },
+  "${modID}:FishingKit": {
+    "NAME": "Fishing Kit",
+    "FLAVOR": "Gotta fish 'em all!",
+    "DESCRIPTIONS": [
+      "At the start of combat add a random #ypokemonmaster:Fishing #yRod and two random #ypokemonmaster:Bait cards to your hand."
+    ]
+  },
+  "${modID}:HotPotato": {
+    "NAME": "Hot Potato",
+    "FLAVOR": "Hot, but tasty!",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a card, gain 1 #yTemporary HP."
+    ]
+  },
+  "${modID}:SharkBait": {
+    "NAME": "Shark Bait",
+    "FLAVOR": "Hoo Ha Hah!",
+    "DESCRIPTIONS": [
+      "You have + 15% #yBait power while #yFishing."
+    ]
+  },
+  "${modID}:QuickClaw": {
+    "NAME": "Quick Claw",
+    "FLAVOR": "Faster than fast, quicker than quick.",
+    "DESCRIPTIONS": [
+      "The first time each turn you discard a card, draw 2 cards."
+    ]
+  },
+  "${modID}:RepeatBall": {
+    "NAME": "Repeat Ball",
+    "FLAVOR": "Gotta catch 'em... again?.",
+    "DESCRIPTIONS": [
+      "Right click this relic to permanently add a copy of a card in your hand to your deck."
+    ]
+  },
+  "${modID}:ChoiceBand": {
+    "NAME": "ChoiceBand",
+    "FLAVOR": "One Punch!",
+    "DESCRIPTIONS": [
+      "If you play exactly 1 card on your turn, remove ALL of your debuffs."
+    ]
+  }
+}

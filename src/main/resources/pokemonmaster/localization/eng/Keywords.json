@@ -1,0 +1,277 @@
+[
+  {
+    "PROPER_NAME": "Prized",
+    "NAMES": [
+      "prized",
+      "",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "DESCRIPTION": "Take an additional 6 damage from the next unblocked attack."
+  },
+  {
+  "PROPER_NAME": "Supporter",
+  "NAMES": [
+  "supporter",
+  "supporters",
+  "",
+  "",
+  "",
+  ""
+
+  ],
+  "DESCRIPTION": "You can only gain the benefits of the first supporter card played each turn."
+  },
+  {
+    "PROPER_NAME": "Gate",
+    "NAMES": [
+      "gate",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "If this card is in your discard pile at the start of your turn, add it to your hand and add a void to your discard pile."
+  },
+  {
+    "PROPER_NAME": "Rivalry",
+    "NAMES": [
+      "rivalry",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "If you are in an Elite or Boss room, this card has a bonus effect."
+  },
+  {
+    "PROPER_NAME": "Surf",
+    "NAMES": [
+      "surf",
+      "surf+",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "0 Cost attack with *Retain and *Exhaust that deals damage based on your current energy."
+  },
+  {
+    "PROPER_NAME": "Firework",
+    "NAMES": [
+      "firework",
+      "fireworks",
+      "firework+",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "0 cost status card that usually deals damage to an enemy and exhausts."
+  },
+  {
+    "PROPER_NAME": "Choose",
+    "NAMES": [
+      "choose",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Choose one of the listed effects."
+  },
+  {
+    "PROPER_NAME": "Spark",
+    "NAMES": [
+      "spark",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Gain Energy at the start of your turn. Can go negative, you will lose Energy."
+  },
+  {
+    "PROPER_NAME": "Blur",
+    "NAMES": [
+      "blur",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "You do not lose block at the end of this turn."
+  },
+  {
+    "PROPER_NAME": "Buffer",
+    "NAMES": [
+      "buffer",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Ignore the next instance of damage you receive."
+  },
+  {
+    "PROPER_NAME": "Return",
+    "NAMES": [
+      "return",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "This cards cost is set to 1 and returns to your hand."
+  },
+  {
+    "PROPER_NAME": "Strike",
+    "NAMES": [
+      "strike",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "This card counts as a Strike card for other cards, relics and effects."
+  },
+  {
+    "PROPER_NAME": "Burned",
+    "NAMES": [
+      "burned",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "At the end of your turn, this character takes damage equal to the amount."
+  },
+  {
+    "PROPER_NAME": "Evolve",
+    "NAMES": [
+      "evolve",
+      "evolves",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "The Pokemon is replaced with a more powerful card."
+  },
+  {
+    "PROPER_NAME": "Devolve",
+    "NAMES": [
+      "devolve",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Remove this and gain a new copy of the basic pokemon this evolved from."
+  },
+  {
+    "PROPER_NAME": "Magnet",
+    "NAMES": [
+      "magnet",
+      "magnets",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Magnets are a 0 cost Status card that retain, provide 1 energy when played, and do not Exhaust."
+  },
+  {
+    "PROPER_NAME": "Fish",
+    "NAMES": [
+      "fish",
+      "fishing",
+      "",
+      "",
+      ""
+    ],
+    "DESCRIPTION": "Discover a new fishing themed card. You may Exhaust a #yBait card to increase your chances of finding a more powerful card."
+  },
+  {
+    "PROPER_NAME": "Bait",
+    "NAMES": [
+      "bait",
+      "",
+      "",
+      "",
+      ""
+    ],
+    "DESCRIPTION": "This card can be #yExhausted while #yFishing to improve your rewards."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+
+
+
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces and be entirely lowercase. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "Curl Up",
+    "NAMES": [
+      "Curl Up",
+      "curl_up"
+    ],
+
+
+
+    "DESCRIPTION": "If you receive unblocked attack damage, gain Block and you do not lose it this turn."
+  },
+  {
+  "PROPER_NAME": "Special Evolution",
+  "NAMES": [
+  "Special Evolution",
+  "special_evolution"
+],
+  "DESCRIPTION": "This pokemon evolves in a unique way."
+  },
+  {
+    "PROPER_NAME": "Bullet Seed",
+    "NAMES": [
+      "Bullet Seed",
+      "bullet_seed",
+      "bullet_seeds",
+      "Bullet_Seeds",
+      "bullet_seed+",
+      "bullet_seeds+",
+      "Bullet_Seeds+"
+
+    ],
+    "DESCRIPTION": "#b0 Cost attacks that deal #b4 damage and #yExhaust."
+  }
+
+
+]

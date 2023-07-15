@@ -1,0 +1,76 @@
+{
+  "${modID}:PotionID": {
+    "NAME": "Some Kind of Potion",
+    "DESCRIPTIONS": [
+      "Little",
+      " pieces ",
+      "that get put together",
+      " into a description.",
+      " Exactly how depends on the potion, and you can set it up however you want."
+    ]
+  },
+  "${modID}:ThunderStone": {
+    "NAME": "Thunder Stone",
+    "DESCRIPTIONS": [
+      "Permanently evolve #b",
+      " #yLightning #yPokemon in your hand.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:FireStone": {
+    "NAME": "Fire Stone",
+    "DESCRIPTIONS": [
+      "Permanently evolve #b",
+      " #yFire #yPokemon in your hand.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:BleakStone": {
+    "NAME": "Bleak Stone",
+    "DESCRIPTIONS": [
+      "Permanently evolve #b",
+      " #yDark #yPokemon in your hand.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:MindStone": {
+    "NAME": "Mind Stone",
+    "DESCRIPTIONS": [
+      "Permanently evolve #b",
+      " #yPsychic #yPokemon in your hand.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:WaterStone": {
+    "NAME": "Water Stone",
+    "DESCRIPTIONS": [
+      "Permanently evolve #b",
+      " #yWater #yPokemon in your hand.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:LeafStone": {
+    "NAME": "Leaf Stone",
+    "DESCRIPTIONS": [
+      "Permanently evolve #b",
+      " #yGrass #yPokemon in your hand.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:ResistancePotion": {
+    "NAME": "Resistance Potion",
+    "DESCRIPTIONS": [
+      "Take #b",
+      " less damage from ALL enemies this turn.",
+      "It's a rock."
+    ]
+  },
+  "${modID}:BurnPotion": {
+    "NAME": "Burn Potion",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yBurn.",
+      "It's a rock."
+    ]
+  }
+}

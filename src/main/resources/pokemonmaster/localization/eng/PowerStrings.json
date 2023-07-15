@@ -1,0 +1,510 @@
+{
+  "${modID}:PowerID": {
+    "NAME": "Ultimate Power",
+    "DESCRIPTIONS": [
+      "You are Very Cool and Strong."
+    ]
+  },
+  "${modID}:VileplumePower": {
+    "NAME": "Mean Green",
+    "DESCRIPTIONS": [
+      "Deal #b50% additional damage.",
+      ""
+    ]
+  },
+  "${modID}:Prized": {
+    "NAME": "Prized",
+    "DESCRIPTIONS": [
+      "Take an additional #b6 damage from the next unblocked attack.",
+      ""
+    ]
+  },
+  "${modID}:DrawDownPower": {
+    "NAME": "Draw Down",
+    "DESCRIPTIONS": [
+      "Draw #b",
+      " less card next turn.",
+      ""
+    ]
+  },
+  "${modID}:BronzongPower": {
+    "NAME": "Cycler",
+    "DESCRIPTIONS": [
+      "The first Status card played each turn exhausts.",
+      "The first #b",
+      " Status cards played each turn Exhaust."
+    ]
+  },
+  "${modID}:LanaPower": {
+    "NAME": "Lana",
+    "DESCRIPTIONS": [
+      "Restore #b",
+      " HP each time you play an Attack this turn."
+    ]
+  },
+  "${modID}:CrystalCavePower": {
+    "NAME": "Crystal Cave",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block at the start of your turn."
+    ]
+  },
+  "${modID}:EntangleNext": {
+    "NAME": "Entangle Next",
+    "DESCRIPTIONS": [
+      "You can't play attacks next turn.",
+      ""
+    ]
+  },
+  "${modID}:CurlUpPokemonPower": {
+    "NAME": "Curl Up",
+    "DESCRIPTIONS": [
+      "The next time you take unblocked attack damage, gain #b.",
+      " Block."
+    ]
+  },
+  "${modID}:FuryCutterPower": {
+    "NAME": "Fury Cutter",
+    "DESCRIPTIONS": [
+      "Your Strikes deal #b",
+      " additional damage this turn."
+    ]
+  },
+  "${modID}:MagExhaustPower": {
+    "NAME": "Mag Exhaust",
+    "DESCRIPTIONS": [
+      "Exhaust the next Status card you play.",
+      "Exhaust the next #b",
+      " Status cards you play."
+    ]
+  },
+  "${modID}:MagnetBlast": {
+    "NAME": "Magnet Blast",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to ALL enemies when you play a Status card."
+    ]
+  },
+  "${modID}:MtCoronetPower": {
+    "NAME": "Mt. Coronet",
+    "DESCRIPTIONS": [
+      "Add #b",
+      " #yMagnets to your hand at the start of your turn."
+    ]
+  },
+  "${modID}:ShieldEnergyPower": {
+    "NAME": "Barrier",
+    "DESCRIPTIONS": [
+      "You take #b",
+      " less damage from ALL attacks."
+    ]
+  },
+  "${modID}:Smelt": {
+    "NAME": "Smelt",
+    "DESCRIPTIONS": [
+      "At the start of your turn exhaust a card in your discard pile and gain #b1 Energy.",
+      ""
+    ]
+  },
+  "${modID}:StunfiskBite": {
+    "NAME": "Stunfisk Bite",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to the next enemy that attacks you."
+    ]
+  },
+  "${modID}:SupporterPlayed": {
+    "NAME": "Supporter Played",
+    "DESCRIPTIONS": [
+      "You've played a #ySupporter this turn.",
+      ""
+    ]
+  },
+  "${modID}:ShroomishPower": {
+    "NAME": "Shroomish Punch",
+    "DESCRIPTIONS": [
+      "At the start of your turn deal #b",
+      " damage, if you take damage lose this effect."
+    ]
+  },"${modID}:DamageDownPower": {
+  "NAME": "Resistant",
+  "DESCRIPTIONS": [
+    "Take #b",
+    " less Damage from ALL attacks."
+  ]
+},
+  "${modID}:BreloomPower": {
+    "NAME": "Focus Punch",
+    "DESCRIPTIONS": [
+      "At the start of each of your turns deal #b",
+      " Damage to a random enemy, if you take damage lose this effect."
+    ]
+  },
+  "${modID}:ChesnaughtVPower": {
+    "NAME": "Needle Line",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Thorns."
+    ]
+  },
+  "${modID}:ShedinjaPower": {
+    "NAME": "Wonder Guard",
+    "DESCRIPTIONS": [
+      "If you take damage, Die.",
+      ""
+    ]
+  },
+  "${modID}:NinjaskPower": {
+    "NAME": "Speed Boost",
+    "DESCRIPTIONS": [
+      "The first time each turn you play 2 attacks gain #b",
+      " Dexterity."
+    ]
+  },
+  "${modID}:Spark": {
+    "NAME": "Spark",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Energy."
+    ]
+  },
+  "${modID}:OricorioPower": {
+    "NAME": "OricorioPower",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Strength and add #b",
+      " burns to your hand."
+    ]
+  },
+  "${modID}:CoalossalPower": {
+    "NAME": "Tar Generator",
+    "DESCRIPTIONS": [
+      "At the end of your turn Exhaust #b",
+      " random card in your discard pile and gain #b",
+      " random cards in your discard pile and gain #b",
+      " #ySpark."
+    ]
+  },
+  "${modID}:PokeDollPower": {
+    "NAME": "Substitute",
+    "DESCRIPTIONS": [
+      "If you play an Attack card, lose ALL your temporary HP.",
+      ""
+    ]
+  },
+  "${modID}:FalinksVPower": {
+    "NAME": "Iron Defense Formation",
+    "DESCRIPTIONS": [
+      "When you play an attack that costs 0, gain #b",
+      " Block."
+    ]
+  },
+  "${modID}:WoundedPower": {
+    "NAME": "Wounded",
+    "DESCRIPTIONS": [
+      "At the start of your next turn add 7 Wounds to your hand.",
+      ""
+    ]
+  },
+  "${modID}:DestructiveFlames": {
+    "NAME": "Destructive Flames",
+    "DESCRIPTIONS": [
+      "Whenever you #yExhaust a non #yStatus card add #b",
+      " random #yFirework to your hand.",
+      " random #yFireworks to your hand."
+    ]
+  },
+  "${modID}:SnakePlantPower": {
+    "NAME": "Malleable",
+    "DESCRIPTIONS": [
+      "Gain #y",
+      " Block each time you play an attack."
+    ]
+  },
+  "${modID}:NoBlockNext": {
+    "NAME": "Shattered",
+    "DESCRIPTIONS": [
+      "You can't gain Block next turn.",
+      ""
+    ]
+  },
+  "${modID}:NextAttackModified": {
+    "NAME": "NextAttackModified",
+    "DESCRIPTIONS": [
+      "Your next Attack deals #b",
+      " less damage."
+    ]
+  },
+  "${modID}:EnergyDownPower": {
+    "NAME": "EnergyDownPower",
+    "DESCRIPTIONS": [
+      "At the start of your next turn lose #b",
+      " Energy."
+    ]
+  },
+  "${modID}:WonderSkin": {
+    "NAME": "Wonder Skin",
+    "DESCRIPTIONS": [
+      "Gain #b",
+      " Block for each card Exhausted this turn."
+    ]
+  },
+  "${modID}:FightingStadiumPower": {
+    "NAME": "Fighting Stadium",
+    "DESCRIPTIONS": [
+      "Your Fighting Pokemon Attacks deal additional #b",
+      " damage."
+    ]
+  },
+  "${modID}:LostCityPower": {
+    "NAME": "Lost City",
+    "DESCRIPTIONS": [
+      "Cards you draw cost #b",
+      " less. ALL your cards Exhaust when played."
+    ]
+  },
+  "${modID}:StatusDiscardBlock": {
+    "NAME": "Incandescent Body",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Block for each status card in your discard pile."
+    ]
+  },
+  "${modID}:StatusDiscardDamage": {
+    "NAME": "Torrid Wave",
+    "DESCRIPTIONS": [
+      "At the start of your turn deal #b",
+      " damage to a random enemy for each status card in your discard pile."
+    ]
+  },
+  "${modID}:EnergyPower": {
+    "NAME": "EnergyPower",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Energy."
+    ]
+  },
+  "${modID}:CoatingEnergyPower": {
+    "NAME": "CoatingEnergyPower",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " Artifact. At the end of your turn lose",
+      " #b Artifact."
+    ]
+  },
+  "${modID}:MorpekoPower": {
+    "NAME": "Aura Wheel",
+    "DESCRIPTIONS": [
+      "After you play a card gain #b",
+      " Block",
+      ""
+    ]
+  },
+  "${modID}:SirfetchSnooze": {
+    "NAME": "SirFetchSnooze",
+    "DESCRIPTIONS": [
+      "You can't play ANY attacks until you restore HP",
+      "",
+      ""
+    ]
+  },
+  "${modID}:ZamazentaPower": {
+    "NAME": "Zamazenta",
+    "DESCRIPTIONS": [
+      "Take #b",
+      " less damage from attacks for each unspent Energy.",
+      ""
+    ]
+  },
+  "${modID}:FocusSashPower": {
+    "NAME": "Focus Sash",
+    "DESCRIPTIONS": [
+      "If you would die, heal to #b",
+      " HP.",
+      ""
+    ]
+  },
+  "${modID}:CavernTackle": {
+    "NAME": "Cavern Tackle",
+    "DESCRIPTIONS": [
+      "Your Terrakions fail.",
+      "",
+      ""
+    ]
+  },
+  "${modID}:TakeDamagePower": {
+    "NAME": "Recoil",
+    "DESCRIPTIONS": [
+      "At the start of your turn, take #b",
+      " Damage.",
+      ""
+    ]
+  },
+  "${modID}:Dynamotor": {
+    "NAME": "Dynamotor",
+    "DESCRIPTIONS": [
+      "At the end of your turn Exhaust #b",
+      " random card in your discard pile and gain #b",
+      " random cards in your discard pile and gain #b",
+      " #ySpark."
+    ]
+  },
+  "${modID}:OricorioLightningPower": {
+    "NAME": "OricorioLightningPower",
+    "DESCRIPTIONS": [
+      "Your next #b",
+      " attack deals +50% damage.",
+      " attacks deal +50% damage."
+    ]
+  },
+  "${modID}:RejielekiPower": {
+    "NAME": "Transistor",
+    "DESCRIPTIONS": [
+      "Whenever you draw a card, deal #b",
+      " damage to a random enemy."
+    ]
+  },
+  "${modID}:CruelCharge": {
+    "NAME": "Cruel Charge",
+    "DESCRIPTIONS": [
+      "At the start of your turn lose #b",
+      " HP."
+    ]
+  },
+  "${modID}:VoltAbsorb": {
+    "NAME": "Volt Absorb",
+    "DESCRIPTIONS": [
+      "The first time each turn you deal #b40 damage, gain 1 #yIntangible.",
+      ""
+    ]
+  },
+  "${modID}:TagTeamPower": {
+    "NAME": "Tag Team",
+    "DESCRIPTIONS": [
+      "The next #b",
+      " Plusle you play does double damage."
+    ]
+  },
+  "${modID}:TimeEating": {
+    "NAME": "Time Eating",
+    "DESCRIPTIONS": [
+      "Gain #b2 #yStrength for card you play, up to 12 cards.",
+      ""
+    ]
+  },
+  "${modID}:StormyMountainPower": {
+    "NAME": "Stormy Mountain",
+    "DESCRIPTIONS": [
+      "At the start of your turn add #b",
+      " random common basic Lightning Pokemon to your hand."
+    ]
+  },
+  "${modID}:RegielekiPower": {
+    "NAME": "Transistor",
+    "DESCRIPTIONS": [
+      "Deal #b",
+      " damage to a random enemy whenever you draw a card."
+    ]
+  },
+  "${modID}:Burned": {
+    "NAME": "Burned",
+    "DESCRIPTIONS": [
+      "At the end of your turn, this character takes #b",
+      " damage."
+    ]
+  },
+  "${modID}:NinetalesBurn": {
+    "NAME": "Ninetales Burn",
+    "DESCRIPTIONS": [
+      "Apply ",
+      " #yBurned to any enemies that attack you."
+    ]
+  },
+  "${modID}:BurningScarfPower": {
+    "NAME": "Burning Scarf",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yBurned each time an enemy attacks you."
+    ]
+  },
+  "${modID}:RoughSkin": {
+    "NAME": "Rough Skin",
+    "DESCRIPTIONS": [
+      "If your Block is broken this turn, gain #b",
+      " #yThorns."
+    ]
+  },
+  "${modID}:ToxicSpikes": {
+    "NAME": "Toxic Spikes",
+    "DESCRIPTIONS": [
+      "Apply #b",
+      " #yPoison each time an enemy attacks you this turn.."
+    ]
+  },
+  "${modID}:MagmaBasin": {
+    "NAME": "Magma Basin",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " #ySpark and lose #b4 HP."
+
+    ]
+  },
+  "${modID}:SudowoodoPower": {
+    "NAME": "Squirt Bottle",
+    "DESCRIPTIONS": [
+      "If you play a Water type card lose ALL of your temp HP and gain #b",
+      " Strength."
+
+    ]
+  },
+  "${modID}:ChosenPower": {
+    "NAME": "Chosen",
+    "DESCRIPTIONS": [
+      "Whenever you play a non-attack card gain #b",
+      " #yStrength."
+
+    ]
+  },
+  "${modID}:AcidSpray": {
+    "NAME": "Acid Spray",
+    "DESCRIPTIONS": [
+      "When you play a #yStatus card apply #b",
+      " #yPoison to a random Enemy."
+
+    ]
+  },
+  "${modID}:FireworkShow": {
+    "NAME": "Firework Show",
+    "DESCRIPTIONS": [
+      "At the start of your turn add #b",
+      " random #yFirework to your hand.",
+      " random #yFireworks to your hand."
+
+    ]
+  },
+  "${modID}:SlowStart": {
+    "NAME": "Slow Start",
+    "DESCRIPTIONS": [
+      "Once you've played all 5 Titans, Exhume Regigias.",
+      " Need to play",
+      " Regice",
+      " Regirock",
+      " Regidrago",
+      " Regieleki",
+      " Registeel",
+      "."
+
+    ]
+  },
+  "${modID}:MysteryCharge": {
+    "NAME": "Mystery Charge",
+    "DESCRIPTIONS": [
+      "At the start of your turn gain #b",
+      " [E] and draw #b",
+      " card if you have no #ySupporters in your draw or discard piles.",
+      ""
+
+    ]
+  }
+}
+

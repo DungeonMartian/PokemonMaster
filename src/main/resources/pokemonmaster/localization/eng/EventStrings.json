@@ -1,0 +1,59 @@
+{
+  "${modID}:EventID": {
+    "NAME": "Event Name",
+    "DESCRIPTIONS": [
+      "This is event text, generally used to describe what's happening.",
+      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
+      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
+      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
+      "You have to mark every word individually.",
+      "You can also use [#ffffff]white[] hex color codes like this to color text.",
+      "This also works in card text! But not on keywords."
+    ],
+    "OPTIONS": [
+      "[Action Description] What you actually get.",
+      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
+      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
+      "[Leave]",
+      "Select card to remove. (You can also stick extra text like this in here.)"
+    ]
+  },
+  "${modID}:BirdMan": {
+    "NAME": "Bird Keeper",
+    "DESCRIPTIONS": [
+      "This is event text, generally used to describe what's happening.",
+      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
+      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
+      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
+      "You have to mark every word individually.",
+      "You can also use [#ffffff]white[] hex color codes like this to color text.",
+      "This also works in card text! But not on keywords."
+    ],
+    "OPTIONS": [
+      "[Leave]",
+      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
+      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
+      "[Leave]",
+      "Select card to remove. (You can also stick extra text like this in here.)"
+    ]
+  },
+  "${modID}:EeveeEvolve": {
+    "NAME": "Eeveelution",
+    "DESCRIPTIONS": [
+      "In your journey through the Spire you come across a cavernous room filled with small stones in a variety of colours. You can feel your Eevee's excitement.",
+      "[#333333]Your[] [#333333]Eevee [#333333]will [#333333]never [#333333]forgive [#333333]you.",
+      "What's this? Your Eevee is evolving!"
+      ],
+    "OPTIONS": [
+      "[Dark Blue]This one feels solid and soothing to the touch.",
+      "[Yellow] This one feels hot and painful.",
+      "[Red] It's warm and ashy, with parts turning to dust.",
+      "[Purple] While holding this you get a strong sense of Deja-Vu.",
+      "[Black] The Edges are surprisingly sharp.",
+      "[Light Blue] It's a nice firm stone, very cold to the touch.",
+      "[Green] This stone fills you with a sense of... Determination...",
+      "[Pink] This one seems oddly familiar.",
+      "[Leave]"
+    ]
+  }
+}
