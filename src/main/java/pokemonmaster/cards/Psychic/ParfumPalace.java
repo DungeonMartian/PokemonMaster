@@ -34,7 +34,7 @@ public class ParfumPalace extends BasePokemonCard {
         super(cardInfo);
         setMagic(MAGIC,UPG_MAGIC);
         tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
+
         tags.add(CustomTags.UNEVOLVED);
         this.purgeOnUse = this.evolve !=null;
         this.evolve=null;
