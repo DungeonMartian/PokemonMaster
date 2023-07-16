@@ -159,6 +159,16 @@
       ""
     ]
   },
+  "${modID}:Toxin": {
+    "NAME": "Toxin",
+    "DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M!.",
+    "UPGRADE_DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M!.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Scizor": {
     "NAME": "Scizor",
     "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. Increase the damage of ALL *Strikes this turn by !M!. Gain 1 Plated Armor. NL pokemonmaster:Return.",
