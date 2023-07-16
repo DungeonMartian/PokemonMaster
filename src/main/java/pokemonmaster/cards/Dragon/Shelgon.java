@@ -9,6 +9,7 @@ import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DamageDownPower;
+import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -52,7 +53,7 @@ public class Shelgon extends BasePokemonCard {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
 
-        //addToBot(new EvolveActionCombat(this,"discard"));
+        addToBot(new EvolveActionCombat(this,"discard"));
     }
 
     @Override

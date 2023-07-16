@@ -1797,8 +1797,8 @@
   },
   "${modID}:Gengar": {
     "NAME": "Gengar",
-    "DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies TWICE for each enemy.",
-    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies TWICE for each enemy.",
+    "DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies for each enemy.",
+    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies for each enemy.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4635,8 +4635,8 @@
   },
   "${modID}:Drampa": {
     "NAME": "Drampa",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. Discard to the top !M! cards of your draw pile.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. Discard to the top !M! cards of your draw pile.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Discard the top !M! cards of your draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Discard the top !M! cards of your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4655,8 +4655,8 @@
   },
   "${modID}:TatsugiriDragon": {
     "NAME": "Tatsugiri",
-    "DESCRIPTION": "{@@}Add !M! Surfs to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Add !M! Surfs to your hand.",
+    "DESCRIPTION": "{@@}Add !M! pokemonmaster:Surfs to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Add !M! pokemonmaster:Surfs to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
