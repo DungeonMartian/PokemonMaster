@@ -4603,6 +4603,76 @@
       ""
     ]
   },
+  "${modID}:Jangmoo": {
+    "NAME": "Jangmo-o",
+    "DESCRIPTION": "{@@}Deal 1 damage for every 3 HP you are missing.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal 1 damage for every 3 HP you are missing.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Hakamoo": {
+    "NAME": "Hakamo-o",
+    "DESCRIPTION": "{@@}Deal 1 damage for every 2 HP you are missing.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal 1 damage for every 2 HP you are missing.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Kommoo": {
+    "NAME": "Kommo-o",
+    "DESCRIPTION": "{@@}Deal 1 damage for each HP you are missing.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal 1 damage for each HP you are missing.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Drampa": {
+    "NAME": "Drampa",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. Discard to the top !M! cards of your draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. Discard to the top !M! cards of your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:DuraludonV": {
+    "NAME": "Duraludon V",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! Damage. NL Take !M! less damage from ALL enemies this turn.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! Damage. NL Take !M! less damage from ALL enemies this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:TatsugiriDragon": {
+    "NAME": "Tatsugiri",
+    "DESCRIPTION": "{@@}Add !M! Surfs to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Add !M! Surfs to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:RoaringMoon": {
+    "NAME": "Roaring Moon",
+    "DESCRIPTION": "{@@}Gain !M! Strength and Dexterity. NL Discard 1 card at random.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Strength and Dexterity. NL Discard 1 card at random.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",

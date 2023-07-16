@@ -1,4 +1,4 @@
-package pokemonmaster.cards.Base;
+package pokemonmaster.cards.Dragon;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -8,52 +8,58 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.DamageDownPower;
 import pokemonmaster.powers.Prized;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class JolteonGX extends BaseCard {
+public class DuraludonV extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "JolteonGX",
-            1,
+            "DuraludonV",
+            3,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.SPECIAL,
+            CardRarity.UNCOMMON,
             PokemonMaster.Enums.CARD_COLOR);
 
 
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 21;
-    private static final int UPG_DAMAGE = 4;
-    private static final int RECOIL = 4;
-    private static final int RECOILUP = -1;
+    private static final int DAMAGE = 16;
+    private static final int UPG_DAMAGE = 5;
+
+    private static final int MAGIC = 8;
+    private static final int UPG_MAGIC = 2;
 
 
 
-    public JolteonGX() {
+    public DuraludonV() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
-        setMagic(RECOIL, RECOILUP);
+        setMagic(MAGIC,UPG_MAGIC);
+        tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.LIGHTNING);
+        tags.add(CustomTags.UNEVOLVED);
+
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
+
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
-        addToBot(new DamageAction(p, new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS)));
+
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new JolteonGX();
+        return new DuraludonV();
     }
-
 }
 
