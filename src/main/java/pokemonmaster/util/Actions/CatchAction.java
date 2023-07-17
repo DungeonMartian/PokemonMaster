@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import pokemonmaster.cards.Metal.Doublade;
+import pokemonmaster.cards.Metal.Honedge;
 import pokemonmaster.cards.StarterRelic.Act1.*;
 import pokemonmaster.cards.StarterRelic.Act2.*;
 import pokemonmaster.cards.StarterRelic.Act3.*;
@@ -159,10 +161,10 @@ public class CatchAction extends AbstractGameAction {
                  return new Donu();
              case "Deca":
                  return new Deca();
-            //case "SpireShield":
-            //    return new SpireShield();
-            //case "SpireSpear":
-            //    return new SpireSpear();
+            case "SpireShield":
+                return new Doublade();
+            case "SpireSpear":
+                return new Honedge();
             //case "CorruptHeart":
             //    return new SpireSpear();
             default:
