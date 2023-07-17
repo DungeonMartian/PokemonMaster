@@ -142,6 +142,7 @@ public class TypeRemoverClass {
                 FIRETYPE.add(CharizardV.ID);
                 FIRETYPE.add(BurningScarf.ID);
                 FIRETYPE.add(Darumaka.ID);
+                FIRETYPE.add(DelphoxV.ID);
                 FIRETYPE.add(InciniroarV.ID);
                 FIRETYPE.add(InfernapeV.ID);
                 FIRETYPE.add(EnteiV.ID);
@@ -149,6 +150,7 @@ public class TypeRemoverClass {
                 FIRETYPE.add(FireCrystal.ID);
                 FIRETYPE.add(Fletchling.ID);
                 FIRETYPE.add(HeatEnergy.ID);
+                FIRETYPE.add(Heatmor.ID);
                 FIRETYPE.add(Hooh.ID);
                 FIRETYPE.add(Magmar.ID);
                 FIRETYPE.add(MagmaBasin.ID);
@@ -161,6 +163,7 @@ public class TypeRemoverClass {
                 FIRETYPE.add(Torchic.ID);
                 FIRETYPE.add(Victini.ID);
                 FIRETYPE.add(VictiniV.ID);
+                FIRETYPE.add(Volcanion.ID);
                 FIRETYPE.add(VolcaronaV.ID);
                 FIRETYPE.add(Vulpix.ID);
                 FIRETYPE.add(Welder.ID);
@@ -176,6 +179,8 @@ public class TypeRemoverClass {
                 GRASSTYPE.add(ChesnaughtV.ID);
                 GRASSTYPE.add(Durant.ID);
                 GRASSTYPE.add(Dwebble.ID);
+                GRASSTYPE.add(GardeniasVigor.ID);
+                GRASSTYPE.add(Heracross.ID);
                 GRASSTYPE.add(HisuianLilligantV.ID);
                 GRASSTYPE.add(Maractus.ID);
                 GRASSTYPE.add(Morelull.ID);
