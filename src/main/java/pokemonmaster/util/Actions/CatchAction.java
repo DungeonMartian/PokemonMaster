@@ -109,6 +109,12 @@ public class CatchAction extends AbstractGameAction {
                 return new Sneko();
             case "SphericGuardian":
                 return new SphericGuardian();
+            case "BanditChild":
+                return new Pointy();
+            case "BanditLeader":
+                return new Romeo();
+            case "BanditBear":
+                return new Bear();
             case "BookOfStabbing":
                 return new BookOfStabbing();
             case "SlaverBoss":
@@ -125,14 +131,14 @@ public class CatchAction extends AbstractGameAction {
                 return new Nemesis();
             case "Reptomancer":
                 return new Reptomancer();
-            //case "GiantHead":
-            //    return new StoneHelm();
+            case "GiantHead":
+                return new GiantHead();
             case "Darkling":
                 return new Darkling();
             case "Exploder":
                 return new ShapeExploder();
-            //case "Maw":
-            //    return new Maw();
+            case "Maw":
+                return new Maw();
             case "Orb Walker":
                 return new OrbWalker();
             case "Spiker":
@@ -143,8 +149,8 @@ public class CatchAction extends AbstractGameAction {
                 return new SpireGrowth();
             case "Transient":
                 return new Transient();
-            //case "WrithingMass":
-            //    return new WrithingMass();
+            case "WrithingMass":
+                return new WrithingMass();
             case "TimeEater":
                 return new TimeEater();
             case "AwakenedOne":

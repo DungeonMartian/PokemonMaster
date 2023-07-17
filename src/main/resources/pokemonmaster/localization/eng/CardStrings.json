@@ -4673,6 +4673,66 @@
       ""
     ]
   },
+  "${modID}:WrithingMass": {
+    "NAME": "Capt. Writhing Mass",
+    "DESCRIPTION": "{@@}pokemonmaster:Choose Randomly. NL Deal !D! damage to a random enemy. NL Gain !B! Block. NL Apply !M! Weak and Vulnerable to a random enemy. NL Stun a random enemy.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Choose Randomly. NL Deal !D! damage to a random enemy. NL Gain !B! Block. NL Apply !M! Weak and Vulnerable to a random enemy. NL Stun a random enemy.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:GiantHead": {
+    "NAME": "Capt. Giant Head",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Increase this cards damage by !M!. NL Shuffle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Increase this cards damage by !M!. NL Shuffle this card into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Maw": {
+    "NAME": "Capt. Maw",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Bear": {
+    "NAME": "Capt. Bear",
+    "DESCRIPTION": "{@@}Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Romeo": {
+    "NAME": "Capt. Romeo",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Apply !M! Weak.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Apply !M! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Pointy": {
+    "NAME": "Capt. Pointy",
+    "DESCRIPTION": "{@@}Deal !D! damage twice.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage twice.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",
