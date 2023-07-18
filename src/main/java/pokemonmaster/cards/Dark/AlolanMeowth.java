@@ -9,14 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class AlolanMeowth extends BasePokemonCard {
+public class AlolanMeowth extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "AlolanMeowth",
             1,
@@ -35,24 +34,21 @@ public class AlolanMeowth extends BasePokemonCard {
 
 
     public AlolanMeowth() {
-        super(cardInfo);
+        super(cardInfo,new AlolanPersian(),new AlolanPersian(),CustomTags.DARK);
         setBlock(BLOCK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
+
+
         tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new AlolanPersian();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new EvolveActionCombat(this,"discard"));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false)));
         addToBot(new DiscardAction(p,p,p.hand.size(),true));
         addToBot(new DrawCardAction(p, magicNumber));

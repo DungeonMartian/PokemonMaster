@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ToolsOfTheTradePower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Liepard extends BasePokemonCard {
+public class Liepard extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Liepard",
             1,
@@ -31,19 +31,17 @@ public class Liepard extends BasePokemonCard {
 
 
     public Liepard() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerDark.png","pokemonmaster/character/cardback/bg_powerDark_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ToolsOfTheTradePower(p,  magicNumber)));
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new ToolsOfTheTradePower(p,  magicNumber)));
     }
 
     @Override

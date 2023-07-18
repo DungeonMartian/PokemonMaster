@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Arbok extends BasePokemonCard {
+public class Arbok extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Arbok",
             -2,
@@ -32,22 +32,22 @@ public class Arbok extends BasePokemonCard {
     private static final int UPG_MAGIC = 2;
 
     public Arbok() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return false;
     }
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
     }
+
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();

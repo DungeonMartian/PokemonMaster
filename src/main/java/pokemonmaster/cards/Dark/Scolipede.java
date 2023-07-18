@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Scolipede extends BasePokemonCard {
+public class Scolipede extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Scolipede",
             1,
@@ -32,22 +32,21 @@ public class Scolipede extends BasePokemonCard {
 
 
     public Scolipede() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p,  3)));
-
 
     }
 

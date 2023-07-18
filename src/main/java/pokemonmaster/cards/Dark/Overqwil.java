@@ -6,14 +6,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.ToxicSpikes;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Overqwil extends BasePokemonCard {
+public class Overqwil extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Overqwil",
             1,
@@ -34,18 +34,18 @@ public class Overqwil extends BasePokemonCard {
 
 
     public Overqwil() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new ToxicSpikes(p,magicNumber)));

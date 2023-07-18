@@ -1,6 +1,6 @@
 This is the project files for the Slay the Spire mod "The Pokemon Master"
 
-Currently, this is a work in progress and is entirely made by one person. All the card art is from the Pokemon 
+Currently, this is a work in progress and is made by two people. All the card art is from the Pokemon 
 TCG, with the other art being made by me.
 
 Here's the set up you'll need to do to get this to work.

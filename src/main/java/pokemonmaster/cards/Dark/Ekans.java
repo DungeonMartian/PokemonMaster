@@ -9,14 +9,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.GainStrengthPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Ekans extends BasePokemonCard {
+public class Ekans extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Ekans",
             -2,
@@ -34,25 +34,22 @@ public class Ekans extends BasePokemonCard {
     private static final int UPG_MAGIC = 2;
 
     public Ekans() {
-        super(cardInfo);
+        super(cardInfo,new Arbok(),new Arbok(),CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Arbok();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return false;
     }
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
     }
+
     @Override
     public void triggerWhenDrawn() {
         super.triggerWhenDrawn();

@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Thievul extends BasePokemonCard {
+public class Thievul extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Thievul",
             1,
@@ -31,9 +31,8 @@ public class Thievul extends BasePokemonCard {
 
 
     public Thievul() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
@@ -42,11 +41,9 @@ public class Thievul extends BasePokemonCard {
 
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new BetterDiscardPileToHandAction(magicNumber));
         addToBot(new DiscardAction(p, p, this.magicNumber, false));
-
     }
 
     @Override

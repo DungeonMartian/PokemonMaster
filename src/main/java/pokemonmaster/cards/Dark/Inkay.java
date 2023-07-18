@@ -15,13 +15,14 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Inkay extends BasePokemonCard {
+public class Inkay extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Inkay",
             2,
@@ -42,22 +43,21 @@ public class Inkay extends BasePokemonCard {
 
 
     public Inkay() {
-        super(cardInfo);
+        super(cardInfo,new Malamar(),new Malamar(),CustomTags.DARK);
         setDamage(DAMAGE, UPG_DAMAGE);
         setBlock(BLOCK,UPG_BLOCk);
         setMagic(MAGIC);
-        tags.add(CustomTags.DARK);
+
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Malamar();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDark.png","pokemonmaster/character/cardback/bg_attackDark_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
@@ -66,7 +66,7 @@ public class Inkay extends BasePokemonCard {
         if (pow == null) {
             addToBot(new ApplyPowerAction(p, p, new ConfusionPower(p)));
         }
-        addToBot(new EvolveActionCombat(this,"discard"));
+
     }
 
     @Override

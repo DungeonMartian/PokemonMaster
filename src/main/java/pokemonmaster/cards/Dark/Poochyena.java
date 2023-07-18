@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DamageDownPower;
 import pokemonmaster.util.Actions.EvolveActionCombat;
@@ -14,7 +15,7 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Poochyena extends BasePokemonCard {
+public class Poochyena extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Poochyena",
             1,
@@ -34,25 +35,24 @@ public class Poochyena extends BasePokemonCard {
     private static final int UPG_DDOWN= 1;
 
     public Poochyena() {
-        super(cardInfo);
+        super(cardInfo,new Mightyena(),new Mightyena(),CustomTags.DARK);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(DDOWN,UPG_DDOWN);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Mightyena();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
-        addToBot(new EvolveActionCombat(this,"discard"));
+
     }
 
     @Override

@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Swalot extends BasePokemonCard {
+public class Swalot extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Swalot",
             2,
@@ -34,20 +34,19 @@ public class Swalot extends BasePokemonCard {
 
 
     public Swalot() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
+
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-        this.evolve=null;
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
                 if (!monster.isDead && !monster.isDying) {
@@ -60,7 +59,6 @@ public class Swalot extends BasePokemonCard {
             }
         }
         addToBot(new GainBlockAction(p, p, block));
-
     }
 
     @Override

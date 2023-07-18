@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Wheezing extends BasePokemonCard {
+public class Wheezing extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Wheezing",
             1,
@@ -35,20 +35,19 @@ public class Wheezing extends BasePokemonCard {
 
 
     public Wheezing() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setDamage(DAMAGE,UPG_DAMAGE);
         setMagic(POISON,UPG_POISON);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
         this.damageTypeForTurn= DamageInfo.DamageType.THORNS;
         this.damageType= DamageInfo.DamageType.THORNS;
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
         addToBot( new BouncingFlaskAction( randomMonster, magicNumber, 1));
 
@@ -60,7 +59,7 @@ public class Wheezing extends BasePokemonCard {
 
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
         if (randomMonster != null){
-            addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.POISON));
+            addToBot(new DamageAction(randomMonster, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.POISON));
             addToBot( new BouncingFlaskAction( randomMonster, magicNumber, 1));
         }
 

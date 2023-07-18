@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Venipede extends BasePokemonCard {
+public class Venipede extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Venipede",
             1,
@@ -34,14 +35,10 @@ public class Venipede extends BasePokemonCard {
 
 
     public Venipede() {
-        super(cardInfo);
+        super(cardInfo,new Whirlipede(),new Scolipede(),CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Scolipede();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
@@ -49,9 +46,14 @@ public class Venipede extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    }
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, magicNumber), magicNumber));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p,  1)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Whirlipede(), 1));
+        
 
     }
 

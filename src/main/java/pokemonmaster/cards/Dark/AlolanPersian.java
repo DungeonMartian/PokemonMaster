@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class AlolanPersian extends BasePokemonCard {
+public class AlolanPersian extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "AlolanPersian",
             1,
@@ -35,24 +35,22 @@ public class AlolanPersian extends BasePokemonCard {
 
 
     public AlolanPersian() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DARK);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
         tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false)));
         addToBot(new DiscardAction(p,p,p.hand.size(),true));
         addToBot(new DrawCardAction(p, magicNumber));
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 

@@ -8,9 +8,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import java.util.function.Predicate;
@@ -18,7 +17,7 @@ import java.util.function.Predicate;
 import static pokemonmaster.CustomTags.POKEMON;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Grimer extends BasePokemonCard {
+public class Grimer extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Grimer",
             1,
@@ -36,19 +35,20 @@ public class Grimer extends BasePokemonCard {
 
 
     public Grimer() {
-        super(cardInfo);
+        super(cardInfo, new Muk(),new Muk(),CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
+
         tags.add(POKEMON);
-        this.evolve=new Muk();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelectCardsInHandAction(p.hand.size(), "discard", true, true, (Predicate<AbstractCard>) card -> true, abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 addToBot(new DiscardSpecificCardAction(i));
@@ -58,7 +58,6 @@ public class Grimer extends BasePokemonCard {
                 }
             }
         }));
-        addToBot(new EvolveActionCombat(this,"discard"));
     }
 
     @Override

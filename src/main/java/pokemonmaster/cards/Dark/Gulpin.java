@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Gulpin extends BasePokemonCard {
+public class Gulpin extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Gulpin",
             2,
@@ -35,21 +36,21 @@ public class Gulpin extends BasePokemonCard {
 
 
     public Gulpin() {
-        super(cardInfo);
+        super(cardInfo,new Swalot(),new Swalot(),CustomTags.DARK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DARK);
+
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         tags.add(CustomTags.BAIT);
         this.misc=-25;
-        this.evolve=new Swalot();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
                 if (!monster.isDead && !monster.isDying) {
@@ -62,8 +63,6 @@ public class Gulpin extends BasePokemonCard {
             }
         }
         addToBot(new GainBlockAction(p, p, block));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(this.evolve, 1));
-
     }
 
     @Override

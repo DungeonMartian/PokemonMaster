@@ -6,15 +6,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.ToxicSpikes;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Qwilfish extends BasePokemonCard {
+public class Qwilfish extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Qwilfish",
             1,
@@ -35,25 +34,20 @@ public class Qwilfish extends BasePokemonCard {
 
 
     public Qwilfish() {
-        super(cardInfo);
+        super(cardInfo,new Overqwil(),new Overqwil(),CustomTags.DARK);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC);
-        tags.add(CustomTags.DARK);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Overqwil();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new ToxicSpikes(p,magicNumber)));
-        addToBot(new EvolveActionCombat(this, "discard"));
     }
 
     @Override
