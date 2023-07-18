@@ -1,10 +1,18 @@
 package pokemonmaster.cards;
 
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.core.Settings;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 
 // import pokemonmaster.CustomTags;
+import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.powers.DuplicationPower;
 import pokemonmaster.util.CardInfo;
 
 public abstract class IntermediateEvolutionCard extends EvolvedPokemonCard {
@@ -23,6 +31,31 @@ public abstract class IntermediateEvolutionCard extends EvolvedPokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         onUse(p, m);
         addToBot(new MakeTempCardInDiscardAction(this.finalEvolution.makeCopy(), 1));
+
+        AbstractPower pow = AbstractDungeon.player.getPower(DuplicationPower.POWER_ID);
+        if (pow != null) {
+            if (pow.amount == 0) {
+                addToTop(new RemoveSpecificPowerAction(pow.owner, pow.owner, pow));
+                applyPowers();
+            }
+
+            else    {
+                addToTop(new ReducePowerAction(p, p, pow, 1));
+                applyPowers();
+            }
+
+            AbstractCard tmp = this.makeSameInstanceOf();
+            AbstractDungeon.player.limbo.addToTop(tmp);
+            tmp.current_x = this.current_x;
+            tmp.current_y = this.current_y;
+            tmp.target_x = Settings.WIDTH / 2.0F - 300.0F * Settings.scale;
+            tmp.target_y = Settings.HEIGHT / 2.0F;
+            if (m != null)
+                tmp.calculateCardDamage(m);
+            tmp.purgeOnUse = true;
+            AbstractDungeon.actionManager.addCardQueueItem(new CardQueueItem(tmp, m, this.energyOnUse, true, true), false);
+
+        }
         }
 
     public abstract void onUse(AbstractPlayer p, AbstractMonster m);

@@ -1,5 +1,6 @@
 package pokemonmaster.cards.StarterRelic;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -33,7 +34,7 @@ public class StarterAttack extends BasePokemonCard {
     public StarterAttack() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
-
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override

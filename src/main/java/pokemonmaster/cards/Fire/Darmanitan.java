@@ -44,10 +44,7 @@ public class Darmanitan extends FinalEvolutionCard {
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
-    }
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {

@@ -1797,8 +1797,8 @@
   },
   "${modID}:Haunter": {
     "NAME": "Haunter",
-    "DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies for each enemy.",
-    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies for each enemy.",
+    "DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to a random enemy for each enemy.",
+    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to a random enemy for each enemy.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2736,8 +2736,8 @@
   },
   "${modID}:Pokeball": {
     "NAME": "Pokeball",
-    "DESCRIPTION": "{@@}Capture an enemy with 10 or less HP and add it to your deck.",
-    "UPGRADE_DESCRIPTION":"{@@}Capture an enemy with 10 or less HP and add it to your deck.",
+    "DESCRIPTION": "{@@}Capture an enemy with 10 or less HP and add it to your deck. NL Fleeting.",
+    "UPGRADE_DESCRIPTION":"{@@}Capture an enemy with 10 or less HP and add it to your deck. NL Fleeting.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2746,8 +2746,8 @@
   },
   "${modID}:SafariBall": {
     "NAME": "Safari Ball",
-    "DESCRIPTION": "{@@}Capture an enemy with 20 or less HP and add it to your deck.",
-    "UPGRADE_DESCRIPTION":"{@@}Capture an enemy with 20 or less HP and add it to your deck.",
+    "DESCRIPTION": "{@@}Capture an enemy with 20 or less HP and add it to your deck. NL Fleeting.",
+    "UPGRADE_DESCRIPTION":"{@@}Capture an enemy with 20 or less HP and add it to your deck. NL Fleeting.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

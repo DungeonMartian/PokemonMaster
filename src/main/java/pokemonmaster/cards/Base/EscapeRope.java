@@ -27,7 +27,7 @@ public class EscapeRope extends BaseCard {
     public EscapeRope() {
         super(cardInfo);
         tags.add(CardTags.HEALING);
-
+        FleetingField.fleeting.set(this, true);
     }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         boolean canUse = super.canUse(p, m);
@@ -51,7 +51,7 @@ public class EscapeRope extends BaseCard {
                 AbstractDungeon.player.flipHorizontal = !AbstractDungeon.player.flipHorizontal;
                 AbstractDungeon.overlayMenu.endTurnButton.disable();
                 AbstractDungeon.player.escapeTimer = 2.5F;
-                FleetingField.fleeting.set(this, true);
+
                 if (this.upgraded) {
                     addToBot(new AddCardToDeckAction(new EscapeRope()));
                 }

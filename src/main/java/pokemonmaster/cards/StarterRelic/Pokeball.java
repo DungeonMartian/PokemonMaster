@@ -1,5 +1,6 @@
 package pokemonmaster.cards.StarterRelic;
 
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -31,6 +32,7 @@ public class Pokeball extends BasePokemonCard {
         setDamage(CULT);
         this.damageType= DamageInfo.DamageType.HP_LOSS;
         this.damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override

@@ -9,10 +9,8 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -47,10 +45,7 @@ public class Bunnelby extends BasicPokemonCard {
 
 
 
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
-
-            }
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {

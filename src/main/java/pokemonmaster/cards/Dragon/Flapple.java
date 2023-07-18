@@ -45,12 +45,7 @@ public class Flapple extends FinalEvolutionCard {
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
-
-
-    }
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
