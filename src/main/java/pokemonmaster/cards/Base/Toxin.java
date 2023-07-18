@@ -10,10 +10,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+
 // import com.megacrit.cardcrawl.powers.GainStrengthPower;
 // import com.megacrit.cardcrawl.powers.StrengthPower;
 
-import pokemonmaster.CustomTags;
+// import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -39,8 +42,8 @@ public class Toxin extends BaseCard {
         super(cardInfo);
         this.selfRetain = false;
         setDamage(DAMAGE);
-        setMagic(DAMAGE_INCREASE,DAMAGE_INCREASE);
-        tags.add(CustomTags.METAL);
+        setMagic(DAMAGE_INCREASE,0);
+        // tags.add(CustomTags.METAL);
         // tags.add(CustomTags.BAIT);
         this.misc =5;
     }
@@ -55,8 +58,12 @@ public class Toxin extends BaseCard {
     }
     @Override
     public void triggerWhenDrawn() {
-        addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+        addToBot(new DamageAction(AbstractDungeon.player, new DamageInfo(AbstractDungeon.player, damage, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ModifyDamageAction(this.uuid, this.magicNumber));
+        // send to discard pile
+        addToBot(new DiscardSpecificCardAction(this, null));
+        // draw a card
+        addToBot(new DrawCardAction(1));
     }
 
 
