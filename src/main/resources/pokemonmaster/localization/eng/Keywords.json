@@ -38,6 +38,19 @@
     "DESCRIPTION": "If this card is in your discard pile at the start of your turn, add it to your hand and add a void to your discard pile."
   },
   {
+    "PROPER_NAME": "Toxin",
+    "NAMES": [
+      "toxin",
+      "toxins",
+      "toxin+",
+      "toxins+",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Unplayable #yStatus card that deals damage to you when drawn. Increases the amount each time it's drawn."
+  },
+  {
     "PROPER_NAME": "Rivalry",
     "NAMES": [
       "rivalry",

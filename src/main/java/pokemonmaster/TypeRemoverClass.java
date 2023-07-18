@@ -163,6 +163,7 @@ public class TypeRemoverClass {
                 FIRETYPE.add(HeatEnergy.ID);
                 FIRETYPE.add(Heatmor.ID);
                 FIRETYPE.add(Hooh.ID);
+                FIRETYPE.add(Kiawe.ID);
                 FIRETYPE.add(Magmar.ID);
                 FIRETYPE.add(MagmaBasin.ID);
                 FIRETYPE.add(Numel.ID);

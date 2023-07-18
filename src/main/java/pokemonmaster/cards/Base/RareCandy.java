@@ -9,8 +9,6 @@ import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
-import java.util.function.Predicate;
-
 import static pokemonmaster.PokemonMasterMod.makeID;
 
 public class RareCandy extends BasePokemonCard {
@@ -41,7 +39,7 @@ public class RareCandy extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new SelectCardsInHandAction(magicNumber, "evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(CustomTags.POKEMON), abstractCards -> {
+        addToBot(new SelectCardsInHandAction(magicNumber, "evolve",false,false, card -> card.hasTag(CustomTags.POKEMON), abstractCards -> {
         for (AbstractCard i : abstractCards) {
             addToBot(new EvolveActionCombat(i, "hand"));
         }

@@ -1,7 +1,6 @@
-package pokemonmaster.cards.Grass;
+package pokemonmaster.cards.Fire;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,16 +9,17 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.Spark;
 import pokemonmaster.powers.SupporterPlayed;
-import pokemonmaster.util.Actions.GardeniaFollowUpAction;
+import pokemonmaster.util.Actions.KiaweAction;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class GardeniasVigor extends BasePokemonCard {
+public class Kiawe extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "GardeniasVigor",
-            1,
+            "Kiawe",
+            2,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.UNCOMMON,
@@ -29,28 +29,28 @@ public class GardeniasVigor extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = 1;
+    private static final int MAGIC = 4;
 
 
 
-    public GardeniasVigor() {
+
+    public Kiawe() {
         super(cardInfo);
-        setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.GRASS);
+        setMagic(MAGIC);
+        tags.add(CustomTags.FIRE);
         tags.add(CustomTags.SUPPORTER);
-
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
-
+        setCostUpgrade(1);
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
+        this.exhaust=true;
     }
-
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
-            addToBot(new DrawCardAction(magicNumber, new GardeniaFollowUpAction()));
-            addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p,1)));
+            addToBot(new KiaweAction(magicNumber));
+            addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Spark(AbstractDungeon.player,2)));
+            addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p,1)));;
         }
     }
     public void triggerOnGlowCheck() {
@@ -60,10 +60,9 @@ public class GardeniasVigor extends BasePokemonCard {
             this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
         }
     }
-
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new GardeniasVigor();
+        return new Kiawe();
     }
 }
 

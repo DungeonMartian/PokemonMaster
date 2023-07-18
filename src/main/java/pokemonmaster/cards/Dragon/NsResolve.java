@@ -1,5 +1,6 @@
 package pokemonmaster.cards.Dragon;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -49,7 +50,10 @@ public class NsResolve extends BasePokemonCard {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
             addToBot(new DrawCardAction(magicNumber, new NAction()));
+            addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p,1)));
+
         }
+
     }
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();

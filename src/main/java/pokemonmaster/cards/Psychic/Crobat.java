@@ -42,7 +42,7 @@ public class Crobat extends FinalEvolutionCard {
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(POISOND, POISONDUP);
         // tags.add(CustomTags.PSYCHIC);
-        this.cardsToPreview = new Toxin();
+        //this.cardsToPreview = new Toxin();
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
 
     }

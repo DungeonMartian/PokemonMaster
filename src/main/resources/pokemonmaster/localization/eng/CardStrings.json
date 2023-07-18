@@ -1837,8 +1837,8 @@
   },
   "${modID}:Crobat": {
     "NAME": "Crobat",
-    "DESCRIPTION": "{@@}Deal !D! damage NL apply !M! poison NL add a Toxin to your discard pile",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage NL apply !M! poison NL add a Toxin to your discard pile",
+    "DESCRIPTION": "{@@}Deal !D! damage NL Apply !M! poison NL Add a pokemonmaster:Toxin to your discard pile",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage NL Apply !M! poison NL Add a pokemonmaster:Toxin to your discard pile",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3915,8 +3915,8 @@
   },
   "${modID}:Shinx": {
     "NAME": "Shinx",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your Hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your Hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3925,8 +3925,8 @@
   },
   "${modID}:Luxio": {
     "NAME": "Luxio",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your Hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your Hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3935,8 +3935,8 @@
   },
   "${modID}:Luxray": {
     "NAME": "Luxray",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your Hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your Hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4625,8 +4625,8 @@
   },
   "${modID}:NsResolve": {
     "NAME": "N's Resolve",
-    "DESCRIPTION": "{@@}pokemonmaster:Supporter. Draw !M! Cards. NL Exhaust ALL cards drawn this way that are not *Dragon. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. Draw !M! Cards. NL Exhaust ALL cards drawn this way that are not *Dragon. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Draw !M! Cards. NL Exhaust ALL cards drawn this way that are not *Dragon. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Draw !M! Cards. NL Exhaust ALL cards drawn this way that are not *Dragon. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4775,8 +4775,8 @@
   },
   "${modID}:GardeniasVigor": {
     "NAME": "Gardenia's Vigor",
-    "DESCRIPTION": "{@@}Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",
+    "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4817,6 +4817,16 @@
     "NAME": "Heatmor",
     "DESCRIPTION": "{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
     "UPGRADE_DESCRIPTION":"{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Kiawe": {
+    "NAME": "Kiawe",
+    "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Exhaust 4 cards in your draw pile. NL Gain 2 Spark. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Exhaust 4 cards in your draw pile. NL Gain 2 Spark. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
