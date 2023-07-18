@@ -1807,8 +1807,8 @@
   },
   "${modID}:Gengar": {
     "NAME": "Gengar",
-    "DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies TWICE for each enemy.",
-    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies TWICE for each enemy.",
+    "DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies for each enemy.",
+    "UPGRADE_DESCRIPTION": "{@@}Ethereal. NL Deal !D! damage to ALL enemies for each enemy.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4675,8 +4675,8 @@
   },
   "${modID}:Drampa": {
     "NAME": "Drampa",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. Discard to the top !M! cards of your draw pile.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. Discard to the top !M! cards of your draw pile.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Discard the top !M! cards of your draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Discard the top !M! cards of your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4695,8 +4695,8 @@
   },
   "${modID}:TatsugiriDragon": {
     "NAME": "Tatsugiri",
-    "DESCRIPTION": "{@@}Add !M! Surfs to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Add !M! Surfs to your hand.",
+    "DESCRIPTION": "{@@}Add !M! pokemonmaster:Surfs to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Add !M! pokemonmaster:Surfs to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4707,6 +4707,116 @@
     "NAME": "Roaring Moon",
     "DESCRIPTION": "{@@}Gain !M! Strength and Dexterity. NL Discard 1 card at random.",
     "UPGRADE_DESCRIPTION":"{@@}Gain !M! Strength and Dexterity. NL Discard 1 card at random.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:WrithingMass": {
+    "NAME": "Capt. Writhing Mass",
+    "DESCRIPTION": "{@@}pokemonmaster:Choose Randomly. NL Deal !D! damage to a random enemy. NL Gain !B! Block. NL Apply !M! Weak and Vulnerable to a random enemy. NL Stun a random enemy.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Choose Randomly. NL Deal !D! damage to a random enemy. NL Gain !B! Block. NL Apply !M! Weak and Vulnerable to a random enemy. NL Stun a random enemy.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:GiantHead": {
+    "NAME": "Capt. Giant Head",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Increase this cards damage by !M!. NL Shuffle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Increase this cards damage by !M!. NL Shuffle this card into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Maw": {
+    "NAME": "Capt. Maw",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Bear": {
+    "NAME": "Capt. Bear",
+    "DESCRIPTION": "{@@}Gain !M! Dexterity.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Dexterity.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Romeo": {
+    "NAME": "Capt. Romeo",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Apply !M! Weak.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Apply !M! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Pointy": {
+    "NAME": "Capt. Pointy",
+    "DESCRIPTION": "{@@}Deal !D! damage twice.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage twice.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:GardeniasVigor": {
+    "NAME": "Gardenia's Vigor",
+    "DESCRIPTION": "{@@}Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Heracross": {
+    "NAME": "Heracross",
+    "DESCRIPTION": "{@@}Whenever a debuff is applied to you, gain !M! Strength.",
+    "UPGRADE_DESCRIPTION":"{@@}Whenever a debuff is applied to you, gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Volcanion": {
+    "NAME": "Volcanion",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Apply !M! Weak and pokemonmaster:Burned to ALL enemies.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Apply !M! Weak and pokemonmaster:Burned to ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:DelphoxV": {
+    "NAME": "Delphox V",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Exhaust ALL of your Burns. All enemies lose Strength equal to the number of Burns Exhausted.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Exhaust ALL of your Burns. All enemies lose Strength equal to the number of Burns Exhausted.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Heatmor": {
+    "NAME": "Heatmor",
+    "DESCRIPTION": "{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

@@ -5,6 +5,8 @@ import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import pokemonmaster.cards.Metal.Doublade;
+import pokemonmaster.cards.Metal.Honedge;
 import pokemonmaster.cards.StarterRelic.Act1.*;
 import pokemonmaster.cards.StarterRelic.Act2.*;
 import pokemonmaster.cards.StarterRelic.Act3.*;
@@ -109,6 +111,12 @@ public class CatchAction extends AbstractGameAction {
                 return new Sneko();
             case "SphericGuardian":
                 return new SphericGuardian();
+            case "BanditChild":
+                return new Pointy();
+            case "BanditLeader":
+                return new Romeo();
+            case "BanditBear":
+                return new Bear();
             case "BookOfStabbing":
                 return new BookOfStabbing();
             case "SlaverBoss":
@@ -125,14 +133,14 @@ public class CatchAction extends AbstractGameAction {
                 return new Nemesis();
             case "Reptomancer":
                 return new Reptomancer();
-            //case "GiantHead":
-            //    return new StoneHelm();
+            case "GiantHead":
+                return new GiantHead();
             case "Darkling":
                 return new Darkling();
             case "Exploder":
                 return new ShapeExploder();
-            //case "Maw":
-            //    return new Maw();
+            case "Maw":
+                return new Maw();
             case "Orb Walker":
                 return new OrbWalker();
             case "Spiker":
@@ -143,8 +151,8 @@ public class CatchAction extends AbstractGameAction {
                 return new SpireGrowth();
             case "Transient":
                 return new Transient();
-            //case "WrithingMass":
-            //    return new WrithingMass();
+            case "WrithingMass":
+                return new WrithingMass();
             case "TimeEater":
                 return new TimeEater();
             case "AwakenedOne":
@@ -153,10 +161,10 @@ public class CatchAction extends AbstractGameAction {
                  return new Donu();
              case "Deca":
                  return new Deca();
-            //case "SpireShield":
-            //    return new SpireShield();
-            //case "SpireSpear":
-            //    return new SpireSpear();
+            case "SpireShield":
+                return new Doublade();
+            case "SpireSpear":
+                return new Honedge();
             //case "CorruptHeart":
             //    return new SpireSpear();
             default:

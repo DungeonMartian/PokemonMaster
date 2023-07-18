@@ -465,6 +465,14 @@
 
     ]
   },
+  "${modID}:Guts": {
+    "NAME": "Guts",
+    "DESCRIPTIONS": [
+      "Whenever a #yDebuff is applied to you, gain #b",
+      " #yStrength."
+
+    ]
+  },
   "${modID}:AcidSpray": {
     "NAME": "Acid Spray",
     "DESCRIPTIONS": [

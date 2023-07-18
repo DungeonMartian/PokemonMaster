@@ -1,7 +1,7 @@
 package pokemonmaster.cards.Psychic;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.AttackDamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -39,7 +39,7 @@ public class Haunter extends BaseCard {
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         setEthereal(true);
-        this.isMultiDamage = true;
+
         purgeOnUse = true;
         this.cardsToPreview = new Gengar();
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
@@ -50,7 +50,7 @@ public class Haunter extends BaseCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster m2 : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (!m2.isDeadOrEscaped()) {
-                addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+                addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
         }
         addToBot(new MakeTempCardInDiscardAction(new Gengar(), 1));

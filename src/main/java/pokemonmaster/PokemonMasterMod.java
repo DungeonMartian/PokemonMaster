@@ -280,8 +280,8 @@ public class PokemonMasterMod implements
 
     @Override
     public void receiveStartGame() {
-        TypeRemoverClass.DOTHIS=true;
-       TypeRemoverClass.removeCards();
+        TypeRemoverClass.DOTHIS = true;
+        TypeRemoverClass.removeCards();
 
     }
 
@@ -290,6 +290,7 @@ public class PokemonMasterMod implements
         TypeRemoverClass.DOTHIS=true;
         TypeRemoverClass.removeCards();
     }
+
 
 
 }

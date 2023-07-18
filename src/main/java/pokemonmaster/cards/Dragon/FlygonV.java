@@ -51,8 +51,9 @@ public class FlygonV extends BasePokemonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
 
+
+        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
