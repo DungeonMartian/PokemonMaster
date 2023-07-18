@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Salamence extends BasePokemonCard {
+public class Salamence extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Salamence",
             1,
@@ -38,25 +38,21 @@ public class Salamence extends BasePokemonCard {
 
 
     public Salamence() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.DRAGON);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
         setBlock(BLOCK,UPG_BLOCK);
-        tags.add(CustomTags.DRAGON);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=null;
-        this.purgeOnUse = this.evolve !=null;
+        
 
-        this.cardsToPreview=this.evolve;
         this.isMultiDamage = true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
         this.exhaust=true;
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         addToBot(new GainBlockAction(p, p, block));
 

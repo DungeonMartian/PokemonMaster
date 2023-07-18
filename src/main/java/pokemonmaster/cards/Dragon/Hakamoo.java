@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Hakamoo extends BasePokemonCard {
+public class Hakamoo extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Hakamoo",
             1,
@@ -35,26 +36,21 @@ public class Hakamoo extends BasePokemonCard {
 
 
     public Hakamoo() {
-        super(cardInfo);
+        super(cardInfo,new Kommoo(),CustomTags.DRAGON);
         setCostUpgrade(0);
-        tags.add(CustomTags.DRAGON);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Kommoo();
-        this.purgeOnUse = this.evolve !=null;
 
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new MakeTempCardInDiscardAction(new Kommoo(), 1));
+
 
     }
+
     public void onMoveToDiscard() {
         this.rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();

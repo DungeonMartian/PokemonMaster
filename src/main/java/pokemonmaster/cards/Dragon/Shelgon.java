@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DamageDownPower;
 import pokemonmaster.util.Actions.EvolveActionCombat;
@@ -14,7 +15,7 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Shelgon extends BasePokemonCard {
+public class Shelgon extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Shelgon",
             1,
@@ -34,26 +35,21 @@ public class Shelgon extends BasePokemonCard {
 
 
     public Shelgon() {
-        super(cardInfo);
+        super(cardInfo,new Salamence(),CustomTags.DRAGON);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.DRAGON);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
-        this.evolve=new Salamence();
-        this.purgeOnUse = this.evolve !=null;
 
-        this.cardsToPreview=this.evolve;
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
+
+
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
-
-        addToBot(new EvolveActionCombat(this,"discard"));
     }
 
     @Override

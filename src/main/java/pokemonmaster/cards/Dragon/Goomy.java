@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DamageDownPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Goomy extends BaseCard {
+public class Goomy extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Goomy",
             0,
@@ -34,22 +35,18 @@ public class Goomy extends BaseCard {
 
 
     public Goomy() {
-        super(cardInfo);
+        super(cardInfo,new HisuianSliggo(),new HisuianGoodra(),CustomTags.DRAGON);
         setMagic(DLESS, DLESSUP);
-        tags.add(CustomTags.DRAGON);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new HisuianGoodra();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
 
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
 
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new HisuianSliggo(), 1));
+
 
     }
 
