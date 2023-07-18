@@ -13,13 +13,14 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Chinchou extends BaseCard {
+public class Chinchou extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Chinchou",
             1,
@@ -38,20 +39,17 @@ public class Chinchou extends BaseCard {
 
 
     public Chinchou() {
-        super(cardInfo);
+        super(cardInfo,new Lanturn(),new Lanturn(),CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Lanturn();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p,1)));
         AbstractPower pow = AbstractDungeon.player.getPower(Spark.POWER_ID);
@@ -60,7 +58,7 @@ public class Chinchou extends BaseCard {
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             }
         }
-        addToBot(new MakeTempCardInDiscardAction(new Lanturn(), 1));
+
     }
 
     @Override

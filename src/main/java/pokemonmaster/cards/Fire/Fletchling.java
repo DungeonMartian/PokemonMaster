@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Fletchling extends BaseCard {
+public class Fletchling extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Fletchling",
             1,
@@ -35,25 +36,22 @@ public class Fletchling extends BaseCard {
 
 
     public Fletchling() {
-        super(cardInfo);
+        super(cardInfo,new Fletchinder(),new Talonflame(),CustomTags.FIRE);
         setMagic(DRAW);
         setDamage(DAMAGE,UPG_DAMAGE);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Talonflame();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DiscardAction(p,p,p.hand.size(),true));
         addToBot(new DrawCardAction(p,magicNumber));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new MakeTempCardInDiscardAction(new Fletchinder(), 1));
+
     }
 
     @Override

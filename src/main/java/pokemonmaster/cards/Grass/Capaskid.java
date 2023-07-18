@@ -12,13 +12,14 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.cards.ChoiceCards.BulletSeed;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Capaskid extends BaseCard {
+public class Capaskid extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Capaskid",
             1,
@@ -35,18 +36,16 @@ public class Capaskid extends BaseCard {
 
 
     public Capaskid() {
-        super(cardInfo);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Scovillain();
+        super(cardInfo,new Scovillain(),new Scovillain(),CustomTags.GRASS);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         AbstractCard s = (new BulletSeed()).makeCopy();
         AbstractPower STRPOW = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
         AbstractPower FRAILPOW = AbstractDungeon.player.getPower(FrailPower.POWER_ID);
@@ -72,7 +71,7 @@ public class Capaskid extends BaseCard {
 
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(s));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(s));
-        addToBot(new MakeTempCardInDiscardAction(new Scovillain(), 1));
+
 
     }
 

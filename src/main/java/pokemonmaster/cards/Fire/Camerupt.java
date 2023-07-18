@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Camerupt extends BaseCard {
+public class Camerupt extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Camerupt",
             1,
@@ -35,24 +35,23 @@ public class Camerupt extends BaseCard {
 
 
     public Camerupt() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setDamage(DAMAGE,DAMAGEUP);
         setMagic(BURNMAGIC,BURNMAGICUP);
         this.isMultiDamage = true;
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++) {
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             addToBot(new MakeTempCardInHandAction(new Burn(), 1));
         }
-        }
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

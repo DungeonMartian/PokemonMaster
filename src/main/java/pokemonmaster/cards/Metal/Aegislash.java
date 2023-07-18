@@ -1,7 +1,9 @@
 package pokemonmaster.cards.Metal;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -9,13 +11,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Aegislash extends BaseCard {
+public class Aegislash extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Aegislash",
             1,
@@ -34,27 +36,25 @@ public class Aegislash extends BaseCard {
     private static final int UPG_DAMAGE= 1;
 
     public Aegislash() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.METAL);
         setBlock(BLOCK, UPG_BLOCK);
         setDamage(DAMAGE,UPG_DAMAGE);
         setMagic(STAT,STATUP);
         this.exhaust = true;
         this.isMultiDamage = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
                         .size() - 2).type == CardType.ATTACK){
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
-            }
+            addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
+        }
         else if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
                         .size() - 2).type == AbstractCard.CardType.SKILL){
@@ -64,6 +64,7 @@ public class Aegislash extends BaseCard {
         else; {
         }
     }
+
     public void triggerOnGlowCheck() {
         if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat

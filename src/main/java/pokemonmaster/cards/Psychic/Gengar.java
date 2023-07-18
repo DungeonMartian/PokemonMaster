@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Gengar extends BaseCard {
+public class Gengar extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Gengar",
             1,
@@ -32,26 +32,27 @@ public class Gengar extends BaseCard {
 
 
     public Gengar() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.PSYCHIC);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+        
         setEthereal(true);
         this.isMultiDamage = true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster m2 : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (!m2.isDeadOrEscaped()) {
                 addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             }
         }
-        }
-            @Override
+    }
+
+    @Override
     public AbstractCard makeCopy() { //Optional
         return new Gengar();
     }

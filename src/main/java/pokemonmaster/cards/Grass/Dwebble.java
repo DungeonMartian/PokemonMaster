@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Dwebble extends BaseCard {
+public class Dwebble extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Dwebble",
             1,
@@ -32,24 +33,21 @@ public class Dwebble extends BaseCard {
 
 
     public Dwebble() {
-        super(cardInfo);
+        super(cardInfo,new Crustle(),new Crustle(),CustomTags.GRASS);
         tags.add(CustomTags.POKEMON);
         setBlock(BLOCK, UPG_BLOCK);
 
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Crustle();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, block), block));
-        addToBot(new MakeTempCardInDiscardAction(new Crustle(), 1));
+
     }
 
     @Override

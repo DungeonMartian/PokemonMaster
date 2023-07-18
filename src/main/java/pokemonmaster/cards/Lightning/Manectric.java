@@ -7,9 +7,9 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.ChoiceCards.Collect;
 import pokemonmaster.cards.ChoiceCards.ElectricBall;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
@@ -17,7 +17,7 @@ import java.util.ArrayList;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Manectric extends BaseCard {
+public class Manectric extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Manectric",
             1,
@@ -33,17 +33,17 @@ public class Manectric extends BaseCard {
 
 
     public Manectric() {
-        super(cardInfo);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+        super(cardInfo,CustomTags.LIGHTNING);
+
         setMagic(DRAW);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> ATTACKA = new ArrayList<>();
         ATTACKA.add(new Collect());
         ElectricBall machClaw = new ElectricBall();

@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.EnergyDownPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Lucario extends BaseCard {
+public class Lucario extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Lucario",
             0,
@@ -35,24 +35,23 @@ public class Lucario extends BaseCard {
 
 
     public Lucario() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIGHTING);
         setMagic(LUCENERGY,LUCENERGYUP);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainEnergyAction(magicNumber));
         addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p,magicNumber)));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Riolu(), 1));
-
 
     }
 

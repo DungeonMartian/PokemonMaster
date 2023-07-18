@@ -5,14 +5,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.MysteryCharge;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Claydol extends BasePokemonCard {
+public class Claydol extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Claydol",
             1,
@@ -31,20 +31,17 @@ public class Claydol extends BasePokemonCard {
 
 
     public Claydol() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIGHTING);
         setMagic(MAGIC);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerFighting.png","pokemonmaster/character/cardback/bg_powerFighting_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new MysteryCharge(p,1)));
-
     }
 
     @Override

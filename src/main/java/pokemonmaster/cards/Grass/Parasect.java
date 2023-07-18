@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Parasect extends BaseCard {
+public class Parasect extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Parasect",
             1,
@@ -34,22 +34,22 @@ public class Parasect extends BaseCard {
 
 
     public Parasect() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.GRASS);
         setMagic(POISOND, POISONDUP);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.GRASS);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         addToBot(new StunMonsterAction(m,p ));
         addToBot(new PressEndTurnButtonAction());
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Parasect();

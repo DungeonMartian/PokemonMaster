@@ -11,14 +11,14 @@ import com.megacrit.cardcrawl.powers.FrailPower;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.ChoiceCards.BulletSeed;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Scovillain extends BaseCard {
+public class Scovillain extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Scovillain",
             1,
@@ -37,17 +37,15 @@ public class Scovillain extends BaseCard {
 
 
     public Scovillain() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.GRASS);
         setMagic(STRGAIN, STRGAINUP);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+ 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         AbstractCard s = (new BulletSeed()).makeCopy();
         AbstractPower STRPOW = AbstractDungeon.player.getPower(StrengthPower.POWER_ID);
         AbstractPower FRAILPOW = AbstractDungeon.player.getPower(FrailPower.POWER_ID);

@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Trevenant extends BaseCard {
+public class Trevenant extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Trevenant",
             2,
@@ -35,20 +35,19 @@ public class Trevenant extends BaseCard {
 
 
     public Trevenant() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.GRASS);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 3);
         ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 3);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackGrass.png","pokemonmaster/character/cardback/bg_attackGrass_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
     }

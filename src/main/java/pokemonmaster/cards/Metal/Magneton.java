@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Magneton extends BaseCard {
+public class Magneton extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Magneton",
             1,
@@ -35,21 +36,20 @@ public class Magneton extends BaseCard {
 
 
     public Magneton() {
-        super(cardInfo);
+        super(cardInfo,new Magnezone(),CustomTags.METAL);
         setBlock(BLOCK, UPG_BLOCK);
+        setMagic(MAGNET);
         purgeOnUse = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        this.cardsToPreview = new Magnezone();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new MakeTempCardInHandAction(new Magnet(), this.MAGNET));
+        addToBot(new MakeTempCardInHandAction(new Magnet(), magicNumber));
         addToBot(new MakeTempCardInDiscardAction(new Magnezone(), 1));
     }
 

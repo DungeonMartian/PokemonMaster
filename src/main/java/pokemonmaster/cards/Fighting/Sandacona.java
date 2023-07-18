@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Sandacona extends BaseCard {
+public class Sandacona extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Sandaconda",
             1,
@@ -33,23 +33,22 @@ public class Sandacona extends BaseCard {
 
 
     public Sandacona() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIGHTING);
         setBlock(BLOCK,BLOCKUP);
         setMagic(SILIDEX);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p,magicNumber)));
-
     }
 
     @Override

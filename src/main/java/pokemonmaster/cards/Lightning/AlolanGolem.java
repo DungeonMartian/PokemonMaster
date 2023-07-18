@@ -6,14 +6,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class AlolanGolem extends BaseCard {
+public class AlolanGolem extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "AlolanGolem",
             1,
@@ -32,18 +32,18 @@ public class AlolanGolem extends BaseCard {
 
 
     public AlolanGolem() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.LIGHTNING);
         setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new Spark(p, 1)));

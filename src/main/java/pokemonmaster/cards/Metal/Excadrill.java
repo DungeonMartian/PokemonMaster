@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.ChoiceCards.Dredge;
 import pokemonmaster.cards.ChoiceCards.MachClaw;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
@@ -15,7 +15,7 @@ import java.util.ArrayList;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Excadrill extends BaseCard {
+public class Excadrill extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Excadrill",
             2,
@@ -31,20 +31,17 @@ public class Excadrill extends BaseCard {
 
 
     public Excadrill() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.METAL);
         setDamage(DAMAGE);
         setCostUpgrade(1);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> ATTACKA = new ArrayList<>();
         ATTACKA.add(new Dredge());
         MachClaw machClaw = new MachClaw();
@@ -58,7 +55,7 @@ public class Excadrill extends BaseCard {
         machClaw.calculateCardDamage(m);
         ATTACKB.add(machClaw);
         addToBot(new ChooseOneAction(ATTACKB));
-     }
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

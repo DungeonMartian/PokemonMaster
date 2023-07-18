@@ -7,13 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Riolu extends BaseCard {
+public class Riolu extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Riolu",
             0,
@@ -33,19 +33,16 @@ public class Riolu extends BaseCard {
 
 
     public Riolu() {
-        super(cardInfo);
+        super(cardInfo,new Lucario(),new Lucario(),CustomTags.FIGHTING);
         setMagic(RIOENERGY,RIOENERGYUP);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Lucario();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SetupAction());
         if (this.upgraded) {
             addToBot(new SetupAction());

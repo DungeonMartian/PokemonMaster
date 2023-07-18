@@ -14,14 +14,14 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.ShieldEnergyPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Greninja extends BasePokemonCard {
+public class Greninja extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Greninja",
             0,
@@ -42,23 +42,19 @@ public class Greninja extends BasePokemonCard {
 
 
     public Greninja() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=null;
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
         this.rawDescription = cardStrings.DESCRIPTION;
          this.exhaust=true;
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
@@ -87,8 +83,8 @@ public class Greninja extends BasePokemonCard {
                         .size() - 2).type == CardType.CURSE){
             addToBot(new StunMonsterAction(m,p));
         }
-
     }
+
     public void triggerOnGlowCheck() {
         if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat

@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Prized;
 import pokemonmaster.util.Actions.LaprasVMAction;
@@ -14,7 +14,7 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class LaprasVMAX extends BasePokemonCard {
+public class LaprasVMAX extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "LaprasVMAX",
             0,
@@ -33,23 +33,19 @@ public class LaprasVMAX extends BasePokemonCard {
 
 
     public LaprasVMAX() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.isMultiDamage = true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
         this.rawDescription = cardStrings.DESCRIPTION ;
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        //for (int i=1; i <=EnergyPanel.totalCount; i++) {
-        //    addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
 
-        //}
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new LaprasVMAction(p, this.multiDamage, this.damageTypeForTurn, this.freeToPlayOnce, EnergyPanel.totalCount));
         addToBot(new ApplyPowerAction(p, p, new Prized(p, 1)));
     }

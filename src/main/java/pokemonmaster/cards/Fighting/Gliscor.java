@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Gliscor extends BaseCard {
+public class Gliscor extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Gliscor",
             3,
@@ -35,22 +35,22 @@ public class Gliscor extends BaseCard {
 
 
     public Gliscor() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIGHTING);
         setBlock(BLOCK,BLOCKUP);
         setMagic(POISON,POISONUP);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.FIGHTING);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
 
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Gliscor();

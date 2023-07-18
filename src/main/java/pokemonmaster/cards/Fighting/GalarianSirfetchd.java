@@ -10,14 +10,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EntanglePower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.SirFetchSnooze;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class GalarianSirfetchd extends BaseCard {
+public class GalarianSirfetchd extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "GalarianSirfetch'd",
             3,
@@ -36,19 +36,18 @@ public class GalarianSirfetchd extends BaseCard {
 
 
     public GalarianSirfetchd() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIGHTING);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFighting.png","pokemonmaster/character/cardback/bg_attackFighting_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));

@@ -12,12 +12,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Combusken extends BaseCard {
+public class Combusken extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Combusken",
             1,
@@ -37,22 +38,20 @@ public class Combusken extends BaseCard {
 
 
     public Combusken() {
-        super(cardInfo);
+        super(cardInfo, new Blaziken(),CustomTags.FIRE);
         setDamage(DAMAGE,DAMAGEUP);
         setMagic(DEXUP);
-        purgeOnUse = true;
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.EVOLVED);
-        this.cardsToPreview = new Blaziken();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Blaziken(), 1));
+
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p,magicNumber)));
 
 

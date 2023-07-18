@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DamageDownPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Dreadnaw extends BaseCard {
+public class Dreadnaw extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Dreadnaw",
             1,
@@ -35,22 +35,20 @@ public class Dreadnaw extends BaseCard {
 
 
     public Dreadnaw() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(DAMAGEDOWN,UPG_DAMAGEDOWN);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
-
 
     }
 

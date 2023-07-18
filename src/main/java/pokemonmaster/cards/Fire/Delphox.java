@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Burned;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Delphox extends BaseCard {
+public class Delphox extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Delphox",
             1,
@@ -35,19 +35,18 @@ public class Delphox extends BaseCard {
 
 
     public Delphox() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(WEAK,UPG_WEAK);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
@@ -57,8 +56,6 @@ public class Delphox extends BaseCard {
                 }
             }
         }
-
-
 
     }
 

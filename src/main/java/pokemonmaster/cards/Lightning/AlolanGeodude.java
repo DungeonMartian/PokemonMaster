@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class AlolanGeodude extends BaseCard {
+public class AlolanGeodude extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "AlolanGeodude",
             1,
@@ -34,23 +35,19 @@ public class AlolanGeodude extends BaseCard {
 
 
     public AlolanGeodude() {
-        super(cardInfo);
+        super(cardInfo,new AlolanGraveler(),new AlolanGolem(),CustomTags.LIGHTNING);
         setBlock(BLOCK, UPG_BLOCK);
-        purgeOnUse = true;
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.cardsToPreview = new AlolanGolem();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new Spark(p, 1)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new AlolanGraveler(),1));
 
     }
 

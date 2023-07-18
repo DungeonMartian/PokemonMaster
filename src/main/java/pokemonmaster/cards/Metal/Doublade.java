@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Doublade extends BaseCard {
+public class Doublade extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Doublade",
             2,
@@ -33,24 +34,22 @@ public class Doublade extends BaseCard {
     private static final int UPG_BLOCK= 1;
 
     public Doublade() {
-        super(cardInfo);
+        super(cardInfo,new Aegislash(),CustomTags.METAL);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(DEXT,DEXTUP);
-        purgeOnUse = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        this.cardsToPreview = new Aegislash();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p, magicNumber)));
-        addToBot(new MakeTempCardInDiscardAction(new Aegislash(), 1));
 
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Doublade();

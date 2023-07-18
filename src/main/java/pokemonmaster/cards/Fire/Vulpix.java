@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Vulpix extends BaseCard {
+public class Vulpix extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Vulpix",
             1,
@@ -33,23 +34,19 @@ public class Vulpix extends BaseCard {
 
 
     public Vulpix() {
-        super(cardInfo);
+        super(cardInfo,new Ninetales(),new Ninetales(),CustomTags.FIRE);
         setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Ninetales();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new MakeTempCardInHandAction(new Burn(), 1));
-        addToBot(new MakeTempCardInDiscardAction(new Ninetales(), 1));
+
 
     }
 

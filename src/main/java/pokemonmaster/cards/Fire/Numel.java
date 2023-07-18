@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Numel extends BaseCard {
+public class Numel extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Numel",
             1,
@@ -35,26 +36,24 @@ public class Numel extends BaseCard {
 
 
     public Numel() {
-        super(cardInfo);
+        super(cardInfo,new Camerupt(),new Camerupt(),CustomTags.FIRE);
         setDamage(DAMAGE);
         setMagic(BURNMAGIC,BURNMAGICUP);
         this.isMultiDamage = true;
-        purgeOnUse = true;
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.UNEVOLVED);
-        tags.add(CustomTags.POKEMON);
-        this.cardsToPreview = new Camerupt();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < this.magicNumber; i++){
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
             addToBot(new MakeTempCardInHandAction(new Burn(), 1));
         }
-        addToBot(new MakeTempCardInDiscardAction(new Camerupt(), 1));
+
     }
 
     @Override

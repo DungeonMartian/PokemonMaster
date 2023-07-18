@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Probopass extends BaseCard {
+public class Probopass extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Probopass",
             1,
@@ -33,17 +33,16 @@ public class Probopass extends BaseCard {
 
 
     public Probopass() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.METAL);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (int i = 1; i <= AbstractDungeon.player.hand.size() - 1; i++) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         }

@@ -2,19 +2,17 @@ package pokemonmaster.cards.Psychic;
 
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Shuppet extends BaseCard {
+public class Shuppet extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Shuppet",
             1,
@@ -33,23 +31,19 @@ public class Shuppet extends BaseCard {
 
 
     public Shuppet() {
-        super(cardInfo);
+        super(cardInfo,new Banette(),new Banette(),CustomTags.PSYCHIC);
         setMagic(SHUPPDRAW, SHUPPDRAWUP);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Banette();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ExhaustAction(1, false));
         addToBot(new DrawCardAction(p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Banette(),1));
+
 
     }
 

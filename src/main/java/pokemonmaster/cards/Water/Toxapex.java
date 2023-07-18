@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Toxapex extends BaseCard {
+public class Toxapex extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Toxapex",
             2,
@@ -36,19 +36,17 @@ public class Toxapex extends BaseCard {
 
 
     public Toxapex() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.WATER);
         setBlock(BLOCK,UPG_BLOCK);
         setMagic(POISON,UPG_POISON);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {

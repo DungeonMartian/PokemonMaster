@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Mareanie extends BaseCard {
+public class Mareanie extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Mareanie",
             2,
@@ -34,21 +35,18 @@ public class Mareanie extends BaseCard {
 
 
     public Mareanie() {
-        super(cardInfo);
+        super(cardInfo,new Toxapex(),new Toxapex(),CustomTags.WATER);
         setBlock(BLOCK);
         setMagic(WEAKEN,UPG_WEAKEN);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Toxapex();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
@@ -57,7 +55,6 @@ public class Mareanie extends BaseCard {
                 }
             }
         }
-        addToBot(new MakeTempCardInDiscardAction(new Toxapex(),1));
     }
 
     @Override

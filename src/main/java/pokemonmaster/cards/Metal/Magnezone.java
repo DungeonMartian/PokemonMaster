@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Magnezone extends BaseCard {
+public class Magnezone extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Magnezone",
             -1,
@@ -31,21 +31,21 @@ public class Magnezone extends BaseCard {
 
 
     public Magnezone() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.METAL);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+        setMagic(MAGNET);
+
         this.isMultiDamage = true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new WhirlwindAction(p, this.multiDamage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
-        addToBot(new MakeTempCardInHandAction(new Magnet(), this.MAGNET));
-            }
+        addToBot(new MakeTempCardInHandAction(new Magnet(), magicNumber));
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

@@ -11,13 +11,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Charjabug extends BaseCard {
+public class Charjabug extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Charjabug",
             1,
@@ -37,24 +38,21 @@ public class Charjabug extends BaseCard {
 
 
     public Charjabug() {
-        super(cardInfo);
+        super(cardInfo,new Vikavolt(),CustomTags.LIGHTNING);
         setDamage(DAMAGE);
         setMagic(SPARK, UPG_SPARK);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Vikavolt();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackLightning.png","pokemonmaster/character/cardback/bg_attackLightning_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new Spark(p, magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Vikavolt(),1));
+
     }
 
     @Override

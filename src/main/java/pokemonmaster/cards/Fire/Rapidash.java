@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Rapidash extends BaseCard {
+public class Rapidash extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Rapidash",
             1,
@@ -35,18 +35,17 @@ public class Rapidash extends BaseCard {
 
 
     public Rapidash() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setDamage(DAMAGE,DAMAGEUP);
         setBlock(BLOCK,BLOCKUP);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 

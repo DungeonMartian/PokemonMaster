@@ -7,13 +7,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.StatusDiscardBlock;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Magmar extends BaseCard {
+public class Magmar extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Magmar",
             1,
@@ -32,21 +33,17 @@ public class Magmar extends BaseCard {
 
 
     public Magmar() {
-        super(cardInfo);
+        super(cardInfo,new Magmortar(),new Magmortar(),CustomTags.FIRE);
         setMagic(FIRE,FIREUP);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.UNEVOLVED);
-        tags.add(CustomTags.POKEMON);
-        purgeOnUse = true;
-        this.cardsToPreview = new Magmortar();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerFire.png","pokemonmaster/character/cardback/bg_powerFire_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p,p, new StatusDiscardBlock(p,magicNumber)));
-        addToBot(new MakeTempCardInDiscardAction(new Magmortar(), 1));
 
     }
 

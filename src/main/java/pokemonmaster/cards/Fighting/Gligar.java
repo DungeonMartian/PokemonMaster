@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Gligar extends BaseCard {
+public class Gligar extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Gligar",
             3,
@@ -35,25 +36,21 @@ public class Gligar extends BaseCard {
 
 
     public Gligar() {
-        super(cardInfo);
+        super(cardInfo,new Gliscor(),new Gliscor(),CustomTags.FIGHTING);
         setMagic(POISOND, POISONDUP);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        tags.add(CustomTags.FIGHTING);
-        purgeOnUse = true;
-        this.cardsToPreview = new Gliscor();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m, p, this.magicNumber), this.magicNumber, AbstractGameAction.AttackEffect.POISON));
         addToBot(new StunMonsterAction(m,p ));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Gliscor(), 1));
 
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Gligar();

@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Makuhita extends BaseCard {
+public class Makuhita extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Makuhita",
             2,
@@ -35,24 +36,22 @@ public class Makuhita extends BaseCard {
 
 
     public Makuhita() {
-        super(cardInfo);
+        super(cardInfo, new Hariyama(), new Hariyama(),CustomTags.FIGHTING);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
+
         setInnate(true);
-        this.cardsToPreview = new Hariyama();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFighting.png","pokemonmaster/character/cardback/bg_attackFighting_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new StunMonsterAction(m,p ));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Hariyama(), 1));
+
 
     }
 

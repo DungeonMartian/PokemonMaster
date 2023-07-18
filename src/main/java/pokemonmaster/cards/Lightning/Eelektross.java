@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Eelektross extends BaseCard {
+public class Eelektross extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Eelektross",
             3,
@@ -34,28 +34,28 @@ public class Eelektross extends BaseCard {
 
 
     public Eelektross() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.LIGHTNING);
         setDamage(DAMAGE);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
+
         this.isMultiDamage = true;
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackLightning.png","pokemonmaster/character/cardback/bg_attackLightning_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-                for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
-                    if (!monster.isDead && !monster.isDying) {
-                        addToBot(new StunMonsterAction(monster, p));
-                    }
+        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+            for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
+                if (!monster.isDead && !monster.isDying) {
+                    addToBot(new StunMonsterAction(monster, p));
                 }
             }
+        }
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Tynamo(),1));
         }

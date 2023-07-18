@@ -11,13 +11,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Corphish extends BasePokemonCard {
+public class Corphish extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Corphish",
             0,
@@ -36,27 +37,24 @@ public class Corphish extends BasePokemonCard {
 
 
     public Corphish() {
-        super(cardInfo);
+        super(cardInfo,new Crawdaunt(),new Crawdaunt(),CustomTags.WATER);
         setDamage(DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Crawdaunt();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
         addToBot(new DiscardAction(p, p, 1, false));
         addToBot(new EvolveActionCombat(this,"discard"));
-            }
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.TakeDamagePower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Tynamo extends BaseCard {
+public class Tynamo extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Tynamo",
             3,
@@ -33,14 +34,11 @@ public class Tynamo extends BaseCard {
 
 
     public Tynamo() {
-        super(cardInfo);
+        super(cardInfo,new Eelektrik(),new Eelektross(),CustomTags.LIGHTNING);
         setMagic(MAGIC);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         setCostUpgrade(2);
-        purgeOnUse = true;
-        this.cardsToPreview = new Eelektross();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
@@ -50,7 +48,12 @@ public class Tynamo extends BaseCard {
 
         addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p,1)));
         addToBot(new ApplyPowerAction(p, p, new TakeDamagePower(p,magicNumber)));
-        addToBot(new MakeTempCardInDiscardAction(new Eelektrik(), 1));
+
+
+    }
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
     }
 

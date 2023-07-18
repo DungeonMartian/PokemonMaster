@@ -16,13 +16,14 @@ import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.ShieldEnergyPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Froakie extends BasePokemonCard {
+public class Froakie extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Froakie",
             2,
@@ -43,21 +44,17 @@ public class Froakie extends BasePokemonCard {
 
 
     public Froakie() {
-        super(cardInfo);
+        super(cardInfo,new Frogadier(),new Greninja(),CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC, UPG_MAGIC);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve = new Greninja();
-        this.purgeOnUse = this.evolve != null;
-        this.cardsToPreview = this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png", "pokemonmaster/character/cardback/bg_attackWater_p.png");
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
@@ -86,8 +83,8 @@ public class Froakie extends BasePokemonCard {
                         .size() - 2).type == CardType.CURSE){
             addToBot(new StunMonsterAction(m,p));
         }
-        addToBot(new MakeTempCardInDiscardAction(new Frogadier(), 1));
     }
+
     public void triggerOnGlowCheck() {
         if (!AbstractDungeon.actionManager.cardsPlayedThisCombat.isEmpty() && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat

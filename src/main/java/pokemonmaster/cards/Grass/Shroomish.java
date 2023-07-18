@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.ShroomishPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Shroomish extends BaseCard {
+public class Shroomish extends BasicPokemonCard {
 
     private final static CardInfo cardInfo = new CardInfo(
             "Shroomish",
@@ -34,28 +35,22 @@ public class Shroomish extends BaseCard {
 
 
     public Shroomish() {
-        super(cardInfo);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.POKEMON);
+        super(cardInfo,new Breloom(),new Breloom(),CustomTags.GRASS);
+
         setMagic(MUSHPUNCH, MUSHPUNCHUP);
-        purgeOnUse = true;
-        this.cardsToPreview = new Breloom();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractCard s = (new Breloom()).makeCopy();
-        if (upgraded) {
-            s.upgrade();
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(s, 1));
-        } else {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(s, 1));
-        }
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
+
         addToBot(new ApplyPowerAction(p, p, new ShroomishPower(p, magicNumber)));
     }
+
     public void upgrade() {
         if (!this.upgraded) {
             upgradeName();

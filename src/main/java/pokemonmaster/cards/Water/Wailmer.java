@@ -7,12 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Wailmer extends BaseCard {
+public class Wailmer extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Wailmer",
             -1,
@@ -31,21 +32,20 @@ public class Wailmer extends BaseCard {
 
 
     public Wailmer() {
-        super(cardInfo);
+        super(cardInfo,new Wailord(),new Wailord(),CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Wailord();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
 
+
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SkewerAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse));
-        addToBot(new MakeTempCardInDiscardAction(new Wailord(), 1));
+
 
     }
 

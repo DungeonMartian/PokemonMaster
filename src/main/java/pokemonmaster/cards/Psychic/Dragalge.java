@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Dragalge extends BasePokemonCard {
+public class Dragalge extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Dragalge",
             2,
@@ -36,12 +36,11 @@ public class Dragalge extends BasePokemonCard {
 
 
     public Dragalge() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.PSYCHIC);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
+
 
         this.isMultiDamage = true;
         this.exhaust=true;
@@ -49,21 +48,24 @@ public class Dragalge extends BasePokemonCard {
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-    for (int i =0; i <3; i++) {
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-    }
-        if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
-                if (!monster.isDead && !monster.isDying) {
-                    addToBot(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, magicNumber), magicNumber));
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
+            for (int i =0; i <3; i++) {
+                addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+            }
+            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
+                    if (!monster.isDead && !monster.isDying) {
+                        addToBot(new ApplyPowerAction(monster, p, new PoisonPower(monster, p, magicNumber), magicNumber));
+                    }
                 }
             }
-        }
-    AbstractCard S = new Skrelp();
-    if(this.upgraded){S.upgrade();}
-       addToBot(new MakeTempCardInDiscardAction(S, 1));
+            AbstractCard S = new Skrelp();
+            if(this.upgraded){S.upgrade();}
+            addToBot(new MakeTempCardInDiscardAction(S, 1));
+
     }
 
     @Override

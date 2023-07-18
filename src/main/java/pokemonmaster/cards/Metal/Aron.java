@@ -10,13 +10,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DrawDownPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Aron extends BaseCard {
+public class Aron extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Aron",
             1,
@@ -36,24 +37,20 @@ public class Aron extends BaseCard {
 
 
     public Aron() {
-        super(cardInfo);
+        super(cardInfo,new Lairon(),new Aggron(),CustomTags.METAL);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(DRAWDOWN);
-        purgeOnUse = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.cardsToPreview = new Aggron();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new DrawDownPower(p,DRAWDOWN)));
-        addToBot(new MakeTempCardInDiscardAction(new Lairon(), 1));
+
     }
 
     @Override

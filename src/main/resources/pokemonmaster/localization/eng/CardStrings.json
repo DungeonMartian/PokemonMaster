@@ -191,8 +191,8 @@
   },
   "${modID}:Magneton": {
     "NAME": "Magneton",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Add 2 pokemonmaster:Magnets to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Add 2 pokemonmaster:Magnets to your hand.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Add !M! pokemonmaster:Magnets to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Add !M! pokemonmaster:Magnets to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -201,8 +201,8 @@
   },
   "${modID}:Magnezone": {
     "NAME": "Magnezone",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies X times. NL Add 2 pokemonmaster:Magnets to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage to ALL enemies X times. NL Add 2 pokemonmaster:Magnets to your hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies X times. NL Add !M! pokemonmaster:Magnets to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage to ALL enemies X times. NL Add !M! pokemonmaster:Magnets to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

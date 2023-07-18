@@ -11,13 +11,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Darumaka extends BasePokemonCard {
+public class Darumaka extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Darumaka",
             1,
@@ -36,29 +37,22 @@ public class Darumaka extends BasePokemonCard {
 
 
     public Darumaka() {
-        super(cardInfo);
+        super(cardInfo,new Darmanitan(),new Darmanitan(),CustomTags.FIRE);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Darmanitan();
-        this.purgeOnUse = this.evolve !=null;
 
-        this.cardsToPreview=this.evolve;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new EvolveActionCombat(this,"discard"));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p,magicNumber)));
         addToBot(new DamageCallbackAction(p, new DamageInfo(p, (int) (damage*.5), DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.NONE, integer -> {
             //addToBot(new DamageAction(p, new DamageInfo(p, integer, DamageInfo.DamageType.THORNS)));
-    }));
+        }));
     }
 
     @Override

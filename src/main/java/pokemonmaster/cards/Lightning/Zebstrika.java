@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Zebstrika extends BaseCard {
+public class Zebstrika extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Zebstrika",
             1,
@@ -31,17 +31,17 @@ public class Zebstrika extends BaseCard {
 
 
     public Zebstrika() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.LIGHTNING);
         setMagic(DRAW, UPG_DRAW);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DiscardAction(p,p,p.hand.size(),true));
         addToBot(new DrawCardAction(p,magicNumber));

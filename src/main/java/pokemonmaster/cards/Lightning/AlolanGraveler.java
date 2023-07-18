@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class AlolanGraveler extends BaseCard {
+public class AlolanGraveler extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "AlolanGraveler",
             1,
@@ -34,24 +35,20 @@ public class AlolanGraveler extends BaseCard {
 
 
     public AlolanGraveler() {
-        super(cardInfo);
+        super(cardInfo,new AlolanGolem(),CustomTags.LIGHTNING);
         setBlock(BLOCK, UPG_BLOCK);
-        purgeOnUse = true;
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        this.cardsToPreview = new AlolanGolem();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new Spark(p, 1)));
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new AlolanGolem(),1));
-
     }
 
     @Override

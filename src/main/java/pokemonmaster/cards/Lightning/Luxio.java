@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Luxio extends BasePokemonCard {
+public class Luxio extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Luxio",
             1,
@@ -35,22 +36,19 @@ public class Luxio extends BasePokemonCard {
 
 
     public Luxio() {
-        super(cardInfo);
+        super(cardInfo,new Luxray(),CustomTags.LIGHTNING);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Luxray();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackLightning.png","pokemonmaster/character/cardback/bg_attackLightning_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Luxray(),1));
+
 
     }
 

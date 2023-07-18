@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Burned;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Braixen extends BaseCard {
+public class Braixen extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Braixen",
             1,
@@ -35,25 +36,21 @@ public class Braixen extends BaseCard {
 
 
     public Braixen() {
-        super(cardInfo);
+        super(cardInfo,new Delphox(),CustomTags.FIRE);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(WEAK,UPG_WEAK);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Delphox();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(m, p, new Burned(m,2)));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m,magicNumber,false)));
-        addToBot(new MakeTempCardInDiscardAction(new Delphox(), 1));
 
     }
 

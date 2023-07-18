@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Snom extends BaseCard {
+public class Snom extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Snom",
             1,
@@ -32,25 +33,22 @@ public class Snom extends BaseCard {
 
 
     public Snom() {
-        super(cardInfo);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Frosmoth();
+        super(cardInfo,new Frosmoth(),new Frosmoth(),CustomTags.WATER);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
         tags.add(CustomTags.BAIT);
         this.misc=40;
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ExhaustAction(1, false));
         addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, 1)));
         if (this.upgraded) {
             addToBot(new ApplyPowerAction(p, p, new DrawCardNextTurnPower(p, 1)));
         }
-        addToBot(new MakeTempCardInDiscardAction(new Frosmoth(),1));
+
     }
 
     @Override

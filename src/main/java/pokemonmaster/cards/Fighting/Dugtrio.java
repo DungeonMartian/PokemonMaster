@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.TakeDamagePower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Dugtrio extends BasePokemonCard {
+public class Dugtrio extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Dugtrio",
             1,
@@ -33,18 +33,18 @@ public class Dugtrio extends BasePokemonCard {
 
 
     public Dugtrio() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIGHTING);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFighting.png","pokemonmaster/character/cardback/bg_attackFighting_p.png");
         this.isMultiDamage = true;
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         addToBot(new ApplyPowerAction(p, p, new TakeDamagePower(p,5)));

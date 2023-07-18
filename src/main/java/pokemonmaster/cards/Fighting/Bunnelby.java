@@ -10,13 +10,14 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Bunnelby extends BasePokemonCard {
+public class Bunnelby extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Bunnelby",
             1,
@@ -35,15 +36,11 @@ public class Bunnelby extends BasePokemonCard {
 
 
     public Bunnelby() {
-        super(cardInfo);
+        super(cardInfo,new Diggersby(),new Diggersby(),CustomTags.FIGHTING);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         tags.add(CardTags.STRIKE);
-        this.purgeOnUse = true;
-        this.evolve=new Diggersby();
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFighting.png","pokemonmaster/character/cardback/bg_attackFighting_p.png");
     }
 
@@ -52,11 +49,16 @@ public class Bunnelby extends BasePokemonCard {
 
     public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+            }
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p,2,false)));
-        addToBot(new EvolveActionCombat(this,"discard"));
+
         //AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Diggersby(), 1));
-            }
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

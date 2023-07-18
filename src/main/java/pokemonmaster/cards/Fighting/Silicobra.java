@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Silicobra extends BaseCard {
+public class Silicobra extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Silicobra",
             1,
@@ -35,25 +36,21 @@ public class Silicobra extends BaseCard {
 
 
     public Silicobra() {
-        super(cardInfo);
+        super(cardInfo,new Sandacona(),new Sandacona(),CustomTags.FIGHTING);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(SILIDEX);
-        tags.add(CustomTags.FIGHTING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Sandacona();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
     }
 
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p,1)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Sandacona(), magicNumber));
     }
 
     @Override

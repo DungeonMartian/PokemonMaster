@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
@@ -16,7 +17,7 @@ import java.util.function.Predicate;
 import static pokemonmaster.CustomTags.POKEMON;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Porygon extends BasePokemonCard {
+public class Porygon extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Porygon",
             1,
@@ -32,31 +33,28 @@ public class Porygon extends BasePokemonCard {
 
 
     public Porygon() {
-        super(cardInfo);
+        super(cardInfo,new Porygon2(),new PorygonZ(),CustomTags.NORMAL);
         setMagic(EVOLVE);
         setCostUpgrade(0);
-        tags.add(CustomTags.NORMAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
+
         tags.add(CardTags.HEALING);
 
-        this.purgeOnUse = true;
-        this.evolve=new PorygonZ();
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillNormal.png","pokemonmaster/character/cardback/bg_skillNormal_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelectCardsInHandAction(magicNumber, "choose card to evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 addToBot(new EvolveActionCombat(i, "hand"));
 
             }
         }));
-        addToBot(new MakeTempCardInDiscardAction(new Porygon2(), 1));
+
 
     }
 

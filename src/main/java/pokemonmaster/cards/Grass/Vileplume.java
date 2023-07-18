@@ -6,14 +6,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.VileplumePower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Vileplume extends BaseCard {
+public class Vileplume extends FinalEvolutionCard {
     private static final int GREENANGRY = 1;
 
 
@@ -35,23 +35,21 @@ public class Vileplume extends BaseCard {
 
 
     public Vileplume() {
-        super(cardInfo);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+        super(cardInfo,CustomTags.GRASS);
+
         setMagic(GREENANGRY);
         setSelfRetain(false,true);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerGrass.png","pokemonmaster/character/cardback/bg_powerGrass_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new ApplyPowerAction(p, p, new VileplumePower(p,magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p,99,false)));
     }
-
 
 
     @Override

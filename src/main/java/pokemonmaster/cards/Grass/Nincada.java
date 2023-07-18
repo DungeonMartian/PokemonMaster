@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Nincada extends BaseCard {
+public class Nincada extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Nincada",
             2,
@@ -36,24 +36,21 @@ public class Nincada extends BaseCard {
 
 
     public Nincada() {
-        super(cardInfo);
+        super(cardInfo,new Ninjask(),new Ninjask(),CustomTags.GRASS);
         setDamage(DAMAGE);
         setMagic(NINBUF,NINBUFUP);
-        purgeOnUse = true;
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.cardsToPreview = new Ninjask();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackGrass.png","pokemonmaster/character/cardback/bg_attackGrass_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new BufferPower(p,magicNumber)));
-        addToBot(new MakeTempCardInDiscardAction(new Ninjask(), 1));
         addToBot(new MakeTempCardInDiscardAction(new Shedinja(), 1));
     }
 

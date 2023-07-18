@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Eelektrik extends BaseCard {
+public class Eelektrik extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Eelektrik",
             2,
@@ -30,23 +31,20 @@ public class Eelektrik extends BaseCard {
 
 
     public Eelektrik() {
-        super(cardInfo);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+        super(cardInfo,new Eelektross(),CustomTags.LIGHTNING);
+
         setCostUpgrade(1);
-        purgeOnUse = true;
-        this.cardsToPreview = new Eelektross();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p,1)));
-        addToBot(new MakeTempCardInDiscardAction(new Eelektross(), 1));
+
 
     }
 

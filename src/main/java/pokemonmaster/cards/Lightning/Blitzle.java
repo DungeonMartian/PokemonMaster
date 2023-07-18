@@ -2,18 +2,17 @@ package pokemonmaster.cards.Lightning;
 
 import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Blitzle extends BaseCard {
+public class Blitzle extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Blitzle",
             1,
@@ -32,23 +31,19 @@ public class Blitzle extends BaseCard {
 
 
     public Blitzle() {
-        super(cardInfo);
+        super(cardInfo,new Zebstrika(),new Zebstrika(),CustomTags.LIGHTNING);
         setMagic(DRAW, UPG_DRAW);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.purgeOnUse=true;
-        this.cardsToPreview=new Zebstrika();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DiscardAction(p,p,1,false));
         addToBot(new DrawCardAction(p,magicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new Zebstrika(),1));
 
     }
 

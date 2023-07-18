@@ -9,13 +9,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.MagExhaustPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Bronzor extends BaseCard {
+public class Bronzor extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Bronzor",
             1,
@@ -34,25 +35,21 @@ public class Bronzor extends BaseCard {
 
 
     public Bronzor() {
-        super(cardInfo);
+        super(cardInfo,new Bronzong(),new Bronzong(),CustomTags.METAL);
         setBlock(BLOCK);
         setMagic(MAGEX, MAGEXUP);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Bronzong();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new MakeTempCardInHandAction(new Magnet(), 1));
         addToBot(new ApplyPowerAction(p, p, new MagExhaustPower(p,magicNumber)));
-        addToBot(new MakeTempCardInDiscardAction(new Bronzong(), 1));
+
     }
 
     @Override

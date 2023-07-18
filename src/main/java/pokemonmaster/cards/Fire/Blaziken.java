@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Blaziken extends BaseCard {
+public class Blaziken extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Blaziken",
             1,
@@ -35,22 +35,21 @@ public class Blaziken extends BaseCard {
 
 
     public Blaziken() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setDamage(DAMAGE,DAMAGEUP);
-        tags.add(CustomTags.POKEMON);
+
         setMagic(DEXUP);
         this.exhaust=true;
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.EVOLVED);
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new DexterityPower(p,magicNumber)));
-
 
     }
 

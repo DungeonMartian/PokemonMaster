@@ -10,6 +10,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.EnergizedBluePower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Prized;
 import pokemonmaster.util.Actions.EvolveActionCombat;
@@ -17,7 +18,7 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class LaprasV extends BasePokemonCard {
+public class LaprasV extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "LaprasV",
             2,
@@ -36,29 +37,24 @@ public class LaprasV extends BasePokemonCard {
 
 
     public LaprasV() {
-        super(cardInfo);
+        super(cardInfo,new LaprasVMAX(),new LaprasVMAX(),CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new LaprasVMAX();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new EnergizedBluePower(p, magicNumber)));
         addToBot(new ApplyPowerAction(p, p, new Prized(p, 1)));
 
 
-        addToBot(new EvolveActionCombat(this,"discard"));
-            }
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

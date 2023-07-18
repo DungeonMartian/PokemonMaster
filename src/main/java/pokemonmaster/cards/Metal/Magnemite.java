@@ -7,12 +7,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Magnemite extends BaseCard {
+public class Magnemite extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Magnemite",
             0,
@@ -31,21 +32,19 @@ public class Magnemite extends BaseCard {
 
 
     public Magnemite() {
-        super(cardInfo);
+        super(cardInfo,new Magneton(),new Magnezone(),CustomTags.METAL);
         setMagic(MAGNET, MAGNETUP);
-        purgeOnUse = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.cardsToPreview = new Magnezone();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new MakeTempCardInHandAction(new Magnet(), this.magicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new Magneton(), 1));
+
     }
 
 

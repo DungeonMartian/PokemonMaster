@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Ferrothorn extends BaseCard {
+public class Ferrothorn extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Ferrothorn",
             4,
@@ -31,18 +31,17 @@ public class Ferrothorn extends BaseCard {
 
 
     public Ferrothorn() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.METAL);
         setBlock(BLOCK, UPG_BLOCK);
         setCostUpgrade(3);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
     }

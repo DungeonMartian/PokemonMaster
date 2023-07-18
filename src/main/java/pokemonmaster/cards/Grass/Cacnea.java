@@ -12,12 +12,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.ThornsPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Cacnea extends BaseCard {
+public class Cacnea extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Cacnea",
             1,
@@ -38,27 +39,26 @@ public class Cacnea extends BaseCard {
 
 
     public Cacnea() {
-        super(cardInfo);
+        super(cardInfo,new Cacturne(),new Cacturne(),CustomTags.GRASS);
         setDamage(DAMAGE, DAMAGEUP);
         setMagic(THORNS, THORNSUP);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        tags.add(CustomTags.LIGHTNING);
-        purgeOnUse = true;
-        this.cardsToPreview = new Cacturne();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackGrass.png","pokemonmaster/character/cardback/bg_attackGrass_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         if (this.target != null && m.getIntentBaseDmg() >= 0) {
             addToBot(new ApplyPowerAction(p, p, new ThornsPower(p,magicNumber)));
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
         }
-        addToBot(new MakeTempCardInDiscardAction(new Cacturne(), 1));
+
     }
+
     public void triggerOnGlowCheck() {
         this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
         for (AbstractMonster m : (AbstractDungeon.getCurrRoom()).monsters.monsters) {

@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Electrike extends BaseCard {
+public class Electrike extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Electrike",
             0,
@@ -29,25 +30,23 @@ public class Electrike extends BaseCard {
 
 
     public Electrike() {
-        super(cardInfo);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+        super(cardInfo,new Manectric(),new Manectric(),CustomTags.LIGHTNING);
+
         setMagic(DRAW);
-        purgeOnUse = true;
-        this.cardsToPreview = new Manectric();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
         if (this.upgraded) {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Electrike(),1));
         }
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Manectric(),1));
+
 
     }
 

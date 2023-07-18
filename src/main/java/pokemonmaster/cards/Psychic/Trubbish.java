@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Trubbish extends BaseCard {
+public class Trubbish extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Trubbish",
             1,
@@ -33,22 +34,21 @@ public class Trubbish extends BaseCard {
 
 
     public Trubbish() {
-        super(cardInfo);
+        super(cardInfo,new Garbodor(),new Garbodor(),CustomTags.PSYCHIC);
         setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.cardsToPreview = new Garbodor();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new MakeTempCardInHandAction(new Dazed(),5));
-        addToBot(new MakeTempCardInDiscardAction(new Garbodor(),1));
+
     }
 
     @Override

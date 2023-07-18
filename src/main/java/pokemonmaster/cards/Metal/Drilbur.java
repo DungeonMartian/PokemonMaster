@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Drilbur extends BaseCard {
+public class Drilbur extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Drilbur",
             1,
@@ -34,24 +35,22 @@ public class Drilbur extends BaseCard {
     private static final int BLOCK = 4;
     private static final int UPG_BLOCK= 2;
     public Drilbur() {
-        super(cardInfo);
+        super(cardInfo,new Excadrill(),new Excadrill(),CustomTags.METAL);
         setDamage(DAMAGE, UPG_DAMAGE);
         setBlock(BLOCK, UPG_BLOCK);
-        purgeOnUse = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        this.cardsToPreview = new Excadrill();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
 
     }
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new MakeTempCardInDiscardAction(new Excadrill(), 1));
+
 
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Drilbur();

@@ -6,14 +6,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Burned;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Salazzle extends BasePokemonCard {
+public class Salazzle extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Salazzle",
             1,
@@ -32,24 +32,18 @@ public class Salazzle extends BasePokemonCard {
 
 
     public Salazzle() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.PSYCHIC);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m,p,magicNumber)));
         addToBot(new ApplyPowerAction(m, p, new Burned(m, magicNumber)));
-
 
     }
 

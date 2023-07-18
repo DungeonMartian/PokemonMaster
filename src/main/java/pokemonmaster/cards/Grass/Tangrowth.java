@@ -6,13 +6,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NoxiousFumesPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Tangrowth extends BaseCard {
+public class Tangrowth extends FinalEvolutionCard {
 
 
 
@@ -34,22 +34,20 @@ public class Tangrowth extends BaseCard {
 
 
     public Tangrowth() {
-        super(cardInfo);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.POKEMON);
+        super(cardInfo,CustomTags.GRASS);
+
         setMagic(POISONTURN,POISONTURNUP);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerGrass.png","pokemonmaster/character/cardback/bg_powerGrass_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new NoxiousFumesPower(p,magicNumber)));
     }
 
-   
 
     @Override
     public AbstractCard makeCopy() { //Optional

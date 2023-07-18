@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class GalarianFarfetchd extends BaseCard {
+public class GalarianFarfetchd extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "GalarianFarfetch'd",
             0,
@@ -34,23 +35,20 @@ public class GalarianFarfetchd extends BaseCard {
 
 
     public GalarianFarfetchd() {
-        super(cardInfo);
+        super(cardInfo, new GalarianSirfetchd(), new GalarianSirfetchd(),CustomTags.FIGHTING);
         setMagic(FARFETC, FARFECTUP);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        tags.add(CustomTags.FIGHTING);
+
         tags.add(CardTags.HEALING);
-        purgeOnUse = true;
-        this.cardsToPreview = new GalarianSirfetchd();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFighting.png","pokemonmaster/character/cardback/bg_skillFighting_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
         addToBot(new HealAction(p, p, this.magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new GalarianSirfetchd(), 1));
     }
 
     @Override

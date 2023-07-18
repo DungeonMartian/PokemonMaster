@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NextTurnBlockPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Wooper extends BaseCard {
+public class Wooper extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Wooper",
             1,
@@ -33,23 +34,20 @@ public class Wooper extends BaseCard {
 
 
     public Wooper() {
-        super(cardInfo);
+        super(cardInfo,new Quagsire(),new Quagsire(),CustomTags.WATER);
         setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Quagsire();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(p, p, new NextTurnBlockPower(p, this.block), this.block));
-        addToBot(new MakeTempCardInDiscardAction(new Quagsire(), 1));
+
     }
 
     @Override

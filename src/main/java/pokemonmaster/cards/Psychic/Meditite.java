@@ -11,12 +11,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Meditite extends BaseCard {
+public class Meditite extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Meditite",
             3,
@@ -28,22 +29,19 @@ public class Meditite extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     public Meditite() {
-        super(cardInfo);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Medicham();
+        super(cardInfo,new Medicham(),new Medicham(),CustomTags.PSYCHIC);
+
         setCostUpgrade(2);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Dazed(), 2, false, true));
         addToBot(new ApplyPowerAction(p, p, new IntangiblePlayerPower(p, 1), 1));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Medicham(),1));
+
 
     }
 

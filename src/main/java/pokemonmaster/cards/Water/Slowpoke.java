@@ -11,15 +11,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Burned;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Slowpoke extends BasePokemonCard {
+public class Slowpoke extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Slowpoke",
             1,
@@ -39,26 +38,21 @@ public class Slowpoke extends BasePokemonCard {
     private static final int UPG_MAGIC = 2;
 
     public Slowpoke() {
-        super(cardInfo);
+        super(cardInfo,new Slowbro(),new Slowbro(),CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Slowbro();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(m, p, new Burned(m, 2)));
 
-        addToBot(new EvolveActionCombat(this,"discard"));
-            }
+    }
 
     @Override
     public void triggerOnManualDiscard() {

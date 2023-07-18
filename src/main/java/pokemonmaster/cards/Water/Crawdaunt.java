@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Crawdaunt extends BasePokemonCard {
+public class Crawdaunt extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Crawdaunt",
             0,
@@ -34,12 +34,10 @@ public class Crawdaunt extends BasePokemonCard {
 
 
     public Crawdaunt() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.WATER);
         setDamage(DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
@@ -50,6 +48,12 @@ public class Crawdaunt extends BasePokemonCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new DiscardAction(p, p, 1, false));
     }
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
+
+    }
+
     public void applyPowers() {
         AbstractPower strength = AbstractDungeon.player.getPower("Strength");
         if (strength != null)

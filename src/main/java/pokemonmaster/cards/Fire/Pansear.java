@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Pansear extends BaseCard {
+public class Pansear extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Pansear",
             1,
@@ -32,22 +33,18 @@ public class Pansear extends BaseCard {
 
 
     public Pansear() {
-        super(cardInfo);
+        super(cardInfo,new Simisear(),new Simisear(),CustomTags.FIRE);
         setMagic(DRAWF, DRAWFUP);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Simisear();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DrawCardAction(magicNumber));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Simisear(), 1));
+
 
     }
 

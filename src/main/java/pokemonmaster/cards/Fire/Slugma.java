@@ -10,17 +10,17 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Slugma extends BaseCard {
+public class Slugma extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Slugma",
-            2,
+            1,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.COMMON,
@@ -36,19 +36,16 @@ public class Slugma extends BaseCard {
 
 
     public Slugma() {
-        super(cardInfo);
+        super(cardInfo, new Magcargo(), new Magcargo(),CustomTags.FIRE);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.cardsToPreview = new Magcargo();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         AbstractPower pow = AbstractDungeon.player.getPower(Spark.POWER_ID);
         if (pow != null) {
@@ -57,8 +54,9 @@ public class Slugma extends BaseCard {
                 addToBot(new RemoveSpecificPowerAction(p, p, pow));
             }
         }
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-            }
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.FIRE));
+
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

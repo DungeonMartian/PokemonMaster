@@ -8,13 +8,13 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Garbodor extends BaseCard {
+public class Garbodor extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Garbodor",
             1,
@@ -33,18 +33,18 @@ public class Garbodor extends BaseCard {
 
 
     public Garbodor() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.PSYCHIC);
         setMagic(DAMAGE,UPG_DAMAGE);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.isMultiDamage=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         addToBot(new MakeTempCardInDiscardAction(new Trubbish(),1));
     }

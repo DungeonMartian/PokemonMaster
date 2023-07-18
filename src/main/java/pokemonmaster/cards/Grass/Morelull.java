@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Morelull extends BaseCard {
+public class Morelull extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Morelull",
             2,
@@ -36,24 +37,20 @@ public class Morelull extends BaseCard {
 
 
     public Morelull() {
-        super(cardInfo);
+        super(cardInfo,new Shiinotic(),new Shiinotic(),CustomTags.GRASS);
         setBlock(BLOCK);
         setMagic(LULLDEBURFF);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Shiinotic();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
-        addToBot(new MakeTempCardInDiscardAction(new Shiinotic(), 1));
         if (upgraded) {
             addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
         }

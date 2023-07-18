@@ -6,15 +6,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Burned;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Salandit extends BasePokemonCard {
+public class Salandit extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Salandit",
             1,
@@ -33,23 +32,19 @@ public class Salandit extends BasePokemonCard {
 
 
     public Salandit() {
-        super(cardInfo);
+        super(cardInfo,new Salazzle(),new Salazzle(),CustomTags.PSYCHIC);
         setMagic(MAGIC,UPG_MAGIC);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.evolve=new Salazzle();
-        this.purgeOnUse = this.evolve !=null;
-        this.cardsToPreview=this.evolve;
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
 
-        addToBot(new EvolveActionCombat(this,"discard"));
         addToBot(new ApplyPowerAction(m, p, new PoisonPower(m,p,magicNumber)));
         addToBot(new ApplyPowerAction(m, p, new Burned(m, magicNumber)));
 

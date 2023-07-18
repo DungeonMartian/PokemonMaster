@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Burned;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Fennekin extends BaseCard {
+public class Fennekin extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Fennekin",
             1,
@@ -33,23 +34,21 @@ public class Fennekin extends BaseCard {
 
 
     public Fennekin() {
-        super(cardInfo);
+        super(cardInfo,new Braixen(),new Delphox(),CustomTags.FIRE);
         setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Delphox();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new ApplyPowerAction(m, p, new Burned(m,2)));
-        addToBot(new MakeTempCardInDiscardAction(new Braixen(), 1));
+
 
     }
 

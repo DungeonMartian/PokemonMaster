@@ -9,12 +9,13 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Nosepass extends BaseCard {
+public class Nosepass extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Nosepass",
             1,
@@ -32,25 +33,24 @@ public class Nosepass extends BaseCard {
 
 
     public Nosepass() {
-        super(cardInfo);
+        super(cardInfo, new Probopass(), new Probopass(),CustomTags.METAL);
         setMagic(NOSEBLOCK, NOSEBLOCKUP);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        purgeOnUse = true;
-        this.cardsToPreview = new Probopass();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new MakeTempCardInHandAction(new Magnet(), 1));
         applyPowers();
         addToBot(new GainBlockAction(p, p, this.block+1));
-        addToBot(new MakeTempCardInDiscardAction(new Probopass(), 1));
+
     }
+
     public void applyPowers() {
         int count = 0;
         for (AbstractCard c : AbstractDungeon.player.hand.group) {

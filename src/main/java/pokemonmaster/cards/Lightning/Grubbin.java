@@ -8,13 +8,14 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Grubbin extends BaseCard {
+public class Grubbin extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Grubbin",
             1,
@@ -33,23 +34,20 @@ public class Grubbin extends BaseCard {
 
 
     public Grubbin() {
-        super(cardInfo);
+        super(cardInfo,new Charjabug(),new Vikavolt(),CustomTags.LIGHTNING);
         setMagic(SPARK, UPG_SPARK);
-        purgeOnUse = true;
-        this.cardsToPreview = new Vikavolt();
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
 
         addToBot(new ApplyPowerAction(p, p, new Spark(p, magicNumber)));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Charjabug(),1));
 
     }
 

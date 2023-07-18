@@ -10,13 +10,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.DrawDownPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Lairon extends BaseCard {
+public class Lairon extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Lairon",
             1,
@@ -36,24 +37,18 @@ public class Lairon extends BaseCard {
 
 
     public Lairon() {
-        super(cardInfo);
+        super(cardInfo,new Aggron(),CustomTags.METAL);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(DRAWDOWN);
-        purgeOnUse = true;
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        this.cardsToPreview = new Aggron();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
 
     }
 
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new DrawDownPower(p,DRAWDOWN)));
-        addToBot(new MakeTempCardInDiscardAction(new Aggron(), 1));
 
     }
 

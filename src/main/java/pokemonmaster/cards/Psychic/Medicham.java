@@ -8,9 +8,9 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.ChoiceCards.Blunder;
 import pokemonmaster.cards.ChoiceCards.Crash;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
@@ -18,7 +18,7 @@ import java.util.ArrayList;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Medicham extends BaseCard {
+public class Medicham extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Medicham",
             1,
@@ -37,18 +37,16 @@ public class Medicham extends BaseCard {
 
 
     public Medicham() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.PSYCHIC);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.PSYCHIC);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToTop(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         ArrayList<AbstractCard> ATTACKA = new ArrayList<>();
         ATTACKA.add(new Crash());

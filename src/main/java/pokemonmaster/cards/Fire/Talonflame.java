@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Talonflame extends BaseCard {
+public class Talonflame extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Talonflame",
             1,
@@ -36,19 +36,17 @@ public class Talonflame extends BaseCard {
 
 
     public Talonflame() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setMagic(ENERGY,UPG_ENERGY);
         setDamage(DAMAGE,UPG_DAMAGE);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DiscardAction(p,p,p.hand.size(),true));
         addToBot(new DrawCardAction(p,3));
         addToBot(new GainEnergyAction(magicNumber));

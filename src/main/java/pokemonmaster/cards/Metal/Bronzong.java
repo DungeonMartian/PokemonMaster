@@ -6,14 +6,14 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.BronzongPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Bronzong extends BaseCard {
+public class Bronzong extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Bronzong",
             2,
@@ -34,20 +34,18 @@ public class Bronzong extends BaseCard {
 
 
     public Bronzong() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.METAL);
         setMagic(MAGEXHAUST, MAGEXHAUSTUP);
-        setInnate(false, true);
-        tags.add(CustomTags.METAL);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerMetal.png","pokemonmaster/character/cardback/bg_powerMetal_p.png");
 
     }
 
 
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new MakeTempCardInHandAction(new Magnet(), 1));
         addToBot(new ApplyPowerAction(p, p, new BronzongPower(p,magicNumber)));
     }

@@ -10,12 +10,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Gloom extends BaseCard {
+public class Gloom extends IntermediateEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Gloom",
             0,
@@ -34,25 +35,22 @@ public class Gloom extends BaseCard {
 
 
     public Gloom() {
-        super(cardInfo);
+        super(cardInfo,new Vileplume(),CustomTags.GRASS);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(VULNE);
         this.isMultiDamage = true;
-        purgeOnUse = true;
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.POKEMON);
-        this.cardsToPreview = new Vileplume();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackGrass.png","pokemonmaster/character/cardback/bg_attackGrass_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         addToBot(new ApplyPowerAction(p, p, new VulnerablePower(p,magicNumber,false)));
-        addToBot(new MakeTempCardInDiscardAction(new Vileplume(), 1));
+
     }
 
     @Override

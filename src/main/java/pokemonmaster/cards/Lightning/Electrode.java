@@ -7,14 +7,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Electrode extends BaseCard {
+public class Electrode extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Electrode",
             2,
@@ -33,21 +33,20 @@ public class Electrode extends BaseCard {
 
 
     public Electrode() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.LIGHTNING);
         setMagic(SPARKGAIN,UPG_SPARKGAIN);
-        tags.add(CustomTags.LIGHTNING);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         int count = AbstractDungeon.player.hand.size();
         for (int i = 0; i < count; i++) {
-                addToTop(new ExhaustAction(1, true, true));
+            addToTop(new ExhaustAction(1, true, true));
             addToBot(new ApplyPowerAction(p, p, new Spark(p, magicNumber)));
         }
 

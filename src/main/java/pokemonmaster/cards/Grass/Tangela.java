@@ -8,12 +8,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.NoxiousFumesPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Tangela extends BaseCard {
+public class Tangela extends BasicPokemonCard {
 
 
 
@@ -35,23 +36,20 @@ public class Tangela extends BaseCard {
 
 
     public Tangela() {
-        super(cardInfo);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.EVOLVED);
+        super(cardInfo,new Tangrowth(),new Tangrowth(),CustomTags.GRASS);
+
         setMagic(POISONTURN,POISONTURNUP);
-        tags.add(CustomTags.POKEMON);
-        this.cardsToPreview = new Tangrowth();
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerGrass.png","pokemonmaster/character/cardback/bg_powerGrass_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new NoxiousFumesPower(p,magicNumber)));
-        addToBot(new MakeTempCardInDiscardAction(new Tangrowth(), 1));
-    }
 
+    }
 
 
     @Override

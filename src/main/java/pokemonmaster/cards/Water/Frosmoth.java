@@ -10,13 +10,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DrawCardNextTurnPower;
 import com.megacrit.cardcrawl.powers.EnergizedPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Frosmoth extends BaseCard {
+public class Frosmoth extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Frosmoth",
             1,
@@ -33,18 +33,17 @@ public class Frosmoth extends BaseCard {
 
 
     public Frosmoth() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.WATER);
         setCostUpgrade(0);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         this.magicNumber=p.hand.size();
         addToBot(new SelectCardsInHandAction(this.magicNumber, "Exhaust", true, true, c -> true, list -> {
             for (AbstractCard c : list) {

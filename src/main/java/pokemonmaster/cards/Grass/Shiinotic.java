@@ -9,13 +9,13 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Shiinotic extends BaseCard {
+public class Shiinotic extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Shiinotic",
             2,
@@ -36,19 +36,19 @@ public class Shiinotic extends BaseCard {
 
 
     public Shiinotic() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.GRASS);
         setBlock(BLOCK);
         setMagic(LULLDEBURFF,LULLDEBURFFUP);
-        tags.add(CustomTags.GRASS);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
+
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
     }
 
+
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster mblock : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (!mblock.isDeadOrEscaped() && mblock.getIntentBaseDmg() >= 0) {
                 addToBot(new GainBlockAction(p, p, mblock.getIntentDmg()));
@@ -58,6 +58,7 @@ public class Shiinotic extends BaseCard {
         addToBot(new ApplyPowerAction(m, p, new WeakPower(m, this.magicNumber, false), this.magicNumber));
         addToBot(new ApplyPowerAction(m, p, new StrengthPower(m, -this.magicNumber), -this.magicNumber));
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Shiinotic();

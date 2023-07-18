@@ -8,14 +8,14 @@ import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.NinetalesBurn;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Ninetales extends BaseCard {
+public class Ninetales extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Ninetales",
             1,
@@ -34,19 +34,16 @@ public class Ninetales extends BaseCard {
 
 
     public Ninetales() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.POKEMON);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillFire.png","pokemonmaster/character/cardback/bg_skillFire_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new MakeTempCardInHandAction(new Burn(), 1));
         addToBot(new ApplyPowerAction(p, p, new NinetalesBurn(p,2)));
