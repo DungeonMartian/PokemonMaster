@@ -159,6 +159,7 @@
 ///        PSYCHICTYPE.add(DeoxysS.ID);
 ///        PSYCHICTYPE.add(GalarianArticuno.ID);
 ///        PSYCHICTYPE.add(Gastly.ID);
+///        PSYCHICTYPE.add(Zubat.ID);
 ///        PSYCHICTYPE.add(Giratina.ID);
 ///        PSYCHICTYPE.add(HorrorEnergy.ID);
 ///        PSYCHICTYPE.add(LostCity.ID);

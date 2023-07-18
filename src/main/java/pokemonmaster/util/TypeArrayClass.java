@@ -13,6 +13,7 @@ public abstract class TypeArrayClass {
         PSYCICTYPE.add(DeoxysA.ID);
         PSYCICTYPE.add(DeoxysS.ID);
         PSYCICTYPE.add(Gastly.ID);
+        PSYCICTYPE.add(Zubat.ID);
         PSYCICTYPE.add(Giratina.ID);
         PSYCICTYPE.add(LostCity.ID);
         PSYCICTYPE.add(Meditite.ID);
