@@ -34,9 +34,20 @@ public class TypeRemoverClass {
                 Random randNum = new Random();
                 randNum.setSeed(Settings.seed);
                 Set<Integer> set = new LinkedHashSet<Integer>();
-                while (set.size() < 7) {
-                    set.add(randNum.nextInt(9) + 1);
+                // Integer randInt1 = 1;
+                Integer randInt1 = randNum.nextInt(9) + 1; // TODO uncomment
+                Integer randInt2 = randNum.nextInt(8) + 1;
+                if (randInt2 >= randInt1) {
+                    randInt2 += 1;
                 }
+
+                // add all integers from 1 to 9 except for the two random ones to the set
+                for (int i = 1; i < 10; i++) {
+                    if (i != randInt1 && i != randInt2) {
+                        set.add(i);
+                    }
+                }
+
 
                 ArrayList<String> DARKTYPE = new ArrayList<>();
                 DARKTYPE.add(Absol.ID);
@@ -234,6 +245,7 @@ public class TypeRemoverClass {
                 PSYCHICTYPE.add(DeoxysS.ID);
                 PSYCHICTYPE.add(GalarianArticuno.ID);
                 PSYCHICTYPE.add(Gastly.ID);
+                PSYCHICTYPE.add(Zubat.ID);
                 PSYCHICTYPE.add(Giratina.ID);
                 PSYCHICTYPE.add(HisuianTyphlosionV.ID);
                 PSYCHICTYPE.add(HorrorEnergy.ID);

@@ -1815,6 +1815,36 @@
       ""
     ]
   },
+  "${modID}:Zubat": {
+    "NAME": "Zubat",
+    "DESCRIPTION": "{@@}NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "{@@}NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Golbat": {
+    "NAME": "Golbat",
+    "DESCRIPTION": "{@@}NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "{@@}NL Deal !D! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Crobat": {
+    "NAME": "Crobat",
+    "DESCRIPTION": "{@@}Deal !D! damage NL apply !M! poison NL add a Toxin to your discard pile",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage NL apply !M! poison NL add a Toxin to your discard pile",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Meditite": {
     "NAME": "Meditite",
     "DESCRIPTION": "{@@}Gain 1 Intangible. NL Add 2 Dazed to the top of your draw pile.",
