@@ -37,12 +37,6 @@ public class Raichu extends FinalEvolutionCard {
         tags.add(CardTags.STRIKE);
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
-
-
-
-     }
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
