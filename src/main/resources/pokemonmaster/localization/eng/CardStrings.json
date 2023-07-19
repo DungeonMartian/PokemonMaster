@@ -161,8 +161,8 @@
   },
   "${modID}:Toxin": {
     "NAME": "Toxin",
-    "DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M!.",
-    "UPGRADE_DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M!.",
+    "DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M! NL Discard and draw a card",
+    "UPGRADE_DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M! NL Discard and draw a card",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
