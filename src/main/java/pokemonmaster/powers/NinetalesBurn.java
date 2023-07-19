@@ -1,12 +1,14 @@
 package pokemonmaster.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -28,8 +30,10 @@ public class NinetalesBurn extends BasePower implements CloneablePowerInterface 
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
+
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {
             flash();
+
             addToBot(new ApplyPowerAction(info.owner, AbstractDungeon.player, new Burned(info.owner,  this.amount), this.amount));
         }
         return damageAmount;

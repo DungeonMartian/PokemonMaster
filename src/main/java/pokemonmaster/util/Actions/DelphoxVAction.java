@@ -1,6 +1,7 @@
 package pokemonmaster.util.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -8,6 +9,7 @@ import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
+import com.megacrit.cardcrawl.vfx.combat.ScreenOnFireEffect;
 
 public class DelphoxVAction extends AbstractGameAction {
     int STRENGTHDOWN;
@@ -35,6 +37,7 @@ public class DelphoxVAction extends AbstractGameAction {
         if (STRENGTHDOWN >0) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
                 if (!monster.isDead && !monster.isDying) {
+                    AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ScreenOnFireEffect(), 0.1F));
                     addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new StrengthPower(monster, -STRENGTHDOWN)));
                 }
             }

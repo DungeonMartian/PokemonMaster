@@ -27,8 +27,10 @@ public class BurningScarfPower extends BasePower implements CloneablePowerInterf
     }
 
     public int onAttacked(DamageInfo info, int damageAmount) {
+
         if (info.owner != null && info.type != DamageInfo.DamageType.THORNS && info.type != DamageInfo.DamageType.HP_LOSS && info.owner != this.owner) {
             flash();
+
             addToBot(new ApplyPowerAction(info.owner, AbstractDungeon.player, new Burned(info.owner,  this.amount), this.amount));
         }
         return damageAmount;

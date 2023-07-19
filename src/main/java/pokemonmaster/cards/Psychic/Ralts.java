@@ -16,7 +16,7 @@ public class Ralts extends BasicPokemonCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.RARE,
+            CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
@@ -27,7 +27,7 @@ public class Ralts extends BasicPokemonCard {
     public Ralts() {
         super(cardInfo, new Kirlia(), new Gardevoir(), CustomTags.PSYCHIC);
         setBlock(BLOCK, UPG_BLOCK);
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 

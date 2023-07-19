@@ -27,7 +27,7 @@ public class Kirlia extends BasicPokemonCard {
     public Kirlia() {
         super(cardInfo, new Gardevoir(), new Gardevoir(), CustomTags.PSYCHIC);
         setBlock(BLOCK, UPG_BLOCK);
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 

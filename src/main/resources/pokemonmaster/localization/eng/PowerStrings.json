@@ -434,6 +434,13 @@
       " #yThorns."
     ]
   },
+  "${modID}:PichuPower": {
+    "NAME": "Pichu Power",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP from a card, gain #b",
+      " #ySpark."
+    ]
+  },
   "${modID}:ToxicSpikes": {
     "NAME": "Toxic Spikes",
     "DESCRIPTIONS": [

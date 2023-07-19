@@ -1,12 +1,15 @@
 package pokemonmaster.cards.Fire;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Burn;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.FlameBarrierEffect;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -44,6 +47,8 @@ public class Ninetales extends FinalEvolutionCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new FlameBarrierEffect(p.hb.cX, p.hb.cY), 0.1F));
+
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new MakeTempCardInHandAction(new Burn(), 1));
         addToBot(new ApplyPowerAction(p, p, new NinetalesBurn(p,2)));
