@@ -1,10 +1,13 @@
 package pokemonmaster.cards.Psychic;
 
+import com.badlogic.gdx.graphics.Color;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.InstantKillAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -33,7 +36,7 @@ public class Unown extends BaseCard {
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         this.baseMagicNumber=0;
-
+        tags.add(CardTags.HEALING);
         this.isMagicNumberModified = this.baseMagicNumber != this.magicNumber;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
         this.rawDescription = cardStrings.DESCRIPTION;
@@ -46,6 +49,22 @@ public class Unown extends BaseCard {
                 for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
                     if (!monster.isDead && !monster.isDying) {
                         addToBot(new InstantKillAction(monster));
+                        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new GiantEyeEffect(monster.hb.cX, monster.hb.cY, Color.PURPLE), 0.1F));
+
+                    }
+                }
+            }
+
+        }
+    }
+
+    public void triggerOnGlowCheck() {
+        this.glowColor = AbstractCard.BLUE_BORDER_GLOW_COLOR.cpy();
+        if (magicNumber >= 35){
+            if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
+                for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
+                    if (!monster.isDead && !monster.isDying) {
+                        this.glowColor = AbstractCard.GOLD_BORDER_GLOW_COLOR.cpy();
                     }
                 }
             }
@@ -53,8 +72,6 @@ public class Unown extends BaseCard {
 
 
     }
-
-
     @Override
     public void applyPowers() {
         this.magicNumber= AbstractDungeon.actionManager.cardsPlayedThisTurn.size();

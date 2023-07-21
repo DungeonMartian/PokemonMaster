@@ -40,7 +40,34 @@ public abstract class BasicPokemonCard extends PokemonCard {
         onUse(p, m);
         // if this.nextEvolution is not None
         if (this.nextEvolution != null && !this.isDuplicate) {
-            addToBot(new MakeTempCardInDiscardAction(this.nextEvolution.makeCopy(), 1));
+            AbstractCard TOEVOLVE =this.nextEvolution.makeCopy();
+            if (this.isCostModified | this.isCostModifiedForTurn){
+                if (this.isCostModified){
+
+                    if (this.cost == 0){
+                        TOEVOLVE.cost = 0;
+                        TOEVOLVE.costForTurn = 0;
+                    }
+                    else {
+                        int NEW = this.baseCost -this.cost;
+                        TOEVOLVE.costForTurn -= NEW;
+                        TOEVOLVE.cost -=  NEW;
+                    }
+                    TOEVOLVE.isCostModified = true;
+                }
+                if (this.isCostModifiedForTurn){
+
+                    if (this.costForTurn == 0){
+                        TOEVOLVE.costForTurn = 0;
+                    }
+                    else{
+                        int NEW = this.baseCost - this.cost;
+                        TOEVOLVE.costForTurn -= NEW;
+                    }
+                    TOEVOLVE.isCostModifiedForTurn=true;
+                }
+            }
+            addToBot(new MakeTempCardInDiscardAction(TOEVOLVE, 1));
         }
 
         if (!isDuplicate){

@@ -3,6 +3,7 @@ package pokemonmaster.cards;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
 import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardQueueItem;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.core.Settings;
@@ -32,7 +33,34 @@ public abstract class IntermediateEvolutionCard extends EvolvedPokemonCard {
         onUse(p, m);
         // if this.nextEvolution is not None
         if (this.finalEvolution != null && !this.isDuplicate) {
-            addToBot(new MakeTempCardInDiscardAction(this.finalEvolution.makeCopy(), 1));
+            AbstractCard TOEVOLVE =this.finalEvolution.makeCopy();
+            if (this.isCostModified | this.isCostModifiedForTurn){
+                if (this.isCostModified){
+
+                    if (this.cost == 0){
+                        TOEVOLVE.cost = 0;
+                        TOEVOLVE.costForTurn = 0;
+                    }
+                    else {
+                        int NEW = this.baseCost -this.cost;
+                        TOEVOLVE.costForTurn -= NEW;
+                        TOEVOLVE.cost -=  NEW;
+                    }
+                    TOEVOLVE.isCostModified = true;
+                }
+                if (this.isCostModifiedForTurn){
+
+                    if (this.costForTurn == 0){
+                        TOEVOLVE.costForTurn = 0;
+                    }
+                    else{
+                        int NEW = this.baseCost - this.cost;
+                        TOEVOLVE.costForTurn -= NEW;
+                    }
+                    TOEVOLVE.isCostModifiedForTurn=true;
+                }
+            }
+            addToBot(new MakeTempCardInDiscardAction(TOEVOLVE, 1));
         }
 
         if (!isDuplicate){

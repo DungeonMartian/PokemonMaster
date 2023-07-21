@@ -4888,7 +4888,7 @@
     "DESCRIPTION": "{@@}If you've played at least 35 cards this turn, kill ALL enemies.",
     "UPGRADE_DESCRIPTION":"{@@}If you've played at least 35 cards this turn, kill ALL enemies.",
     "EXTENDED_DESCRIPTION": [
-      "NL (You've played !M! cards)",
+      " NL (You've played !M! cards)",
       "",
       ""
     ]
