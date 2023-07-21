@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.OldCemeteryPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -35,7 +36,7 @@ public class OldCemetary extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new ApplyPowerAction(p, p, new pokemonmaster.powers.OldCemetary(p,magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new OldCemeteryPower(p,magicNumber)));
 
 
     }

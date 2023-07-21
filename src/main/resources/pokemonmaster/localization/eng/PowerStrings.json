@@ -463,6 +463,13 @@
       " #yPoison each time an enemy attacks you this turn.."
     ]
   },
+  "${modID}:OldCemeteryPower": {
+    "NAME": "Old Cemetery",
+    "DESCRIPTIONS": [
+      "Whenever an enemy performs a non-attack action, they take #b",
+      " damage."
+    ]
+  },
   "${modID}:MagmaBasin": {
     "NAME": "Magma Basin",
     "DESCRIPTIONS": [

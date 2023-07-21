@@ -43,7 +43,6 @@ public class Scyther extends BaseCard {
         tags.add(CustomTags.GRASS);
         tags.add(CustomTags.UNEVOLVED);
         tags.add(CustomTags.POKEMON);
-        this.isDamageModified=true;
         this.returnToHand=true;
         tags.add(CardTags.STRIKE);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackGrass.png","pokemonmaster/character/cardback/bg_attackGrass_p.png");
