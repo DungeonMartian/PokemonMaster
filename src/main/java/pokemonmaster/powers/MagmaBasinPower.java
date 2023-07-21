@@ -1,9 +1,12 @@
 package pokemonmaster.powers;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.RedFireballEffect;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -28,6 +31,8 @@ public class MagmaBasinPower extends BasePower {
 
 
     public void atStartOfTurn() {
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new RedFireballEffect(this.owner.hb.cX-5,this.owner.hb.cY,this.owner.hb.cX+5,this.owner.hb.cY, 3), 0.1F));
+
         addToTop(new LoseHPAction(owner,owner,4));
         addToTop(new ApplyPowerAction(this.owner, this.owner, new Spark(this.owner, this.amount), this.amount));
     }

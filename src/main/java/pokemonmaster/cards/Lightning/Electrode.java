@@ -1,11 +1,13 @@
 package pokemonmaster.cards.Lightning;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -49,6 +51,7 @@ public class Electrode extends FinalEvolutionCard {
             addToTop(new ExhaustAction(1, true, true));
             addToBot(new ApplyPowerAction(p, p, new Spark(p, magicNumber)));
         }
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ExplosionSmallEffect(p.hb.cX, p.hb.cY), 0.3F));
 
     }
 
