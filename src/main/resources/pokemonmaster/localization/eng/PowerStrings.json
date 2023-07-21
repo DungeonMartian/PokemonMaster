@@ -448,6 +448,14 @@
       " #ySpark."
     ]
   },
+  "${modID}:Refinement": {
+    "NAME": "Refinement",
+    "DESCRIPTIONS": [
+      "At the start of your turn draw #b",
+      " cards and add #b",
+      " #yDazed to your discard pile."
+    ]
+  },
   "${modID}:ToxicSpikes": {
     "NAME": "Toxic Spikes",
     "DESCRIPTIONS": [

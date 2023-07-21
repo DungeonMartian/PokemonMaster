@@ -28,8 +28,8 @@ public class HisuianElectrodeV extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE =9;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE =15;
+    private static final int UPG_DAMAGE = 5;
 
 
 

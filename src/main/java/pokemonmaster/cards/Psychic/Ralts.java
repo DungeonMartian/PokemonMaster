@@ -1,6 +1,8 @@
 package pokemonmaster.cards.Psychic;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
+import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
@@ -13,27 +15,27 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Ralts extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Ralts",
-            1,
+            0,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.SPECIAL,
+            CardRarity.UNCOMMON,
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
+    private static final int MAGIC = 1;
 
-    private static final int BLOCK = 4;
-    private static final int UPG_BLOCK = 4;
 
     public Ralts() {
         super(cardInfo, new Kirlia(), new Gardevoir(), CustomTags.PSYCHIC);
-        setBlock(BLOCK, UPG_BLOCK);
+        setMagic(MAGIC);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new GainBlockAction(p, p, block));
+        addToBot(new MakeTempCardInDiscardAction(new Dazed(),1));
+        addToBot(new DrawCardAction(p,1));
         }
 }
 

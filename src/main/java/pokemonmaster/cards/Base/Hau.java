@@ -39,10 +39,7 @@ public class Hau extends BaseCard {
         tags.add(CustomTags.SUPPORTER);
     }
 
-    @Override
-    public void applyPowers() {
 
-    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);

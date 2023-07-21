@@ -1,12 +1,10 @@
 package pokemonmaster.cards.Dragon;
 
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
@@ -20,7 +18,7 @@ public class Axew extends BasicPokemonCard {
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.SPECIAL,
+            CardRarity.COMMON,
             PokemonMaster.Enums.CARD_COLOR);
 
 

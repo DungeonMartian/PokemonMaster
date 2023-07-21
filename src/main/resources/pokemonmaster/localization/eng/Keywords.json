@@ -77,6 +77,19 @@
     "DESCRIPTION": "If you are in an Elite or Boss room, this card has a bonus effect."
   },
   {
+    "PROPER_NAME": "Volt-Turn",
+    "NAMES": [
+      "voltturn",
+      "volt-turn",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Every 5 cards you play in a turn, this card returns to your hand from your discard pile."
+  },
+  {
     "PROPER_NAME": "Surf",
     "NAMES": [
       "surf",
