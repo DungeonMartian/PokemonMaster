@@ -23,19 +23,20 @@ public class Ralts extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
     private static final int MAGIC = 1;
-
+    private static final int UPG_MAGIC = 1;
 
     public Ralts() {
         super(cardInfo, new Kirlia(), new Gardevoir(), CustomTags.PSYCHIC);
-        setMagic(MAGIC);
+        setMagic(MAGIC,UPG_MAGIC);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new MakeTempCardInDiscardAction(new Dazed(),1));
-        addToBot(new DrawCardAction(p,1));
+        addToBot(new MakeTempCardInDiscardAction(new Dazed(),magicNumber));
+        addToBot(new DrawCardAction(p,magicNumber));
         }
 }
 

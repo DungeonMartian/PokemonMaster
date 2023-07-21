@@ -20,6 +20,7 @@ public class Gardevoir extends FinalEvolutionCard {
             CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
     private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 1;
 
 
     public static final String ID = makeID(cardInfo.baseId);
@@ -27,7 +28,7 @@ public class Gardevoir extends FinalEvolutionCard {
     public Gardevoir() {
         super(cardInfo, CustomTags.PSYCHIC);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
-        setMagic(MAGIC);
+        setMagic(MAGIC,UPG_MAGIC);
     }
 
     @Override

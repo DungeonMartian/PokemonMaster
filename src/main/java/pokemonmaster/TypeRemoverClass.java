@@ -272,7 +272,7 @@ public class TypeRemoverClass {
                 PSYCHICTYPE.add(Sigilyph.ID);
                 PSYCHICTYPE.add(Trubbish.ID);
                 PSYCHICTYPE.add(Zubat.ID);
-                PSYCHICTYPE.add(Ralts.ID);
+                PSYCHICTYPE.add(Unown.ID);
 
 
                 ArrayList<String> WATERTYPE = new ArrayList<>();

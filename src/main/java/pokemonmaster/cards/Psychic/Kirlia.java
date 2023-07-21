@@ -23,10 +23,11 @@ public class Kirlia extends BasicPokemonCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int MAGIC = 1;
+    private static final int UPG_MAGIC = 1;
 
     public Kirlia() {
         super(cardInfo, new Gardevoir(), new Gardevoir(), CustomTags.PSYCHIC);
-        setMagic(MAGIC);
+        setMagic(MAGIC,UPG_MAGIC);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerPsychic.png","pokemonmaster/character/cardback/bg_powerPsychic_p.png");
 
     }
