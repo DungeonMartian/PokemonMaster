@@ -17,7 +17,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class RoaringMoon extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "RoaringMoon",
-            1,
+            2,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.UNCOMMON,

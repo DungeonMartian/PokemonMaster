@@ -51,6 +51,19 @@
     "DESCRIPTION": "Unplayable #yStatus card that deals damage to you when drawn. Increases the amount each time it's drawn."
   },
   {
+    "PROPER_NAME": "Held Item",
+    "NAMES": [
+      "Held Item",
+      "Held_Item",
+      "held_item",
+      "Held_item",
+      "held_Item",
+      ""
+
+    ],
+    "DESCRIPTION": "Held Items are played automatically at the start of combat, but only one of them. They all purge at start of combat regardless."
+  },
+  {
     "PROPER_NAME": "Rivalry",
     "NAMES": [
       "rivalry",

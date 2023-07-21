@@ -686,6 +686,16 @@
       ""
     ]
   },
+  "${modID}:GoldBerry": {
+    "NAME": "Gold Berry",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Heal !M! HP.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Heal !M! HP.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:HypnoToxicLaser": {
     "NAME": "Hypno Toxic Laser",
     "DESCRIPTION": "{@@}If the target is Poisoned, apply *Stunned. NL Apply !M! Poison. NL Exhaust.",
