@@ -4893,6 +4893,36 @@
       ""
     ]
   },
+  "${modID}:Diancie": {
+    "NAME": "Diancie",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw !M! cards.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw !M! cards.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:TapuLele": {
+    "NAME": "Tapu Lele",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL This cards damage is increased by !M! times your current energy.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL This cards damage is increased by !M! times your current energy.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Chimecho": {
+    "NAME": "Chimecho",
+    "DESCRIPTION": "{@@}Seek a *Pokemon and a pokemonmaster:Supporter. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Seek a *Pokemon and a pokemonmaster:Supporter. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",

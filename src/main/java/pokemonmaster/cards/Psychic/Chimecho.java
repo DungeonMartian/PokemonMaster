@@ -1,44 +1,45 @@
 package pokemonmaster.cards.Psychic;
 
-import com.megacrit.cardcrawl.actions.common.GainBlockAction;
+import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
+import java.util.function.Predicate;
+
+import static pokemonmaster.CustomTags.POKEMON;
+import static pokemonmaster.CustomTags.SUPPORTER;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class PsychicBlock extends BasePokemonCard {
+public class Chimecho extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "",
+            "Chimecho",
             1,
             CardType.SKILL,
             CardTarget.SELF,
-            CardRarity.BASIC,
+            CardRarity.COMMON,
             PokemonMaster.Enums.CARD_COLOR);
 
 
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK= 3;
 
 
 
-    public PsychicBlock() {
+
+    public Chimecho() {
         super(cardInfo);
-        setBlock(BLOCK, UPG_BLOCK);
+        setCostUpgrade(0);
+        this.exhaust=true;
         tags.add(CustomTags.PSYCHIC);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-        this.purgeOnUse = this.evolve !=null;
-        this.evolve=null;
-        this.cardsToPreview=this.evolve;
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }
@@ -46,13 +47,16 @@ public class PsychicBlock extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new GainBlockAction(p, p, block));
-        addToBot(new EvolveActionCombat(this,"discard"));
+        addToBot(new FetchAction(p.drawPile,(Predicate<AbstractCard>) card -> card.hasTag(POKEMON),1, abstractCards -> {
+        }));
+        addToBot(new FetchAction(p.drawPile,(Predicate<AbstractCard>) card -> card.hasTag(SUPPORTER),1, abstractCards -> {
+        }));
+
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new PsychicBlock();
+        return new Chimecho();
     }
 }
 
