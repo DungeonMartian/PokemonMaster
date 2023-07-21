@@ -1817,8 +1817,8 @@
   },
   "${modID}:Zubat": {
     "NAME": "Zubat",
-    "DESCRIPTION": "{@@}NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "{@@}NL Deal !D! damage.",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1827,8 +1827,8 @@
   },
   "${modID}:Golbat": {
     "NAME": "Golbat",
-    "DESCRIPTION": "{@@}NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "{@@}NL Deal !D! damage.",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1837,8 +1837,8 @@
   },
   "${modID}:Crobat": {
     "NAME": "Crobat",
-    "DESCRIPTION": "{@@}Deal !D! damage NL Apply !M! poison NL Add a pokemonmaster:Toxin to your discard pile",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage NL Apply !M! poison NL Add a pokemonmaster:Toxin to your discard pile",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage NL Apply !M! poison NL Add a pokemonmaster:Toxin to your discard pile",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage NL Apply !M! poison NL Add a pokemonmaster:Toxin to your discard pile",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1847,8 +1847,8 @@
   },
   "${modID}:Ralts": {
     "NAME": "Ralts",
-    "DESCRIPTION": "{@@}Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block.",
+    "DESCRIPTION": "{@@}Draw !M! Card{!M!|>1=s}. NL Add !M! Dazed to your discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Draw !M! Card{!M!|>1=s}. NL Add !M! Dazed to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1857,8 +1857,8 @@
   },
   "${modID}:Kirlia": {
     "NAME": "Kirlia",
-    "DESCRIPTION": "{@@}Gain !B! Block.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block.",
+    "DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! Dazed to your discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! Dazed to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1867,8 +1867,8 @@
   },
   "${modID}:Gardevoir": {
     "NAME": "Gardevoir",
-    "DESCRIPTION": "{@@}Gain !B! Block NL Discard a card, if you do draw two card.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block NL Discard a card, if you do draw two card.",
+    "DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! *Ralts to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! *Ralts to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3553,7 +3553,7 @@
       ""
     ]
   },
-  "${modID}:GalarianMoltres": {
+  "${modID}:GalarianMoltresGX": {
     "NAME": "Galarian Moltres GX",
     "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Exhaust 2 random cards in your discard pile. Gain 1 pokemonmaster:Spark.",
     "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Exhaust 2 random cards in your discard pile. Gain 1 pokemonmaster:Spark.",
@@ -3945,8 +3945,8 @@
   },
   "${modID}:Shinx": {
     "NAME": "Shinx",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3955,8 +3955,8 @@
   },
   "${modID}:Luxio": {
     "NAME": "Luxio",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3965,8 +3965,8 @@
   },
   "${modID}:Luxray": {
     "NAME": "Luxray",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Every time you play 5 cards, return this card from the discard pile to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Every time you play 5 cards, return this card from the discard pile to your hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4383,10 +4383,10 @@
       ""
     ]
   },
-  "${modID}:GalarianMoltresGX": {
-    "NAME": "Galarian Moltres GX",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
+  "${modID}:GalarianMoltres": {
+    "NAME": "Galarian Moltres",
+    "DESCRIPTION": "{@@}Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4859,6 +4859,26 @@
     "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Exhaust 4 cards in your draw pile. NL Gain 2 Spark. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:OldCemetery": {
+    "NAME": "Old Cemetery",
+    "DESCRIPTION": "{@@}Whenever an enemy performs a non-attack action, they take !M! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}Whenever an enemy performs a non-attack action, they take !M! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Unown": {
+    "NAME": "Unown",
+    "DESCRIPTION": "{@@}If you've played at least 35 cards this turn, kill ALL enemies.",
+    "UPGRADE_DESCRIPTION":"{@@}If you've played at least 35 cards this turn, kill ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "NL (You've played !M! cards)",
       "",
       ""
     ]

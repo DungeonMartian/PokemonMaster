@@ -56,8 +56,8 @@ public class TypeRemoverClass {
                 DARKTYPE.add(DarkraiGX.ID);
                 DARKTYPE.add(Ekans.ID);
                 DARKTYPE.add(EternatusV.ID);
-                DARKTYPE.add(GalarianMoltres.ID);
                 DARKTYPE.add(GalarianMoltresGX.ID);
+                DARKTYPE.add(GalarianMoltres.ID);
                 DARKTYPE.add(Grimer.ID);
                 DARKTYPE.add(Gulpin.ID);
                 DARKTYPE.add(HisuianSamurottV.ID);
@@ -261,7 +261,9 @@ public class TypeRemoverClass {
                 PSYCHICTYPE.add(Munna.ID);
                 PSYCHICTYPE.add(Natu.ID);
                 PSYCHICTYPE.add(Nihilego.ID);
+                PSYCHICTYPE.add(OldCemetary.ID);
                 PSYCHICTYPE.add(ParfumPalace.ID);
+                PSYCHICTYPE.add(Ralts.ID);
                 PSYCHICTYPE.add(RotomV.ID);
                 PSYCHICTYPE.add(Sableye.ID);
                 PSYCHICTYPE.add(Salandit.ID);

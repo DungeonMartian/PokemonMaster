@@ -30,7 +30,7 @@ public class Wheezing extends FinalEvolutionCard {
 
     private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE= 2;
-    private static final int POISON = 4;
+    private static final int POISON = 5;
     private static final int UPG_POISON= 2;
 
 
