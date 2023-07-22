@@ -41,6 +41,13 @@
       "Whenever you #yExhaust a card, gain 1 #yTemporary HP."
     ]
   },
+  "${modID}:FirstEdition": {
+    "NAME": "First Edition",
+    "FLAVOR": "It's a collector item Mom!",
+    "DESCRIPTIONS": [
+      "Gain #b50 #yGold for each Rare card in your deck."
+    ]
+  },
   "${modID}:SharkBait": {
     "NAME": "Shark Bait",
     "FLAVOR": "Hoo Ha Hah!",

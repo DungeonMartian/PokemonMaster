@@ -246,9 +246,11 @@ public class TypeRemoverClass {
 
                 ArrayList<String> PSYCHICTYPE = new ArrayList<>();
                 PSYCHICTYPE.add(Blacephalon.ID);
+                PSYCHICTYPE.add(Chimecho.ID);
                 PSYCHICTYPE.add(DeoxysD.ID);
                 PSYCHICTYPE.add(DeoxysA.ID);
                 PSYCHICTYPE.add(DeoxysS.ID);
+                PSYCHICTYPE.add(Diancie.ID);
                 PSYCHICTYPE.add(GalarianArticuno.ID);
                 PSYCHICTYPE.add(Gastly.ID);
                 PSYCHICTYPE.add(Giratina.ID);
@@ -270,6 +272,7 @@ public class TypeRemoverClass {
                 PSYCHICTYPE.add(Skrelp.ID);
                 PSYCHICTYPE.add(Shuppet.ID);
                 PSYCHICTYPE.add(Sigilyph.ID);
+                PSYCHICTYPE.add(TapuLele.ID);
                 PSYCHICTYPE.add(Trubbish.ID);
                 PSYCHICTYPE.add(Zubat.ID);
                 PSYCHICTYPE.add(Unown.ID);
@@ -325,6 +328,7 @@ public class TypeRemoverClass {
                 DRAGONTYPE.add(PalkiaGX.ID);
                 DRAGONTYPE.add(Regidrago.ID);
                 DRAGONTYPE.add(Rayquaza.ID);
+                DRAGONTYPE.add(RoaringMoon.ID);
                 DRAGONTYPE.add(SalamenceV.ID);
                 DRAGONTYPE.add(TatsugiriDragon.ID);
                 DRAGONTYPE.add(Turtonator.ID);
