@@ -2,7 +2,6 @@ package pokemonmaster.relics;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
-import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.jar.PokemonMaster;
 
@@ -42,7 +41,7 @@ public class FirstEdition extends BaseRelic {
     }
 
     public boolean canSpawn() {
-        return ((Settings.isEndless || AbstractDungeon.floorNum >= 5) &&
+        return ((AbstractDungeon.floorNum >= 5) &&
                 !(AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.ShopRoom));
     }
 

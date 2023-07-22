@@ -13,7 +13,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Transient extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Transient",
-            3,
+            4,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.SPECIAL,
@@ -29,7 +29,7 @@ public class Transient extends BasePokemonCard {
 
     public Transient() {
         super(cardInfo);
-
+        setCostUpgrade(4);
     }
 
     @Override

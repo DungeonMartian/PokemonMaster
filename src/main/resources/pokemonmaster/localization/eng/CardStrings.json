@@ -1358,7 +1358,7 @@
   "${modID}:Makuhita": {
     "NAME": "Makuhita",
     "DESCRIPTION": "{@@}Innate. NL Deal !D! damage. Apply *Stunned.",
-    "UPGRADE_DESCRIPTION": "{@@}Innate. NL Deal !D! damage. NL Apply Stunned.",
+    "UPGRADE_DESCRIPTION": "{@@}Innate. NL Deal !D! damage. NL Apply *Stunned.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4396,7 +4396,7 @@
   "${modID}:GalarianMoltres": {
     "NAME": "Galarian Moltres",
     "DESCRIPTION": "{@@}Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Whenever you Exhaust a non-Status card add a pokemonmaster:Firework to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

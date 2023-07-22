@@ -33,6 +33,7 @@ public class GalarianMoltres extends BasePokemonCard {
     public GalarianMoltres() {
         super(cardInfo);
         setMagic(MAGIC);
+        setInnate(false,true);
         tags.add(CustomTags.DARK);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
