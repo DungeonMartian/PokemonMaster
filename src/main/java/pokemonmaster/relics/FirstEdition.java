@@ -26,7 +26,17 @@ public class FirstEdition extends BaseRelic {
         for (AbstractCard j : AbstractDungeon.player.masterDeck.group){
             if (j.rarity == AbstractCard.CardRarity.RARE){
                 AbstractDungeon.player.gainGold(100);
+
             }
+            //if (j.name.contains(" V") ){
+            //    AbstractDungeon.player.gainGold(100);
+            //}
+            //if (j.name.contains(" GX") ){
+            //    AbstractDungeon.player.gainGold(100);
+            //}
+            //if (j.name.contains(" EX") ){
+            //    AbstractDungeon.player.gainGold(100);
+            //}
         }
 
     }
