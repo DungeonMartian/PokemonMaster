@@ -3,6 +3,7 @@
   "name": "${project.name}",
   "author_list": ["${author}"],
   "description": "!(project.description)",
+  "credits": "Contributors: Zygon WhoBoy, Chrischu, Sabinmoon",
   "version": "${project.version}",
   "sts_version": "${SlayTheSpire.version}",
   "mts_version": "${ModTheSpire.version}",

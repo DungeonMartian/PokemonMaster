@@ -46,12 +46,12 @@ public class GlaceonGX extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         for (int i = 0; i < 3; i++) {
-            addToBot(new VFXAction(new BlizzardEffect(10,
-                    AbstractDungeon.getMonsters().shouldFlipVfx()), 0.25F));
+            addToBot(new VFXAction(new BlizzardEffect(this.damage,
+                    AbstractDungeon.getMonsters().shouldFlipVfx()), 0.15F));
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-            addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
-        }
 
+        }
+        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
             }
 
     @Override

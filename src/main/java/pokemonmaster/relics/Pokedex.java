@@ -32,7 +32,7 @@ public class Pokedex extends BaseRelic  {
     @Override
     public void atBattleStart() {
         this.counter=1;
-        this.usedUp = false;
+        this.grayscale = false;
         for (AbstractCard j : AbstractDungeon.player.masterDeck.group){
             if (j.hasTag(CustomTags.POKEMON)) {
                 if (!Added.contains(j)) {
@@ -50,9 +50,11 @@ public class Pokedex extends BaseRelic  {
             addToBot(new DrawCardAction(AbstractDungeon.player, 1));
             addToBot(new GainEnergyAction(1));
             this.counter -= 1;
+            flash();
         }
         if (this.counter <=0){
-            this.usedUp = true;
+            this.grayscale = true;
+
         }
         super.atTurnStart();
     }
@@ -60,7 +62,7 @@ public class Pokedex extends BaseRelic  {
     @Override
     public void onEnterRoom(AbstractRoom room) {
         this.counter = -1;
-        this.usedUp=false;
+        this.grayscale = false;
         super.onEnterRoom(room);
     }
 

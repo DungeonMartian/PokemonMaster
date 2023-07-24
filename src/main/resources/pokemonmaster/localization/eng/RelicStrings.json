@@ -52,7 +52,7 @@
     "NAME": "Pokedex",
     "FLAVOR": "It's a high tech Encyclopedia!",
     "DESCRIPTIONS": [
-      "Gain 1 energy and draw 1 card at the start of your turn. Increase this amount by 1 for every 3 unique pokemon in your deck."
+      "At the start of your first turn gain  [E]  and draw #b1 extra card. Increase the number of turns by #b1 for each #b3 unique pokemon in your deck."
     ]
   },
   "${modID}:SharkBait": {

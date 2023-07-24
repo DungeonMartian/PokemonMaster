@@ -478,6 +478,14 @@
 
     ]
   },
+  "${modID}:Tsunami": {
+    "NAME": "Tsunami",
+    "DESCRIPTIONS": [
+      "At the start of your turn add #b",
+      " #ySurfs to your hand."
+
+    ]
+  },
   "${modID}:SudowoodoPower": {
     "NAME": "Squirt Bottle",
     "DESCRIPTIONS": [

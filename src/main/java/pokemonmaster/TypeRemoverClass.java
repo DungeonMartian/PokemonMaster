@@ -288,6 +288,8 @@ public class TypeRemoverClass {
                 WATERTYPE.add(Cryogonal.ID);
                 WATERTYPE.add(Froakie.ID);
                 WATERTYPE.add(GoodRod.ID);
+                WATERTYPE.add(HisuianBasculin.ID);
+                WATERTYPE.add(Keldeo.ID);
                 WATERTYPE.add(Lana.ID);
                 WATERTYPE.add(LaprasV.ID);
                 WATERTYPE.add(Mareanie.ID);
@@ -298,6 +300,7 @@ public class TypeRemoverClass {
                 WATERTYPE.add(Slowpoke.ID);
                 WATERTYPE.add(SharpedoEX.ID);
                 WATERTYPE.add(ShiningMagikarp.ID);
+                WATERTYPE.add(Shellos.ID);
                 WATERTYPE.add(Snom.ID);
                 WATERTYPE.add(SuperRod.ID);
                 WATERTYPE.add(SuicuneV.ID);

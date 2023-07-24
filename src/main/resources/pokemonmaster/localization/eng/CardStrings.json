@@ -4923,6 +4923,56 @@
       ""
     ]
   },
+  "${modID}:Keldeo": {
+    "NAME": "Keldeo",
+    "DESCRIPTION": "{@@}At the start of your next turn add !M! pokemonmaster:Surfs to your hand. Draw 1 fewer card next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}At the start of your next turn add !M! pokemonmaster:Surfs to your hand. Draw 1 fewer card next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:HisuianBasculin": {
+    "NAME": "Hisuian Basculin",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Add a Dazed, Wound and pokemonmaster:Magnet to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Add a Dazed, Wound and pokemonmaster:Magnet to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:HisuianBasculegion": {
+    "NAME": "Hisuian Basculegion",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !M! damage for each Status card in your draw, hand, discard or exhaust piles.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike NL Deal !M! damage for each Status card in your draw, hand, discard or exhaust piles.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage.)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Shellos": {
+    "NAME": "Shellos",
+    "DESCRIPTION": "{@@}Heal !M! HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Heal !M! HP",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Gastrodon": {
+    "NAME": "Gastrodon",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. Take !M! damage at the start of your next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. Take !M! damage at the start of your next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",

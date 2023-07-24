@@ -1,25 +1,29 @@
-package pokemonmaster.cards.Base;
+package pokemonmaster.cards.Water;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
+import com.megacrit.cardcrawl.cards.status.Dazed;
+import com.megacrit.cardcrawl.cards.status.Wound;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BasicPokemonCard;
+import pokemonmaster.cards.Metal.Magnet;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Pikachu2 extends BasicPokemonCard {
+public class HisuianBasculin extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "Pikachu2",
-            1,
+            "HisuianBasculin",
+            0,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.BASIC,
+            CardRarity.COMMON,
             PokemonMaster.Enums.CARD_COLOR);
 
 
@@ -31,13 +35,12 @@ public class Pikachu2 extends BasicPokemonCard {
 
 
 
-    public Pikachu2() {
-        super(cardInfo, new Raichu(), new Raichu(), CustomTags.LIGHTNING);
-        setBackgroundTexture("E:/PokeSpire/BasicMod/src/main/resources/pokemonmaster/cards/attack/Pikachu2.png", "E:/PokeSpire/BasicMod/src/main/resources/pokemonmaster/cards/attack/Pikachu2.png");
+    public HisuianBasculin() {
+        super(cardInfo, new HisuianBasculegion(), new HisuianBasculegion(), CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CardTags.STARTER_STRIKE);
         tags.add(CardTags.STRIKE);
+
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }
 
@@ -45,12 +48,15 @@ public class Pikachu2 extends BasicPokemonCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        //addToBot(new MakeTempCardInDiscardAction(new Raichu(), 1));
+        addToBot(new MakeTempCardInHandAction(new Dazed()));
+        addToBot(new MakeTempCardInHandAction(new Wound()));
+        addToBot(new MakeTempCardInHandAction(new Magnet()));
     }
+
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Pikachu2();
+        return new HisuianBasculin();
     }
 }
 
