@@ -35,7 +35,7 @@ public class Magnet extends BaseCard {
         setMagic(ENERGY, ENERGYUP);
         tags.add(CustomTags.METAL);
         tags.add(CustomTags.BAIT);
-        this.misc =5;
+        this.misc =10;
     }
 
 

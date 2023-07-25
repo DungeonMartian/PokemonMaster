@@ -8,8 +8,8 @@ import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class DamageDownPower extends BasePower implements CloneablePowerInterface {
-    public static final String POWER_ID = makeID("DamageDownPower");
+public class Resistant extends BasePower implements CloneablePowerInterface {
+    public static final String POWER_ID = makeID("Resistant");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = true;
     //The only thing this controls is the color of the number on the power icon.
@@ -17,7 +17,7 @@ public class DamageDownPower extends BasePower implements CloneablePowerInterfac
     //For a power to actually decrease/go away on its own they do it themselves.
     //Look at powers that do this like VulnerablePower and DoubleTapPower.
 
-    public DamageDownPower(AbstractCreature owner, int amount) {
+    public Resistant(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
     }
 
@@ -39,6 +39,6 @@ public class DamageDownPower extends BasePower implements CloneablePowerInterfac
     //Optional, for CloneablePowerInterface.
     @Override
     public AbstractPower makeCopy() {
-        return new DamageDownPower(owner, amount);
+        return new Resistant(owner, amount);
     }
 }

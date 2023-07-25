@@ -8,7 +8,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
-import pokemonmaster.powers.DamageDownPower;
+import pokemonmaster.powers.Resistant;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -40,7 +40,7 @@ public class ResistancePotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new DamageDownPower(AbstractDungeon.player, this.potency)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Resistant(AbstractDungeon.player, this.potency)));
     }
 
     public CustomPotion makeCopy() {

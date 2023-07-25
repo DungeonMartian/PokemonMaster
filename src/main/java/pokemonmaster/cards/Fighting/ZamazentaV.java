@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.powers.ShieldEnergyPower;
+import pokemonmaster.powers.Barrier;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -22,7 +22,7 @@ public class ZamazentaV extends BaseCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int SHIELD =3;
+    private static final int SHIELD =5;
     private static final int SHIELDUP =3;
     public ZamazentaV() {
         super(cardInfo);
@@ -34,7 +34,7 @@ public class ZamazentaV extends BaseCard {
     }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new ApplyPowerAction(p, p, new ShieldEnergyPower(p,magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new Barrier(p,magicNumber)));
     }
     @Override
     public AbstractCard makeCopy() { //Optional

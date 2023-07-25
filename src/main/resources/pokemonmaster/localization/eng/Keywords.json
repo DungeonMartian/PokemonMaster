@@ -22,7 +22,36 @@
   ""
 
   ],
+
   "DESCRIPTION": "You can only gain the benefits of the first supporter card played each turn."
+  },
+  {
+    "PROPER_NAME": "Predate",
+    "NAMES": [
+      "predate",
+      "predator",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+
+    "DESCRIPTION": "Exhaust a Bait card in your hand to gain a benefit equal to  10% of the Bait Power times the number on this card."
+  },
+  {
+    "PROPER_NAME": "Barrier",
+    "NAMES": [
+      "barrier",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+
+    "DESCRIPTION": "Take less damage from enemy attacks. Reduce this amount by 1 the round after you are attacked by an enemy."
   },
   {
     "PROPER_NAME": "Gate",

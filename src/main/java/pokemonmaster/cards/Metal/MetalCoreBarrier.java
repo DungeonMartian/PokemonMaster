@@ -7,7 +7,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.powers.DamageDownPower;
+import pokemonmaster.powers.Resistant;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -42,7 +42,7 @@ public class MetalCoreBarrier extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new Resistant(p,magicNumber)));
 
     }
 

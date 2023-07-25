@@ -14,11 +14,9 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import com.megacrit.cardcrawl.powers.VulnerablePower;
 import com.megacrit.cardcrawl.powers.WeakPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.powers.ShieldEnergyPower;
-import pokemonmaster.util.Actions.EvolveActionCombat;
+import pokemonmaster.powers.Barrier;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -72,7 +70,7 @@ public class Frogadier extends IntermediateEvolutionCard {
         else if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat
                         .size() - 2).type == CardType.POWER){
-            addToBot(new ApplyPowerAction(p, p, new ShieldEnergyPower(p, magicNumber)));
+            addToBot(new ApplyPowerAction(p, p, new Barrier(p, magicNumber)));
         }
         else if (AbstractDungeon.actionManager.cardsPlayedThisCombat.size() >= 2 && AbstractDungeon.actionManager.cardsPlayedThisCombat
                 .get(AbstractDungeon.actionManager.cardsPlayedThisCombat

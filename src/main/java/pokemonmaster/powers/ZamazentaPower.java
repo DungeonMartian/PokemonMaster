@@ -29,7 +29,7 @@ public class ZamazentaPower extends BasePower implements CloneablePowerInterface
     @Override
     public void atEndOfTurn(boolean isPlayer) {
         super.atEndOfTurn(isPlayer);
-        addToBot(new ApplyPowerAction(owner, owner, new DamageDownPower(owner, EnergyPanel.totalCount*this.amount)));
+        addToBot(new ApplyPowerAction(owner, owner, new Resistant(owner, EnergyPanel.totalCount*this.amount)));
 
     }
 

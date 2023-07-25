@@ -92,11 +92,11 @@
       " #yMagnets to your hand at the start of your turn."
     ]
   },
-  "${modID}:ShieldEnergyPower": {
+  "${modID}:Barrier": {
     "NAME": "Barrier",
     "DESCRIPTIONS": [
       "You take #b",
-      " less damage from ALL attacks."
+      " less damage from ALL attacks. Reduce this amount by #b1 the round after you are attacked by an enemy."
     ]
   },
   "${modID}:Smelt": {
@@ -133,7 +133,8 @@
       "At the start of your turn deal #b",
       " damage, if you take damage lose this effect."
     ]
-  },"${modID}:DamageDownPower": {
+  },
+  "${modID}:Resistant": {
   "NAME": "Resistant",
   "DESCRIPTIONS": [
     "Take #b",
@@ -468,6 +469,13 @@
     "DESCRIPTIONS": [
       "Whenever an enemy performs a non-attack action, they take #b",
       " damage."
+    ]
+  },
+  "${modID}:HailPower": {
+    "NAME": "Hail",
+    "DESCRIPTIONS": [
+      "At the start of your turn deal #b",
+      " damage to ALL enemies."
     ]
   },
   "${modID}:MagmaBasin": {

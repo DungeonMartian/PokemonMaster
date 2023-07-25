@@ -6,11 +6,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.powers.DamageDownPower;
-import pokemonmaster.util.Actions.EvolveActionCombat;
+import pokemonmaster.powers.Resistant;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -49,7 +47,7 @@ public class Shelgon extends IntermediateEvolutionCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new ApplyPowerAction(p, p, new DamageDownPower(p,magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new Resistant(p,magicNumber)));
     }
 
     @Override

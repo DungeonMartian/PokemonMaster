@@ -281,11 +281,13 @@ public class TypeRemoverClass {
                 ArrayList<String> WATERTYPE = new ArrayList<>();
                 WATERTYPE.add(AquaPatch.ID);
                 WATERTYPE.add(Articuno.ID);
+                WATERTYPE.add(Cetoddle.ID);
                 WATERTYPE.add(Chewtle.ID);
                 WATERTYPE.add(Chinchou.ID);
                 WATERTYPE.add(Corphish.ID);
                 WATERTYPE.add(Cramorant.ID);
                 WATERTYPE.add(Cryogonal.ID);
+                WATERTYPE.add(Cubchoo.ID);
                 WATERTYPE.add(Froakie.ID);
                 WATERTYPE.add(GoodRod.ID);
                 WATERTYPE.add(HisuianBasculin.ID);
@@ -302,6 +304,7 @@ public class TypeRemoverClass {
                 WATERTYPE.add(ShiningMagikarp.ID);
                 WATERTYPE.add(Shellos.ID);
                 WATERTYPE.add(Snom.ID);
+                WATERTYPE.add(Snover.ID);
                 WATERTYPE.add(SuperRod.ID);
                 WATERTYPE.add(SuicuneV.ID);
                 WATERTYPE.add(Wailmer.ID);

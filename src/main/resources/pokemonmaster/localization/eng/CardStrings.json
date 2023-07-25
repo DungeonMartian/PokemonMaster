@@ -151,8 +151,8 @@
   },
   "${modID}:Magnet": {
     "NAME": "Magnet",
-    "DESCRIPTION": "{@@}Retain. NL Gain [E]. NL pokemonmaster:Bait 5.",
-    "UPGRADE_DESCRIPTION": "{@@}Retain. NL Gain [E]. NL pokemonmaster:Bait 5.",
+    "DESCRIPTION": "{@@}Retain. NL Gain [E]. NL pokemonmaster:Bait 10.",
+    "UPGRADE_DESCRIPTION": "{@@}Retain. NL Gain [E]. NL pokemonmaster:Bait 10.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -578,8 +578,8 @@
   },
   "${modID}:ShieldEnergy": {
     "NAME": "Shield Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Take !M! less damage from attacks.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Take !M! less damage from attacks.",
+    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Barrier.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2397,8 +2397,8 @@
   },
   "${modID}:StoneEnergy": {
     "NAME": "Stone Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Take !M! less damage from attacks.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Take !M! less damage from attacks.",
+    "DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! Barrier.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2427,8 +2427,8 @@
   },
   "${modID}:ZamazentaV": {
     "NAME": "Zamazenta V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Take !M! less damage from attacks.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Take !M! less damage from attacks.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Barrier.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3891,7 +3891,7 @@
     "EXTENDED_DESCRIPTION": [
       " Gain !M! Strength.",
       " Gain !M! Dexterity.",
-      " Take !M! less damage from attacks.",
+      " Gain !M! Barrier.",
       " Apply !M! Weak and Vulnerable.",
       " Apply Stunned.",
       ""
@@ -3904,7 +3904,7 @@
     "EXTENDED_DESCRIPTION": [
       " Gain !M! Strength.",
       " Gain !M! Dexterity.",
-      " Take !M! less damage from attacks.",
+      " Gain !M! Barrier.",
       " Apply !M! Weak and Vulnerable.",
       " Apply Stunned.",
       ""
@@ -3917,7 +3917,7 @@
     "EXTENDED_DESCRIPTION": [
       " NL Gain !M! Strength.",
       " NL Gain !M! Dexterity.",
-      " NL Take !M! less damage from attacks.",
+      " NL Gain !M! Barrier.",
       " NL Apply !M! Weak and Vulnerable.",
       " NL Apply Stunned.",
       " NL Exhaust."
@@ -4605,8 +4605,8 @@
   },
   "${modID}:Eternatus": {
     "NAME": "Eternatus",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Scry !M!. NL Gain  [E] [E]  at the start of your next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Scry !M!. NL Gain  [E] [E]  at the start of your next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Scry !M!. NL Gain  [E] [E]  at the start of your next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Scry !M!. NL Gain  [E] [E]  at the start of your next turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4967,6 +4967,66 @@
     "NAME": "Gastrodon",
     "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. Take !M! damage at the start of your next turn.",
     "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. Take !M! damage at the start of your next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Snover": {
+    "NAME": "Snover",
+    "DESCRIPTION": "{@@}At the start of your turn deal !M! damage to ALL enemies. NL Gain 2 pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}At the start of your turn deal !M! damage to ALL enemies. NL Gain 2 pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Abomasnow": {
+    "NAME": "Abomasnow",
+    "DESCRIPTION": "{@@}At the start of your turn deal !M! damage to ALL enemies. NL Gain 4 pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}At the start of your turn deal !M! damage to ALL enemies. NL Gain 4 pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Cubchoo": {
+    "NAME": "Cubchoo",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. pokemonmaster:Predate !M! Strength.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. pokemonmaster:Predate !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Beartic": {
+    "NAME": "Beartic",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL pokemonmaster:Predate !M! Strength.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL pokemonmaster:Predate !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Cetoddle": {
+    "NAME": "Cetoddle",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL pokemonmaster:Predate !M! Temp HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL pokemonmaster:Predate !M! Temp HP.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Cetitan": {
+    "NAME": "Cetitan",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL pokemonmaster:Predate !M! Temp HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL pokemonmaster:Predate !M! Temp HP.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

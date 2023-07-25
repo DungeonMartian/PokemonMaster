@@ -4,55 +4,53 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.EnergizedPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.Barrier;
+import pokemonmaster.powers.HailPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class WaterPower extends BasePokemonCard {
+public class Snover extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "",
+            "Snover",
             1,
             CardType.POWER,
             CardTarget.SELF,
-            CardRarity.BASIC,
+            CardRarity.RARE,
             PokemonMaster.Enums.CARD_COLOR);
 
 
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK= 3;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC= 2;
 
 
 
-    public WaterPower() {
-        super(cardInfo);
-        setBlock(BLOCK, UPG_BLOCK);
-        tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
-        this.purgeOnUse = this.evolve !=null;
-        this.evolve=null;
-        this.cardsToPreview=this.evolve;
+    public Snover() {
+        super(cardInfo,new Abomasnow(),new Abomasnow(), CustomTags.WATER);
+        setMagic(MAGIC,UPG_MAGIC);
+
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerWater.png","pokemonmaster/character/cardback/bg_powerWater_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new ApplyPowerAction(p, p, new EnergizedPower(p, 1)));
-
+        addToBot(new ApplyPowerAction(p, p, new HailPower(p, magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new Barrier(p, 2)));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new WaterPower();
+        return new Snover();
     }
 }
 

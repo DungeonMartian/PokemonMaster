@@ -8,7 +8,7 @@ import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.EnergyPower;
-import pokemonmaster.powers.ShieldEnergyPower;
+import pokemonmaster.powers.Barrier;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -23,7 +23,7 @@ public class StoneEnergy extends BaseCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int SHIELD =2;
+    private static final int SHIELD =4;
     private static final int SHIELDUP =2;
     public StoneEnergy() {
         super(cardInfo);
@@ -35,7 +35,7 @@ public class StoneEnergy extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new EnergyPower(p,1)));
-        addToBot(new ApplyPowerAction(p, p, new ShieldEnergyPower(p,magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new Barrier(p,magicNumber)));
     }
     @Override
     public AbstractCard makeCopy() { //Optional
