@@ -36,7 +36,7 @@ public class Ninjask extends FinalEvolutionCard {
     public Ninjask() {
         super(cardInfo,CustomTags.GRASS);
 
-
+        setCostUpgrade(1);
         setMagic(NINBUF);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerGrass.png","pokemonmaster/character/cardback/bg_powerGrass_p.png");
 
