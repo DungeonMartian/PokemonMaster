@@ -329,8 +329,8 @@
   },
   "${modID}:Ferroseed": {
     "NAME": "Ferroseed",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -558,8 +558,8 @@
   },
   "${modID}:MetalCoreBarrier": {
   "NAME": "Metal Core Barrier",
-  "DESCRIPTION": "{@@}Take !M! less damage this turn from ALL enemies this turn. NL Exhaust.",
-  "UPGRADE_DESCRIPTION": "{@@}Take !M! less damage this turn from ALL enemies this turn. NL Exhaust.",
+  "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant. NL Exhaust.",
+  "UPGRADE_DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant. NL Exhaust.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -888,8 +888,8 @@
   },
   "${modID}:Goomy": {
   "NAME": "Goomy",
-  "DESCRIPTION": "{@@}Take !M! less damage from ALL enemies this turn.",
-  "UPGRADE_DESCRIPTION": "{@@}Take !M! less damage from ALL enemies this turn.",
+  "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant.",
+  "UPGRADE_DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -898,8 +898,8 @@
 },
   "${modID}:HisuianSliggo": {
     "NAME": "Hisuian Sliggo",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1447,8 +1447,8 @@
   },
   "${modID}:DeoxysD": {
     "NAME": "Deoxys-D",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1927,8 +1927,8 @@
   },
   "${modID}:UrsalunaV": {
     "NAME": "Ursaluna V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage, deal 1 less damage for each HP you are missing. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage, deal 1 less damage for each HP you are missing. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage, deal 1 less damage for each HP you are missing. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage, deal 1 less damage for each HP you are missing. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2237,8 +2237,8 @@
   },
   "${modID}:Chewtle": {
     "NAME": "Chewtle",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2247,8 +2247,8 @@
   },
   "${modID}:Dreadnaw": {
     "NAME": "Dreadnaw",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3455,8 +3455,8 @@
   },
   "${modID}:Poochyena": {
     "NAME": "Poochyena",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3465,8 +3465,8 @@
   },
   "${modID}:Mightyena": {
     "NAME": "Mightyena",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4175,8 +4175,8 @@
   },
   "${modID}:Carbink": {
     "NAME": "Carbink",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL You take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL You take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4375,8 +4375,8 @@
   },
   "${modID}:Registeel": {
     "NAME": "Registeel",
-    "DESCRIPTION": "{@@}Deal !D! Damage. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! Damage. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Deal !D! Damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! Damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4445,8 +4445,8 @@
   },
   "${modID}:Haxorus": {
     "NAME": "Haxorus",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL pokemonmaster:Rivalry Deal !D! damage. NL Take !M! damage.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL pokemonmaster:Rivalry Deal !D! damage. NL Take !M! damage.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL pokemonmaster:Rivalry Deal !D! damage and take !M! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL pokemonmaster:Rivalry Deal !D! damage and take !M! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4465,8 +4465,8 @@
   },
   "${modID}:Bagon": {
     "NAME": "Bagon",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4475,8 +4475,8 @@
   },
   "${modID}:Shelgon": {
     "NAME": "Shelgon",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL You take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4505,8 +4505,8 @@
   },
   "${modID}:BlackKyuremEX": {
     "NAME": "Black Kyurem EX",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Apply *Stunned. NL pokemonmaster:Rivalry Deal !D! damage.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Apply *Stunned. NL pokemonmaster:Rivalry Deal !D! damage.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Apply *Stunned. NL pokemonmaster:Rivalry Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Apply *Stunned. NL pokemonmaster:Rivalry Deal !D! damage. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4725,8 +4725,8 @@
   },
   "${modID}:DuraludonV": {
     "NAME": "Duraludon V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! Damage. NL Take !M! less damage from ALL enemies this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! Damage. NL Take !M! less damage from ALL enemies this turn.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! Damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! Damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

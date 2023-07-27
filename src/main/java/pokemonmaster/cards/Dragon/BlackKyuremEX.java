@@ -44,7 +44,7 @@ public class BlackKyuremEX extends BasePokemonCard {
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-
+        this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
     }

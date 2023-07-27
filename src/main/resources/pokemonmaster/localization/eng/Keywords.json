@@ -54,6 +54,20 @@
     "DESCRIPTION": "Take less damage from enemy attacks. Reduce this amount by 1 the round after you are attacked by an enemy."
   },
   {
+    "PROPER_NAME": "Resistant",
+    "NAMES": [
+      "resistant",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+
+    "DESCRIPTION": "Take less damage from enemy attacks this round."
+  },
+  {
     "PROPER_NAME": "Gate",
     "NAMES": [
       "gate",

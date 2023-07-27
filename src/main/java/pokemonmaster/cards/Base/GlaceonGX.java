@@ -31,7 +31,10 @@ public class GlaceonGX extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 2;
-    private static final int UPG_DAMAGE = 1;
+
+
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC = 1;
 
 
 
@@ -40,12 +43,13 @@ public class GlaceonGX extends BaseCard {
         this.isMultiDamage = true;
         tags.add(CustomTags.WATER);
         tags.add(CustomTags.POKEMON);
-        setDamage(DAMAGE, UPG_DAMAGE);
+        setDamage(DAMAGE);
+        setMagic(MAGIC,UPG_MAGIC);
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        for (int i = 0; i < 3; i++) {
+        for (int i = 0; i < magicNumber; i++) {
             addToBot(new VFXAction(new BlizzardEffect(this.damage,
                     AbstractDungeon.getMonsters().shouldFlipVfx()), 0.15F));
             addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
