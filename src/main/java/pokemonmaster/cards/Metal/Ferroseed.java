@@ -36,7 +36,8 @@ public class Ferroseed extends BasicPokemonCard {
         super(cardInfo,new Ferrothorn(),new Ferrothorn(),CustomTags.METAL);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(DAMAGEDOWN,DAMAGEDOWNUP);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 45;
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillMetal.png","pokemonmaster/character/cardback/bg_skillMetal_p.png");
 

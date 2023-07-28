@@ -36,7 +36,8 @@ public class Skrelp extends BasicPokemonCard {
         super(cardInfo,new Dragalge(),new Dragalge(),CustomTags.PSYCHIC);
         setBlock(BLOCK, UPG_BLOCK);
         setMagic(MAGIC,UPG_MAGIC);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 50;
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 

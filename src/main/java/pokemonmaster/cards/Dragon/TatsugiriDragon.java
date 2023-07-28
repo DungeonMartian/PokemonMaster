@@ -36,6 +36,8 @@ public class TatsugiriDragon extends BasePokemonCard {
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
+        tags.add(CustomTags.BAIT);
+        this.misc = 40;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
 
     }
