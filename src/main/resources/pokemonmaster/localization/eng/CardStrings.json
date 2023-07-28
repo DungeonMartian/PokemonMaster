@@ -91,8 +91,8 @@
   },
   "${modID}:UltraBall": {
     "NAME": "Ultra Ball",
-    "DESCRIPTION": "{@@}Discard !M! cards from your hand. NL *Seek 1 Pokemon. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Discard !M! card from your hand. NL *Seek 1 Pokemon. NL Exhaust.",
+    "DESCRIPTION": "{@@}Discard !M! cards from your hand. NL *Seek 1 Pokemon. NL pokemonmaster:Bait 50. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Discard !M! card from your hand. NL *Seek 1 Pokemon. NL pokemonmaster:Bait 50. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -329,8 +329,8 @@
   },
   "${modID}:Ferroseed": {
     "NAME": "Ferroseed",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant. NL pokemonmaster:Bait 45.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! pokemonmaster:Resistant. NL pokemonmaster:Bait 45.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -888,8 +888,8 @@
   },
   "${modID}:Goomy": {
   "NAME": "Goomy",
-  "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant.",
-  "UPGRADE_DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant.",
+  "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant. NL pokemonmaster:Bait 30.",
+  "UPGRADE_DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant. NL pokemonmaster:Bait 30.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -1037,8 +1037,8 @@
     ]
   },"${modID}:Slugma": {
   "NAME": "Slugma",
-  "DESCRIPTION": "{@@}Deal !D! damage. NL Remove ALL of your pokemonmaster:Spark",
-  "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Remove ALL of your pokemonmaster:Spark",
+  "DESCRIPTION": "{@@}Deal !D! damage. NL Remove ALL of your pokemonmaster:Spark. NL pokemonmaster:Bait 35.",
+  "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Remove ALL of your pokemonmaster:Spark. NL pokemonmaster:Bait 35.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -1497,8 +1497,8 @@
   },
   "${modID}:Trubbish": {
     "NAME": "Trubbish",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Add 5 Dazed to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Add 5 Dazed to your hand.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Add 5 Dazed to your hand. NL pokemonmaster:Bait -25.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Add 5 Dazed to your hand. NL pokemonmaster:Bait -25.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2337,8 +2337,8 @@
   },
   "${modID}:Grubbin": {
     "NAME": "Grubbin",
-    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Spark.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Spark.",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Spark. NL pokemonmaster:Bait 25.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Spark. NL pokemonmaster:Bait 25.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2347,8 +2347,8 @@
   },
   "${modID}:Charjabug": {
     "NAME": "Charjabug",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Spark.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Spark.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Spark. NL pokemonmaster:Bait 60.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Spark. NL pokemonmaster:Bait 60.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3245,8 +3245,8 @@
   },
   "${modID}:ShapeExploder": {
     "NAME": "Capt. Exploder",
-    "DESCRIPTION": "{@@}At the end of 3 turns, deal 30 damage to ALL enemies. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}At the end of 3 turns, deal 30 damage to ALL enemies. NL Exhaust.",
+    "DESCRIPTION": "{@@}At the end of 3 turns, deal !M! damage to ALL enemies. NL pokemonmaster:Bait 80. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}At the end of 3 turns, deal !M! damage to ALL enemies. NL pokemonmaster:Bait 80. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3595,8 +3595,8 @@
   },
   "${modID}:Inkay": {
     "NAME": "Inkay",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !B! Block. NL Gain !M! Strength and Dexterity. NL Become Confused.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !B! Block. NL Gain !M! Strength and Dexterity. NL Become Confused.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !B! Block. NL Gain !M! Strength and Dexterity. NL Become Confused. NL pokemonmaster:Bait 45.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !B! Block. NL Gain !M! Strength and Dexterity. NL Become Confused. NL pokemonmaster:Bait 45.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3815,8 +3815,8 @@
   },
   "${modID}:Corphish": {
     "NAME": "Corphish",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Strength. NL Discard 1 card.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Strength. NL Discard 1 card.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Strength. NL Discard 1 card. NL pokemonmaster:Bait 20.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Strength. NL Discard 1 card. NL pokemonmaster:Bait 20.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4245,8 +4245,8 @@
   },
   "${modID}:Skrelp": {
     "NAME": "Skrelp",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Apply !M! Poison to any enemies that attack you this turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Apply !M! Poison to any enemies that attack you this turn.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Apply !M! Poison to any enemies that attack you this turn. NL pokemonmaster:Bait 50.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Apply !M! Poison to any enemies that attack you this turn. NL pokemonmaster:Bait 50.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4405,8 +4405,8 @@
   },
   "${modID}:Applin": {
     "NAME": "Applin",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw a card.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card. NL pokemonmaster:Bait 30.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw a card. NL pokemonmaster:Bait 30.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4735,8 +4735,8 @@
   },
   "${modID}:TatsugiriDragon": {
     "NAME": "Tatsugiri",
-    "DESCRIPTION": "{@@}Add !M! pokemonmaster:Surfs to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Add !M! pokemonmaster:Surfs to your hand.",
+    "DESCRIPTION": "{@@}Add !M! pokemonmaster:Surfs to your hand. NL pokemonmaster:Bait 40.",
+    "UPGRADE_DESCRIPTION":"{@@}Add !M! pokemonmaster:Surfs to your hand. NL pokemonmaster:Bait 40.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4856,7 +4856,7 @@
   "${modID}:Heatmor": {
     "NAME": "Heatmor",
     "DESCRIPTION": "{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
-    "UPGRADE_DESCRIPTION":"{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4955,8 +4955,8 @@
   },
   "${modID}:Shellos": {
     "NAME": "Shellos",
-    "DESCRIPTION": "{@@}Heal !M! HP.",
-    "UPGRADE_DESCRIPTION":"{@@}Heal !M! HP",
+    "DESCRIPTION": "{@@}Heal !M! HP. NL pokemonmaster:Bait 35.",
+    "UPGRADE_DESCRIPTION":"{@@}Heal !M! HP. NL pokemonmaster:Bait 35.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

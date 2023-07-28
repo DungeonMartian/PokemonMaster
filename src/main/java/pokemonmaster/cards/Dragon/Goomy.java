@@ -34,7 +34,8 @@ public class Goomy extends BasicPokemonCard {
     public Goomy() {
         super(cardInfo,new HisuianSliggo(),new HisuianGoodra(),CustomTags.DRAGON);
         setMagic(DLESS, DLESSUP);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 30;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
 
     }

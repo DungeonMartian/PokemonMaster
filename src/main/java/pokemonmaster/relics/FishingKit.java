@@ -3,10 +3,24 @@ package pokemonmaster.relics;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import pokemonmaster.cards.Base.UltraBall;
 import pokemonmaster.cards.ChoiceCards.BulletSeed;
+import pokemonmaster.cards.Dragon.Applin;
+import pokemonmaster.cards.Dragon.Goomy;
+import pokemonmaster.cards.Dragon.TatsugiriDragon;
+import pokemonmaster.cards.Fire.Slugma;
+import pokemonmaster.cards.Lightning.Charjabug;
+import pokemonmaster.cards.Lightning.Grubbin;
+import pokemonmaster.cards.Metal.Ferroseed;
 import pokemonmaster.cards.Metal.GholdengoCoin;
 import pokemonmaster.cards.Metal.Magnet;
-import pokemonmaster.cards.StarterRelic.Act1.*;
+import pokemonmaster.cards.Psychic.Skrelp;
+import pokemonmaster.cards.Psychic.Trubbish;
+import pokemonmaster.cards.StarterRelic.Act1.ASlimeM;
+import pokemonmaster.cards.StarterRelic.Act1.ASlimeS;
+import pokemonmaster.cards.StarterRelic.Act1.SSlimeM;
+import pokemonmaster.cards.StarterRelic.Act1.SSlimeS;
+import pokemonmaster.cards.StarterRelic.Act3.ShapeExploder;
 import pokemonmaster.cards.Water.*;
 import pokemonmaster.jar.PokemonMaster;
 
@@ -51,9 +65,19 @@ public class FishingKit extends BaseRelic  {
         BAIT.add(new ASlimeS());
         BAIT.add(new SSlimeM());
         BAIT.add(new ASlimeM());
-        BAIT.add(new LouseRed());
-        BAIT.add(new LouseGreen());
-
+        BAIT.add(new UltraBall());
+        BAIT.add(new Applin());
+        BAIT.add(new Goomy());
+        BAIT.add(new TatsugiriDragon());
+        BAIT.add(new Slugma());
+        BAIT.add(new Charjabug());
+        BAIT.add(new Grubbin());
+        BAIT.add(new Ferroseed());
+        BAIT.add(new Skrelp());
+        BAIT.add(new Trubbish());
+        BAIT.add(new ShapeExploder());
+        BAIT.add(new Corphish());
+        BAIT.add(new Shellos());
 
         Random random = new Random();
         random.setSeed(cardRandomRng.randomLong());
@@ -70,6 +94,7 @@ public class FishingKit extends BaseRelic  {
         addToBot(new MakeTempCardInHandAction(FISHINGROD.get(RODHAND-1)));
         addToBot(new MakeTempCardInHandAction(BAIT.get(BAITHAND-1)));
         addToBot(new MakeTempCardInHandAction(BAIT.get(BAITHAND2-1)));
+
     }
 
 

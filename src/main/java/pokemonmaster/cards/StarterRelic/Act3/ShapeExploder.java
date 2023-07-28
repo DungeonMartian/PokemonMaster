@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.TheBombPower;
+import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -32,6 +33,8 @@ public class ShapeExploder extends BasePokemonCard {
     public ShapeExploder() {
         super(cardInfo);
         setMagic(DAMAGE, UPG_DAMAGE);
+        tags.add(CustomTags.BAIT);
+        this.misc = 80;
     }
 
     @Override

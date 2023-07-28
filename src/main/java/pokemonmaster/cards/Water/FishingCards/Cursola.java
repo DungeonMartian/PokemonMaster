@@ -28,7 +28,7 @@ public class Cursola extends BasePokemonCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int MAGIC = 2;
-    private static final int UPG_MAGIC = -1;
+    private static final int UPG_MAGIC = 1;
 
 
 
@@ -42,10 +42,7 @@ public class Cursola extends BasePokemonCard {
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
-    }
     public boolean canUse(AbstractPlayer p, AbstractMonster m) {
         return false;
     }

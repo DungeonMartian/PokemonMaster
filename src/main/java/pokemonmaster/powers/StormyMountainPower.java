@@ -2,9 +2,11 @@ package pokemonmaster.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import pokemonmaster.cards.Lightning.*;
+import pokemonmaster.CustomTags;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -33,20 +35,23 @@ public class StormyMountainPower extends BasePower implements CloneablePowerInte
 
     public void atStartOfTurn() {
     for (int i =1; i <= this.amount; i++) {
-
-        int MIN = 1;
-        int MAX = 10;
-        int RANDOM_INT = (int) Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
-        if (RANDOM_INT == 1){addToBot(new MakeTempCardInHandAction(new Pachirisu(),1));}
-        if (RANDOM_INT == 2){addToBot(new MakeTempCardInHandAction(new Emolga(),1));}
-        if (RANDOM_INT ==3) {addToBot(new MakeTempCardInHandAction(new Dedenne(),1));}
-        if (RANDOM_INT ==4) {addToBot(new MakeTempCardInHandAction(new Electrike(),1));}
-        if (RANDOM_INT ==5) {addToBot(new MakeTempCardInHandAction(new AlolanGeodude(),1));}
-        if (RANDOM_INT ==6) {addToBot(new MakeTempCardInHandAction(new Minun(),1));}
-        if (RANDOM_INT ==7) {addToBot(new MakeTempCardInHandAction(new Plusle(),1));}
-        if (RANDOM_INT ==8) {addToBot(new MakeTempCardInHandAction(new Zapdos(),1));}
-        if (RANDOM_INT ==9) {addToBot(new MakeTempCardInHandAction(new OricorioLightning(),1));}
-        if (RANDOM_INT ==10) {addToBot(new MakeTempCardInHandAction(new Tynamo(),1));}
+        AbstractCard tmp = AbstractDungeon.returnTrulyRandomCardInCombat();
+        while (!tmp.hasTag(CustomTags.POKEMON) || !tmp.hasTag(CustomTags.LIGHTNING) || tmp.rarity != AbstractCard.CardRarity.COMMON)
+            tmp = AbstractDungeon.returnTrulyRandomCardInCombat();
+        addToBot(new MakeTempCardInHandAction(tmp,1));
+        //int MIN = 1;
+        //int MAX = 10;
+        //int RANDOM_INT = (int) Math.floor(Math.random() * (MAX - MIN + 1) + MIN);
+        //if (RANDOM_INT == 1){addToBot(new MakeTempCardInHandAction(new Pachirisu(),1));}
+        //if (RANDOM_INT == 2){addToBot(new MakeTempCardInHandAction(new Emolga(),1));}
+        //if (RANDOM_INT ==3) {addToBot(new MakeTempCardInHandAction(new Dedenne(),1));}
+        //if (RANDOM_INT ==4) {addToBot(new MakeTempCardInHandAction(new Electrike(),1));}
+        //if (RANDOM_INT ==5) {addToBot(new MakeTempCardInHandAction(new AlolanGeodude(),1));}
+        //if (RANDOM_INT ==6) {addToBot(new MakeTempCardInHandAction(new Minun(),1));}
+        //if (RANDOM_INT ==7) {addToBot(new MakeTempCardInHandAction(new Plusle(),1));}
+        //if (RANDOM_INT ==8) {addToBot(new MakeTempCardInHandAction(new Zapdos(),1));}
+        //if (RANDOM_INT ==9) {addToBot(new MakeTempCardInHandAction(new OricorioLightning(),1));}
+        //if (RANDOM_INT ==10) {addToBot(new MakeTempCardInHandAction(new Tynamo(),1));}
         }
     }
     @Override

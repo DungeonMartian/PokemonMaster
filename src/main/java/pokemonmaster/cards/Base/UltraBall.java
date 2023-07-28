@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.common.DiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -35,7 +36,8 @@ public class UltraBall extends BaseCard {
     public UltraBall() {
         super(cardInfo);
         this.exhaust = true;
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 50;
         setMagic(DISCARD, DISCARDUP);
 
     }

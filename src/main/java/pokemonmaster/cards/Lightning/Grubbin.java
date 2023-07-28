@@ -1,13 +1,10 @@
 package pokemonmaster.cards.Lightning;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Spark;
@@ -36,7 +33,8 @@ public class Grubbin extends BasicPokemonCard {
     public Grubbin() {
         super(cardInfo,new Charjabug(),new Vikavolt(),CustomTags.LIGHTNING);
         setMagic(SPARK, UPG_SPARK);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 25;
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 

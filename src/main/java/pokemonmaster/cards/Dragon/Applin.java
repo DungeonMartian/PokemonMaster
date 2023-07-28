@@ -39,7 +39,8 @@ public class Applin extends BasicPokemonCard {
     public Applin() {
         super(cardInfo,new Flapple(),new Flapple(),CustomTags.DRAGON);
         setDamage(DAMAGE, UPG_DAMAGE);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 30;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
     }

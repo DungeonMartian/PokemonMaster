@@ -39,7 +39,7 @@ public class RareCandy extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new SelectCardsInHandAction(magicNumber, "evolve",false,false, card -> card.hasTag(CustomTags.POKEMON), abstractCards -> {
+        addToBot(new SelectCardsInHandAction(magicNumber, "evolve",false,false, card -> card.hasTag(CustomTags.POKEMON) && (card.cardsToPreview != null || !card.upgraded), abstractCards -> {
         for (AbstractCard i : abstractCards) {
             addToBot(new EvolveActionCombat(i, "hand"));
         }

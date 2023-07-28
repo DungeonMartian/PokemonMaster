@@ -1,14 +1,12 @@
 package pokemonmaster.cards.Psychic;
 
 import com.megacrit.cardcrawl.actions.common.GainBlockAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.status.Dazed;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -36,7 +34,8 @@ public class Trubbish extends BasicPokemonCard {
     public Trubbish() {
         super(cardInfo,new Garbodor(),new Garbodor(),CustomTags.PSYCHIC);
         setBlock(BLOCK, UPG_BLOCK);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = -25;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }

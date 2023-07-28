@@ -38,7 +38,8 @@ public class Slugma extends BasicPokemonCard {
     public Slugma() {
         super(cardInfo, new Magcargo(), new Magcargo(),CustomTags.FIRE);
         setDamage(DAMAGE, UPG_DAMAGE);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 35;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }

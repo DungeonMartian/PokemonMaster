@@ -32,7 +32,8 @@ public class Shellos extends BasicPokemonCard {
     public Shellos() {
         super(cardInfo,new Gastrodon(), new Gastrodon(),CustomTags.WATER);
         setMagic(MAGIC,UPG_MAGIC);
-
+        tags.add(CustomTags.BAIT);
+        this.misc = 35;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");
 
     }

@@ -1,20 +1,15 @@
 package pokemonmaster.cards.Normal;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
-import java.util.function.Predicate;
-
-import static pokemonmaster.CustomTags.POKEMON;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
 public class Porygon extends BasicPokemonCard {
@@ -48,7 +43,7 @@ public class Porygon extends BasicPokemonCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(magicNumber, "choose card to evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
+        addToBot(new SelectCardsInHandAction(magicNumber, "evolve",false,false, card -> card.hasTag(CustomTags.POKEMON) && (card.cardsToPreview != null || !card.upgraded), abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 addToBot(new EvolveActionCombat(i, "hand"));
 
