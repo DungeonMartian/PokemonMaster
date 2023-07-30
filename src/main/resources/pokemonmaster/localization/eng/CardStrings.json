@@ -19,6 +19,166 @@
     ""
   ]
 },
+  "${modID}:Yamper": {
+    "NAME": "Yamper",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Apply *Stunned.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Apply *Stunned.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Boltund": {
+    "NAME": "Boltund",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL If you've played 4 or more cards this turn, this costs 0.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL If you've played 4 or more cards this turn, this costs 0.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Litleo": {
+    "NAME": "Litleo",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Exhaust a card.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Exhaust a card.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Pyroar": {
+    "NAME": "Pyroar",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! Strength. NL Exhaust a card.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! Strength. NL Exhaust a card.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Skiddo": {
+    "NAME": "Skiddo",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Gogoat": {
+    "NAME": "Gogoat",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Clamperl": {
+    "NAME": "Clamperl",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant. NL pokemonmaster:Bait 50.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Resistant. NL pokemonmaster:Bait 50.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Gorebyss": {
+    "NAME": "Gorebyss",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Resistant.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Zorua": {
+    "NAME": "Zorua",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw 1 card.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Zoroark": {
+    "NAME": "Zoroark",
+    "DESCRIPTION": "{@@}Deal !D! damage for each *Pokemon in your discard pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each *Pokemon in your discard pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Rockruff": {
+    "NAME": "Rockruff",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Lycanroc": {
+    "NAME": "Lycanroc",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Noibat": {
+    "NAME": "Noibat",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard the top card of your deck.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard the top card of your deck.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Noivern": {
+    "NAME": "Noivern",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Discard the top card of your deck.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Discard the top card of your deck.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Elgyem": {
+    "NAME": "Elgyem",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL This attack ignores Block. NL pokemonmaster:Evolve draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL This attack ignores Block. NL pokemonmaster:Evolve draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Beheeyem": {
+    "NAME": "Beheeyem",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL This attack ignores Block. NL Shufle this card into your draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL This attack ignores Block. NL Shufle this card into your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Pikachu": {
     "NAME": "Pikachu",
     "DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !D! damage.",
@@ -29,10 +189,20 @@
       ""
     ]
   },
-  "${modID}:Pikachu2": {
-    "NAME": "Pikachu",
-    "DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !D! damage.",
+  "${modID}:Melmetal": {
+    "NAME": "Melmetal",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Meltan": {
+    "NAME": "Meltan",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

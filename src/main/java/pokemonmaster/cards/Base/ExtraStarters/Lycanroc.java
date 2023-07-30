@@ -1,4 +1,4 @@
-package pokemonmaster.cards.Fire;
+package pokemonmaster.cards.Base.ExtraStarters;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -7,52 +7,56 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.powers.Prized;
+import pokemonmaster.powers.ExertedPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class CentiskorchV extends BaseCard {
+public class Lycanroc extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "CentiskorchV",
-            4,
+            "Lycanroc",
+            1,
             CardType.ATTACK,
             CardTarget.ALL_ENEMY,
-            CardRarity.RARE,
+            CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 
 
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 30;
-    private static final int UPG_DAMAGE = 10;
+    private static final int DAMAGE = 9;
+    private static final int UPG_DAMAGE = 4;
+    private static final int MAGIC = 1;
 
 
 
-    public CentiskorchV() {
-        super(cardInfo);
+
+    public Lycanroc() {
+        super(cardInfo,CustomTags.FIGHTING);
         setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(MAGIC);
+
+
         this.isMultiDamage = true;
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.UNEVOLVED);
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFighting.png","pokemonmaster/character/cardback/bg_attackFighting_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
+        addToBot(new ApplyPowerAction(p, p, new ExertedPower(p,magicNumber)));
+
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new CentiskorchV();
+        return new Lycanroc();
     }
 }
 

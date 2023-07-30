@@ -1,58 +1,59 @@
-package pokemonmaster.cards.Fire;
+package pokemonmaster.cards.Base.ExtraStarters;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.powers.Prized;
+import pokemonmaster.util.Actions.DiscardDrawnAction;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class CentiskorchV extends BaseCard {
+public class Noivern extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "CentiskorchV",
-            4,
+            "Noivern",
+            1,
             CardType.ATTACK,
-            CardTarget.ALL_ENEMY,
-            CardRarity.RARE,
+            CardTarget.ENEMY,
+            CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 
 
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 30;
-    private static final int UPG_DAMAGE = 10;
+    private static final int DAMAGE = 6;
+    private static final int UPG_DAMAGE = 3;
+
+    private static final int MAGIC = 1;
 
 
-
-    public CentiskorchV() {
-        super(cardInfo);
+    public Noivern() {
+        super(cardInfo,CustomTags.DRAGON);
         setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(MAGIC);
+
         this.isMultiDamage = true;
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.UNEVOLVED);
-        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
     }
 
-    @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
 
+
+    @Override
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
+        addToBot(new DrawCardAction(this.magicNumber, new DiscardDrawnAction()));
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new CentiskorchV();
+        return new Noivern();
     }
 }
 

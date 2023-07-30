@@ -23,7 +23,7 @@ public class Cursed extends BasePower implements HealthBarRenderPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
-        if (info ==null){
+        if (damageAmount < 0){
 
         }
         super.onAttack(info, damageAmount, target);
@@ -45,6 +45,6 @@ public class Cursed extends BasePower implements HealthBarRenderPower {
 
     @Override
     public Color getColor() {
-        return Color.SCARLET;
+        return Color.GRAY;
     }
 }

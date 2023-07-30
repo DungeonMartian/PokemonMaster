@@ -1,9 +1,11 @@
 package pokemonmaster;
 
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import pokemonmaster.Potions.*;
+import pokemonmaster.cards.Base.ExtraStarters.*;
 import pokemonmaster.cards.Dark.*;
 import pokemonmaster.cards.Dragon.*;
 import pokemonmaster.cards.Fighting.*;
@@ -18,29 +20,117 @@ import pokemonmaster.relics.HotPotato;
 import pokemonmaster.relics.QuickClaw;
 import pokemonmaster.relics.SharkBait;
 
-import java.util.ArrayList;
-import java.util.LinkedHashSet;
-import java.util.Random;
-import java.util.Set;
+import java.util.*;
 
 
 public class TypeRemoverClass {
 
     public static boolean DOTHIS = true;
+    public static boolean TOADD = true;
+
+    private static AbstractCard TOADD1;
+    private static AbstractCard TOADD2;
+
+    public TypeRemoverClass() {
+        TOADD = true;
+    }
 
     public static void removeCards() {
         if (DOTHIS) {
             if (!AbstractDungeon.player.hasRelic("PrismaticShard")) {
+                TOADD = true;
                 Random randNum = new Random();
                 randNum.setSeed(Settings.seed);
                 Set<Integer> set = new LinkedHashSet<Integer>();
                 // Integer randInt1 = 1;
                 Integer randInt1 = randNum.nextInt(9) + 1; // TODO uncomment
-                Integer randInt2 = randNum.nextInt(8) + 1;
-                if (randInt2 >= randInt1) {
-                    randInt2 += 1;
+                Integer randInt2 = randNum.nextInt(9) + 1;
+                while (randInt2.equals(randInt1)){
+                    randInt2 = randNum.nextInt(9) + 1;;
                 }
 
+
+                if (randInt1 == 1){
+                    TOADD1 = new Elgyem();
+                }
+                if (randInt1 == 2){
+                    TOADD1 = new Meltan();
+                }
+                if (randInt1 == 3){
+                    TOADD1 = new Litleo();
+                }
+                if (randInt1 == 4){
+                    TOADD1 = new Rockruff();
+                }
+                if (randInt1 == 5){
+                    TOADD1 = new Skiddo();
+                }
+                if (randInt1 == 6){
+                    TOADD1 = new Yamper();
+                }
+                if (randInt1 == 7){
+                    TOADD1 = new Zorua();
+                }
+                if (randInt1 == 8){
+                    TOADD1 = new Clamperl();
+                }
+                if (randInt1 == 9){
+                    TOADD1 = new Noibat();
+                }
+
+                if (randInt2 == 1){
+                    TOADD2 = new Elgyem();
+                }
+                if (randInt2 == 2){
+                    TOADD2 = new Meltan();
+                }
+                if (randInt2 == 3){
+                    TOADD2 = new Litleo();
+                }
+                if (randInt2 == 4){
+                    TOADD2 = new Rockruff();
+                }
+                if (randInt2 == 5){
+                    TOADD2 = new Skiddo();
+                }
+                if (randInt2 == 6){
+                    TOADD2 = new Yamper();
+                }
+                if (randInt2 == 7){
+                    TOADD2 = new Zorua();
+                }
+                if (randInt2 == 8){
+                    TOADD2 = new Clamperl();
+                }
+                if (randInt2 == 9){
+                    TOADD2 = new Noibat();
+                }
+
+
+
+
+                if (AbstractDungeon.floorNum <=1){
+                    for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                        if (Objects.equals(c.cardID, TOADD1.cardID)){
+                            TOADD = false;
+                        }
+                    }
+                    if (TOADD){
+                        AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                    }
+
+                }
+                if (AbstractDungeon.floorNum <=1){
+                    for (AbstractCard t : (AbstractDungeon.player).masterDeck.group) {
+                        if (Objects.equals(t.cardID, TOADD2.cardID)){
+                            TOADD = false;
+                        }
+                    }
+                    if (TOADD){
+                        AbstractDungeon.player.masterDeck.addToTop(TOADD2);
+                    }
+
+                }
                 // add all integers from 1 to 9 except for the two random ones to the set
                 for (int i = 1; i < 10; i++) {
                     if (i != randInt1 && i != randInt2) {
