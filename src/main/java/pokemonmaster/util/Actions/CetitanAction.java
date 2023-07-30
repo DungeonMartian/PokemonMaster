@@ -14,9 +14,10 @@ import java.util.function.Predicate;
 
 public class CetitanAction extends AbstractGameAction {
     private static int BAIT=0;
+    private static boolean TODO = false;
     public CetitanAction(Integer number){
     this.amount = number;
-
+        TODO = false;
 
     }
     @Override
@@ -27,6 +28,10 @@ public class CetitanAction extends AbstractGameAction {
         }
         for (AbstractCard t : AbstractDungeon.player.hand.group) {
             if (t.hasTag(CustomTags.BAIT)) {
+                TODO = true;
+            }
+        }
+        if (TODO) {
                 addToTop(new SelectCardsInHandAction(1, "exhaust", false, true, (Predicate<AbstractCard>) card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
                     for (AbstractCard i : abstractCards) {
                         int NEWMAGIC = this.amount * (i.misc / 10)+(BAIT/10);
@@ -35,7 +40,7 @@ public class CetitanAction extends AbstractGameAction {
                     }}));
 
             }
-        }
+
         this.isDone=true;
     }
 }

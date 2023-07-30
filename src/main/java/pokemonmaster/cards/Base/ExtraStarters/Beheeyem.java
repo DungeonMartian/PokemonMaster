@@ -16,7 +16,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Beheeyem extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Beheeyem",
-            1,
+            0,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.SPECIAL,
@@ -26,7 +26,7 @@ public class Beheeyem extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 9;
+    private static final int DAMAGE = 6;
     private static final int UPG_DAMAGE = 3;
 
 
