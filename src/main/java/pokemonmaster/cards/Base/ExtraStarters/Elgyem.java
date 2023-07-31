@@ -38,7 +38,7 @@ public class Elgyem extends BasePokemonCard {
         tags.add(CustomTags.PSYCHIC);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-        this.purgeOnUse = this.evolve !=null;
+        this.purgeOnUse = true;
         this.evolve=new Beheeyem();
         this.cardsToPreview=this.evolve;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");

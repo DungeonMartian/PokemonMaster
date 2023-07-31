@@ -20,7 +20,7 @@ public class BearticAction extends AbstractGameAction {
     public BearticAction (Integer number){
     this.amount = number;
     TODO = false;
-
+        BAIT=0;
     }
     @Override
     public void update() {

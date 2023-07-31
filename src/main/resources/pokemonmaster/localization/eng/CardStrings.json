@@ -748,8 +748,8 @@
   },
   "${modID}:ShieldEnergy": {
     "NAME": "Shield Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Barrier.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Barrier.",
+    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! pokemonmaster:Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2567,8 +2567,8 @@
   },
   "${modID}:StoneEnergy": {
     "NAME": "Stone Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! Barrier.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! Barrier.",
+    "DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! pokemonmaster:Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2597,8 +2597,8 @@
   },
   "${modID}:ZamazentaV": {
     "NAME": "Zamazenta V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Barrier.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Barrier.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! pokemonmaster:Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4061,7 +4061,7 @@
     "EXTENDED_DESCRIPTION": [
       " Gain !M! Strength.",
       " Gain !M! Dexterity.",
-      " Gain !M! Barrier.",
+      " Gain !M! pokemonmaster:Barrier.",
       " Apply !M! Weak and Vulnerable.",
       " Apply Stunned.",
       ""
@@ -4074,7 +4074,7 @@
     "EXTENDED_DESCRIPTION": [
       " Gain !M! Strength.",
       " Gain !M! Dexterity.",
-      " Gain !M! Barrier.",
+      " Gain !M! pokemonmaster:.",
       " Apply !M! Weak and Vulnerable.",
       " Apply Stunned.",
       ""
@@ -4087,7 +4087,7 @@
     "EXTENDED_DESCRIPTION": [
       " NL Gain !M! Strength.",
       " NL Gain !M! Dexterity.",
-      " NL Gain !M! Barrier.",
+      " NL Gain !M! pokemonmaster:Barrier.",
       " NL Apply !M! Weak and Vulnerable.",
       " NL Apply Stunned.",
       " NL Exhaust."
