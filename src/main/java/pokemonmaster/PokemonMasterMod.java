@@ -43,6 +43,7 @@ public class PokemonMasterMod implements
         EditCharactersSubscriber,
         StartGameSubscriber,
         StartActSubscriber,
+        PostDungeonInitializeSubscriber,
         PostInitializeSubscriber {
 
     public static ModInfo info;
@@ -112,6 +113,7 @@ public class PokemonMasterMod implements
 
 
         addPotions();
+
     }
 
     /*----------Localization----------*/
@@ -280,8 +282,8 @@ public class PokemonMasterMod implements
 
     @Override
     public void receiveStartGame() {
-        TypeRemoverClass.DOTHIS = true;
-        TypeRemoverClass.removeCards();
+        //TypeRemoverClass.DOTHIS = true;
+        //TypeRemoverClass.removeCards();
 
     }
 
@@ -292,5 +294,9 @@ public class PokemonMasterMod implements
     }
 
 
-
+    @Override
+    public void receivePostDungeonInitialize() {
+        TypeRemoverClass.DOTHIS=true;
+        TypeRemoverClass.removeCards();
+    }
 }
