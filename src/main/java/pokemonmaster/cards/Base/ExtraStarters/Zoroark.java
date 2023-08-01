@@ -1,7 +1,5 @@
 package pokemonmaster.cards.Base.ExtraStarters;
 
-import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -44,7 +42,6 @@ public class Zoroark extends FinalEvolutionCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
         addToBot(new BeatUpAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
 

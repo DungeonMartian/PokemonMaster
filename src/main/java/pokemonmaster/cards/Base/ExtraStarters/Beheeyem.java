@@ -44,7 +44,6 @@ public class Beheeyem extends BasePokemonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
     }

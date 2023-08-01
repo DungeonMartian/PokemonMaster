@@ -1,10 +1,12 @@
 package pokemonmaster.cards.Base.ExtraStarters;
 
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.watcher.WallopAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.vfx.combat.WaterDropEffect;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -40,6 +42,7 @@ public class Gogoat extends FinalEvolutionCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
+
         addToBot(new WallopAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
     }
 

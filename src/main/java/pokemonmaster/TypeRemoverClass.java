@@ -15,6 +15,7 @@ import pokemonmaster.cards.Lightning.*;
 import pokemonmaster.cards.Metal.*;
 import pokemonmaster.cards.Psychic.*;
 import pokemonmaster.cards.Water.*;
+import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.relics.ChoiceBand;
 import pokemonmaster.relics.HotPotato;
 import pokemonmaster.relics.QuickClaw;
@@ -108,29 +109,32 @@ public class TypeRemoverClass {
 
 
 
+            if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
 
-                if (AbstractDungeon.floorNum <=1){
+
+                if (AbstractDungeon.floorNum <= 1) {
                     for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
-                        if (Objects.equals(c.cardID, TOADD1.cardID)){
+                        if (Objects.equals(c.cardID, TOADD1.cardID)) {
                             TOADD = false;
                         }
                     }
-                    if (TOADD){
+                    if (TOADD) {
                         AbstractDungeon.player.masterDeck.addToTop(TOADD1);
                     }
 
                 }
-                if (AbstractDungeon.floorNum <=1){
+                if (AbstractDungeon.floorNum <= 1) {
                     for (AbstractCard t : (AbstractDungeon.player).masterDeck.group) {
-                        if (Objects.equals(t.cardID, TOADD2.cardID)){
+                        if (Objects.equals(t.cardID, TOADD2.cardID)) {
                             TOADD = false;
                         }
                     }
-                    if (TOADD){
+                    if (TOADD) {
                         AbstractDungeon.player.masterDeck.addToTop(TOADD2);
                     }
 
                 }
+            }
                 // add all integers from 1 to 9 except for the two random ones to the set
                 for (int i = 1; i < 10; i++) {
                     if (i != randInt1 && i != randInt2) {

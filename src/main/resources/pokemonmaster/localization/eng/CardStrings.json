@@ -2647,8 +2647,8 @@
   },
   "${modID}:GalarianArticuno": {
     "NAME": "Galarian Articuno",
-    "DESCRIPTION": "{@@}At the start of your turn lose !M! HP. NL Exhaust !M! cards. NL Gain !M! pokemonmaster:Spark. NL Gain !M! [E].",
-    "UPGRADE_DESCRIPTION":"{@@}Retain. NL At the start of your turn lose !M! HP. NL Exhaust !M! cards. NL Gain !M! pokemonmaster:Spark. NL Gain !M! [E].",
+    "DESCRIPTION": "{@@}Exhaust !M! cards. NL Gain !M! pokemonmaster:Spark. NL Gain !M! [E]. NL At the start of your turn lose !M! HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Retain. NL Exhaust !M! cards. NL Gain !M! pokemonmaster:Spark. NL Gain !M! [E]. NL At the start of your turn lose !M! HP.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2657,8 +2657,8 @@
   },
   "${modID}:Fletchling": {
     "NAME": "Fletchling",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard your hand, draw !M! cards.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard your hand, draw !M! cards.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard your hand, draw !M! card{!M!|>1=s}.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard your hand, draw !M! card{!M!|>1=s}.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2667,8 +2667,8 @@
   },
   "${modID}:Fletchinder": {
     "NAME": "Fletchinder",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard your hand, draw !M! cards.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard your hand, draw !M! cards.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard your hand, draw !M! card{!M!|>1=s}.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard your hand, draw !M! card{!M!|>1=s}.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
