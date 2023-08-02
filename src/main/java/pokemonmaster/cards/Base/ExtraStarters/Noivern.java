@@ -19,7 +19,7 @@ public class Noivern extends FinalEvolutionCard {
             "Noivern",
             1,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 

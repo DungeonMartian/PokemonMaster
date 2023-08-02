@@ -15,8 +15,8 @@
   "${modID}:Prized": {
     "NAME": "Prized",
     "DESCRIPTIONS": [
-      "Take an additional #b6 damage from the next unblocked attack.",
-      ""
+      "Take an additional #b6 damage from the next #b",
+      " unblocked attacks."
     ]
   },
   "${modID}:DrawDownPower": {
@@ -24,6 +24,14 @@
     "DESCRIPTIONS": [
       "Draw #b",
       " less card next turn.",
+      ""
+    ]
+  },
+  "${modID}:ExertedPower": {
+    "NAME": "Exerted",
+    "DESCRIPTIONS": [
+      "Lose #b",
+      " #yStrength next turn.",
       ""
     ]
   },
