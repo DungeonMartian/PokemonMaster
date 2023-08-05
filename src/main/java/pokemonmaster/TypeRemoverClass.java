@@ -146,6 +146,7 @@ public class TypeRemoverClass {
                 ArrayList<String> DARKTYPE = new ArrayList<>();
                 DARKTYPE.add(Absol.ID);
                 DARKTYPE.add(AlolanMeowth.ID);
+                DARKTYPE.add(BlackGlasses.ID);
                 DARKTYPE.add(CrobatV.ID);
                 DARKTYPE.add(DarkraiGX.ID);
                 DARKTYPE.add(Ekans.ID);
@@ -159,6 +160,7 @@ public class TypeRemoverClass {
                 DARKTYPE.add(HonchkrowV.ID);
                 DARKTYPE.add(Inkay.ID);
                 DARKTYPE.add(Koffing.ID);
+                DARKTYPE.add(LiepardEX.ID);
                 DARKTYPE.add(Murkrow.ID);
                 DARKTYPE.add(Nickit.ID);
                 DARKTYPE.add(Poochyena.ID);
@@ -167,11 +169,13 @@ public class TypeRemoverClass {
                 DARKTYPE.add(RadiantHisuainSneasler.ID);
                 DARKTYPE.add(Roxie.ID);
                 DARKTYPE.add(Seviper.ID);
+                DARKTYPE.add(Sneasel.ID);
                 DARKTYPE.add(Spiritomb.ID);
                 DARKTYPE.add(TyranitarV.ID);
                 DARKTYPE.add(WheezingV.ID);
                 DARKTYPE.add(Varoom.ID);
                 DARKTYPE.add(Venipede.ID);
+                DARKTYPE.add(Vullaby.ID);
 
 
                 ArrayList<String> LightningTYPE = new ArrayList<>();
@@ -285,11 +289,13 @@ public class TypeRemoverClass {
                 GRASSTYPE.add(ChesnaughtV.ID);
                 GRASSTYPE.add(Durant.ID);
                 GRASSTYPE.add(Dwebble.ID);
+                GRASSTYPE.add(Exeggcute.ID);
                 GRASSTYPE.add(GardeniasVigor.ID);
                 GRASSTYPE.add(Heracross.ID);
                 GRASSTYPE.add(HisuianLilligantV.ID);
                 GRASSTYPE.add(Maractus.ID);
                 GRASSTYPE.add(Morelull.ID);
+                GRASSTYPE.add(NetBall.ID);
                 GRASSTYPE.add(Nincada.ID);
                 GRASSTYPE.add(Oddish.ID);
                 GRASSTYPE.add(Paras.ID);
@@ -299,7 +305,8 @@ public class TypeRemoverClass {
                 GRASSTYPE.add(Revitalizer.ID);
                 GRASSTYPE.add(Scyther.ID);
                 GRASSTYPE.add(Shuckle.ID);
-                GRASSTYPE.add(Shroomish.ID);
+                GRASSTYPE.add(Sunkern.ID);
+                GRASSTYPE.add(Oddish.ID);
                 GRASSTYPE.add(Tangela.ID);
                 GRASSTYPE.add(Tropius.ID);
                 GRASSTYPE.add(VenusaurEX.ID);

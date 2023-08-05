@@ -1,21 +1,21 @@
-package pokemonmaster.cards.Base;
+package pokemonmaster.cards.Dark;
 
-import com.megacrit.cardcrawl.actions.common.HealAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-
+import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.cards.HeldItemCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.CardInfo;
 import pokemonmaster.util.Actions.HeldItemAction;
+import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class GoldBerry extends HeldItemCard{
+public class BlackGlasses extends HeldItemCard{
     private final static CardInfo cardInfo = new CardInfo(
-            "GoldBerry",
+            "BlackGlasses",
             -2,
             CardType.SKILL,
             CardTarget.SELF,
@@ -25,19 +25,21 @@ public class GoldBerry extends HeldItemCard{
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private final static int MAGIC = 5;
+    private final static int MAGIC = 2;
     private final static int UPG_MAGIC = 2;
-    public GoldBerry() {
+
+    public BlackGlasses() {
         super(cardInfo);
         setMagic(MAGIC,UPG_MAGIC);
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDark.png","pokemonmaster/character/cardback/bg_skillDark_p.png");
 
     }
 
     @Override
     public void OnStartup() {
-        // heal hp
+
         AbstractPlayer p = AbstractDungeon.player;
-        addToBot(new HeldItemAction(new HealAction(p,p,this.magicNumber)));
+        addToBot(new HeldItemAction(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber))));
     }
 
     @Override
@@ -47,6 +49,6 @@ public class GoldBerry extends HeldItemCard{
     
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new GoldBerry();
+        return new BlackGlasses();
     }
 }

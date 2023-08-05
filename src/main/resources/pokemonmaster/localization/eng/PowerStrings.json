@@ -131,7 +131,7 @@
   "${modID}:HeldItemPlayed": {
     "NAME": "Held Item",
     "DESCRIPTIONS": [
-      "You've played a #yHeld_Item this turn.",
+      "Your #yHeld #yItem has triggered this combat.",
       ""
     ]
   },

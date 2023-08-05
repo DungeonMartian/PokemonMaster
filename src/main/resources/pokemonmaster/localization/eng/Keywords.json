@@ -104,7 +104,7 @@
       ""
 
     ],
-    "DESCRIPTION": "Held Items are played automatically at the start of combat, but only one of them. They all purge at start of combat regardless."
+    "DESCRIPTION": "One Held Item is played automatically at the start of combat. They all purge."
   },
   {
     "PROPER_NAME": "Rivalry",

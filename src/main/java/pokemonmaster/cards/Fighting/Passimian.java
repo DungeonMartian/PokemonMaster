@@ -48,7 +48,7 @@ public class Passimian extends BasePokemonCard {
 
         addToBot(new SelectCardsInHandAction(1, "Discard.", (cards) -> {
             addToTop(new DiscardSpecificCardAction(cards.get(0)));
-            int cost = (cards.get(0)).cost;
+            int cost = cards.get(0).costForTurn;
             if (cost > 0) {
                 for (int i = 0; i < cost; i++) {
                     addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));

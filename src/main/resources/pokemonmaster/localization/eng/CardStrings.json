@@ -866,6 +866,16 @@
       ""
     ]
   },
+  "${modID}:BlackGlasses": {
+    "NAME": "Black Glasses",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! Strength.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! Strength.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:HypnoToxicLaser": {
     "NAME": "Hypno Toxic Laser",
     "DESCRIPTION": "{@@}If the target is Poisoned, apply *Stunned. NL Apply !M! Poison. NL Exhaust.",
@@ -1407,8 +1417,8 @@
   },
   "${modID}:Tropius": {
   "NAME": "Tropius",
-  "DESCRIPTION": "{@@}Drink !M! Potion{!M!|>1=s}. NL Exhaustive !stslib:ex!.",
-  "UPGRADE_DESCRIPTION": "{@@}Drink !M! Potion{!M!|>1=s}. NL Exhaustive !stslib:ex!.",
+  "DESCRIPTION": "{@@}Drink !M! random Potion{!M!|>1=s}. NL Exhaustive !stslib:ex!.",
+  "UPGRADE_DESCRIPTION": "{@@}Drink !M! random Potion{!M!|>1=s}. NL Exhaustive !stslib:ex!.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -4725,8 +4735,8 @@
   },
   "${modID}:AltariaV": {
     "NAME": "Altaria V",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Upgrade ALL cards in your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Upgrade ALL cards in your hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !B! Block. NL Upgrade ALL cards in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Gain !B! Block. NL Upgrade ALL cards in your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5203,12 +5213,102 @@
       ""
     ]
   },
-  "${modID}:": {
-    "NAME": "",
-    "DESCRIPTION": "{@@}",
-    "UPGRADE_DESCRIPTION":"{@@}",
+  "${modID}:Sneasel": {
+    "NAME": "Sneasel",
+    "DESCRIPTION": "{@@}Deal !D! damage for each  [E]  the *Pokemon in your hand cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each  [E]  the *Pokemon in your hand cost.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL (You have !M! [E] of *Pokemon)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Weavile": {
+    "NAME": "Weavile",
+    "DESCRIPTION": "{@@}Deal !D! damage for each  [E]  the other *Pokemon in your hand cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each  [E]  the other *Pokemon in your hand cost.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL (You have !M! [E] of *Pokemon)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Vullaby": {
+    "NAME": "Vullaby",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak and Vulnerable.",
     "EXTENDED_DESCRIPTION": [
       "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Mandibuzz": {
+    "NAME": "Mandibuzz",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak and Vulnerable.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL If the enemy intends to attack, apply !M! Weak and Vulnerable.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:LiepardEX": {
+    "NAME": "Liepard EX",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Temp HP. NL If the target intends to attack, apply *Stunned and 3 Strength and Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Gain !M! Temp HP. NL If the target intends to attack, apply *Stunned and 3 Strength and Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Sunkern": {
+    "NAME": "Sunkern",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Heal !M! HP for each Status card in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Heal !M! HP for each Status card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Sunflora": {
+    "NAME": "Sunflora",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Gain !M! Temp HP for each Status card in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Gain !M! Temp HP for each Status card in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:NetBall": {
+    "NAME": "Net Ball",
+    "DESCRIPTION": "{@@}*Seek an Unevolved Grass *Pokemon. Add a Slimed to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}*Seek an Unevolved Grass *Pokemon. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Exeggcute": {
+    "NAME": "Exeggcute",
+    "DESCRIPTION": "{@@}When you play, discard or Exhaust this card, add !M! *Exeggcute to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}When you play, discard or Exhaust this card, add !M! *Exeggcute to your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:AlolanExeggutor": {
+    "NAME": "Alolan Exeggutor",
+    "DESCRIPTION": "{@@}Deal !D! damage for each Exeggcute in your hand, draw pile, discard pile and exhaust pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each Exeggcute in your hand, draw pile, discard pile and exhaust pile.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage. NL (You have !M! Exeggcute)",
       "",
       ""
     ]

@@ -13,11 +13,12 @@ import pokemonmaster.util.Actions.HeldItemAction;
 public abstract class HeldItemCard extends BasePokemonCard implements StartupCard{
     public HeldItemCard(pokemonmaster.util.CardInfo cardInfo) {
         super(cardInfo);
+        tags.add(CardTags.HEALING);
     }
 
     // on startup
     public abstract void OnStartup();
-    
+
     @Override
     public boolean atBattleStartPreDraw() {
 

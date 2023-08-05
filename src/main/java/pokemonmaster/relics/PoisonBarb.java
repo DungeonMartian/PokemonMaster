@@ -1,4 +1,4 @@
-package pokemonmaster.relics;
+//package pokemonmaster.relics;
 //
 //import com.evacipated.cardcrawl.mod.stslib.patches.BlockModifierPatches;
 //import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
@@ -21,8 +21,7 @@ package pokemonmaster.relics;
 //    }
 //
 //
-//    @Override
-//    public Void On
+//    publicon
 //
 //    // Take advantage of autocomplete!
 //    // If you type "public onUse" IntelliJ should already have the method in the suggestions.
