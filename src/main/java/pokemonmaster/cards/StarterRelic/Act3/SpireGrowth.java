@@ -5,9 +5,9 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.ConstrictedPower;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.ConstrictedPokemonPower;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -17,7 +17,7 @@ public class SpireGrowth extends BasePokemonCard {
             "SpireGrowth",
             2,
             CardType.SKILL,
-            CardTarget.SELF,
+            CardTarget.ENEMY,
             CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 
@@ -38,7 +38,7 @@ public class SpireGrowth extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new ConstrictedPower(m,p,magicNumber)));
+        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new ConstrictedPokemonPower(m,p,magicNumber)));
 
     }
 

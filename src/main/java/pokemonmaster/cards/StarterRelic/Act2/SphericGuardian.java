@@ -27,7 +27,7 @@ public class SphericGuardian extends BasePokemonCard {
     public static final String ID = makeID(cardInfo.baseId);
 
 
-    private static final int ARMOUR = 15;
+    private static final int ARMOUR = 10;
 
 
     public SphericGuardian() {

@@ -19,6 +19,26 @@
     ""
   ]
 },
+  "${modID}:Bidoof": {
+    "NAME": "Bidoof",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw until you have !M! cards in hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw until you have !M! cards in hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Bibarel": {
+    "NAME": "Bibarel",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw until you have !M! cards in hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw until you have !M! cards in hand.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Yamper": {
     "NAME": "Yamper",
     "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Apply *Stunned.",
@@ -2047,8 +2067,8 @@
   },
   "${modID}:Kirlia": {
     "NAME": "Kirlia",
-    "DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! Dazed to your discard pile.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! Dazed to your discard pile.",
+    "DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s} and add !M! Dazed to your discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s} and add !M! Dazed to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2057,8 +2077,8 @@
   },
   "${modID}:Gardevoir": {
     "NAME": "Gardevoir",
-    "DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! *Ralts to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s}. NL Add !M! *Ralts to your hand.",
+    "DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s} and add !M! *Ralts to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn draw !M! Card{!M!|>1=s} and add !M! *Ralts to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3415,8 +3435,8 @@
   },
   "${modID}:SpireGrowth": {
     "NAME": "Capt. Spire Growth",
-    "DESCRIPTION": "{@@}Apply !M! *Constricted.",
-    "UPGRADE_DESCRIPTION":"{@@}Apply !M! *Constricted.",
+    "DESCRIPTION": "{@@}Apply !M! pokemonmaster:Constricted.",
+    "UPGRADE_DESCRIPTION":"{@@}Apply !M! pokemonmaster:Constricted.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4825,8 +4845,8 @@
   },
   "${modID}:UltraNecrozmaV": {
     "NAME": "Ultra Necrozma V",
-    "DESCRIPTION": "{@@}Deal !D! danage to a random enemy X times. Add X pokemonmaster:Magnets and Dazed to your discard pile.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! danage to a random enemy X+2 times. Add X+2 pokemonmaster:Magnets and Dazed to your discard pile.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! danage to a random enemy X times. Add X pokemonmaster:Magnets and Dazed to your discard pile.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! danage to a random enemy X+2 times. Add X+2 pokemonmaster:Magnets and Dazed to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4845,8 +4865,8 @@
   },
   "${modID}:NsResolve": {
     "NAME": "N's Resolve",
-    "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Draw !M! Cards. NL Exhaust ALL cards drawn this way that are not *Dragon. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Draw !M! Cards. NL Exhaust ALL cards drawn this way that are not *Dragon. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Draw !M! Cards. NL Exhaust ALL non Dragon cards drawn. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Draw !M! Cards. NL Exhaust ALL non Dragon cards drawn. Gain 1 pokemonmaster:Spark for each card Exhausted. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5105,8 +5125,8 @@
   },
   "${modID}:Keldeo": {
     "NAME": "Keldeo",
-    "DESCRIPTION": "{@@}At the start of your next turn add !M! pokemonmaster:Surfs to your hand. Draw 1 fewer card next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}At the start of your next turn add !M! pokemonmaster:Surfs to your hand. Draw 1 fewer card next turn.",
+    "DESCRIPTION": "{@@}At the start of your next turn add !M! pokemonmaster:Surfs to your hand. NL Draw 1 fewer card next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}At the start of your next turn add !M! pokemonmaster:Surfs to your hand. NL Draw 1 fewer card next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5145,8 +5165,8 @@
   },
   "${modID}:Gastrodon": {
     "NAME": "Gastrodon",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. Take !M! damage at the start of your next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. Take !M! damage at the start of your next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Take !M! damage at the start of your next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Take !M! damage at the start of your next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5285,8 +5305,8 @@
   },
   "${modID}:NetBall": {
     "NAME": "Net Ball",
-    "DESCRIPTION": "{@@}*Seek an Unevolved Grass *Pokemon. Add a Slimed to your hand. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}*Seek an Unevolved Grass *Pokemon. NL Exhaust.",
+    "DESCRIPTION": "{@@}*Seek an Unevolved Grass or Water *Pokemon. Add a Slimed to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}*Seek an Unevolved Grass or Water *Pokemon. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5309,6 +5329,406 @@
     "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each Exeggcute in your hand, draw pile, discard pile and exhaust pile.",
     "EXTENDED_DESCRIPTION": [
       "Deal !D! damage. NL (You have !M! Exeggcute)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Smeargle": {
+    "NAME": "Smeargle",
+    "DESCRIPTION": "{@@}Add a copy of this enemies capture to your hand. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Add a copy of this enemies capture to your hand. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:OranguruV": {
+    "NAME": "Oranguru V",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Add 2 random Powers to your hand. They cost !M! less this turn.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Add 2 random Powers to your hand. They cost 0 this turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Taillow": {
+    "NAME": "Taillow",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. If Fatal, gain !M! Max HP.",
+    "UPGRADE_DESCRIPTION":"pokemonmaster:Strike. NL Deal !D! damage. If Fatal, gain !M! Max HP.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Swellow": {
+    "NAME": "Swellow",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. If Fatal, gain !M! Max HP. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. If Fatal, gain !M! Max HP. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Komala": {
+    "NAME": "Komala",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. Gain !M! Buffer. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. Gain !M! Buffer. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Dunsparce": {
+    "NAME": "Dunsparce",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Draw !M! card{!M!|>1=s}.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Draw !M! card{!M!|>1=s}.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Dudunsparce": {
+    "NAME": "Dudunsparce",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Draw !M! card{!M!|>1=s}. NL Deal !D! damage. NL Draw !M! card{!M!|>1=s}.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Draw !M! card{!M!|>1=s}. NL Deal !D! damage. NL Draw !M! card{!M!|>1=s}.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Furfrou": {
+    "NAME": "Furfrou",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Audino": {
+    "NAME": "Audino",
+    "DESCRIPTION": "{@@}Gain !M! Regen.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Regen.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Tauros": {
+    "NAME": "Tauros",
+    "DESCRIPTION": "{@@}Deal !D! damage. This attack does additional damage equal to your missing HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. This attack does additional damage equal to your missing HP.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage.",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Bouffalant": {
+    "NAME": "Bouffalant",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Take !M! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Take !M! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Snorlax": {
+    "NAME": "Snorlax",
+    "DESCRIPTION": "{@@}Heal to full HP. NL Lose !M!  [E]  and draw !M! less cards next turn. NL End your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Heal to full HP. NL Lose !M!  [E]  and draw !M! less cards next turn. NL End your turn. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Shroodle": {
+    "NAME": "Shroodle",
+    "DESCRIPTION": "{@@}Gain !M! Strength and Poison.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Strength and Poison.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Grafaiai": {
+    "NAME": "Grafaiai",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Strength affects this card !M! times. NL Gain !M! Strength and Poison.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Strength affects this card !M! times. NL Gain !M! Strength and Poison.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Leftovers": {
+    "NAME": "Leftovers",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! Regen.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Held_Item NL Gain !M! Regen.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Clefairy": {
+    "NAME": "Clefairy",
+    "DESCRIPTION": "{@@}Lose 25% of your max hp. Gain that amount as Temp HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Lose 25% of your max hp. Gain that amount as Temp HP.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Lose !M! HP)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Clefable": {
+    "NAME": "Clefable",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:BlisseyV": {
+    "NAME": "Blissey V",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Remove your Debuffs. NL Double your Regen. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Remove your Debuffs. NL Double your Regen. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Slakoth": {
+    "NAME": "Slakoth",
+    "DESCRIPTION": "{@@}Apply *Stunned. NL Lose !M!  [E]  next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Apply *Stunned. NL Lose !M!  [E]  next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Vigoroth": {
+    "NAME": "Vigoroth",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Gain !M!  [E]  . NL Draw !M! card{!M!|>1=s}.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Gain !M!  [E]  . NL Draw !M! card{!M!|>1=s}.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Slaking": {
+    "NAME": "Slaking",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Lose !M!  [E]  and draw !M! less cards next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Lose !M!  [E]  and draw !M! less cards next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Whismur": {
+    "NAME": "Whismur",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Loudred": {
+    "NAME": "Loudred",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Exploud": {
+    "NAME": "Exploud",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Tympole": {
+    "NAME": "Tympole",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Palpitoad": {
+    "NAME": "Palpitoad",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Seismitoad": {
+    "NAME": "Seismitoad",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Meloetta": {
+    "NAME": "Meloetta",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:DubwoolV": {
+    "NAME": "Dubwool V",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Gain !M! pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Yungoos": {
+    "NAME": "Yungoos",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL If the enemy intends to attack, gain !B! Block. If not, deal !M! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL If the enemy intends to attack, gain !B! Block. If not, deal !M! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Gumshoos": {
+    "NAME": "Gumshoos",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL If the enemy intends to attack, gain !B! Block. If not, deal !M! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL If the enemy intends to attack, gain !B! Block. If not, deal !M! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Miltank": {
+    "NAME": "Miltank",
+    "DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !M! pokemonmaster:Barrier. NL OR Deal !D! damage to a random enemy. NL Double this attacks base damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Choose. NL Gain !M! pokemonmaster:Barrier. NL OR Deal !D! damage to a random enemy. NL Double this attacks base damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:LugiaGX": {
+    "NAME": "Lugia GX",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Whenever you lose HP from a card, gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Whenever you lose HP from a card, gain !M! pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Cheren": {
+    "NAME": "Cheren",
+    "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Exhume a Normal *Pokemon. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Supporter. NL Exhume a Normal *Pokemon. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Winona": {
+    "NAME": "Winona",
+    "DESCRIPTION": "{@@}*Seek 3 Normal *Pokemon.",
+    "UPGRADE_DESCRIPTION":"{@@}*Seek 3 Normal *Pokemon.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Dratini": {
+    "NAME": "Dratini",
+    "DESCRIPTION": "{@@}Apply !M! pokemonmaster:Constricted.",
+    "UPGRADE_DESCRIPTION":"{@@}Apply !M! pokemonmaster:Constricted.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Dragonair": {
+    "NAME": "Dragonair",
+    "DESCRIPTION": "{@@}Apply !M! pokemonmaster:Constricted.",
+    "UPGRADE_DESCRIPTION":"{@@}Apply !M! pokemonmaster:Constricted.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Dragonite": {
+    "NAME": "Dragonite",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Lose !M!  [E]  next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Lose !M!  [E]  next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:WyrdeerV": {
+    "NAME": "Wyrdeer V",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage and take !M! damage X times.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage and take !M! damage X times.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:": {
+    "NAME": "",
+    "DESCRIPTION": "{@@}",
+    "UPGRADE_DESCRIPTION":"{@@}",
+    "EXTENDED_DESCRIPTION": [
+      "",
       "",
       ""
     ]

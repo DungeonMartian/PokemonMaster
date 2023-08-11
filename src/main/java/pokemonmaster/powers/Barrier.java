@@ -19,23 +19,32 @@ public class Barrier extends BasePower implements CloneablePowerInterface {
     }{
         this.isTurnBased = true;
         this.priority = 99;
+        this.TOREDUCE= false;
     }
 
       public void updateDescription() {
       this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
     }
+
+
     public float atDamageReceive(float damage, DamageInfo.DamageType type) {
         if (type == DamageInfo.DamageType.NORMAL) {
-            TOREDUCE = true;
             return damage - this.amount;
         }
         return damage;
     }
+
+    @Override
+    public int onAttacked(DamageInfo info, int damageAmount) {
+        this.TOREDUCE = true;
+        return super.onAttacked(info, damageAmount);
+    }
+
     public void atStartOfTurn() {
-        if (TOREDUCE) {
+        if (this.TOREDUCE) {
             addToBot(new ReducePowerAction(owner, owner, this, 1));
         }
-        TOREDUCE = false;
+        this.TOREDUCE = false;
     }
 
     @Override

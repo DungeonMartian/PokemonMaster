@@ -85,7 +85,7 @@ public class ThunderStone extends CustomPotion {
                     addToTop(new ExhaustSpecificCardAction(c2,AbstractDungeon.player.hand,true));
                 }
                 else {
-                    addToBot(new EvolveActionCombat(c2, "hand"));
+                    addToBot(new EvolveActionCombat(c2, AbstractDungeon.player.hand));
                 }
                 if (TOREMOVE !=null) {
                     for (AbstractCard i : TOREMOVE) {

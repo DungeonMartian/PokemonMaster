@@ -3,6 +3,7 @@ package pokemonmaster.cards.Base;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.jar.PokemonMaster;
@@ -41,7 +42,7 @@ public class RareCandy extends BasePokemonCard {
 
         addToBot(new SelectCardsInHandAction(magicNumber, "evolve",false,false, card -> card.hasTag(CustomTags.POKEMON) && (card.cardsToPreview != null || !card.upgraded), abstractCards -> {
         for (AbstractCard i : abstractCards) {
-            addToBot(new EvolveActionCombat(i, "hand"));
+            addToBot(new EvolveActionCombat(i, AbstractDungeon.player.hand));
         }
         }));
     }

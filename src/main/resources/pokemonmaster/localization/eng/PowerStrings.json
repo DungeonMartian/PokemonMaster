@@ -64,6 +64,27 @@
       ""
     ]
   },
+  "${modID}:RoundPower": {
+    "NAME": "Round",
+    "DESCRIPTIONS": [
+      "Your cards with #yRound deal #b",
+      " additional damage."
+    ]
+  },
+  "${modID}:ConstrictedPokemonPower": {
+    "NAME": "Constricted",
+    "DESCRIPTIONS": [
+      "At the end of your turn, this character takes #b",
+      " damage."
+    ]
+  },
+  "${modID}:LugiaPower": {
+    "NAME": "Multiscale",
+    "DESCRIPTIONS": [
+      "Whenever you lose HP from a card, gain #b",
+      " #yBarrier."
+    ]
+  },
   "${modID}:CurlUpPokemonPower": {
     "NAME": "Curl Up",
     "DESCRIPTIONS": [

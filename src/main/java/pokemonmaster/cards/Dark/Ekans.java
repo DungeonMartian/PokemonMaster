@@ -63,7 +63,7 @@ public class Ekans extends BasicPokemonCard {
         }
     }
     public void triggerOnManualDiscard() {
-        addToBot(new EvolveActionCombat(this,"discard"));
+        addToBot(new EvolveActionCombat(this,AbstractDungeon.player.discardPile));
         addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.discardPile));
     }
     @Override

@@ -7,12 +7,11 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class NormalBlock extends BasePokemonCard {
+public class NormalSkill extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "",
             1,
@@ -28,11 +27,13 @@ public class NormalBlock extends BasePokemonCard {
     private static final int BLOCK = 5;
     private static final int UPG_BLOCK= 3;
 
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC = 3;
 
-
-    public NormalBlock() {
+    public NormalSkill() {
         super(cardInfo);
         setBlock(BLOCK, UPG_BLOCK);
+        setMagic(MAGIC,UPG_MAGIC);
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
@@ -47,12 +48,12 @@ public class NormalBlock extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new GainBlockAction(p, p, block));
-        addToBot(new EvolveActionCombat(this,"discard"));
+
     }
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new NormalBlock();
+        return new NormalSkill();
     }
 }
 

@@ -12,8 +12,7 @@ import pokemonmaster.util.CardInfo;
 
 import java.util.function.Predicate;
 
-import static pokemonmaster.CustomTags.GRASS;
-import static pokemonmaster.CustomTags.UNEVOLVED;
+import static pokemonmaster.CustomTags.*;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
 public class NetBall extends BasePokemonCard {
@@ -43,7 +42,7 @@ public class NetBall extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        addToBot(new FetchAction(p.drawPile, (Predicate<AbstractCard>) card -> card.hasTag(GRASS) && card.hasTag(UNEVOLVED), 1, abstractCards -> {
+        addToBot(new FetchAction(p.drawPile, (Predicate<AbstractCard>) card -> (card.hasTag(WATER) || card.hasTag(GRASS)) && card.hasTag(UNEVOLVED), 1, abstractCards -> {
         }));
         if (!upgraded) {
             addToBot(new MakeTempCardInHandAction(new Slimed(), 1));

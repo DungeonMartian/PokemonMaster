@@ -1,11 +1,13 @@
 package pokemonmaster.cards.Dragon;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.Prized;
 import pokemonmaster.util.Actions.NecrozmaAction;
 import pokemonmaster.util.CardInfo;
 
@@ -24,7 +26,7 @@ public class UltraNecrozmaV extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 11;
+    private static final int DAMAGE = 12;
 
     private static final int MAGIC = 0;
     private static final int UPG_MAGIC = 2;
@@ -44,6 +46,7 @@ public class UltraNecrozmaV extends BasePokemonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
+        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
 
         addToBot(new NecrozmaAction(p, m, this.damage, this.damageTypeForTurn, this.freeToPlayOnce, this.energyOnUse+magicNumber));
     }

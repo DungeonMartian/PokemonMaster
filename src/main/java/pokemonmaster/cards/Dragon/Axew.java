@@ -44,7 +44,7 @@ public class Axew extends BasicPokemonCard {
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
-                addToBot(new EvolveActionCombat(this,"hand"));
+                addToBot(new EvolveActionCombat(this,AbstractDungeon.player.hand));
             }
         }
 

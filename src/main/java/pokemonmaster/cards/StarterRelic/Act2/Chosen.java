@@ -15,7 +15,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Chosen extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Chosen",
-            1,
+            3,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.SPECIAL,

@@ -12,7 +12,6 @@ import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -53,7 +52,6 @@ public class Corphish extends BasicPokemonCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber)));
         addToBot(new DiscardAction(p, p, 1, false));
-        addToBot(new EvolveActionCombat(this,"discard"));
     }
 
     @Override

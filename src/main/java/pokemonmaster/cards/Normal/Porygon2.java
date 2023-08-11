@@ -3,9 +3,9 @@ package pokemonmaster.cards.Normal;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
@@ -45,7 +45,7 @@ public class Porygon2 extends IntermediateEvolutionCard {
 
         addToBot(new SelectCardsInHandAction(p.hand.size(), "choose card to evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
             for (AbstractCard i : abstractCards) {
-                addToBot(new EvolveActionCombat(i, "hand"));
+                addToBot(new EvolveActionCombat(i, AbstractDungeon.player.hand));
             }
         }));
 

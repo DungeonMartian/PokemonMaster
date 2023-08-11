@@ -3,6 +3,7 @@ package pokemonmaster.cards.Grass;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.SelectCardsInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
@@ -45,7 +46,7 @@ public class Celebi extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new SelectCardsInHandAction(p.hand.size(), "choose card to evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
             for (AbstractCard i : abstractCards) {
-                addToBot(new EvolveActionCombat(i, "hand"));
+                addToBot(new EvolveActionCombat(i, AbstractDungeon.player.hand));
             }
         }));
 

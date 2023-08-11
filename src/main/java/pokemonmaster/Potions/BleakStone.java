@@ -81,7 +81,7 @@ public class BleakStone extends CustomPotion {
                     AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new UmbreonGX(), 1));
                     addToTop(new ExhaustSpecificCardAction(c2,AbstractDungeon.player.hand,true));
                 }
-                else {addToBot(new EvolveActionCombat(c2, "hand"));
+                else {addToBot(new EvolveActionCombat(c2, AbstractDungeon.player.hand));
                 }
                 if (TOREMOVE !=null) {
                     for (AbstractCard i : TOREMOVE) {

@@ -26,6 +26,20 @@
   "DESCRIPTION": "You can only gain the benefits of the first supporter card played each turn."
   },
   {
+    "PROPER_NAME": "Constricted",
+    "NAMES": [
+      "constricted",
+      "constrict",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+
+    "DESCRIPTION": "At the end of this characters turn, they take damage."
+  },
+  {
     "PROPER_NAME": "Predate",
     "NAMES": [
       "predate",
@@ -104,7 +118,7 @@
       ""
 
     ],
-    "DESCRIPTION": "One Held Item is played automatically at the start of combat. They all purge."
+    "DESCRIPTION": "One Held Item is played automatically at the start of combat. They ALL purge."
   },
   {
     "PROPER_NAME": "Rivalry",
@@ -118,6 +132,19 @@
 
     ],
     "DESCRIPTION": "If you are in an Elite or Boss room, this card has a bonus effect."
+  },
+  {
+    "PROPER_NAME": "Round",
+    "NAMES": [
+      "round",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Your cards with Round deal bonus damage."
   },
   {
     "PROPER_NAME": "Volt-Turn",

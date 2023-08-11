@@ -13,6 +13,7 @@ import pokemonmaster.cards.Fire.*;
 import pokemonmaster.cards.Grass.*;
 import pokemonmaster.cards.Lightning.*;
 import pokemonmaster.cards.Metal.*;
+import pokemonmaster.cards.Normal.*;
 import pokemonmaster.cards.Psychic.*;
 import pokemonmaster.cards.Water.*;
 import pokemonmaster.jar.PokemonMaster;
@@ -44,10 +45,10 @@ public class TypeRemoverClass {
                 randNum.setSeed(Settings.seed);
                 Set<Integer> set = new LinkedHashSet<Integer>();
                 // Integer randInt1 = 1;
-                Integer randInt1 = randNum.nextInt(9) + 1; // TODO uncomment
-                Integer randInt2 = randNum.nextInt(9) + 1;
+                Integer randInt1 = randNum.nextInt(10) + 1; // TODO uncomment
+                Integer randInt2 = randNum.nextInt(10) + 1;
                 while (randInt2.equals(randInt1)){
-                    randInt2 = randNum.nextInt(9) + 1;;
+                    randInt2 = randNum.nextInt(10) + 1;;
                 }
 
 
@@ -78,6 +79,9 @@ public class TypeRemoverClass {
                 if (randInt1 == 9){
                     TOADD1 = new Noibat();
                 }
+                if (randInt1 == 10){
+                    TOADD1 = new Bidoof();
+                }
 
                 if (randInt2 == 1){
                     TOADD2 = new Elgyem();
@@ -105,6 +109,9 @@ public class TypeRemoverClass {
                 }
                 if (randInt2 == 9){
                     TOADD2 = new Noibat();
+                }
+                if (randInt2 == 10){
+                    TOADD2 = new Bidoof();
                 }
 
 
@@ -408,6 +415,7 @@ public class TypeRemoverClass {
                 WATERTYPE.add(Snover.ID);
                 WATERTYPE.add(SuperRod.ID);
                 WATERTYPE.add(SuicuneV.ID);
+                WATERTYPE.add(Tympole.ID);
                 WATERTYPE.add(Wailmer.ID);
                 WATERTYPE.add(Wooper.ID);
 
@@ -441,6 +449,36 @@ public class TypeRemoverClass {
                 DRAGONTYPE.add(Turtonator.ID);
                 DRAGONTYPE.add(UltraNecrozmaV.ID);
                 DRAGONTYPE.add(WhiteKyuremGX.ID);
+
+                ArrayList<String> NORMALTYPE = new ArrayList<>();
+                NORMALTYPE.add(Audino.ID);
+                NORMALTYPE.add(BlisseyV.ID);
+                NORMALTYPE.add(Bouffalant.ID);
+                NORMALTYPE.add(Cheren.ID);
+                NORMALTYPE.add(Clefairy.ID);
+                NORMALTYPE.add(DubwoolV.ID);
+                NORMALTYPE.add(Dunsparce.ID);
+                NORMALTYPE.add(Furfrou.ID);
+                NORMALTYPE.add(Komala.ID);
+                NORMALTYPE.add(Leftovers.ID);
+                NORMALTYPE.add(LugiaGX.ID);
+                NORMALTYPE.add(Meloetta.ID);
+                NORMALTYPE.add(Miltank.ID);
+                NORMALTYPE.add(OranguruV.ID);
+                NORMALTYPE.add(Porygon.ID);
+                NORMALTYPE.add(Regigigas.ID);
+                NORMALTYPE.add(Shroodle.ID);
+                NORMALTYPE.add(Slakoth.ID);
+                NORMALTYPE.add(Smeargle.ID);
+                NORMALTYPE.add(Snorlax.ID);
+                NORMALTYPE.add(Taillow.ID);
+                NORMALTYPE.add(Tauros.ID);
+                NORMALTYPE.add(Winona.ID);
+                NORMALTYPE.add(Whismur.ID);
+                NORMALTYPE.add(WyrdeerV.ID);
+                NORMALTYPE.add(Yungoos.ID);
+
+
 
 
 
@@ -584,6 +622,22 @@ public class TypeRemoverClass {
                             AbstractDungeon.srcCommonCardPool.removeCard(Y);
                             AbstractDungeon.srcUncommonCardPool.removeCard(Y);
                             AbstractDungeon.srcRareCardPool.removeCard(Y);
+
+
+
+                        }
+
+                    }
+                }
+                for (int s : set) {
+                    if (s == 10) {
+                        for (String N : NORMALTYPE) {
+                            AbstractDungeon.commonCardPool.removeCard(N);
+                            AbstractDungeon.uncommonCardPool.removeCard(N);
+                            AbstractDungeon.rareCardPool.removeCard(N);
+                            AbstractDungeon.srcCommonCardPool.removeCard(N);
+                            AbstractDungeon.srcUncommonCardPool.removeCard(N);
+                            AbstractDungeon.srcRareCardPool.removeCard(N);
 
 
 

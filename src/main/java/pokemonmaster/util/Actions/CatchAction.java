@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.actions.unique.AddCardToDeckAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.cards.Metal.Doublade;
 import pokemonmaster.cards.Metal.Honedge;
 import pokemonmaster.cards.StarterRelic.Act1.*;
@@ -74,13 +75,25 @@ public class CatchAction extends AbstractGameAction {
             case "AcidSlime_S":
                 return new ASlimeS();
             case "SpikeSlime_L":
-                return new SSlimeL();
+                if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.MonsterRoomBoss)
+                    return new SlimeBoss();
+                else
+                    return new SSlimeL();
             case "AcidSlime_L":
-                return new ASlimeL();
+                if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.MonsterRoomBoss)
+                    return new SlimeBoss();
+                else
+                    return new ASlimeL();
             case "SpikeSlime_M":
-                return new SSlimeM();
+                if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.MonsterRoomBoss)
+                    return new SlimeBoss();
+                else
+                    return new SSlimeM();
             case "AcidSlime_M":
-                return new ASlimeM();
+                if (AbstractDungeon.getCurrRoom() instanceof com.megacrit.cardcrawl.rooms.MonsterRoomBoss)
+                    return new SlimeBoss();
+                else
+                    return new ASlimeM();
             case "GremlinNob":
                 return new GremlinNob();
             case "Sentry":

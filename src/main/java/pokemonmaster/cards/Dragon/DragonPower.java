@@ -3,6 +3,7 @@ package pokemonmaster.cards.Dragon;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
+import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.BufferPower;
 import pokemonmaster.CustomTags;
@@ -49,7 +50,7 @@ public class DragonPower extends BasePokemonCard {
 
         addToBot(new ApplyPowerAction(p, p, new BufferPower(p,magicNumber)));
 
-        addToBot(new EvolveActionCombat(this,"discard"));
+        addToBot(new EvolveActionCombat(this, AbstractDungeon.player.discardPile));
     }
 
     @Override

@@ -6,40 +6,44 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
 public class EvolveActionCombat extends AbstractGameAction {
 
     public final AbstractCard toEvolve;
     public final AbstractCard baseCard;
-    public String SORT;
+
+    public CardGroup SORT;
+
     public AbstractCard c;
 
-    public EvolveActionCombat(AbstractCard c, String where) {
+    public EvolveActionCombat(AbstractCard c, CardGroup where) {
         this.baseCard= c;
         this.toEvolve = c.cardsToPreview;
         this.SORT = where;
+
     }
 
     public void update(){
-//waahhh waahhh hard coded strings fight me I got it working
+//are you happy now? the strings are gone, it's better code, but it's lost its charm
         if (this.toEvolve !=null){
-            if (SORT== "discard") {
+            if (SORT== AbstractDungeon.player.discardPile) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction( this.toEvolve, 1));
                 addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.discardPile,true));
             }
-            if (SORT == "hand"){
+            if (SORT == AbstractDungeon.player.hand){
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.toEvolve, 1));
                 addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.hand,true));
             }
-            if (SORT== "draw") {
+            if (SORT== AbstractDungeon.player.drawPile) {
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.toEvolve, 1,true,false));
                 addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.drawPile,true));
             }
 
             }
         if (this.toEvolve ==null){
-            if (SORT== "discard") {
+            if (SORT== AbstractDungeon.player.discardPile) {
                 if (baseCard.canUpgrade()) {
                     baseCard.upgrade();
                     baseCard.applyPowers();
@@ -47,7 +51,7 @@ public class EvolveActionCombat extends AbstractGameAction {
                 this.isDone = true;
                 return;
             }
-            if (SORT == "hand"){
+            if (SORT == AbstractDungeon.player.hand){
                 if (baseCard.canUpgrade()) {
                     baseCard.upgrade();
                     baseCard.applyPowers();
@@ -56,7 +60,7 @@ public class EvolveActionCombat extends AbstractGameAction {
                 return;
 
             }
-            if (SORT == "draw"){
+            if (SORT == AbstractDungeon.player.drawPile){
                 if (baseCard.canUpgrade()) {
                     baseCard.upgrade();
                     baseCard.applyPowers();
