@@ -5723,6 +5723,26 @@
       ""
     ]
   },
+  "${modID}:DefenseCurl": {
+    "NAME": "DefenseCurl",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Barrier.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Rollout": {
+    "NAME": "Rollout",
+    "DESCRIPTION": "{@@}Deal !D! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION":"{@@}",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",

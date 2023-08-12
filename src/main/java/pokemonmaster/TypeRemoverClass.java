@@ -456,6 +456,7 @@ public class TypeRemoverClass {
                 NORMALTYPE.add(Bouffalant.ID);
                 NORMALTYPE.add(Cheren.ID);
                 NORMALTYPE.add(Clefairy.ID);
+                NORMALTYPE.add(Dratini.ID);
                 NORMALTYPE.add(DubwoolV.ID);
                 NORMALTYPE.add(Dunsparce.ID);
                 NORMALTYPE.add(Furfrou.ID);

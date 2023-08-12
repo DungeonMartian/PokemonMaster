@@ -18,7 +18,7 @@ public class Dratini extends BasicPokemonCard {
             "Dratini",
             1,
             CardType.SKILL,
-            CardTarget.SELF,
+            CardTarget.ENEMY,
             CardRarity.COMMON,
             PokemonMaster.Enums.CARD_COLOR);
 

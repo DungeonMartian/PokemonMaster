@@ -16,7 +16,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class WyrdeerV extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "WyrdeerV",
-            1,
+            -1,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.UNCOMMON,
