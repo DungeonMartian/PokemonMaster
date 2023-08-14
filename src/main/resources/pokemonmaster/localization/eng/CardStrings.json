@@ -81,8 +81,8 @@
   },
   "${modID}:Skiddo": {
     "NAME": "Skiddo",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the unblocked damage dealt.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to the unblocked damage dealt.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -91,8 +91,8 @@
   },
   "${modID}:Gogoat": {
     "NAME": "Gogoat",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to the damage dealt.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the unblocked damage dealt.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to unblocked the damage dealt.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1427,8 +1427,8 @@
   },
   "${modID}:OricorioFire": {
     "NAME": "OricorioF",
-    "DESCRIPTION": "{@@}At the start of your turn gain !M! Strength and add !M! burn to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Innate. At the start of your turn gain !M! Strength and add !M! burn to your hand.",
+    "DESCRIPTION": "{@@}At the start of your turn gain !M! Strength and add !M! burn{!M!|>1=s} to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}Innate. At the start of your turn gain !M! Strength and add !M! burn{!M!|>1=s} to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3316,8 +3316,8 @@
   },
   "${modID}:Taskmaster": {
     "NAME": "Capt. Task Master",
-    "DESCRIPTION": "{@@}Deal !D! damage. Gain !M! Strength. pokemonmaster:Return.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Gain !M! Strength. pokemonmaster:Return.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Strength. NL pokemonmaster:Return.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Strength. NL pokemonmaster:Return.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3456,7 +3456,7 @@
   "${modID}:Nemesis": {
     "NAME": "Capt. Nemesis",
     "DESCRIPTION": "{@@}Gain !M! Intangible.",
-    "UPGRADE_DESCRIPTION":"{@@}Innate. Gain !M! Intangible.",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Gain !M! Intangible.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3475,8 +3475,8 @@
   },
   "${modID}:Dagger": {
     "NAME": "Capt. Dagger",
-    "DESCRIPTION": "{@@}Deal !D! damage. Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Exhaust.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

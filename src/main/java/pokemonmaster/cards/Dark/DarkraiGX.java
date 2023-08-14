@@ -50,7 +50,7 @@ public class DarkraiGX extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Prized(AbstractDungeon.player,magicNumber)));
+        addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Prized(AbstractDungeon.player,1)));
 
     }
     @Override

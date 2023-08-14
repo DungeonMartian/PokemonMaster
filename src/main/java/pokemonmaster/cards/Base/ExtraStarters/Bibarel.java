@@ -1,5 +1,7 @@
 package pokemonmaster.cards.Base.ExtraStarters;
 
+import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -8,7 +10,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.BeatUpAction;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -29,7 +30,7 @@ public class Bibarel extends FinalEvolutionCard {
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE= 4;
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 4;
     private static final int UPG_MAGIC = 1;
 
     public Bibarel() {
@@ -44,7 +45,7 @@ public class Bibarel extends FinalEvolutionCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new BeatUpAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
         addToBot(new ExpertiseAction(p, magicNumber));
     }
 

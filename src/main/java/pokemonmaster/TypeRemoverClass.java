@@ -142,8 +142,9 @@ public class TypeRemoverClass {
 
                 }
             }
-                // add all integers from 1 to 9 except for the two random ones to the set
-                for (int i = 1; i < 10; i++) {
+                // add all integers from 1 to 30 except for the two random ones to the set
+                //had to make this arbitrarily large to future proof for more added buckets
+                for (int i = 1; i < 31; i++) {
                     if (i != randInt1 && i != randInt2) {
                         set.add(i);
                     }

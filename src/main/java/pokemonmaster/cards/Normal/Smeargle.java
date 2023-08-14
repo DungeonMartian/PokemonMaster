@@ -14,7 +14,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Smeargle extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Smeargle",
-            1,
+            2,
             CardType.SKILL,
             CardTarget.ENEMY,
             CardRarity.RARE,
@@ -28,6 +28,7 @@ public class Smeargle extends BasePokemonCard {
 
     public Smeargle() {
         super(cardInfo);
+        setCostUpgrade(1);
         tags.add(CardTags.HEALING);
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.POKEMON);

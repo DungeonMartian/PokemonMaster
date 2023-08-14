@@ -18,7 +18,7 @@ public class Dragonair extends IntermediateEvolutionCard {
             "Dragonair",
             1,
             CardType.SKILL,
-            CardTarget.SELF,
+            CardTarget.ENEMY,
             CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 
