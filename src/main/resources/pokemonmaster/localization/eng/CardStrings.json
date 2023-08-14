@@ -460,7 +460,7 @@
     ]
   },
   "${modID}:MachClaw": {
-  "NAME": "MachClaw",
+  "NAME": "Mach Claw",
   "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies.",
   "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage to ALL enemies.",
   "EXTENDED_DESCRIPTION": [
@@ -2637,8 +2637,8 @@
   },
   "${modID}:MirageGate": {
     "NAME": "Mirage Gate",
-    "DESCRIPTION": "{@@}If you have 7 or more cards in your exhaust pile gain !M! [E]. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}If you have 7 or more cards in your exhaust pile gain !M! [E]. NL Exhaust.",
+    "DESCRIPTION": "{@@}If you have 7 or more cards in your exhaust pile gain !M!  [E]. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}If you have 7 or more cards in your exhaust pile gain !M!  [E]. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5724,7 +5724,7 @@
     ]
   },
   "${modID}:DefenseCurl": {
-    "NAME": "DefenseCurl",
+    "NAME": "Defense Curl",
     "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier.",
     "UPGRADE_DESCRIPTION":"{@@}Gain !M! pokemonmaster:Barrier.",
     "EXTENDED_DESCRIPTION": [

@@ -16,7 +16,7 @@ public class ElectricBall extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "ElectricBall",
             -2,
-            CardType.SKILL,
+            CardType.ATTACK,
             CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);

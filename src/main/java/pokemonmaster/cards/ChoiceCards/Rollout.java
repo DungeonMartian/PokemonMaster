@@ -18,7 +18,7 @@ public class Rollout extends BaseCard {
             -2,
             CardType.ATTACK,
             CardTarget.ENEMY,
-            CardRarity.BASIC,
+            CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 
 

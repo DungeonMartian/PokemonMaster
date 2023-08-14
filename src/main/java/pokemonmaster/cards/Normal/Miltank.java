@@ -49,6 +49,9 @@ public class Miltank extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         ArrayList<AbstractCard> ATTACK = new ArrayList<>();
         ATTACK.add(new DefenseCurl());
+        DefenseCurl defenseCurl = new DefenseCurl();
+        defenseCurl.magicNumber = this.magicNumber;
+        defenseCurl.applyPowers();
         Rollout rollout = new Rollout();
         rollout.baseDamage = this.baseDamage;
         rollout.calculateCardDamage(m);
