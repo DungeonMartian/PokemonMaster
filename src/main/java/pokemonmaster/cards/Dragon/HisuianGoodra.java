@@ -46,8 +46,11 @@ public class HisuianGoodra extends FinalEvolutionCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new BufferPower(p,magicNumber)));
-
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Goomy(), 1, true, true));
+        AbstractCard TOADD = new Goomy();
+        if (this.upgraded){
+            TOADD.upgrade();
+        }
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(TOADD, 1, true, true));
 
     }
 

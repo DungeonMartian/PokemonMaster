@@ -29,14 +29,23 @@ public class EvolveActionCombat extends AbstractGameAction {
 //are you happy now? the strings are gone, it's better code, but it's lost its charm
         if (this.toEvolve !=null){
             if (SORT== AbstractDungeon.player.discardPile) {
-                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction( this.toEvolve, 1));
+                if (baseCard.upgraded){
+                    this.toEvolve.upgrade();
+                }
+                AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(this.toEvolve, 1));
                 addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.discardPile,true));
             }
             if (SORT == AbstractDungeon.player.hand){
+                if (baseCard.upgraded){
+                    this.toEvolve.upgrade();
+                }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.toEvolve, 1));
                 addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.hand,true));
             }
             if (SORT== AbstractDungeon.player.drawPile) {
+                if (baseCard.upgraded){
+                    this.toEvolve.upgrade();
+                }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.toEvolve, 1,true,false));
                 addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.drawPile,true));
             }

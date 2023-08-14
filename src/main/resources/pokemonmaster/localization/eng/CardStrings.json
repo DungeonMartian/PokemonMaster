@@ -2597,8 +2597,8 @@
   },
   "${modID}:StoneEnergy": {
     "NAME": "Stone Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! pokemonmaster:Barrier.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain  [E]. NL Gain !M! pokemonmaster:Barrier.",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier. NL At the start of your turn gain  [E].",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier. NL At the start of your turn gain  [E].",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2607,8 +2607,8 @@
   },
   "${modID}:StrongEnergy": {
     "NAME": "Strong Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Strength.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Strength.",
+    "DESCRIPTION": "{@@}Gain !M! Strength. NL At the start of your turn gain  [E].",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! Strength. NL At the start of your turn gain  [E].",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

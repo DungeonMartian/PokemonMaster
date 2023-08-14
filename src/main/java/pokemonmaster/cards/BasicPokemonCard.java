@@ -67,6 +67,9 @@ public abstract class BasicPokemonCard extends PokemonCard {
                     TOEVOLVE.isCostModifiedForTurn=true;
                 }
             }
+            if (this.upgraded){
+                TOEVOLVE.upgrade();
+            }
             addToBot(new MakeTempCardInDiscardAction(TOEVOLVE, 1));
         }
 

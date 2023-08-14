@@ -13,6 +13,13 @@
     "At the end of your turn #yExhaust a random card in your discard pile and gain 1 #ypokemonmaster:Spark."
   ]
 },
+  "${modID}:PuzzleCube": {
+    "NAME": "Puzzle Cube",
+    "FLAVOR": "Testing stuff",
+    "DESCRIPTIONS": [
+      "Can we make this work?"
+    ]
+  },
   "${modID}:Pokeball": {
     "NAME": "Pokeball",
     "FLAVOR": "Gotta catch 'em all!!",

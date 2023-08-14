@@ -49,7 +49,11 @@ public class FatalEvolve extends AbstractGameAction {
                 if (!possibleCards.isEmpty()) {
                     this.theCard = possibleCards.get(AbstractDungeon.miscRng.random(0, possibleCards.size() - 1));
                     if (this.theCard.cardsToPreview !=null ){
-                        AbstractDungeon.actionManager.addToTop(new AddCardToDeckAction(this.theCard.cardsToPreview));
+                        AbstractCard TOADD = this.theCard.cardsToPreview;
+                        if (this.theCard.upgraded){
+                            TOADD.upgrade();
+                        }
+                        AbstractDungeon.actionManager.addToTop(new AddCardToDeckAction(TOADD));
                         AbstractDungeon.player.masterDeck.removeCard(this.theCard);
                         EVOLVING = true;
                     }

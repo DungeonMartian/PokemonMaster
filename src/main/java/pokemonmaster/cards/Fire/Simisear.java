@@ -24,7 +24,7 @@ public class Simisear extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DRAWF = 3;
+    private static final int DRAWF = 2;
 
 
 

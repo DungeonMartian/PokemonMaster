@@ -56,7 +56,11 @@ public class LeafStone extends CustomPotion {
                     if (c.uuid == c2.uuid) {
 
                         if (c2.cardsToPreview !=null ){
-                            AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(c2.cardsToPreview));
+                            AbstractCard TOADD = c2.cardsToPreview;
+                            if (c2.upgraded){
+                                TOADD.upgrade();
+                            }
+                            AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(TOADD));
                             //TOREMOVE = c;
                             TOREMOVE.add(c);
                             //AbstractDungeon.player.masterDeck.removeCard(c2);
@@ -65,7 +69,11 @@ public class LeafStone extends CustomPotion {
 
 
                         if (c2.hasTag(CustomTags.EEVEE)){
-                            AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(new LeafeonGX()));
+                            AbstractCard TOADD = new LeafeonGX();
+                            if (c2.upgraded){
+                                TOADD.upgrade();
+                            }
+                            AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(TOADD));
                             //TOREMOVE = c;
                             TOREMOVE.add(c);
                             //AbstractDungeon.player.masterDeck.removeCard(c2);
@@ -78,7 +86,11 @@ public class LeafStone extends CustomPotion {
 
                 }
                 if (c2.hasTag(CustomTags.EEVEE)){
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(new LeafeonGX(), 1));
+                    AbstractCard TOADD = new LeafeonGX();
+                    if (c2.upgraded){
+                        TOADD.upgrade();
+                    }
+                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(TOADD, 1));
                     addToTop(new ExhaustSpecificCardAction(c2,AbstractDungeon.player.hand,true));
                 }
                 else {

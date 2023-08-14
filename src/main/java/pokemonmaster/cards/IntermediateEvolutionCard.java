@@ -60,6 +60,9 @@ public abstract class IntermediateEvolutionCard extends EvolvedPokemonCard {
                     TOEVOLVE.isCostModifiedForTurn=true;
                 }
             }
+            if (this.upgraded){
+                TOEVOLVE.upgrade();
+            }
             addToBot(new MakeTempCardInDiscardAction(TOEVOLVE, 1));
         }
 

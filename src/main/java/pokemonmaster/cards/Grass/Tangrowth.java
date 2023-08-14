@@ -29,7 +29,7 @@ public class Tangrowth extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int POISONTURN = 3;
+    private static final int POISONTURN = 2;
     private static final int POISONTURNUP = 1;
 
 
