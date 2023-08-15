@@ -1,15 +1,12 @@
 package pokemonmaster.cards.Dark;
 
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.DexterityPower;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -29,8 +26,8 @@ public class Whirlipede extends IntermediateEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC= 8;
+    private static final int MAGIC = 3;
+    private static final int UPG_MAGIC= 2;
 
 
 

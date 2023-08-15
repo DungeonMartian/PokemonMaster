@@ -28,8 +28,8 @@ public class Golbat extends IntermediateEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 11;
-    private static final int UPG_DAMAGE = 2;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 3;
 
 
 

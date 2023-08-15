@@ -34,8 +34,8 @@ public class Crobat extends FinalEvolutionCard {
 
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 4;
-    private static final int POISOND = 10;
-    private static final int POISONDUP = 5;
+    private static final int POISOND = 7;
+    private static final int POISONDUP = 4;
 
 
 
