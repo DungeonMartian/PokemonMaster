@@ -1,8 +1,8 @@
 {
   "${modID}:GlaceonGX": {
     "NAME": "Glaceon GX",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage to ALL enemies 3 times",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage to ALL enemies 3 times",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage to ALL enemies !M! times",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage to ALL enemies !M! times",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1607,8 +1607,8 @@
   },
   "${modID}:GalarianSirfetch'd": {
     "NAME": "Galarian Sirfetch'd",
-    "DESCRIPTION": "{@@}Deal !D! damage to a random enemy 3 times. NL You can't play ANY attacks until you restore HP. pokemonmaster:Devolve Discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage to a random enemy 3 times. NL You can't play ANY attacks until you restore HP. pokemonmaster:Devolve Discard pile. NL Exhaust.",
+    "DESCRIPTION": "{@@}Deal !D! damage to a random enemy 3 times. NL You can't play ANY attacks until you restore HP. pokemonmaster:Devolve Discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage to a random enemy 3 times. NL You can't play ANY attacks until you restore HP. pokemonmaster:Devolve Discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1787,8 +1787,8 @@
   },
   "${modID}:Lucario": {
     "NAME": "Lucario",
-    "DESCRIPTION": "{@@}Gain !M! [E]. NL Lose !M!  [E]  next turn. NL pokemonmaster:Devolve Discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !M! [E]. Lose !M!  [E]  next turn. NL pokemonmaster:Devolve Discard pile. NL Exhaust.",
+    "DESCRIPTION": "{@@}Gain !M! [E]. NL Lose !M!  [E]  next turn. NL pokemonmaster:Devolve Discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! [E]. Lose !M!  [E]  next turn. NL pokemonmaster:Devolve Discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1977,8 +1977,8 @@
   },
   "${modID}:Xatu": {
     "NAME": "Xatu",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Scry !M!. Any Status cards discarded are Exhausted. pokemonmaster:Devolve Discard pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Scry !M!. Any Status cards discarded are Exhausted. pokemonmaster:Devolve Discard pile. NL Exhaust.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Scry !M!. Any Status cards discarded are Exhausted. pokemonmaster:Devolve Discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Scry !M!. Any Status cards discarded are Exhausted. pokemonmaster:Devolve Discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2448,7 +2448,7 @@
   "${modID}:Dreadnaw": {
     "NAME": "Dreadnaw",
     "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4605,8 +4605,8 @@
   },
   "${modID}:Applin": {
     "NAME": "Applin",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw a card. NL pokemonmaster:Bait 30.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw a card. NL pokemonmaster:Bait 30.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw 1 card. NL pokemonmaster:Bait 30.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw 1 card. NL pokemonmaster:Bait 30.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

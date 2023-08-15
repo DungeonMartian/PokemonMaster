@@ -29,7 +29,7 @@ public class Mightyena extends FinalEvolutionCard {
     private static final int BLOCK = 5;
     private static final int UPG_BLOCK= 1;
 
-    private static final int DDOWN = 4;
+    private static final int DDOWN = 3;
     private static final int UPG_DDOWN= 1;
 
     public Mightyena() {

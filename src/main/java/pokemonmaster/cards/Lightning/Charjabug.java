@@ -29,7 +29,7 @@ public class Charjabug extends IntermediateEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 4;
-    private static final int SPARK = 2;
+    private static final int SPARK = 1;
     private static final int UPG_SPARK= 1;
 
 

@@ -29,11 +29,11 @@ public class Salamence extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 1;
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 10;
     private static final int UPG_BLOCK = 1;
-    private static final int MAGIC = 4;
+    private static final int MAGIC = 3;
     private static final int UPG_MAGIC = 1;
 
 

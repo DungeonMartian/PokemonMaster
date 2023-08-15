@@ -27,7 +27,7 @@ public class Scolipede extends FinalEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int MAGIC = 5;
-    private static final int UPG_MAGIC= 8;
+    private static final int UPG_MAGIC= 3;
 
 
 

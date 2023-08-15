@@ -25,8 +25,8 @@ public class LeafStep extends BaseCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int DAMAGE = 16;
-    private static final int CARDDRAW = 2;
+    private static final int DAMAGE = 20;
+    private static final int CARDDRAW = 3;
 
     public LeafStep() {
         super(cardInfo);

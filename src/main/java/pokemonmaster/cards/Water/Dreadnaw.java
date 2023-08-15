@@ -30,7 +30,7 @@ public class Dreadnaw extends FinalEvolutionCard {
 
     private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 2;
-    private static final int DAMAGEDOWN = 4;
+    private static final int DAMAGEDOWN = 3;
     private static final int UPG_DAMAGEDOWN = 2;
 
 

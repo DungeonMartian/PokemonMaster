@@ -29,7 +29,7 @@ public class Transient extends BasePokemonCard {
 
     public Transient() {
         super(cardInfo);
-        setCostUpgrade(4);
+        setCostUpgrade(3);
     }
 
     @Override
