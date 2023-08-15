@@ -33,12 +33,13 @@ public class Fraxure extends IntermediateEvolutionCard {
     private static final int UPG_DAMAGE = 4;
 
 
+    private boolean ISELITE = false;
 
 
     public Fraxure() {
         super(cardInfo,new Haxorus(),CustomTags.DRAGON);
         setDamage(DAMAGE, UPG_DAMAGE);
-
+        ISELITE = false;
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
@@ -51,10 +52,14 @@ public class Fraxure extends IntermediateEvolutionCard {
 
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
+                ISELITE = true;
+            }
+        }
+            if (ISELITE) {
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
             }
-        }
+
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
     }

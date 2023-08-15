@@ -24,13 +24,13 @@ public class Axew extends BasicPokemonCard {
 
 
     public static final String ID = makeID(cardInfo.baseId);
-
+    private boolean ISELITE = false;
 
 
 
     public Axew() {
         super(cardInfo,new Fraxure(),new Haxorus(),CustomTags.DRAGON);
-
+        ISELITE = false;
         setCostUpgrade(0);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
 
@@ -44,8 +44,11 @@ public class Axew extends BasicPokemonCard {
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
-                addToBot(new EvolveActionCombat(this,AbstractDungeon.player.hand));
+                ISELITE = true;
             }
+            if (ISELITE) {
+            addToBot(new EvolveActionCombat(this, AbstractDungeon.player.hand));
+        }
         }
 
     }

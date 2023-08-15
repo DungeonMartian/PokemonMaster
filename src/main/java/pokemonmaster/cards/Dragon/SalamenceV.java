@@ -34,7 +34,7 @@ public class SalamenceV extends BasePokemonCard {
     private static final int MAGIC = 2;
     private static final int UPG_MAGIC = -1;
 
-
+    private boolean ISELITE = false;
 
     public SalamenceV() {
         super(cardInfo);
@@ -43,6 +43,7 @@ public class SalamenceV extends BasePokemonCard {
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
+        ISELITE = false;
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
@@ -55,10 +56,14 @@ public class SalamenceV extends BasePokemonCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
+                ISELITE = true;
+            }
+        }
+        if (ISELITE) {
                 if (this.magicNumber >0) {
                     addToBot(new ApplyPowerAction(p, p, new Spark(p, 1)));
                 }
-            }
+
         }
         if (this.magicNumber >0) {
             addToBot(new ApplyPowerAction(p, p, new Spark(p, -magicNumber)));

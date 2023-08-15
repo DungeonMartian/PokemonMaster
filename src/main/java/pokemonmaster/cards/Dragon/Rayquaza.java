@@ -36,7 +36,7 @@ public class Rayquaza extends BasePokemonCard {
     private static final int MAGIC = 2;
 
 
-
+    private boolean ISELITE = false;
     public Rayquaza() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
@@ -44,7 +44,7 @@ public class Rayquaza extends BasePokemonCard {
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-
+        ISELITE = false;
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
@@ -57,10 +57,14 @@ public class Rayquaza extends BasePokemonCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
+                ISELITE = true;
+            }
+        }
+        if (ISELITE) {
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
             }
-        }
+
         addToBot(new ApplyPowerAction(p, p, new Spark(p,-MAGIC)));
 
     }

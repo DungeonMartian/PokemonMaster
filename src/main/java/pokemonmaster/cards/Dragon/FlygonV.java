@@ -38,7 +38,7 @@ public class FlygonV extends BasePokemonCard {
     private static final int UPG_MAGIC = -1;
 
 
-
+    private boolean ISELITE = false;
     public FlygonV() {
         super(cardInfo);
         setDamage(DAMAGE);
@@ -46,7 +46,7 @@ public class FlygonV extends BasePokemonCard {
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-
+        ISELITE = false;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
 
     }
@@ -56,14 +56,19 @@ public class FlygonV extends BasePokemonCard {
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new BiteEffect(m.hb.cX, m.hb.cY), 0.3F));
 
 
-        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
+        addToBot(new ApplyPowerAction(p, p, new Prized(p, 1)));
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
-                addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
+                ISELITE = true;
             }
         }
+        if (ISELITE) {
+            addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
+
+        }
+
+
         addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p,magicNumber)));
 
 

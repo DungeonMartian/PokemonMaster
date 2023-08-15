@@ -34,7 +34,7 @@ public class BlackKyuremEX extends BasePokemonCard {
 
     private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 5;
-
+    private boolean ISELITE = false;
 
 
 
@@ -46,7 +46,7 @@ public class BlackKyuremEX extends BasePokemonCard {
         tags.add(CustomTags.UNEVOLVED);
         this.exhaust=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDragon.png","pokemonmaster/character/cardback/bg_attackDragon_p.png");
-
+        ISELITE = false;
     }
 
     @Override
@@ -59,10 +59,14 @@ public class BlackKyuremEX extends BasePokemonCard {
 
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
+                ISELITE = true;
+            }
+        }
+            if (ISELITE) {
                 addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
 
             }
-        }
+
     }
 
     @Override
