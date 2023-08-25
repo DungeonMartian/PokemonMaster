@@ -61,7 +61,10 @@ public class AlolanDiglet extends BaseCard {
             AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new AlolanDugtrio(), 1, false, true));
         }
     }
-
+    public void upgrade() {
+        this.cardsToPreview.upgrade();
+        super.upgrade();
+    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new AlolanDiglet();

@@ -12,10 +12,10 @@ public class BirdMan extends AbstractImageEvent {
     private static final String[] OPTIONS = eventStrings.OPTIONS;
     private static final String INTRO_2_MSG = DESCRIPTIONS[1];
     private static final String LEAVE_MSG = DESCRIPTIONS[2];
-    private static String title = DESCRIPTIONS[0];
+    private static final String title = DESCRIPTIONS[0];
     private CurScreen screen = CurScreen.INTRO_1;
     private enum CurScreen {
-        INTRO_1, ASK, COMPLETE;
+        INTRO_1, ASK, COMPLETE
     }
     public BirdMan(String title, String body, String imgUrl) {
         super(title, body, imgUrl);

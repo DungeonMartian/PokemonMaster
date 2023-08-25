@@ -44,7 +44,10 @@ public class Ekans extends BasicPokemonCard {
         return false;
     }
 
-
+    public void upgrade() {
+        this.cardsToPreview.upgrade();
+        super.upgrade();
+    }
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
 

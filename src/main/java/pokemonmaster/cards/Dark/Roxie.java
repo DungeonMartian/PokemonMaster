@@ -50,7 +50,7 @@ public class Roxie extends BasePokemonCard {
 
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
-            addToBot(new SelectCardsInHandAction(2, "discard", true, true, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
+            addToBot(new SelectCardsInHandAction(2, "discard", true, true, card -> card.hasTag(POKEMON), abstractCards -> {
                 for (AbstractCard i : abstractCards) {
 
                     addToBot(new DiscardSpecificCardAction(i));

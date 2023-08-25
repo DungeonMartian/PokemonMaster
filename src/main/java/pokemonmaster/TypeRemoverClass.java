@@ -48,7 +48,7 @@ public class TypeRemoverClass {
                 Integer randInt1 = randNum.nextInt(10) + 1;
                 Integer randInt2 = randNum.nextInt(10) + 1;
                 while (randInt2.equals(randInt1)){
-                    randInt2 = randNum.nextInt(10) + 1;;
+                    randInt2 = randNum.nextInt(10) + 1;
                 }
 
             //this could very easily be done much better, but I didn't want to
@@ -125,6 +125,7 @@ public class TypeRemoverClass {
                     for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
                         if (Objects.equals(c.cardID, TOADD1.cardID)) {
                             TOADD = false;
+                            break;
                         }
                     }
                     if (TOADD) {
@@ -136,6 +137,7 @@ public class TypeRemoverClass {
                     for (AbstractCard t : (AbstractDungeon.player).masterDeck.group) {
                         if (Objects.equals(t.cardID, TOADD2.cardID)) {
                             TOADD = false;
+                            break;
                         }
                     }
                     if (TOADD) {

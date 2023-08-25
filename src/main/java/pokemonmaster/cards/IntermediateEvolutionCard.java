@@ -17,7 +17,7 @@ import pokemonmaster.util.CardInfo;
 
 public abstract class IntermediateEvolutionCard extends EvolvedPokemonCard {
     // private PokemonCard preevolution;
-    private PokemonCard finalEvolution;
+    private final PokemonCard finalEvolution;
     private boolean isDuplicate = false;
     public IntermediateEvolutionCard(CardInfo cardinfo, PokemonCard finalEvolution, CardTags pokemonType) {
         super(cardinfo, pokemonType);
@@ -93,6 +93,10 @@ public abstract class IntermediateEvolutionCard extends EvolvedPokemonCard {
             }
         }
 
+    }
+    public void upgrade() {
+        this.cardsToPreview.upgrade();
+        super.upgrade();
     }
 
     public abstract void onUse(AbstractPlayer p, AbstractMonster m);

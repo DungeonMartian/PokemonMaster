@@ -1,11 +1,8 @@
 package pokemonmaster.cards.Base;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
-import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 public abstract class BasePokemonCard extends BaseCard {
@@ -16,9 +13,10 @@ public abstract class BasePokemonCard extends BaseCard {
     }
     public Object evolve(){
         return this.evolve;}
-    @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
-        addToBot(new EvolveActionCombat(this.evolve, AbstractDungeon.player.hand));
+    public void upgrade() {
+        if (this.cardsToPreview != null && this.cardsToPreview.hasTag(CustomTags.POKEMON)) {
+            this.cardsToPreview.upgrade();
+        }
+        super.upgrade();
     }
 }

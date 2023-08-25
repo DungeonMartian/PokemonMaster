@@ -12,15 +12,15 @@ import java.util.ArrayList;
 public class RevitalizerAction extends AbstractGameAction {
     public static final String[] TEXT = (CardCrawlGame.languagePack.getUIString("RevitalizerAction")).TEXT;
 
-    private AbstractPlayer player;
+    private final AbstractPlayer player;
 
-    private int numberOfCards;
+    private final int numberOfCards;
 
-    private boolean optional;
+    private final boolean optional;
 
     private int newCost = 0;
 
-    private boolean setCost;
+    private final boolean setCost;
 
     public RevitalizerAction(int numberOfCards, boolean optional) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;

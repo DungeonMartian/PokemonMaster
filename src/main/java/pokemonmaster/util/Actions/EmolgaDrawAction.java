@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.cards.Lightning.Emolga;
 
 public class EmolgaDrawAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public EmolgaDrawAction(AbstractCard card, int amount) {
         this.card = card;

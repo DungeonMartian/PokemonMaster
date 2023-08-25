@@ -49,7 +49,7 @@ public class Grimer extends BasicPokemonCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(p.hand.size(), "discard", true, true, (Predicate<AbstractCard>) card -> true, abstractCards -> {
+        addToBot(new SelectCardsInHandAction(p.hand.size(), "discard", true, true, card -> true, abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 addToBot(new DiscardSpecificCardAction(i));
                 AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);

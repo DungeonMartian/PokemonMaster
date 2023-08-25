@@ -12,7 +12,7 @@ import java.util.Iterator;
 
 public class MimikyuAction extends AbstractGameAction {
 
-    private AbstractPlayer player;
+    private final AbstractPlayer player;
     private int playAmt;
 
     public MimikyuAction() {

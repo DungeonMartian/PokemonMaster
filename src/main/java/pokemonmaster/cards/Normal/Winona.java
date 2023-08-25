@@ -46,7 +46,7 @@ public class Winona extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
-            addToBot(new FetchAction(p.drawPile,(Predicate<AbstractCard>) card -> card.hasTag(POKEMON) &&card.hasTag(NORMAL),3, abstractCards -> {
+            addToBot(new FetchAction(p.drawPile, card -> card.hasTag(POKEMON) &&card.hasTag(NORMAL),3, abstractCards -> {
             }));
         }
 

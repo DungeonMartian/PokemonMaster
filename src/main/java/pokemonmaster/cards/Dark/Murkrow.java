@@ -54,7 +54,10 @@ public class Murkrow extends BasePokemonCard {
 
         addToBot(new ScryAction(magicNumber));
     }
-
+    public void upgrade() {
+        this.cardsToPreview.upgrade();
+        super.upgrade();
+    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Murkrow();

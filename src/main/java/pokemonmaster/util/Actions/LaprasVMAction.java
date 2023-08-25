@@ -12,10 +12,10 @@ public class LaprasVMAction extends AbstractGameAction {
 
     private boolean freeToPlayOnce = false;
 
-    private DamageInfo.DamageType damageType;
+    private final DamageInfo.DamageType damageType;
 
 
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
     private int ENERGY = -1;
 

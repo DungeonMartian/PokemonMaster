@@ -25,14 +25,14 @@ public class Magnet extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int ENERGY = 1;
-    private static final int ENERGYUP = 1;
+
 
 
 
     public Magnet() {
         super(cardInfo);
         this.selfRetain = true;
-        setMagic(ENERGY, ENERGYUP);
+        setMagic(ENERGY);
         tags.add(CustomTags.METAL);
         tags.add(CustomTags.BAIT);
         this.misc =10;

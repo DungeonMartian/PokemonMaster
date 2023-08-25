@@ -5,7 +5,7 @@ import pokemonmaster.util.CardInfo;
 
 public abstract class PokemonCard extends BaseCard{
 
-    private CardTags _pokemonType;
+    private final CardTags _pokemonType;
     public PokemonCard(CardInfo cardInfo, CardTags pokemonType) {
         super(cardInfo);
         this._pokemonType = pokemonType;

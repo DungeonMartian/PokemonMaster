@@ -42,7 +42,7 @@ public class NetBall extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        addToBot(new FetchAction(p.drawPile, (Predicate<AbstractCard>) card -> (card.hasTag(WATER) || card.hasTag(GRASS)) && card.hasTag(UNEVOLVED), 1, abstractCards -> {
+        addToBot(new FetchAction(p.drawPile, card -> (card.hasTag(WATER) || card.hasTag(GRASS)) && card.hasTag(UNEVOLVED), 1, abstractCards -> {
         }));
         if (!upgraded) {
             addToBot(new MakeTempCardInHandAction(new Slimed(), 1));

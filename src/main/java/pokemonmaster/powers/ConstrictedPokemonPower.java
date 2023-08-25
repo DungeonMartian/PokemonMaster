@@ -34,7 +34,7 @@ public class ConstrictedPokemonPower extends BasePower implements HealthBarRende
     public void atStartOfTurn() {
         flashWithoutSound();
         playApplyPowerSfx();
-        addToBot((AbstractGameAction)new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS)));
+        addToBot(new DamageAction(this.owner, new DamageInfo(this.source, this.amount, DamageInfo.DamageType.THORNS)));
 
     }
     public void playApplyPowerSfx() {

@@ -57,6 +57,7 @@ public class SalamenceV extends BasePokemonCard {
         for (AbstractMonster j : (AbstractDungeon.getCurrRoom()).monsters.monsters) {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
                 ISELITE = true;
+                break;
             }
         }
         if (ISELITE) {

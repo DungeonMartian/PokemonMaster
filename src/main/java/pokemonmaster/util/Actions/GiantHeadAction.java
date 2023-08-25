@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.cards.StarterRelic.Act3.GiantHead;
 
 public class GiantHeadAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public GiantHeadAction(AbstractCard card, int amount) {
         this.card = card;

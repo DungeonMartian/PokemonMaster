@@ -48,10 +48,18 @@ public class Piplup extends BaseCard {
 
         addToBot(new GainBlockAction(p, p, block));
         addToBot(new DiscardPileToTopOfDeckAction(p));
-        addToBot(new MakeTempCardInDiscardAction(new Prinplup(), 1));
+        AbstractCard P = new Prinplup();
+        if (this.upgraded) {
+            P.upgrade();
 
+
+        }
+        addToBot(new MakeTempCardInDiscardAction(P, 1));
     }
-
+    public void upgrade() {
+        this.cardsToPreview.upgrade();
+        super.upgrade();
+    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Piplup();

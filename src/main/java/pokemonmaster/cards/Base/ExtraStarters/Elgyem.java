@@ -52,7 +52,10 @@ public class Elgyem extends BasePokemonCard {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new EvolveActionCombat(this, AbstractDungeon.player.drawPile));
     }
-
+    public void upgrade() {
+        this.cardsToPreview.upgrade();
+        super.upgrade();
+    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Elgyem();

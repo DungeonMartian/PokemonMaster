@@ -15,9 +15,9 @@ public class WaterDiscardDeckAction extends AbstractGameAction {
 
     public static final String[] TEXT = uiStrings.TEXT;
 
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
-    private Boolean AlwaysFree;
+    private final Boolean AlwaysFree;
 
 
     public WaterDiscardDeckAction(AbstractCreature source, Boolean AlwaysFree) {
@@ -43,7 +43,7 @@ public class WaterDiscardDeckAction extends AbstractGameAction {
                 this.p.discardPile.removeCard(tmp);
                 this.p.discardPile.moveToDeck(tmp, false);
                 tmp.costForTurn=0;
-                if (AlwaysFree == true) {
+                if (AlwaysFree) {
                     tmp.cost = 0;
                     tmp.isCostModified = true;
                 }
@@ -58,7 +58,7 @@ public class WaterDiscardDeckAction extends AbstractGameAction {
             for (AbstractCard c : AbstractDungeon.gridSelectScreen.selectedCards) {
                 this.p.discardPile.removeCard(c);
                 this.p.hand.moveToDeck(c, false);
-                if (AlwaysFree == true) {
+                if (AlwaysFree) {
                     c.cost = 0;
                     c.isCostModified = true;
                 }

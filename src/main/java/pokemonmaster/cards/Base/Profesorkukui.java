@@ -50,8 +50,8 @@ public class Profesorkukui extends BaseCard {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
             addToBot(new DrawCardAction(magicNumber));
-            addToBot(new ApplyPowerAction(p, p, (AbstractPower)new StrengthPower(p, this.magicNumber), this.magicNumber));
-            addToBot(new ApplyPowerAction(p, p, (AbstractPower)new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
+            addToBot(new ApplyPowerAction(p, p, new LoseStrengthPower(p, this.magicNumber), this.magicNumber));
             addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p,1)));
         }
     }

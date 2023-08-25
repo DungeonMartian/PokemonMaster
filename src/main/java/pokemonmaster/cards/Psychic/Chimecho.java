@@ -9,8 +9,6 @@ import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
-import java.util.function.Predicate;
-
 import static pokemonmaster.CustomTags.POKEMON;
 import static pokemonmaster.CustomTags.SUPPORTER;
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -47,9 +45,9 @@ public class Chimecho extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new FetchAction(p.drawPile,(Predicate<AbstractCard>) card -> card.hasTag(POKEMON),1, abstractCards -> {
+        addToBot(new FetchAction(p.drawPile, card -> card.hasTag(POKEMON),1, abstractCards -> {
         }));
-        addToBot(new FetchAction(p.drawPile,(Predicate<AbstractCard>) card -> card.hasTag(SUPPORTER),1, abstractCards -> {
+        addToBot(new FetchAction(p.drawPile, card -> card.hasTag(SUPPORTER),1, abstractCards -> {
         }));
 
     }

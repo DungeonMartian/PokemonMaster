@@ -11,11 +11,11 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import java.util.ArrayList;
 
 public class KiaweAction extends AbstractGameAction {
-    private AbstractPlayer player;
+    private final AbstractPlayer player;
 
-    private int numberOfCards;
+    private final int numberOfCards;
 
-    private boolean optional;
+    private final boolean optional;
 
     public KiaweAction(int numberOfCards, boolean optional) {
         this.actionType = AbstractGameAction.ActionType.CARD_MANIPULATION;

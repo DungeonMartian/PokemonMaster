@@ -48,7 +48,7 @@ public class RepeatBall extends BaseRelic implements ClickableRelic {
             if (this.counter > 0) {
                 flash();
                 this.grayscale = true;
-                addToBot(new SelectCardsInHandAction(1, "copy", false, false, (Predicate<AbstractCard>) card -> true, abstractCards -> {
+                addToBot(new SelectCardsInHandAction(1, "copy", false, false, card -> true, abstractCards -> {
                     for (AbstractCard i : abstractCards) {
                         addToBot(new AddCardToDeckAction(i.makeCopy()));
                     }

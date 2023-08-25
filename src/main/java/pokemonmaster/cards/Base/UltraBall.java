@@ -45,7 +45,7 @@ public class UltraBall extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DiscardAction(p, p, this.magicNumber, false));
-        addToBot(new FetchAction(p.drawPile,(Predicate<AbstractCard>) card -> card.hasTag(POKEMON),1, abstractCards -> {
+        addToBot(new FetchAction(p.drawPile, card -> card.hasTag(POKEMON),1, abstractCards -> {
 
 
 

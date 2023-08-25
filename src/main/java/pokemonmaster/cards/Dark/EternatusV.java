@@ -52,7 +52,7 @@ public class EternatusV extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new SelectCardsInHandAction(1, "Exhaust.", false, true, (Predicate<AbstractCard>) card -> true, abstractCards -> {
+        addToBot(new SelectCardsInHandAction(1, "Exhaust.", false, true, card -> true, abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 if (i.cost >0) {
                     addToBot(new ApplyPowerAction(p, p, new Spark(p, i.cost)));

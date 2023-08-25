@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.cards.StarterRelic.Act2.BookOfStabbing;
 
 public class BookAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public BookAction(AbstractCard card, int amount) {
         this.card = card;

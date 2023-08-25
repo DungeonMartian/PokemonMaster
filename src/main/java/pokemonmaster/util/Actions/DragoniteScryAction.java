@@ -19,7 +19,7 @@ public class DragoniteScryAction extends AbstractGameAction {
 
         public static final String[] TEXT = uiStrings.TEXT;
 
-        private float startingDuration;
+        private final float startingDuration;
 
         public DragoniteScryAction(int numCards) {
             this.amount = numCards;

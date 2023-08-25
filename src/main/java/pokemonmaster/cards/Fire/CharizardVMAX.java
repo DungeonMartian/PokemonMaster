@@ -12,7 +12,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.RedFireballEffect;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
+import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Prized;
 import pokemonmaster.powers.Spark;
@@ -20,7 +20,7 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class CharizardVMAX extends BaseCard {
+public class CharizardVMAX extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "CharizardVMAX",
             5,
@@ -40,17 +40,16 @@ public class CharizardVMAX extends BaseCard {
 
 
     public CharizardVMAX() {
-        super(cardInfo);
+        super(cardInfo,CustomTags.FIRE);
         setDamage(DAMAGE,DAMAGEUP);
-        tags.add(CustomTags.FIRE);
-        tags.add(CustomTags.EVOLVED);
-        tags.add(CustomTags.POKEMON);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
     }
 
+
     @Override
-    public void use(AbstractPlayer p, AbstractMonster m) {
+    public void onUse(AbstractPlayer p, AbstractMonster m) {
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new RedFireballEffect(m.hb.cX-5* Settings.scale,m.hb.cY,m.hb.cX+5* Settings.scale,m.hb.cY, 12), 0.1F));
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));

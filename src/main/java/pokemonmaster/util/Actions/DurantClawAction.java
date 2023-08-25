@@ -6,7 +6,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.cards.Grass.Durant;
 
 public class DurantClawAction extends AbstractGameAction {
-    private AbstractCard card;
+    private final AbstractCard card;
 
     public DurantClawAction(AbstractCard card, int amount) {
         this.card = card;

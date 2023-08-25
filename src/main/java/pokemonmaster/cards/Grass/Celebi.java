@@ -44,7 +44,7 @@ public class Celebi extends BasePokemonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new SelectCardsInHandAction(p.hand.size(), "choose card to evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
+        addToBot(new SelectCardsInHandAction(p.hand.size(), "choose card to evolve",false,false, card -> card.hasTag(POKEMON), abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 addToBot(new EvolveActionCombat(i, AbstractDungeon.player.hand));
             }

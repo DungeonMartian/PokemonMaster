@@ -81,6 +81,12 @@ public class Natu extends BaseCard {
         this.rawDescription = cardStrings.DESCRIPTION;
         initializeDescription();
     }
+    public void upgrade() {
+
+        this.cardsToPreview.upgrade();
+
+        super.upgrade();
+    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Natu();

@@ -50,7 +50,7 @@ public class Kiawe extends BasePokemonCard {
         if (pow == null) {
             addToBot(new KiaweAction(magicNumber));
             addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Spark(AbstractDungeon.player,2)));
-            addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p,1)));;
+            addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p,1)));
         }
     }
     public void triggerOnGlowCheck() {

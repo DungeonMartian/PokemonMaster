@@ -16,7 +16,7 @@ public class XatuScryAction extends AbstractGameAction {
 
         public static final String[] TEXT = uiStrings.TEXT;
 
-        private float startingDuration;
+        private final float startingDuration;
 
         public XatuScryAction(int numCards) {
             this.amount = numCards;

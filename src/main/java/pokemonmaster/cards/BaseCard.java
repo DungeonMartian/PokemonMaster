@@ -1,11 +1,11 @@
 package pokemonmaster.cards;
 
 import basemod.abstracts.CustomCard;
-import pokemonmaster.PokemonMasterMod;
-import pokemonmaster.util.CardInfo;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.localization.CardStrings;
+import pokemonmaster.PokemonMasterMod;
+import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 import static pokemonmaster.util.TextureLoader.getCardTextureString;

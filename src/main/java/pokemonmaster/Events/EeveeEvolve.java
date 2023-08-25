@@ -17,7 +17,7 @@ public class EeveeEvolve extends AbstractImageEvent {
     private static final EventStrings eventStrings = CardCrawlGame.languagePack.getEventString(ID);
     private static final String[] DESCRIPTIONS = eventStrings.DESCRIPTIONS;
     private static final String[] OPTIONS = eventStrings.OPTIONS;
-    private static String title = DESCRIPTIONS[0];
+    private static final String title = DESCRIPTIONS[0];
     public EeveeEvolve() {
         super(ID, title, "img/events/eventpicture.png");
         Random randNum = new Random();

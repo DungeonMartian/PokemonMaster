@@ -34,7 +34,7 @@ public class BearticAction extends AbstractGameAction {
             }
         }
         if (TODO) {
-            addToTop(new SelectCardsInHandAction(1, "exhaust", false, true, (Predicate<AbstractCard>) card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
+            addToTop(new SelectCardsInHandAction(1, "exhaust", false, true, card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
                 for (AbstractCard i : abstractCards) {
                     int NEWMAGIC = this.amount * (i.misc / 10) + (BAIT / 10);
 

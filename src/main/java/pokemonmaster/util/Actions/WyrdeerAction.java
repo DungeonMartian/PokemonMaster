@@ -9,19 +9,19 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 
 public class WyrdeerAction extends AbstractGameAction {
-    private boolean freeToPlayOnce;
+    private final boolean freeToPlayOnce;
 
-    private int damage;
-    private int magic;
+    private final int damage;
+    private final int magic;
 
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
-    private DamageInfo.DamageType damageTypeForTurn;
+    private final DamageInfo.DamageType damageTypeForTurn;
 
 
-    private int energyOnUse;
+    private final int energyOnUse;
     public WyrdeerAction(AbstractPlayer p, AbstractMonster m, int damage, DamageInfo.DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse, int MAGIC) {
         this.p = p;
         this.m = m;

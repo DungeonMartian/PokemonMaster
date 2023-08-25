@@ -43,7 +43,7 @@ public class Porygon2 extends IntermediateEvolutionCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new SelectCardsInHandAction(p.hand.size(), "choose card to evolve",false,false, (Predicate<AbstractCard>) card -> card.hasTag(POKEMON), abstractCards -> {
+        addToBot(new SelectCardsInHandAction(p.hand.size(), "choose card to evolve",false,false, card -> card.hasTag(POKEMON), abstractCards -> {
             for (AbstractCard i : abstractCards) {
                 addToBot(new EvolveActionCombat(i, AbstractDungeon.player.hand));
             }

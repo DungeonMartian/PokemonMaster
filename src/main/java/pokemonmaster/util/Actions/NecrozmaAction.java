@@ -13,17 +13,17 @@ import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import pokemonmaster.cards.Metal.Magnet;
 
 public class NecrozmaAction extends AbstractGameAction {
-    private boolean freeToPlayOnce;
+    private final boolean freeToPlayOnce;
 
-    private int damage;
+    private final int damage;
 
-    private AbstractPlayer p;
+    private final AbstractPlayer p;
 
-    private AbstractMonster m;
+    private final AbstractMonster m;
 
-    private DamageInfo.DamageType damageTypeForTurn;
+    private final DamageInfo.DamageType damageTypeForTurn;
 
-    private int energyOnUse;
+    private final int energyOnUse;
 
     public NecrozmaAction(AbstractPlayer p, AbstractMonster m, int damage, DamageInfo.DamageType damageTypeForTurn, boolean freeToPlayOnce, int energyOnUse) {
         this.p = p;
