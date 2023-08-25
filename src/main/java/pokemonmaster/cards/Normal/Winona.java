@@ -37,7 +37,7 @@ public class Winona extends BasePokemonCard {
 
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.SUPPORTER);
-
+        setExhaust(true,false);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillNormal.png","pokemonmaster/character/cardback/bg_skillNormal_p.png");
 
     }

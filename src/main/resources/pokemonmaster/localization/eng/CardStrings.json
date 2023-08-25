@@ -61,8 +61,8 @@
   },
   "${modID}:Litleo": {
     "NAME": "Litleo",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Exhaust a card.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Exhaust a card.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Exhaust 1 card.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Exhaust 1 card.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -71,8 +71,8 @@
   },
   "${modID}:Pyroar": {
     "NAME": "Pyroar",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! Strength. NL Exhaust a card.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! Strength. NL Exhaust a card.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! Strength. NL Exhaust 1 card.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! Strength. NL Exhaust 1 card.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -239,7 +239,7 @@
       ""
     ]
   },
-  "${modID}:Pineco2": {
+  "${modID}:Pineco": {
     "NAME": "Pineco",
     "DESCRIPTION": "{@@}Gain !B! Block",
     "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block",
@@ -351,8 +351,8 @@
   },
   "${modID}:Toxin": {
     "NAME": "Toxin",
-    "DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M! NL Discard and draw a card",
-    "UPGRADE_DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M! NL Discard and draw a card",
+    "DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M! NL Discard this and draw 1 card",
+    "UPGRADE_DESCRIPTION": "{@@}When drawn: NL Take !D! damage and increases damage by !M! NL Discard this and draw 1 card",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1717,8 +1717,8 @@
   },
   "${modID}:Shuppet": {
     "NAME": "Shuppet",
-    "DESCRIPTION": "{@@}Exhaust a card in your hand. NL Draw !M! Cards.",
-    "UPGRADE_DESCRIPTION": "{@@}Exhaust a card in your hand. NL Draw !M! Cards.",
+    "DESCRIPTION": "{@@}Exhaust 1 card in your hand. NL Draw !M! Cards.",
+    "UPGRADE_DESCRIPTION": "{@@}Exhaust 1 card in your hand. NL Draw !M! Cards.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1727,8 +1727,8 @@
   },
   "${modID}:Banette": {
     "NAME": "Banette",
-    "DESCRIPTION": "{@@}Exhaust your hand. NL *Exhume a card.",
-    "UPGRADE_DESCRIPTION": "{@@}Exhaust your hand. NL *Exhume a card.",
+    "DESCRIPTION": "{@@}Exhaust your hand. NL *Exhume 1 card.",
+    "UPGRADE_DESCRIPTION": "{@@}Exhaust your hand. NL *Exhume 1 card.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2298,7 +2298,7 @@
   "${modID}:OricorioLightning": {
     "NAME": "OricorioL",
     "DESCRIPTION": "{@@}Your next attack deals +50% additional damage.",
-    "UPGRADE_DESCRIPTION": "{@@}Your next attack deals +50% additional damage. NL Draw a card.",
+    "UPGRADE_DESCRIPTION": "{@@}Your next attack deals +50% additional damage. NL Draw 1 card.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2806,8 +2806,8 @@
   },
   "${modID}:Snom": {
     "NAME": "Snom",
-    "DESCRIPTION": "{@@}Exhaust a card in your hand. Gain  [E]  next turn. NL pokemonmaster:Bait 40.",
-    "UPGRADE_DESCRIPTION":"{@@}Exhaust a card in your hand. Gain  [E]  and draw 1 additional card next turn. NL pokemonmaster:Bait 40.",
+    "DESCRIPTION": "{@@}Exhaust 1 card in your hand. Gain  [E]  next turn. NL pokemonmaster:Bait 40.",
+    "UPGRADE_DESCRIPTION":"{@@}Exhaust 1 card in your hand. Gain  [E]  and draw 1 additional card next turn. NL pokemonmaster:Bait 40.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2836,8 +2836,8 @@
   },
   "${modID}:AquaPatch": {
     "NAME": "Aqua Patch",
-    "DESCRIPTION": "{@@}Exhaust a card in your discard pile. Gain  [E]  and draw 1 additional card next turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}Exhaust a card in your discard pile. Gain  [E]  and draw 1 additional card next turn. NL Exhaust.",
+    "DESCRIPTION": "{@@}Exhaust 1 card in your discard pile. Gain  [E]  and draw 1 additional card next turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Exhaust 1 card in your discard pile. Gain  [E]  and draw 1 additional card next turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3755,8 +3755,8 @@
   },
   "${modID}:EternatusV": {
     "NAME": "Eternatus V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. Exhaust a card in your hand. Gain pokemonmaster:Spark equal to it's cost.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. Exhaust a card in your hand. Gain pokemonmaster:Spark equal to it's cost.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. Exhaust 1 card in your hand. Gain pokemonmaster:Spark equal to it's cost.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. Exhaust 1 card in your hand. Gain pokemonmaster:Spark equal to it's cost.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3835,8 +3835,8 @@
   },
   "${modID}:Nickit": {
     "NAME": "Nickit",
-    "DESCRIPTION": "{@@}Put a card from your discard pile into your hand. NL Discard !M! card{!M!|>1=s}.",
-    "UPGRADE_DESCRIPTION":"{@@}Put a card from your discard pile into your hand. NL Discard !M! card{!M!|>1=s}.",
+    "DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} from your discard pile into your hand. NL Discard !M! card{!M!|>1=s}.",
+    "UPGRADE_DESCRIPTION":"{@@}Put !M! card{!M!|>1=s} from your discard pile into your hand. NL Discard !M! card{!M!|>1=s}.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4146,7 +4146,7 @@
   "${modID}:Tatsugiri": {
     "NAME": "Tatsugiri",
     "DESCRIPTION": "{@@}Heal !M! HP. NL Gain 2  [E]  next turn. NL pokemonmaster:Bait 65. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}Heal !M! HP. NL Gain 2  [E]  next turn. NL Exhaust. NL pokemonmaster:Bait 65. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Heal !M! HP. NL Gain 2  [E]  next turn. NL pokemonmaster:Bait 65. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4315,8 +4315,8 @@
   },
   "${modID}:Passimian": {
     "NAME": "Passimian",
-    "DESCRIPTION": "{@@}Discard a card. NL Deal !D! damage for each  [E]  the card cost.",
-    "UPGRADE_DESCRIPTION":"{@@}Discard a card. NL Deal !D! damage for each  [E]  the card cost.",
+    "DESCRIPTION": "{@@}Discard 1 card. NL Deal !D! damage for each  [E]  the card cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Discard 1 card. NL Deal !D! damage for each  [E]  the card cost.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4355,8 +4355,8 @@
   },
   "${modID}:Claydol": {
     "NAME": "Claydol",
-    "DESCRIPTION": "{@@}At the start of your turn if you have no pokemonmaster:Supporters in your draw or discard piles gain  [E]  and draw a card.",
-    "UPGRADE_DESCRIPTION":"{@@}At the start of your turn if you have no pokemonmaster:Supporters in your draw or discard piles gain  [E]  and draw a card.",
+    "DESCRIPTION": "{@@}At the start of your turn if you have no pokemonmaster:Supporters in your draw or discard piles gain  [E]  and draw 1 card.",
+    "UPGRADE_DESCRIPTION":"{@@}At the start of your turn if you have no pokemonmaster:Supporters in your draw or discard piles gain  [E]  and draw 1 card.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4475,8 +4475,8 @@
   },
   "${modID}:EspeonGX": {
     "NAME": "Espeon GX",
-    "DESCRIPTION": "{@@}Discard 2 Cards. NL Scry !M!. NL Draw until you have 6 cards.",
-    "UPGRADE_DESCRIPTION":"{@@}Discard 2 Cards. NL Scry !M!. NL Draw until you have 6 cards.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Discard 2 Cards. NL Scry !M!. NL Draw until you have 6 cards.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Discard 2 Cards. NL Scry !M!. NL Draw until you have 6 cards.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4485,8 +4485,8 @@
   },
   "${modID}:UmbreonGX": {
     "NAME": "Umbreon GX",
-    "DESCRIPTION": "{@@}If you are missing HP deal !D! damage. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION":"{@@}If you are missing HP deal !D! damage. NL Deal !D! damage.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL If you are missing HP deal !D! damage. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL If you are missing HP deal !D! damage. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4495,8 +4495,8 @@
   },
   "${modID}:LeafeonGX": {
     "NAME": "Leafeon GX",
-    "DESCRIPTION": "{@@}Deal !D! damage to all enemies. NL Apply !M! Weak to all enemies.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to all enemies. NL Apply !M! Weak to all enemies. NL Gain 1 pokemonmaster:Buffer.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage to all enemies. NL Apply !M! Weak to all enemies.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage to all enemies. NL Apply !M! Weak to all enemies. NL Gain 1 pokemonmaster:Buffer.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4505,8 +4505,8 @@
   },
   "${modID}:FlareonGX": {
     "NAME": "Flareon GX",
-    "DESCRIPTION": "{@@}Exhaust the top !M! cards of your draw pile. NL Deal !D! damage for each Skill or Status Exhausted.",
-    "UPGRADE_DESCRIPTION":"{@@}Exhaust the top !M! cards of your draw pile. NL Deal !D! damage for each Skill or Status Exhausted.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Exhaust the top !M! cards of your draw pile. NL Deal !D! damage for each Skill or Status Exhausted.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Exhaust the top !M! cards of your draw pile. NL Deal !D! damage for each Skill or Status Exhausted.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5055,8 +5055,8 @@
   },
   "${modID}:Heatmor": {
     "NAME": "Heatmor",
-    "DESCRIPTION": "{@@}Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
-    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Exhaust a card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
+    "DESCRIPTION": "{@@}Exhaust 1 card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Exhaust 1 card in your draw pile. Gain !B! Block and 1 pokemonmaster:Spark for each  [E]  it cost.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5675,7 +5675,7 @@
   },
   "${modID}:Winona": {
     "NAME": "Winona",
-    "DESCRIPTION": "{@@}*Seek 3 Normal *Pokemon.",
+    "DESCRIPTION": "{@@}*Seek 3 Normal *Pokemon. NL Exhaust.",
     "UPGRADE_DESCRIPTION":"{@@}*Seek 3 Normal *Pokemon.",
     "EXTENDED_DESCRIPTION": [
       "",
@@ -5739,6 +5739,16 @@
     "UPGRADE_DESCRIPTION":"{@@}",
     "EXTENDED_DESCRIPTION": [
       "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:PorygonEX": {
+    "NAME": "Porygon EX",
+    "DESCRIPTION": "{@@}Deal !D! damage for each unique type of pokemon in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each unique type of pokemon in your hand.",
+    "EXTENDED_DESCRIPTION": [
+      "Deal !D! damage.",
       "",
       ""
     ]

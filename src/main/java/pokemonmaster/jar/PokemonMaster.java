@@ -21,7 +21,7 @@ import com.megacrit.cardcrawl.localization.CharacterStrings;
 import com.megacrit.cardcrawl.screens.CharSelectInfo;
 import pokemonmaster.cards.Base.EeveeGX;
 import pokemonmaster.cards.Base.Pikachu;
-import pokemonmaster.cards.Base.Pineco2;
+import pokemonmaster.cards.Base.Pineco;
 import pokemonmaster.cards.Base.RareCandy;
 import pokemonmaster.relics.Pokeball;
 
@@ -98,9 +98,9 @@ public class PokemonMaster extends CustomPlayer {
         retVal.add(Pikachu.ID);
         retVal.add(Pikachu.ID);
         retVal.add(Pikachu.ID);
-        retVal.add(Pineco2.ID);
-        retVal.add(Pineco2.ID);
-        retVal.add(Pineco2.ID);
+        retVal.add(Pineco.ID);
+        retVal.add(Pineco.ID);
+        retVal.add(Pineco.ID);
         retVal.add(EeveeGX.ID);
         retVal.add(RareCandy.ID);
         retVal.add(RareCandy.ID);

@@ -52,8 +52,11 @@ public class Heatmor extends BasePokemonCard {
                     for (int i =0; i < c.cost; i++) {
                         addToBot(new GainBlockAction(p, p, block));
                         addToBot(new ApplyPowerAction(p, AbstractDungeon.player, new Spark(p, 1)));
+
                     }
+                    AbstractDungeon.player.drawPile.moveToExhaustPile(c);
                 }
+
             }));
 
         }

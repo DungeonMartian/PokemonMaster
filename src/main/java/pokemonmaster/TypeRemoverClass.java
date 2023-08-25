@@ -44,14 +44,16 @@ public class TypeRemoverClass {
                 Random randNum = new Random();
                 randNum.setSeed(Settings.seed);
                 Set<Integer> set = new LinkedHashSet<Integer>();
-                // Integer randInt1 = 1;
-                Integer randInt1 = randNum.nextInt(10) + 1; // TODO uncomment
+
+                Integer randInt1 = randNum.nextInt(10) + 1;
                 Integer randInt2 = randNum.nextInt(10) + 1;
                 while (randInt2.equals(randInt1)){
                     randInt2 = randNum.nextInt(10) + 1;;
                 }
 
-
+            //this could very easily be done much better, but I didn't want to
+            //you can theoretically lose your starting bonus if you use it to remove your bonus cards, then save load
+            //in the neow room
                 if (randInt1 == 1){
                     TOADD1 = new Elgyem();
                 }
@@ -119,7 +121,7 @@ public class TypeRemoverClass {
             if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
 
 
-                if (AbstractDungeon.floorNum <= 1) {
+                if (AbstractDungeon.floorNum < 1) {
                     for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
                         if (Objects.equals(c.cardID, TOADD1.cardID)) {
                             TOADD = false;
@@ -130,7 +132,7 @@ public class TypeRemoverClass {
                     }
 
                 }
-                if (AbstractDungeon.floorNum <= 1) {
+                if (AbstractDungeon.floorNum < 1) {
                     for (AbstractCard t : (AbstractDungeon.player).masterDeck.group) {
                         if (Objects.equals(t.cardID, TOADD2.cardID)) {
                             TOADD = false;
@@ -218,7 +220,6 @@ public class TypeRemoverClass {
                 LightningTYPE.add(Voltorb.ID);
                 LightningTYPE.add(Xurkitree.ID);
                 LightningTYPE.add(Zapdos.ID);
-
 
 
                 ArrayList<String> FIGHTINGTYPE = new ArrayList<>();
@@ -312,6 +313,7 @@ public class TypeRemoverClass {
                 GRASSTYPE.add(Pheromosa.ID);
                 GRASSTYPE.add(Revitalizer.ID);
                 GRASSTYPE.add(Scyther.ID);
+                GRASSTYPE.add(Shroomish.ID);
                 GRASSTYPE.add(Shuckle.ID);
                 GRASSTYPE.add(Sunkern.ID);
                 GRASSTYPE.add(Oddish.ID);
@@ -352,6 +354,7 @@ public class TypeRemoverClass {
                 STEELTYPE.add(ShieldEnergy.ID);
                 STEELTYPE.add(Skarmory.ID);
                 STEELTYPE.add(Zamazenta.ID);
+
 
                 ArrayList<String> PSYCHICTYPE = new ArrayList<>();
                 PSYCHICTYPE.add(Blacephalon.ID);
@@ -451,6 +454,7 @@ public class TypeRemoverClass {
                 DRAGONTYPE.add(UltraNecrozmaV.ID);
                 DRAGONTYPE.add(WhiteKyuremGX.ID);
 
+
                 ArrayList<String> NORMALTYPE = new ArrayList<>();
                 NORMALTYPE.add(Audino.ID);
                 NORMALTYPE.add(BlisseyV.ID);
@@ -468,6 +472,7 @@ public class TypeRemoverClass {
                 NORMALTYPE.add(Miltank.ID);
                 NORMALTYPE.add(OranguruV.ID);
                 NORMALTYPE.add(Porygon.ID);
+                NORMALTYPE.add(PorygonEX.ID);
                 NORMALTYPE.add(Regigigas.ID);
                 NORMALTYPE.add(Shroodle.ID);
                 NORMALTYPE.add(Slakoth.ID);

@@ -11,9 +11,9 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Pineco2 extends BasicPokemonCard {
+public class Pineco extends BasicPokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "Pineco2",
+            "Pineco",
             1,
             CardType.SKILL,
             CardTarget.SELF,
@@ -29,7 +29,7 @@ public class Pineco2 extends BasicPokemonCard {
 
 
 
-    public Pineco2() {
+    public Pineco() {
         super(cardInfo, new Forretress(),new Forretress(),CustomTags.GRASS);
 
         setBlock(BLOCK, UPG_BLOCK);
@@ -48,7 +48,7 @@ public class Pineco2 extends BasicPokemonCard {
 
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new Pineco2();
+        return new Pineco();
     }
 }
 

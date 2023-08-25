@@ -38,6 +38,7 @@ public class EeveeGX extends BaseCard {
         tags.add(CustomTags.SPECIALEVOLVE);
         tags.add(CustomTags.EEVEE);
         tags.add(CustomTags.POKEMON);
+        tags.add(CustomTags.NORMAL);
         setMagic(EEVEESEEK, EEVEEUP);
 
     }
