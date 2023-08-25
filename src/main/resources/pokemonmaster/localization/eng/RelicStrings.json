@@ -13,6 +13,13 @@
     "At the end of your turn #yExhaust a random card in your discard pile and gain 1 #ypokemonmaster:Spark."
   ]
 },
+  "${modID}:TwistedSpoon": {
+    "NAME": "Twisted Spoon",
+    "FLAVOR": "Is there a spoon?",
+    "DESCRIPTIONS": [
+      "Once you've played 10 cards in one turn this combat, heal 8 HP."
+    ]
+  },
   "${modID}:PuzzleCube": {
     "NAME": "Puzzle Cube",
     "FLAVOR": "Testing stuff",

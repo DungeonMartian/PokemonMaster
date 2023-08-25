@@ -21,7 +21,6 @@ import pokemonmaster.cards.Water.FishingCards.*;
 import pokemonmaster.relics.SharkBait;
 
 import java.util.ArrayList;
-import java.util.function.Predicate;
 
 public class FishAction extends AbstractGameAction {
 
@@ -91,11 +90,11 @@ public class FishAction extends AbstractGameAction {
 
 
 
-                FIRSTNUM = (int) Math.floor(Math.random() * (NEWFISHPOWER - (this.BAIT * 0.005) + 1) + (this.BAIT * 0.005));
+                FIRSTNUM = (int) Math.floor(Math.random() * (NEWFISHPOWER - (this.BAIT * 0.006) + 1) + (this.BAIT * 0.006));
 
-                int CARD1 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.005)) + 1) + (FISHMONS.size() * (this.BAIT * 0.005)));
-                int CARD2 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.005)) + 1) + (FISHMONS.size() * (this.BAIT * 0.005)));
-                int CARD3 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.005)) + 1) + (FISHMONS.size() * (this.BAIT * 0.005)));
+                int CARD1 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
+                int CARD2 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
+                int CARD3 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
                 if (CARD1 >= FISHMONS.size()) {
                     CARD1 = FISHMONS.size() - 1;
                 }

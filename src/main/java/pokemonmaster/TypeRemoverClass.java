@@ -17,10 +17,7 @@ import pokemonmaster.cards.Normal.*;
 import pokemonmaster.cards.Psychic.*;
 import pokemonmaster.cards.Water.*;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.relics.ChoiceBand;
-import pokemonmaster.relics.HotPotato;
-import pokemonmaster.relics.QuickClaw;
-import pokemonmaster.relics.SharkBait;
+import pokemonmaster.relics.*;
 
 import java.util.*;
 
@@ -502,7 +499,9 @@ public class TypeRemoverClass {
                             AbstractDungeon.srcUncommonCardPool.removeCard(j);
                             AbstractDungeon.srcRareCardPool.removeCard(j);
                             PotionHelper.potions.remove(MindStone.POTION_ID);
-
+                            AbstractDungeon.uncommonRelicPool.remove(TwistedSpoon.ID);
+                            AbstractDungeon.rareRelicPool.remove(TwistedSpoon.ID);
+                            AbstractDungeon.shopRelicPool.remove(TwistedSpoon.ID);
                         }
                     }
                 }

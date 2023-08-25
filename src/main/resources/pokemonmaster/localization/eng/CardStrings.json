@@ -4824,7 +4824,7 @@
     ]
   },
   "${modID}:SalamenceV": {
-    "NAME": "SalamenceV",
+    "NAME": "Salamence V",
     "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Lose !M! pokemonmaster:Spark. NL pokemonmaster:Rivalry Gain 1 Spark.",
     "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Lose !M! pokemonmaster:Spark. NL pokemonmaster:Rivalry Gain 1 Spark.",
     "EXTENDED_DESCRIPTION": [
