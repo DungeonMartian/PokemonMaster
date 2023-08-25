@@ -30,7 +30,7 @@ public class Garbodor extends FinalEvolutionCard {
     private static final int DAMAGE = 1;
     private static final int UPG_DAMAGE= 1;
     private static final int DAM = 0;
-    private int COUNT =-1;
+    private int COUNT =0;
 
 
     public Garbodor() {
@@ -56,7 +56,7 @@ public class Garbodor extends FinalEvolutionCard {
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         this.baseDamage=0;
-        COUNT =-1;
+        COUNT =0;
         if (player.exhaustPile.size() >0) {
 
             if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
@@ -82,7 +82,7 @@ public class Garbodor extends FinalEvolutionCard {
     @Override
     public void applyPowers() {
         this.baseDamage=0;
-        COUNT =-1;
+        COUNT =0;
         if (AbstractDungeon.player.exhaustPile.size() >0) {
 
             if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
