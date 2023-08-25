@@ -440,6 +440,7 @@ public class TypeRemoverClass {
                 DRAGONTYPE.add(Eternatus.ID);
                 DRAGONTYPE.add(FlygonV.ID);
                 DRAGONTYPE.add(Gible.ID);
+                DRAGONTYPE.add(GiratinaGX.ID);
                 DRAGONTYPE.add(Goomy.ID);
                 DRAGONTYPE.add(Jangmoo.ID);
                 DRAGONTYPE.add(Kyurem.ID);

@@ -5743,6 +5743,16 @@
       ""
     ]
   },
+  "${modID}:GiratinaGX": {
+    "NAME": "Giratina GX",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. pokemonmaster:Gate. NL Deal !D! damage. NL If this card is discarded deal !D! damage to a random enemy.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. pokemonmaster:Gate. NL Deal !D! damage. NL If this card is discarded deal !D! damage to a random enemy.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",
