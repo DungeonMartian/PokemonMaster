@@ -48,6 +48,11 @@ public class Cursola extends BasePokemonCard {
     }
 
     @Override
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+
+    }
+
+    @Override
     public void triggerOnManualDiscard() {
         super.triggerOnManualDiscard();
         addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.discardPile));

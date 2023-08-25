@@ -758,8 +758,8 @@
   },
   "${modID}:ShieldEnergy": {
     "NAME": "Shield Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! pokemonmaster:Barrier.",
-    "UPGRADE_DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! pokemonmaster:Barrier.",
+    "DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier. NL At the start of your turn gain  [E].",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !M! pokemonmaster:Barrier. NL At the start of your turn gain  [E].",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1477,8 +1477,8 @@
   },
   "${modID}:Mankey": {
     "NAME": "Mankey",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 wounds to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 wounds to your hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 Wounds to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 Wounds to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1487,8 +1487,8 @@
   },
   "${modID}:Primeape": {
     "NAME": "Primeape",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 wounds to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 wounds to your hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 Wounds to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL At the start of your next turn add 7 Wounds to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1947,8 +1947,8 @@
   },
   "${modID}:Zamazenta": {
     "NAME": "Zamazenta",
-    "DESCRIPTION": "{@@}At end of your turn take !M! less damage from ALL enemies for each unspent [E].",
-    "UPGRADE_DESCRIPTION": "{@@}At end of your turn take !M! less damage from ALL enemies for each unspent [E].",
+    "DESCRIPTION": "{@@}At end of your turn gain !M! pokemonmaster:Resistant for each unspent  [E].",
+    "UPGRADE_DESCRIPTION": "{@@}At end of your turn gain !M! pokemonmaster:Resistant for each unspent  [E].",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4315,8 +4315,8 @@
   },
   "${modID}:Stakataka": {
     "NAME": "Stakataka",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL If you have less than half HP, gain !M! Temporary HP and Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL If you have less than half HP, gain !M! Temporary HP and Exhaust.",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL If you are below half HP, gain !M! Temporary HP and Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL If you are below half HP, gain !M! Temporary HP and Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

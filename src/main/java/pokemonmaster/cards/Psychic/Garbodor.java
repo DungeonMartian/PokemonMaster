@@ -29,12 +29,14 @@ public class Garbodor extends FinalEvolutionCard {
 
     private static final int DAMAGE = 1;
     private static final int UPG_DAMAGE= 1;
-    private int COUNT =0;
+    private static final int DAM = 0;
+    private int COUNT =-1;
 
 
     public Garbodor() {
         super(cardInfo,CustomTags.PSYCHIC);
         setMagic(DAMAGE,UPG_DAMAGE);
+        setDamage(DAM);
 
         this.isMultiDamage=true;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackPsychic.png","pokemonmaster/character/cardback/bg_attackPsychic_p.png");
@@ -45,26 +47,28 @@ public class Garbodor extends FinalEvolutionCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, damage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
         addToBot(new MakeTempCardInDiscardAction(new Trubbish(),1));
+        this.rawDescription = cardStrings.DESCRIPTION;
+        initializeDescription();
     }
 
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
+        this.baseDamage=0;
+        COUNT =-1;
         if (player.exhaustPile.size() >0) {
-            COUNT =0;
+
             if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
                 for (AbstractCard i : player.exhaustPile.group){
                     if (i.type == AbstractCard.CardType.STATUS) {
                         COUNT += 1;
                     }
                 }
-                if (this.upgraded) {
-                    this.baseDamage = COUNT * DAMAGE+UPG_DAMAGE;
-                }
-                else {
-                    this.baseDamage = COUNT * DAMAGE;
-                }
+
+                    this.baseDamage = COUNT * magicNumber;
+
+
             }
 
             this.rawDescription = cardStrings.DESCRIPTION;
@@ -77,20 +81,17 @@ public class Garbodor extends FinalEvolutionCard {
 
     @Override
     public void applyPowers() {
+        this.baseDamage=0;
+        COUNT =-1;
         if (AbstractDungeon.player.exhaustPile.size() >0) {
-            COUNT =0;
+
             if (!AbstractDungeon.player.exhaustPile.isEmpty()) {
                 for (AbstractCard i : AbstractDungeon.player.exhaustPile.group){
                     if (i.type == AbstractCard.CardType.STATUS) {
                         COUNT += 1;
                     }
                 }
-                if (this.upgraded) {
-                    this.baseDamage = COUNT * DAMAGE+UPG_DAMAGE;
-                }
-                else {
-                    this.baseDamage = COUNT * DAMAGE;
-                }
+                this.baseDamage = COUNT * magicNumber;
             }
             this.rawDescription = cardStrings.DESCRIPTION;
             this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
