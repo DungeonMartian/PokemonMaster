@@ -259,16 +259,6 @@
       ""
     ]
   },
-  "${modID}:Pineco": {
-    "NAME": "Pineco",
-    "DESCRIPTION": "{@@}Gain !B! Block",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block",
-    "EXTENDED_DESCRIPTION": [
-      "",
-      "",
-      ""
-    ]
-  },
   "${modID}:JolteonGX": {
     "NAME": "Jolteon GX",
     "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage. NL Take !M! damage.",
