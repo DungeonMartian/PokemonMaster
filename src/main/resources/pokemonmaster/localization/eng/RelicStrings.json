@@ -13,11 +13,18 @@
     "At the end of your turn #yExhaust a random card in your discard pile and gain 1 #ypokemonmaster:Spark."
   ]
 },
+  "${modID}:MooMooMilk": {
+    "NAME": "Moo Moo Milk",
+    "FLAVOR": "Restores 5 Hearts and it comes in a Bottle! Wait...",
+    "DESCRIPTIONS": [
+      "Whenever you gain #yRegen, gain #b1 more. At the start of combat, gain #b1 #yRegen."
+    ]
+  },
   "${modID}:TwistedSpoon": {
     "NAME": "Twisted Spoon",
     "FLAVOR": "Is there a spoon?",
     "DESCRIPTIONS": [
-      "Once you've played 10 cards in one turn this combat, heal 8 HP."
+      "Once you've played 10 cards in one turn this combat, heal #b8 HP."
     ]
   },
   "${modID}:PuzzleCube": {
@@ -31,28 +38,28 @@
     "NAME": "Pokeball",
     "FLAVOR": "Gotta catch 'em all!!",
     "DESCRIPTIONS": [
-      "Right-click this relic to Capture an enemy with 10 or less current HP."
+      "Right-click this relic to Capture an enemy with #b10 or less current HP."
     ]
   },
   "${modID}:SafariBall": {
     "NAME": "Safari Ball",
     "FLAVOR": "Gotta catch 'em all!!",
     "DESCRIPTIONS": [
-      "Right-click this relic to Capture an enemy with 20 or less current HP."
+      "Right-click this relic to Capture an enemy with #b20 or less current HP."
     ]
   },
   "${modID}:FishingKit": {
     "NAME": "Fishing Kit",
     "FLAVOR": "Gotta fish 'em all!",
     "DESCRIPTIONS": [
-      "At the start of combat add a random #ypokemonmaster:Fishing #yRod and two random #ypokemonmaster:Bait cards to your hand."
+      "At the start of combat add #b1 random #ypokemonmaster:Fishing #yRod and #b2 random #ypokemonmaster:Bait cards to your hand."
     ]
   },
   "${modID}:HotPotato": {
     "NAME": "Hot Potato",
     "FLAVOR": "Hot, but tasty!",
     "DESCRIPTIONS": [
-      "Whenever you #yExhaust a card, gain 1 #yTemporary HP."
+      "Whenever you #yExhaust a card, gain #b1 #yTemporary HP."
     ]
   },
   "${modID}:FirstEdition": {
@@ -73,14 +80,14 @@
     "NAME": "Shark Bait",
     "FLAVOR": "Hoo Ha Hah!",
     "DESCRIPTIONS": [
-      "You have + 15% #yBait power while #yFishing."
+      "You have + #b15 % #yBait power while #yFishing."
     ]
   },
   "${modID}:QuickClaw": {
     "NAME": "Quick Claw",
     "FLAVOR": "Faster than fast, quicker than quick.",
     "DESCRIPTIONS": [
-      "The first time each turn you discard a card, draw 2 cards."
+      "The first time each turn you discard a card, draw #b2 cards."
     ]
   },
   "${modID}:RepeatBall": {
@@ -94,7 +101,7 @@
     "NAME": "ChoiceBand",
     "FLAVOR": "One Punch!",
     "DESCRIPTIONS": [
-      "If you play exactly 1 card on your turn, remove ALL of your debuffs."
+      "If you play exactly #b1 card on your turn, remove ALL of your debuffs."
     ]
   }
 }

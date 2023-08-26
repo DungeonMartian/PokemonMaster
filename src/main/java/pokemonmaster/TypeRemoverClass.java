@@ -647,7 +647,9 @@ public class TypeRemoverClass {
                             AbstractDungeon.srcCommonCardPool.removeCard(N);
                             AbstractDungeon.srcUncommonCardPool.removeCard(N);
                             AbstractDungeon.srcRareCardPool.removeCard(N);
-
+                            AbstractDungeon.uncommonRelicPool.remove(MooMooMilk.ID);
+                            AbstractDungeon.rareRelicPool.remove(MooMooMilk.ID);
+                            AbstractDungeon.shopRelicPool.remove(MooMooMilk.ID);
 
 
                         }
