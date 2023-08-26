@@ -55,12 +55,7 @@ public class Xatu extends BaseCard {
         }
         addToBot(new MakeTempCardInDiscardAction(s,1));
     }
-    public void upgrade() {
 
-            this.cardsToPreview.upgrade();
-
-        super.upgrade();
-    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Xatu();
