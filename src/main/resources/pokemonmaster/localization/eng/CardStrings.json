@@ -5365,8 +5365,8 @@
   },
   "${modID}:Komala": {
     "NAME": "Komala",
-    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. Gain !M! Buffer. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. Gain !M! Buffer. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Gain !M! Buffer. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Strike. NL Deal !D! damage. NL Gain !M! Buffer. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5749,6 +5749,26 @@
     "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. pokemonmaster:Gate. NL Deal !D! damage. NL If this card is discarded deal !D! damage to a random enemy.",
     "EXTENDED_DESCRIPTION": [
       "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Latios": {
+    "NAME": "Latios",
+    "DESCRIPTION": "{@@}Deal !M! damage for each stack of pokemonmaster:Prized you have.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !M! damage for each stack of pokemonmaster:Prized you have.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Deal !D! damage)",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Latias": {
+    "NAME": "Latias",
+    "DESCRIPTION": "{@@}Gain !M! Block for each stack of pokemonmaster:Prized you have.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Block for each stack of pokemonmaster:Prized you have.",
+    "EXTENDED_DESCRIPTION": [
+      " NL (Gain !B! Block)",
       "",
       ""
     ]

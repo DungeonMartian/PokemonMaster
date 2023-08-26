@@ -1,15 +1,13 @@
 package pokemonmaster.cards.Dragon;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
-import com.megacrit.cardcrawl.cards.status.VoidCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
-import com.megacrit.cardcrawl.powers.watcher.VigorPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -18,9 +16,9 @@ import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class GiratinaGX extends BasePokemonCard {
+public class Latios extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "GiratinaGX",
+            "Latios",
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,
@@ -31,15 +29,16 @@ public class GiratinaGX extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 15;
-    private static final int UPG_DAMAGE = 6;
+    private static final int DAMAGE = 10;
+    private static final int UPG_DAMAGE = 5;
+    private static final int DAM = 0;
 
 
 
-
-    public GiratinaGX() {
+    public Latios() {
         super(cardInfo);
-        setDamage(DAMAGE, UPG_DAMAGE);
+        setMagic(DAMAGE, UPG_DAMAGE);
+        setDamage(DAM);
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
@@ -52,36 +51,39 @@ public class GiratinaGX extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
+        this.rawDescription = cardStrings.DESCRIPTION;
+        initializeDescription();
+    }
+
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        initializeDescription();
     }
     @Override
-    public void triggerOnManualDiscard() {
-        super.onMoveToDiscard();
-        addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
-
-        AbstractPower POW = AbstractDungeon.player.getPower(VigorPower.POWER_ID);
+    public void applyPowers() {
+        AbstractPower POW = AbstractDungeon.player.getPower(Prized.POWER_ID);
         if (POW != null){
-            addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, POW));
+            this.baseDamage = POW.amount * magicNumber;
         }
+        super.applyPowers();
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
+    }
+    public void calculateCardDamage(AbstractMonster mo) {
+        AbstractPower POW = AbstractDungeon.player.getPower(Prized.POWER_ID);
+        if (POW != null){
+            this.baseDamage = POW.amount * magicNumber;
+        }
+        super.calculateCardDamage(mo);
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.rawDescription += cardStrings.EXTENDED_DESCRIPTION[0];
+        this.initializeDescription();
     }
 
-    @Override
-    public void atTurnStart() {
-        if (AbstractDungeon.player.discardPile.contains(this)) {
-            addToBot(new AbstractGameAction() {
-                @Override
-                public void update() {
-                    isDone = true;
-                    AbstractDungeon.player.discardPile.moveToHand(GiratinaGX.this);
-                    AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new VoidCard(), 1));
-
-                }
-            });
-        }
-    }
     @Override
     public AbstractCard makeCopy() { //Optional
-        return new GiratinaGX();
+        return new Latios();
     }
 }
 
