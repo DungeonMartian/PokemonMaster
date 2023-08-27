@@ -19,7 +19,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Cheren extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Cheren",
-            1,
+            2,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.UNCOMMON,
@@ -33,6 +33,7 @@ public class Cheren extends BasePokemonCard {
     public Cheren() {
         super(cardInfo);
         this.exhaust=true;
+        setCostUpgrade(1);
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.SUPPORTER);
 

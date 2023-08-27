@@ -4576,7 +4576,7 @@
   "${modID}:Regigigas": {
     "NAME": "Regigigas",
     "DESCRIPTION": "{@@}Startup: Exhaust this and Shuffle the other Titans into your draw pile. Once you play all 5, Exhume this. NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION":"{@@}Startup: Exhaust this and Shuffle the other Titans into your draw pile. Once you play all 5, Exhume this. NL Deal !D! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}Startup: Exhaust this and Shuffle the other Titans+ into your draw pile. Once you play all 5, Exhume this. NL Deal !D! damage.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

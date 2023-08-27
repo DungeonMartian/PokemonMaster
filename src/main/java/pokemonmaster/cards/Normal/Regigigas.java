@@ -35,13 +35,12 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 100;
-    private static final int UPG_DAMAGE= 50;
 
 
 
     public Regigigas() {
         super(cardInfo);
-        setDamage(DAMAGE, UPG_DAMAGE);
+        setDamage(DAMAGE);
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
@@ -66,11 +65,25 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
 
     @Override
     public boolean atBattleStartPreDraw() {
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Registeel(), 1, true, false));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Regirock(), 1, true, false));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Regieleki(), 1, true, false));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Regice(), 1, true, false));
-        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(new Regidrago(), 1, true, false));
+        AbstractCard A = new Registeel();
+        AbstractCard B = new Regirock();
+        AbstractCard C = new Regieleki();
+        AbstractCard D = new Regice();
+        AbstractCard E = new Regidrago();
+
+        if (this.upgraded) {
+            A.upgrade();
+            B.upgrade();
+            C.upgrade();
+            D.upgrade();
+            E.upgrade();
+        }
+
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(A, 1, true, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(B, 1, true, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(C, 1, true, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(D, 1, true, false));
+        AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(E, 1, true, false));
         addToBot(new ExhaustSpecificCardAction(this, AbstractDungeon.player.drawPile));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new SlowStart(AbstractDungeon.player,magicNumber)));
         return true;
