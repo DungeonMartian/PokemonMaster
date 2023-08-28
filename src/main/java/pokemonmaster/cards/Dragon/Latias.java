@@ -29,8 +29,8 @@ public class Latias extends BasePokemonCard {
 
 
     private static final int BLOCK = 0;
-    private static final int MAGIC = 8;
-    private static final int UPG_MAGIC= 4;
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC= 3;
 
 
 

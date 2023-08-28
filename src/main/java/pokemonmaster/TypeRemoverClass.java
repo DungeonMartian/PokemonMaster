@@ -443,6 +443,8 @@ public class TypeRemoverClass {
                 DRAGONTYPE.add(Goomy.ID);
                 DRAGONTYPE.add(Jangmoo.ID);
                 DRAGONTYPE.add(Kyurem.ID);
+                DRAGONTYPE.add(Latias.ID);
+                DRAGONTYPE.add(Latios.ID);
                 DRAGONTYPE.add(NsResolve.ID);
                 DRAGONTYPE.add(PalkiaGX.ID);
                 DRAGONTYPE.add(Regidrago.ID);
