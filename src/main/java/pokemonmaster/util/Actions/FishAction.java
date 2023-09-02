@@ -83,7 +83,7 @@ public class FishAction extends AbstractGameAction {
                 }
                 String SHARKBAIT = SharkBait.ID;
                 if (AbstractDungeon.player.hasRelic(SHARKBAIT)) {
-                    this.BAIT += 15;
+                    this.BAIT += 20;
                 }
 
                 NEWFISHPOWER = (this.POWER + this.BAIT);

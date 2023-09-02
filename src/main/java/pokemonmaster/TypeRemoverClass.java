@@ -476,6 +476,7 @@ public class TypeRemoverClass {
                 NORMALTYPE.add(Porygon.ID);
                 NORMALTYPE.add(PorygonEX.ID);
                 NORMALTYPE.add(Regigigas.ID);
+                NORMALTYPE.add(Sentret.ID);
                 NORMALTYPE.add(Shroodle.ID);
                 NORMALTYPE.add(Slakoth.ID);
                 NORMALTYPE.add(Smeargle.ID);
@@ -483,6 +484,7 @@ public class TypeRemoverClass {
                 NORMALTYPE.add(Taillow.ID);
                 NORMALTYPE.add(Tauros.ID);
                 NORMALTYPE.add(Winona.ID);
+                NORMALTYPE.add(Wingull.ID);
                 NORMALTYPE.add(Whismur.ID);
                 NORMALTYPE.add(WyrdeerV.ID);
                 NORMALTYPE.add(Yungoos.ID);

@@ -9,8 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import pokemonmaster.CustomTags;
 import pokemonmaster.relics.SharkBait;
 
-import java.util.function.Predicate;
-
 
 public class CetitanAction extends AbstractGameAction {
     private static int BAIT=0;
@@ -24,7 +22,7 @@ public class CetitanAction extends AbstractGameAction {
     public void update() {
         String SHARKBAIT = SharkBait.ID;
         if (AbstractDungeon.player.hasRelic(SHARKBAIT)) {
-            BAIT += 15;
+            BAIT += 20;
         }
         for (AbstractCard t : AbstractDungeon.player.hand.group) {
             if (t.hasTag(CustomTags.BAIT)) {

@@ -3,7 +3,9 @@ package pokemonmaster.cards;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
 import pokemonmaster.cards.Base.BasePokemonCard;
@@ -14,10 +16,17 @@ public abstract class HeldItemCard extends BasePokemonCard implements StartupCar
     public HeldItemCard(pokemonmaster.util.CardInfo cardInfo) {
         super(cardInfo);
         tags.add(CardTags.HEALING);
+        this.exhaust=true;
     }
 
     // on startup
     public abstract void OnStartup();
+
+
+    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
+
+        atBattleStartPreDraw();
+    }
 
     @Override
     public boolean atBattleStartPreDraw() {

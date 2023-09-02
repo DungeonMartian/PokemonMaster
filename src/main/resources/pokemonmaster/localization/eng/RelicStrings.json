@@ -80,7 +80,7 @@
     "NAME": "Shark Bait",
     "FLAVOR": "Hoo Ha Hah!",
     "DESCRIPTIONS": [
-      "You have + #b15 % #yBait power while #yFishing."
+      "You have #b20% additional #yBait power."
     ]
   },
   "${modID}:QuickClaw": {

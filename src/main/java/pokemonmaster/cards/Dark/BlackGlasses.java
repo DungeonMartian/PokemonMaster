@@ -4,7 +4,6 @@ import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
-import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.StrengthPower;
 import pokemonmaster.cards.HeldItemCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -42,10 +41,7 @@ public class BlackGlasses extends HeldItemCard{
         addToBot(new HeldItemAction(new ApplyPowerAction(p, p, new StrengthPower(p, magicNumber))));
     }
 
-    @Override
-    public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
 
-    }
     
     @Override
     public AbstractCard makeCopy() { //Optional

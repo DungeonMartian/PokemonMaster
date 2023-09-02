@@ -24,6 +24,7 @@ public class Cursed extends BasePower implements HealthBarRenderPower {
     public Cursed(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
         DAMAGED = false;
+
     }
 
 
@@ -31,6 +32,9 @@ public class Cursed extends BasePower implements HealthBarRenderPower {
 
     @Override
     public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        if (!this.owner.isPlayer){
+
+        }
         if (damageAmount > 0){
             DAMAGED = false;
 
@@ -40,6 +44,7 @@ public class Cursed extends BasePower implements HealthBarRenderPower {
 
     @Override
     public void atEndOfTurn(boolean isPlayer) {
+
         addToBot(new LoseHPAction(this.owner, this.owner, this.amount));
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new GiantEyeEffect(this.owner.hb.cX, this.owner.hb.cY, Color.PURPLE), 0.1F));
         DAMAGED = false;

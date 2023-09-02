@@ -5773,6 +5773,46 @@
       ""
     ]
   },
+  "${modID}:Wingull": {
+    "NAME": "Wingull",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL pokemonmaster:Predate !M!  [E]  next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL pokemonmaster:Predate !M!  [E]  next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Pelipper": {
+    "NAME": "Pelipper",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL pokemonmaster:Predate !M!  [E]  next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL pokemonmaster:Predate !M!  [E]  next turn.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Sentret": {
+    "NAME": "Sentret",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Discard 1 card.",
+    "UPGRADE_DESCRIPTION":"{@@}Draw !M! card{!M!|>1=s}. NL Discard 1 card.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Furret": {
+    "NAME": "Furret",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Discard 2 card.",
+    "UPGRADE_DESCRIPTION":"{@@}Draw !M! card{!M!|>1=s}. NL Discard 2 card.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",
