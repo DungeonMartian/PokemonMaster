@@ -5473,6 +5473,36 @@
       ""
     ]
   },
+  "${modID}:Charcoal": {
+    "NAME": "Charcoal",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain 1 pokemonmaster:Spark. NL Take !M! damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Held_Item NL Gain 1 pokemonmaster:Spark. NL Take !M! damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:AirBalloon": {
+    "NAME": "Air Balloon",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Held_Item NL Gain !M! pokemonmaster:Resistant and 1 Buffer.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:MachoBrace": {
+    "NAME": "Macho Brace",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! Max HP. NL Take 4 damage.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Held_Item NL Gain !M! Max HP. NL Take 4 damage.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Clefairy": {
     "NAME": "Clefairy",
     "DESCRIPTION": "{@@}Lose 25% of your max hp. Gain that amount as Temp HP.",

@@ -237,6 +237,7 @@ public class TypeRemoverClass {
                 FIGHTINGTYPE.add(HisuianArcanineV.ID);
                 FIGHTINGTYPE.add(Kleavor.ID);
                 FIGHTINGTYPE.add(Koraidonex.ID);
+                FIGHTINGTYPE.add(MachoBrace.ID);
                 FIGHTINGTYPE.add(Makuhita.ID);
                 FIGHTINGTYPE.add(Mankey.ID);
                 FIGHTINGTYPE.add(Onix.ID);
@@ -256,6 +257,7 @@ public class TypeRemoverClass {
 
                 ArrayList<String> FIRETYPE = new ArrayList<>();
                 FIRETYPE.add(CentiskorchV.ID);
+                FIRETYPE.add(Charcoal.ID);
                 FIRETYPE.add(CharizardV.ID);
                 FIRETYPE.add(BurningScarf.ID);
                 FIRETYPE.add(Darumaka.ID);
@@ -323,6 +325,7 @@ public class TypeRemoverClass {
 
 
                 ArrayList<String> STEELTYPE = new ArrayList<>();
+                STEELTYPE.add(AirBalloon.ID);
                 STEELTYPE.add(AlolanDiglet.ID);
                 STEELTYPE.add(Aron.ID);
                 STEELTYPE.add(Bronzor.ID);

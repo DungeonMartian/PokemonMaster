@@ -8,6 +8,7 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 
+import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.powers.HeldItemPlayed;
 import pokemonmaster.util.Actions.HeldItemAction;
@@ -17,6 +18,7 @@ public abstract class HeldItemCard extends BasePokemonCard implements StartupCar
         super(cardInfo);
         tags.add(CardTags.HEALING);
         this.exhaust=true;
+        tags.add(CustomTags.HELDITEM);
     }
 
     // on startup
