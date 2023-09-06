@@ -134,7 +134,7 @@
     "DESCRIPTION": "{@@}Deal !D! damage for each *Pokemon in your discard pile.",
     "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each *Pokemon in your discard pile.",
     "EXTENDED_DESCRIPTION": [
-      "",
+      " NL (Hits !M! times)",
       "",
       ""
     ]
@@ -424,7 +424,7 @@
     "DESCRIPTION": "{@@}Deal !D! damage for each card in your hand.",
     "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage for each card in your hand.",
     "EXTENDED_DESCRIPTION": [
-      "",
+      " NL (Hits !M! times)",
       "",
       ""
     ]

@@ -32,8 +32,8 @@ public class Rayquaza extends BasePokemonCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 25;
-    private static final int UPG_DAMAGE = 25;
-    private static final int MAGIC = 2;
+    private static final int UPG_DAMAGE = 15;
+    private static final int MAGIC = 1;
 
 
     private boolean ISELITE = false;

@@ -3,10 +3,12 @@ package pokemonmaster.cards.Psychic;
 import com.badlogic.gdx.graphics.Color;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.utility.ShakeScreenAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.ScreenShake;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
 import com.megacrit.cardcrawl.vfx.combat.GiantEyeEffect;
@@ -48,8 +50,18 @@ public class TapuLele extends BasePokemonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new GiantEyeEffect(m.hb.cX, m.hb.cY, Color.PURPLE), 0.1F*((float) EnergyPanel.getCurrentEnergy() /3)));
+        float ENERGY =  (float) EnergyPanel.getCurrentEnergy() /3;
+        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new GiantEyeEffect(m.hb.cX, m.hb.cY, Color.PURPLE), 0.1F * ENERGY));
+        if (ENERGY < 5) {
+            addToBot(new ShakeScreenAction(.1f, ScreenShake.ShakeDur.SHORT, ScreenShake.ShakeIntensity.LOW));
+        }
+        else if (ENERGY > 5 && ENERGY < 10) {
+            addToBot(new ShakeScreenAction(.1f, ScreenShake.ShakeDur.MED, ScreenShake.ShakeIntensity.MED));
+        }
+        else{
+            addToBot(new ShakeScreenAction(.1f, ScreenShake.ShakeDur.LONG, ScreenShake.ShakeIntensity.HIGH));
 
+        }
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL)));
 
     }
