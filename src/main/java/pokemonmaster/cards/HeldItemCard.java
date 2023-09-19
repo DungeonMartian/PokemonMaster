@@ -26,8 +26,8 @@ public abstract class HeldItemCard extends BasePokemonCard implements StartupCar
 
 
     public void use(AbstractPlayer abstractPlayer, AbstractMonster abstractMonster) {
-
-        atBattleStartPreDraw();
+        OnStartup();
+        //atBattleStartPreDraw();
     }
 
     @Override

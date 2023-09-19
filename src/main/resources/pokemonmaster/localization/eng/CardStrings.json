@@ -5843,6 +5843,26 @@
       ""
     ]
   },
+  "${modID}:Zigzagoon": {
+    "NAME": "Zigagoon",
+    "DESCRIPTION": "{@@}Gain the benefits of a random pokemonmaster:Held_Item.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain the benefits of a random upgraded pokemonmaster:Held_Item.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Linoone": {
+    "NAME": "Linoone",
+    "DESCRIPTION": "{@@}Gain the benefits of a random pokemonmaster:Held_Item. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain the benefits of a random upgraded pokemonmaster:Held_Item. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",

@@ -491,6 +491,7 @@ public class TypeRemoverClass {
                 NORMALTYPE.add(Whismur.ID);
                 NORMALTYPE.add(WyrdeerV.ID);
                 NORMALTYPE.add(Yungoos.ID);
+                NORMALTYPE.add(Zigzagoon.ID);
 
 
 
