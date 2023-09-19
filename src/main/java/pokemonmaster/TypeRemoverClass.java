@@ -1,6 +1,7 @@
 package pokemonmaster;
 
 import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
@@ -35,6 +36,7 @@ public class TypeRemoverClass {
     }
 
     public static void removeCards() {
+        CardCrawlGame.dungeon.initializeCardPools();
         if (DOTHIS) {
             if (!AbstractDungeon.player.hasRelic("PrismaticShard")) {
                 TOADD = true;
@@ -47,6 +49,11 @@ public class TypeRemoverClass {
                 while (randInt2.equals(randInt1)){
                     randInt2 = randNum.nextInt(10) + 1;
                 }
+                Integer randInt3 = randNum.nextInt(10) + 1;
+                while (randInt3.equals(randInt1) || randInt3.equals(randInt2)) {
+                    randInt3 = randNum.nextInt(10) + 1;
+                }
+
 
             //this could very easily be done much better, but I didn't want to
             //you can theoretically lose your starting bonus if you use it to remove your bonus cards, then save load
@@ -145,9 +152,18 @@ public class TypeRemoverClass {
             }
                 // add all integers from 1 to 30 except for the two random ones to the set
                 //had to make this arbitrarily large to future proof for more added buckets
-                for (int i = 1; i < 31; i++) {
-                    if (i != randInt1 && i != randInt2) {
-                        set.add(i);
+                if (AbstractDungeon.player.hasRelic(PuzzleCube.ID)) {
+                    for (int i = 1; i < 31; i++) {
+                        if (i != randInt1 && i != randInt2 && i != randInt3) {
+                            set.add(i);
+                        }
+                    }
+                }
+                if (!AbstractDungeon.player.hasRelic(PuzzleCube.ID)) {
+                    for (int i = 1; i < 31; i++) {
+                        if (i != randInt1 && i != randInt2) {
+                            set.add(i);
+                        }
                     }
                 }
 

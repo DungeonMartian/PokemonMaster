@@ -27,13 +27,6 @@
       "Once you've played 10 cards in one turn this combat, heal #b8 HP."
     ]
   },
-  "${modID}:PuzzleCube": {
-    "NAME": "Puzzle Cube",
-    "FLAVOR": "Testing stuff",
-    "DESCRIPTIONS": [
-      "Can we make this work?"
-    ]
-  },
   "${modID}:Pokeball": {
     "NAME": "Pokeball",
     "FLAVOR": "Gotta catch 'em all!!",
@@ -102,6 +95,13 @@
     "FLAVOR": "One Punch!",
     "DESCRIPTIONS": [
       "If you play exactly #b1 card on your turn, remove ALL of your debuffs."
+    ]
+  },
+  "${modID}:PuzzleCube": {
+    "NAME": "Puzzle Cube",
+    "FLAVOR": "A Mysterious Cube",
+    "DESCRIPTIONS": [
+      "A third Pokemon card type can appear."
     ]
   }
 }
