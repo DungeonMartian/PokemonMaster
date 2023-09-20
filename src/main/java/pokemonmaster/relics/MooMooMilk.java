@@ -35,6 +35,7 @@ public class MooMooMilk extends BaseRelic implements OnReceivePowerRelic {
     public boolean onReceivePower(AbstractPower abstractPower, AbstractCreature abstractCreature) {
         if (abstractPower.ID.equals(RegenPower.POWER_ID)) {
             abstractPower.amount += 1;
+            abstractPower.updateDescription();
             flash();
         }
         return true;
@@ -44,6 +45,7 @@ public class MooMooMilk extends BaseRelic implements OnReceivePowerRelic {
     public int onReceivePowerStacks(AbstractPower power, AbstractCreature source, int stackAmount) {
         if (power.ID.equals(RegenPower.POWER_ID)) {
             flash();
+            power.updateDescription();
             return OnReceivePowerRelic.super.onReceivePowerStacks(power, source, stackAmount + 1);
         } else {
             return OnReceivePowerRelic.super.onReceivePowerStacks(power, source, stackAmount);

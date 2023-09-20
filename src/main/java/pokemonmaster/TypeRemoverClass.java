@@ -588,7 +588,8 @@ public class TypeRemoverClass {
                             AbstractDungeon.srcUncommonCardPool.removeCard(H);
                             AbstractDungeon.srcRareCardPool.removeCard(H);
                             PotionHelper.potions.remove(LeafStone.POTION_ID);
-
+                            AbstractDungeon.rareRelicPool.remove(MiracleSeed.ID);
+                            AbstractDungeon.shopRelicPool.remove(MiracleSeed.ID);
 
                         }
                     }

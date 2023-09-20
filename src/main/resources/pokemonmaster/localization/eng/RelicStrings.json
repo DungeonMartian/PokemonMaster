@@ -103,5 +103,12 @@
     "DESCRIPTIONS": [
       "A third Pokemon card type can appear."
     ]
+  },
+  "${modID}:MiracleSeed": {
+    "NAME": "Miracle Seed",
+    "FLAVOR": "A Miraculous Seed",
+    "DESCRIPTIONS": [
+      "Receive one fewer stack of debuffs applied to you. Debuffs you apply apply one more."
+    ]
   }
 }
