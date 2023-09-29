@@ -35,10 +35,7 @@ public class ProfessorSycamore extends BaseCard {
         this.exhaust = true;
     }
 
-    @Override
-    public void applyPowers() {
 
-    }
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
