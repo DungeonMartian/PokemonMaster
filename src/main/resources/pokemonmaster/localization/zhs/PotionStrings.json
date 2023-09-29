@@ -1,0 +1,76 @@
+{
+  "pokemonmaster:PotionID": {
+    "NAME": "Some Kind of Potion",
+    "DESCRIPTIONS": [
+      "Little",
+      " pieces ",
+      "that get put together",
+      " into a description.",
+      " Exactly how depends on the potion, and you can set it up however you want."
+    ]
+  },
+  "pokemonmaster:ThunderStone": {
+    "NAME": "雷之石",
+    "DESCRIPTIONS": [
+      "完全进化 #b 张",
+      "你手牌中的 #y电属性 #y宝可梦 .",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:FireStone": {
+    "NAME": "火之石",
+    "DESCRIPTIONS": [
+      "完全进化 #b 张",
+      "你手牌中的 #y火属性 #y宝可梦 .",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:BleakStone": {
+    "NAME": "暗之石",
+    "DESCRIPTIONS": [
+      "完全进化 #b 张",
+      "你手牌中的 #y恶属性 #y宝可梦 .",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:MindStone": {
+    "NAME": "心之石",
+    "DESCRIPTIONS": [
+      "完全进化 #b 张",
+      "你手牌中的 #y超属性 #y宝可梦 .",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:WaterStone": {
+    "NAME": "水之石",
+    "DESCRIPTIONS": [
+      "完全进化 #b 张",
+      "你手牌中的 #y水属性 #y宝可梦 .",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:LeafStone": {
+    "NAME": "叶之石",
+    "DESCRIPTIONS": [
+      "完全进化 #b 张",
+      "你手牌中的 #y草属性 #y宝可梦 .",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:ResistancePotion": {
+    "NAME": "抵抗药水",
+    "DESCRIPTIONS": [
+      "本回合减少所有敌人 #b",
+      " 点伤害.",
+      "是一种进化之石."
+    ]
+  },
+  "pokemonmaster:BurnPotion": {
+    "NAME": "燃烧药水",
+    "DESCRIPTIONS": [
+      "给与 #b 层",
+      " #y点燃.",
+      "是一种进化之石."
+    ]
+  }
+}

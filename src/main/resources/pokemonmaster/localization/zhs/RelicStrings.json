@@ -1,0 +1,107 @@
+{
+  "pokemonmaster:RelicID": {
+    "NAME": "Good Relic",
+    "FLAVOR": "Flavor text displayed in detailed relic view.",
+    "DESCRIPTIONS": [
+      "Gain [E] at the start of your turn. [E] is an energy icon."
+    ]
+  },
+  "pokemonmaster:ShortFuse": {
+  "NAME": "爆爆",
+  "FLAVOR": "马上就要爆炸了!",
+  "DESCRIPTIONS": [
+    "在你的回合结束时，随机 #y消耗 1 张你弃牌堆中的牌并获得 1 层 #ypokemonmaster:电火花 ."
+  ]
+},
+  "pokemonmaster:MooMooMilk": {
+    "NAME": "哞哞鲜奶",
+    "FLAVOR": "回复 5 颗心，它出现在一个瓶子里!耐心等待...",
+    "DESCRIPTIONS": [
+      "每当你获得 #y再生 ，多获得 #b1 层. 在战斗开始时，获得 #b1 层 #y再生 ."
+    ]
+  },
+  "pokemonmaster:TwistedSpoon": {
+    "NAME": "弯曲的汤匙",
+    "FLAVOR": "那真的是一把汤匙吗?",
+    "DESCRIPTIONS": [
+      "本场战斗中，当你在一回合打出10张牌后，回复 #b8 生命."
+    ]
+  },
+  "pokemonmaster:PuzzleCube": {
+    "NAME": "Puzzle Cube",
+    "FLAVOR": "Testing stuff",
+    "DESCRIPTIONS": [
+      "Can we make this work?"
+    ]
+  },
+  "pokemonmaster:Pokeball": {
+    "NAME": "精灵球",
+    "FLAVOR": "ポケモン ゲットだぜーッ！",
+    "DESCRIPTIONS": [
+      "右击本遗物，捕获 1 个当前生命值小于 #b10 敌人."
+    ]
+  },
+  "pokemonmaster:SafariBall": {
+    "NAME": "狩猎球",
+    "FLAVOR": "ポケモン ゲットだぜーッ！",
+    "DESCRIPTIONS": [
+      "右击本遗物，捕获 1 个当前生命值小于 #b20 敌人."
+    ]
+  },
+  "pokemonmaster:FishingKit": {
+    "NAME": "钓鱼套装",
+    "FLAVOR": "一起去钓鱼吧!",
+    "DESCRIPTIONS": [
+      "在战斗开始时，将 #b1 张随机 #ypokemonmaster:钓鱼 #y竿 和 #b2 张随机 #ypokemonmaster:诱饵 牌置入你的手牌中."
+    ]
+  },
+  "pokemonmaster:HotPotato": {
+    "NAME": "烫手山芋",
+    "FLAVOR": "烫, 但是非常美味！",
+    "DESCRIPTIONS": [
+      "每当你 #y消耗 1 张牌，获得 #b1 点 #y临时生命 ."
+    ]
+  },
+  "pokemonmaster:FirstEdition": {
+    "NAME": "初代初版",
+    "FLAVOR": "这是一个收藏品!",
+    "DESCRIPTIONS": [
+      "你卡组中每有一张稀有牌，获得 #b50 #y金币 ."
+    ]
+  },
+  "pokemonmaster:Pokedex": {
+    "NAME": "宝可梦图鉴",
+    "FLAVOR": "这是一本高科技百科全书!",
+    "DESCRIPTIONS": [
+      "在你的第一个回合开始时，获得 [E] 并额外抽 #b1 张牌. 你的卡组每有 #b3 张不同的宝可梦，增加 #b1 回合."
+    ]
+  },
+  "pokemonmaster:SharkBait": {
+    "NAME": "鲨鱼鱼饵",
+    "FLAVOR": "吼 哈 哈!",
+    "DESCRIPTIONS": [
+      "你的 #y诱饵 多 #b20% 的渔力."
+    ]
+  },
+  "pokemonmaster:QuickClaw": {
+    "NAME": "先制之爪",
+    "FLAVOR": "更快，更强！",
+    "DESCRIPTIONS": [
+      "每回合第一次弃牌时，抽 #b2 张牌."
+    ]
+  },
+  "pokemonmaster:RepeatBall": {
+    "NAME": "重复球",
+    "FLAVOR": "ポケモン ゲットだぜーッ！",
+    "DESCRIPTIONS": [
+      "右击本遗物，永久将你手中一张牌的复制加入你的牌组中."
+    ]
+  },
+  "pokemonmaster:ChoiceBand": {
+    "NAME": "讲究头带",
+    "FLAVOR": "一拳超人!",
+    "DESCRIPTIONS": [
+      "如果你在你的回合中正好打出 #b1 张牌，移除你所有的减益."
+    ]
+  }
+}

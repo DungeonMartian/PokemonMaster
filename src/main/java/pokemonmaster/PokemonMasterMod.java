@@ -83,7 +83,7 @@ public class PokemonMasterMod implements
     private static final String CHAR_SELECT_PORTRAIT = characterPath("select/portrait.png");
     private static final Color POKEMONMASTER_AZURE_COLOR = new Color(240f / 255f, 254f / 255f, 254f / 255f, 1f);
 
-
+    public static Settings.GameLanguage[] SupportedLanguages = new Settings.GameLanguage[] { Settings.GameLanguage.ENG, Settings.GameLanguage.ZHS };
     public static void initialize() {
         new PokemonMasterMod();
 

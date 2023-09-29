@@ -1,0 +1,592 @@
+{
+  "pokemonmaster:PowerID": {
+    "NAME": "终极力量",
+    "DESCRIPTIONS": [
+      "你很酷很强壮."
+    ]
+  },
+  "pokemonmaster:VileplumePower": {
+    "NAME": "叶绿风暴",
+    "DESCRIPTIONS": [
+      "造成 #b50% 额外伤害.",
+      ""
+    ]
+  },
+  "pokemonmaster:Prized": {
+    "NAME": "极巨化",
+    "DESCRIPTIONS": [
+      "下 #b 次你从未被格挡的攻击中额外受到 #b6 点伤害.",
+      ""
+    ]
+  },
+  "pokemonmaster:DrawDownPower": {
+    "NAME": "抽牌减少",
+    "DESCRIPTIONS": [
+      "下回合少抽 #b 张牌.",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:ExertedPower": {
+    "NAME": "力尽",
+    "DESCRIPTIONS": [
+      "下回合失去 #b 点",
+      " #y力量 .",
+      ""
+    ]
+  },
+  "pokemonmaster:BronzongPower": {
+    "NAME": "周期计",
+    "DESCRIPTIONS": [
+      "每回合打出的第一张 状态牌 将 消耗 .",
+      "每回合打出的 #b ",
+      "张 状态牌 将 消耗 ."
+    ]
+  },
+  "pokemonmaster:LanaPower": {
+    "NAME": "水莲",
+    "DESCRIPTIONS": [
+      "本回合你每次打出攻击牌时，回复 #b ",
+      "点生命."
+    ]
+  },
+  "pokemonmaster:CrystalCavePower": {
+    "NAME": "水晶洞窟",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b ",
+      "点 格挡 ."
+    ]
+  },
+  "pokemonmaster:EntangleNext": {
+    "NAME": "刺网",
+    "DESCRIPTIONS": [
+      "下回合你不能打出攻击牌.",
+      ""
+    ]
+  },
+  "pokemonmaster:RoundPower": {
+    "NAME": "回合",
+    "DESCRIPTIONS": [
+      "持续 #y回合 造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:ConstrictedPokemonPower": {
+    "NAME": "缠绕",
+    "DESCRIPTIONS": [
+      "在回合结束时，这个角色受到 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:LugiaPower": {
+    "NAME": "多重鳞片",
+    "DESCRIPTIONS": [
+      "每当你从卡牌中失去生命, 获得 #b ",
+      "层 #y屏障 ."
+    ]
+  },
+  "pokemonmaster:CurlUpPokemonPower": {
+    "NAME": "蜷身",
+    "DESCRIPTIONS": [
+      "下一次你受到未被格挡的攻击时，获得 #b ",
+      "点 格挡 ."
+    ]
+  },
+  "pokemonmaster:FuryCutterPower": {
+    "NAME": "连斩",
+    "DESCRIPTIONS": [
+      "本回合，你的 打击 造成 #b ",
+      "点额外伤害."
+    ]
+  },
+  "pokemonmaster:MagExhaustPower": {
+    "NAME": "Mag 消耗 ",
+    "DESCRIPTIONS": [
+      " 消耗 你打出的下 1 张 状态牌 .",
+      " 消耗 你打出的下 #b 张",
+      " 状态牌 ."
+    ]
+  },
+  "pokemonmaster:MagnetBlast": {
+    "NAME": "磁铁炸弹",
+    "DESCRIPTIONS": [
+      "每当你打出 1 张 状态牌 ，对所有敌人造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:MtCoronetPower": {
+    "NAME": "天冠山",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b ",
+      "张 #y磁铁 置入你的手牌中."
+    ]
+  },
+  "pokemonmaster:Barrier": {
+    "NAME": "屏障",
+    "DESCRIPTIONS": [
+      "你从所有攻击中少受到 #b ",
+      "点伤害.在被敌人攻击后，下回合将这个数量减少 1 ."
+    ]
+  },
+  "pokemonmaster:Smelt": {
+    "NAME": "熔炼",
+    "DESCRIPTIONS": [
+      "在你的回合， 消耗 1 张你弃牌堆中的牌并获得 1 点能量.",
+      ""
+    ]
+  },
+  "pokemonmaster:StunfiskBite": {
+    "NAME": "泥巴鱼咬",
+    "DESCRIPTIONS": [
+      "对下个要攻击你的敌人造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:SupporterPlayed": {
+    "NAME": "打出过支援者",
+    "DESCRIPTIONS": [
+      "本回合你已经打出过 1 张 #y支援者 .",
+      ""
+    ]
+  },
+  "pokemonmaster:HeldItemPlayed": {
+    "NAME": "携带道具",
+    "DESCRIPTIONS": [
+      "本场战斗已经触发过你的 #y便携道具 .",
+      ""
+    ]
+  },
+  "pokemonmaster:ShroomishPower": {
+    "NAME": "蘑蘑菇拳",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，造成 #b ",
+      "点伤害.如果你受到伤害，失去这个效果."
+    ]
+  },
+  "pokemonmaster:Resistant": {
+  "NAME": "抵抗",
+  "DESCRIPTIONS": [
+    "你从所有攻击中少受到 #b ",
+    "点伤害."
+  ]
+},
+  "pokemonmaster:BreloomPower": {
+    "NAME": "专注拳",
+    "DESCRIPTIONS": [
+      "在你每个回合开始时，随机对一个敌人造成 #b ",
+      "点伤害.如果你受到伤害，失去这个效果."
+    ]
+  },
+  "pokemonmaster:ChesnaughtVPower": {
+    "NAME": "尖刺锋线",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      "层 荆棘 ."
+    ]
+  },
+  "pokemonmaster:ShedinjaPower": {
+    "NAME": "奇异守护",
+    "DESCRIPTIONS": [
+      "你如果受到伤害，即死.",
+      ""
+    ]
+  },
+  "pokemonmaster:NinjaskPower": {
+    "NAME": "加速",
+    "DESCRIPTIONS": [
+      "每回合你第一次打出两张攻击牌时，获得 #b ",
+      "层 敏捷 ."
+    ]
+  },
+  "pokemonmaster:Spark": {
+    "NAME": "电火花",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      "点能量."
+    ]
+  },
+  "pokemonmaster:OricorioPower": {
+    "NAME": "花舞鸟能力",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b",
+      "点 力量 并将 #b",
+      "张 灼伤 置入你的手牌中."
+    ]
+  },
+  "pokemonmaster:CoalossalPower": {
+    "NAME": "焦油发电",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，随机 消耗 你弃牌堆中的 #b ",
+      "张牌并获得 #b",
+      "层 #y电火花 .",
+      ""
+    ]
+  },
+  "pokemonmaster:PokeDollPower": {
+    "NAME": "替身",
+    "DESCRIPTIONS": [
+      "如果你打出攻击牌，会失去你所有的 临时生命 .",
+      ""
+    ]
+  },
+  "pokemonmaster:FalinksVPower": {
+    "NAME": "防御铁阵",
+    "DESCRIPTIONS": [
+      "每当你打出一张耗能为 0 的攻击牌时，获得 #b ",
+      "点 格挡 ."
+    ]
+  },
+  "pokemonmaster:WoundedPower": {
+    "NAME": "受伤",
+    "DESCRIPTIONS": [
+      "在你的下回合开始时，将 7 张 伤口 置入你的手牌中.",
+      ""
+    ]
+  },
+  "pokemonmaster:DestructiveFlames": {
+    "NAME": "毁灭火焰",
+    "DESCRIPTIONS": [
+      "每当你 #y消耗 1 张非 #y状态牌 并将 #b ",
+      "张随机 #y烟花 置入你的手牌中.",
+      ""
+    ]
+  },
+  "pokemonmaster:SnakePlantPower": {
+    "NAME": "柔韧",
+    "DESCRIPTIONS": [
+      "每当你打出一张攻击牌，获得 #b ",
+      "点 格挡 ."
+    ]
+  },
+  "pokemonmaster:NoBlockNext": {
+    "NAME": "支离破碎",
+    "DESCRIPTIONS": [
+      "下回合你不能获得 格挡 .",
+      ""
+    ]
+  },
+  "pokemonmaster:NextAttackModified": {
+    "NAME": "攻击迟缓",
+    "DESCRIPTIONS": [
+      "你的下次攻击少造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:EnergyDownPower": {
+    "NAME": "能量损失",
+    "DESCRIPTIONS": [
+      "在你的下回合开始时，失去 #b ",
+      "点能量."
+    ]
+  },
+  "pokemonmaster:WonderSkin": {
+    "NAME": "奇迹皮肤",
+    "DESCRIPTIONS": [
+      "本回合每 消耗 1 张牌，获得 #b ",
+      "点 格挡 ."
+    ]
+  },
+  "pokemonmaster:FightingStadiumPower": {
+    "NAME": "格斗竞技场",
+    "DESCRIPTIONS": [
+      "你的格斗系宝可梦额外造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:LostCityPower": {
+    "NAME": "放逐市",
+    "DESCRIPTIONS": [
+      "你抽出的卡牌耗能减少 #b .",
+      " 消耗 你打出的所有卡牌."
+    ]
+  },
+  "pokemonmaster:StatusDiscardBlock": {
+    "NAME": "炽热身躯",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，你的弃牌堆每有一张 状态牌 ，获得 #b ",
+      "点 格挡 ."
+    ]
+  },
+  "pokemonmaster:StatusDiscardDamage": {
+    "NAME": "灼热光波",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，你的弃牌堆每有一张 状态牌 ，随机对一个敌人造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:EnergyPower": {
+    "NAME": "能量能源",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b ",
+      "点能量."
+    ]
+  },
+  "pokemonmaster:CoatingEnergyPower": {
+    "NAME": "涂层钢能量",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b ",
+      "层 人工制品 . 在你的回合结束时，失去",
+      " #b 层 人工制品 ."
+    ]
+  },
+  "pokemonmaster:MorpekoPower": {
+    "NAME": "光轮",
+    "DESCRIPTIONS": [
+      "在你打出一张牌后，获得 #b ",
+      "点 格挡 .",
+      ""
+    ]
+  },
+  "pokemonmaster:SirfetchSnooze": {
+    "NAME": "葱游兵打盹",
+    "DESCRIPTIONS": [
+      "在你回复生命前，你不能打出任何攻击牌",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:ZamazentaPower": {
+    "NAME": "藏玛然特",
+    "DESCRIPTIONS": [
+      "每有一点剩余能量，你从所有攻击中少受到 #b ",
+      "点伤害.",
+      ""
+    ]
+  },
+  "pokemonmaster:FocusSashPower": {
+    "NAME": "气势披带",
+    "DESCRIPTIONS": [
+      "你将死，回复 #b ",
+      "点生命.",
+      ""
+    ]
+  },
+  "pokemonmaster:CavernTackle": {
+    "NAME": "岩窟冲撞",
+    "DESCRIPTIONS": [
+      "你的代拉基翁没有效果.",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:TakeDamagePower": {
+    "NAME": "反伤",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，受到 #b ",
+      "点伤害.",
+      ""
+    ]
+  },
+  "pokemonmaster:Dynamotor": {
+    "NAME": "发电机",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，随机 消耗 你弃牌堆中的 #b ",
+      "张牌并获得 #b ",
+      "层 #y电火花 .",
+      ""
+    ]
+  },
+  "pokemonmaster:OricorioLightningPower": {
+    "NAME": "啪滋啪滋风格的花舞鸟",
+    "DESCRIPTIONS": [
+      "你的下 #b 次",
+      "攻击，造成 +50% 额外伤害.",
+      ""
+    ]
+  },
+  "pokemonmaster:RejielekiPower": {
+    "NAME": "电晶体",
+    "DESCRIPTIONS": [
+      "每当你抽 1 张牌，随机对一个敌人造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:CruelCharge": {
+    "NAME": "残酷充能",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，失去 #b ",
+      "点生命."
+    ]
+  },
+  "pokemonmaster:VoltAbsorb": {
+    "NAME": "蓄电",
+    "DESCRIPTIONS": [
+      "每回合首次累计造成 40 点伤害后，获得 1 层 #y无实体 .",
+      ""
+    ]
+  },
+  "pokemonmaster:TagTeamPower": {
+    "NAME": "标签",
+    "DESCRIPTIONS": [
+      "你打出下 #b ",
+      "张正电拍拍，造成双倍伤害."
+    ]
+  },
+  "pokemonmaster:TimeEating": {
+    "NAME": "吞噬时间",
+    "DESCRIPTIONS": [
+      "你每打出一张牌，获得 #b2 点 #y力量 ，上限 12 张牌.",
+      ""
+    ]
+  },
+  "pokemonmaster:StormyMountainPower": {
+    "NAME": "风暴山脉",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b ",
+      "张随机普通，未进化的 *电系宝可梦 牌置入你的手牌."
+    ]
+  },
+  "pokemonmaster:RegielekiPower": {
+    "NAME": "电晶体",
+    "DESCRIPTIONS": [
+      "每当你抽 1 张牌，随机对一个敌人造成 #b",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:Burned": {
+    "NAME": "点燃",
+    "DESCRIPTIONS": [
+      "在你的回合结束时，这个角色受到 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:NinetalesBurn": {
+    "NAME": "九尾火",
+    "DESCRIPTIONS": [
+      "本回合被攻击时，给予",
+      "攻击你敌人 #y点燃 ."
+    ]
+  },
+  "pokemonmaster:BurningScarfPower": {
+    "NAME": "燃烧围巾",
+    "DESCRIPTIONS": [
+      "每当被敌人攻击时，给予 #b ",
+      "层 #y点燃 ."
+    ]
+  },
+  "pokemonmaster:RoughSkin": {
+    "NAME": "粗糙皮肤",
+    "DESCRIPTIONS": [
+      "如果本回合你的 格挡 被打破，获得 #b ",
+      "层 #y荆棘 ."
+    ]
+  },
+  "pokemonmaster:PichuPower": {
+    "NAME": "皮丘",
+    "DESCRIPTIONS": [
+      "每当你从卡牌中失去生命，获得 #b ",
+      "层 #y电火花 ."
+    ]
+  },
+  "pokemonmaster:Refinement": {
+    "NAME": "细化",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，抽 #b ",
+      "张牌并将 #b 张",
+      " #y晕眩 放入你的弃牌堆."
+    ]
+  },
+  "pokemonmaster:ToxicSpikes": {
+    "NAME": "毒菱",
+    "DESCRIPTIONS": [
+      "本回合中每当被敌人攻击时，给予 #b ",
+      "层 #y中毒 ."
+    ]
+  },
+  "pokemonmaster:OldCemeteryPower": {
+    "NAME": "远古墓地",
+    "DESCRIPTIONS": [
+      "每当敌人表现出非攻击意图，它们受到 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:HailPower": {
+    "NAME": "冰雹",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，对所有敌人造成 #b ",
+      "点伤害."
+    ]
+  },
+  "pokemonmaster:MagmaBasin": {
+    "NAME": "熔岩的瀑布深潭",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，获得 #b ",
+      "层 #y电火花 并失去 #b4 点生命."
+
+    ]
+  },
+  "pokemonmaster:Tsunami": {
+    "NAME": "海啸",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b ",
+      "张 #y冲浪 置入你的手牌中."
+
+    ]
+  },
+  "pokemonmaster:SudowoodoPower": {
+    "NAME": "杰尼龟喷壶",
+    "DESCRIPTIONS": [
+      "如果你打出水属性的牌, 失去你所有的 临时生命 并获得 #b ",
+      "点 力量 ."
+
+    ]
+  },
+  "pokemonmaster:ChosenPower": {
+    "NAME": "被拣选者",
+    "DESCRIPTIONS": [
+      "每当你打出一张非攻击牌，获得 #b ",
+      "点 #y力量 ."
+
+    ]
+  },
+  "pokemonmaster:Guts": {
+    "NAME": "毅力",
+    "DESCRIPTIONS": [
+      "W每当你获得 1 层 #y负面效果 ，获得 #b ",
+      "点 #y力量 ."
+
+    ]
+  },
+  "pokemonmaster:AcidSpray": {
+    "NAME": "酸液炸弹",
+    "DESCRIPTIONS": [
+      "每当你打出 1 张 #y状态牌 ，随机给予一个敌人 #b ",
+      "层 #y中毒 ."
+
+    ]
+  },
+  "pokemonmaster:FireworkShow": {
+    "NAME": "烟花秀",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b ",
+      "张随机 #y烟花 置入你的手牌中.",
+      ""
+
+    ]
+  },
+  "pokemonmaster:SlowStart": {
+    "NAME": "慢启动",
+    "DESCRIPTIONS": [
+      "你若打出全部 5 张永恒宝可梦， 发掘 雷吉奇卡斯.",
+      "需要打出",
+      "雷吉艾斯",
+      "雷吉洛克",
+      "雷吉铎拉戈",
+      "雷吉艾勒奇",
+      "雷吉斯奇鲁",
+      "."
+
+    ]
+  },
+  "pokemonmaster:MysteryCharge": {
+    "NAME": "神秘充能",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，如果你的抽牌堆或弃牌堆没有 #y支援者 ，获得 #b",
+      " [E] 并抽 #b ",
+      "张牌.",
+      ""
+
+    ]
+  }
+}
+

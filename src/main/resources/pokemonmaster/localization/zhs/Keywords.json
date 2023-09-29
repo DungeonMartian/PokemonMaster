@@ -1,0 +1,227 @@
+[   
+  {
+    "PROPER_NAME": "极巨化",
+    "NAMES": [
+      "极巨化"
+    ],
+    "DESCRIPTION": "下一次你在未被格挡的攻击中额外受到6点伤害."
+  },
+  {
+  "PROPER_NAME": "支援者",
+  "NAMES": [
+  "支援者"
+  ],
+
+  "DESCRIPTION": "你每回合打出的第一张支援者卡牌才会生效."
+  },
+  {
+    "PROPER_NAME": "缠绕",
+    "NAMES": [
+      "缠绕"
+    ],
+
+    "DESCRIPTION": "在这个角色回合结束时，他们受到伤害."
+  },
+  {
+    "PROPER_NAME": "掠夺",
+    "NAMES": [
+      "掠夺"
+    ],
+
+    "DESCRIPTION": "消耗一张你手牌中的诱饵卡以获得诱饵卡数值乘以此卡数值10%的收益."
+  },
+  {
+    "PROPER_NAME": "屏障",
+    "NAMES": [
+      "屏障"
+    ],
+
+    "DESCRIPTION": "减少敌人攻击造成的伤害。在被敌人攻击后，下回合将这个数量减少 1 ."
+  },
+  {
+    "PROPER_NAME": "抵抗",
+    "NAMES": [
+      "抵抗"
+    ],
+
+    "DESCRIPTION": "本回合减少敌人攻击造成的伤害."
+  },
+  {
+    "PROPER_NAME": "扭曲之门",
+    "NAMES": [
+      "扭曲之门"
+    ],
+    "DESCRIPTION": "如果这张牌在你回合开始时在你的弃牌堆中，把它添加到你到你手牌里，并在你的弃牌堆中添加一个虚空."
+  },
+  {
+    "PROPER_NAME": "毒素",
+    "NAMES": [
+      "毒素",
+      "毒素+"
+    ],
+    "DESCRIPTION": "不能被打出 #y状态 卡，在抽取时对你造成伤害，每次抽取时增加数额."
+  },
+  {
+    "PROPER_NAME": "携带道具",
+    "NAMES": [
+      "携带道具"
+    ],
+    "DESCRIPTION": "携带道具在战斗开始时自动打出。它们将被暂时移除，并不会进入消耗堆."
+  },
+  {
+    "PROPER_NAME": "斗争心",
+    "NAMES": [
+      "斗争心"
+    ],
+    "DESCRIPTION": "如果你在精英或BOSS房间，这张卡具有特殊效果."
+  },
+  {
+    "PROPER_NAME": "回合",
+    "NAMES": [
+      "回合"
+    ],
+    "DESCRIPTION": "你的卡牌持续回合造成伤害."
+  },
+  {
+    "PROPER_NAME": "伏转",
+    "NAMES": [
+      "伏转"
+    ],
+    "DESCRIPTION": "在你的回合你每打5张牌，这张牌就会从你的弃牌堆中回到你的手中"
+  },
+  {
+    "PROPER_NAME": "冲浪",
+    "NAMES": [
+      "冲浪",
+      "冲浪+"
+    ],
+    "DESCRIPTION": "0 消耗攻击，*保留和*消耗，根据你当前的能量造成伤害."
+  },
+  {
+    "PROPER_NAME": "烟花",
+    "NAMES": [
+      "烟花",
+      "烟花+"
+    ],
+    "DESCRIPTION": "0 消耗状态卡，通常对敌人造成伤害并消耗."
+  },
+  {
+    "PROPER_NAME": "抉择",
+    "NAMES": [
+      "抉择"
+    ],
+    "DESCRIPTION": "选择列出的效果之一."
+  },
+  {
+    "PROPER_NAME": "电火花",
+    "NAMES": [
+      "电火花"
+    ],
+    "DESCRIPTION": "在你的回合开始时获得能量。可以变成负值，你会失去能量."
+  },
+  {
+    "PROPER_NAME": "残影",
+    "NAMES": [
+      "残影"
+    ],
+    "DESCRIPTION": "你在这个回合结束时不会失去护甲."
+  },
+  {
+    "PROPER_NAME": "缓冲",
+    "NAMES": [
+      "缓冲"
+    ],
+    "DESCRIPTION": "阻止下一次你受到的生命值损伤."
+  },
+  {
+    "PROPER_NAME": "回手",
+    "NAMES": [
+      "回手"
+    ],
+    "DESCRIPTION": "这张卡消耗设置为1并返回你的手牌."
+  },
+  {
+    "PROPER_NAME": "打击",
+    "NAMES": [
+      "打击"
+    ],
+    "DESCRIPTION": "对于其他卡牌，遗物和效果，这张卡算作一张打击卡"
+  },
+  {
+    "PROPER_NAME": "点燃",
+    "NAMES": [
+      "点燃"
+    ],
+    "DESCRIPTION": "在你的回合结束时，这个角色受到等同于数量的伤害."
+  },
+  {
+    "PROPER_NAME": "进化",
+    "NAMES": [
+      "进化"
+    ],
+    "DESCRIPTION": "这个宝可梦将进化为更强大的卡牌."
+  },
+  {
+    "PROPER_NAME": "退化",
+    "NAMES": [
+      "退化"
+    ],
+    "DESCRIPTION": "移除这张卡并获得这张卡进化前的原版宝可梦的全新复制品."
+  },
+  {
+    "PROPER_NAME": "磁铁",
+    "NAMES": [
+      "磁铁"
+    ],
+    "DESCRIPTION": "磁铁是一张0消耗状态卡，保留，打出时提供1能量，并且不会消耗."
+  },
+  {
+    "PROPER_NAME": "钓鱼",
+    "NAMES": [
+      "钓鱼"
+    ],
+    "DESCRIPTION": "我能在这钓上一整天！ 发现新的钓鱼主题卡。你可以消耗一张 #y诱饵卡 来增加找到更强大卡牌的机会."
+  },
+  {
+    "PROPER_NAME": "诱饵",
+    "NAMES": [
+      "诱饵"
+    ],
+    "DESCRIPTION": "这张卡可以在 #y钓鱼 时 #y消耗 ，来提升你的奖励."
+  },
+  {
+    "PROPER_NAME": "Multiword Keyword",
+    "NAMES": [
+      "Multiword Keyword",
+      "multiword_keyword",
+      "multiword_keywords"
+    ],
+
+
+
+    "DESCRIPTION": "Make sure the first element in the NAMES is the same as your PROPER_NAME. The rest should use _ to replace spaces and be entirely lowercase. In card text, you'll use the underscore versions."
+  },
+  {
+    "PROPER_NAME": "蜷身",
+    "NAMES": [
+      "蜷身"
+    ],
+    "DESCRIPTION": "如果你受到未被格挡的攻击伤害，则获得格挡，并且本回合不会失去它."
+  },
+  {
+    "PROPER_NAME": "特殊进化",
+    "NAMES": [
+     "特殊进化"
+    ],
+    "DESCRIPTION": "这只宝可梦以独特的方式进化."
+  },
+  {
+    "PROPER_NAME": "种子机关枪",
+    "NAMES": [
+      "种子机关枪",
+	  "种子机关枪+"
+    ],
+    "DESCRIPTION": "#b0 消耗攻击卡，造成 #b4 点伤害并 #y消耗."
+  }
+
+]

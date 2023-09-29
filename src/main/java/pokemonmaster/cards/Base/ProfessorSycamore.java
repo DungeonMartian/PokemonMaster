@@ -32,6 +32,7 @@ public class ProfessorSycamore extends BaseCard {
         super(cardInfo);
             tags.add(CustomTags.SUPPORTER);
         setCostUpgrade(0);
+        this.exhaust = true;
     }
 
     @Override

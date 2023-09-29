@@ -22,6 +22,7 @@ public class TimeEating extends BasePower implements NonStackablePower {
 
     public TimeEating(AbstractCreature owner, int amount) {
         super(POWER_ID, TYPE, TURN_BASED, owner, amount);
+        this.amount=1;
     }
     public void stackPower(int stackAmount) {
         super.stackPower(stackAmount);
@@ -37,8 +38,9 @@ public class TimeEating extends BasePower implements NonStackablePower {
     @Override
     public void onPlayCard(AbstractCard card, AbstractMonster m) {
         super.onPlayCard(card, m);
-        if (this.amount <= 12){
+        if (this.amount < 12){
             addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new StrengthPower(owner,2)));
+            this.amount+=1;
         }
 
     }
