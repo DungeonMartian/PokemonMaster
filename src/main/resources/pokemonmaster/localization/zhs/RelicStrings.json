@@ -97,14 +97,14 @@
       "如果你在你的回合中正好打出 #b1 张牌，移除你所有的减益."
     ]
   },
-  "${modID}:PuzzleCube": {
+  "pokemonmaster:PuzzleCube": {
     "NAME": "拼图方块",
     "FLAVOR": "一个神秘的立方体",
     "DESCRIPTIONS": [
       "第三种类型的宝可梦将会出现在你的卡池里."
     ]
   },
-  "${modID}:MiracleSeed": {
+  "pokemonmaster:MiracleSeed": {
     "NAME": "奇迹种子",
     "FLAVOR": "一个神奇的种子",
     "DESCRIPTIONS": [

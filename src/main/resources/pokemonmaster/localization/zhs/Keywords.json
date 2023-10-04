@@ -80,7 +80,7 @@
     "NAMES": [
       "回合"
     ],
-    "DESCRIPTION": "你的卡牌持续回合造成伤害."
+    "DESCRIPTION": "你的回合牌造成额外伤害."
   },
   {
     "PROPER_NAME": "伏转",

@@ -829,7 +829,7 @@
   "${modID}:ProfessorSycamore": {
     "NAME": "Professor Sycamore",
     "DESCRIPTION": "{@@}pokemonmaster:Supporter NL Exhaust your hand. NL Draw 7 Cards. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Supporter NL Exhaust your hand. NL Draw 7 Cards. NL Exhaust/",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Supporter NL Exhaust your hand. NL Draw 7 Cards. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

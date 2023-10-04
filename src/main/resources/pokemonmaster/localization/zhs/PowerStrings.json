@@ -67,7 +67,7 @@
   "pokemonmaster:RoundPower": {
     "NAME": "回合",
     "DESCRIPTIONS": [
-      "持续 #y回合 造成 #b ",
+      "你的 #y回合 牌额外造成 #b ",
       "点伤害."
     ]
   },
