@@ -29,11 +29,12 @@ public class Crustle extends FinalEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
 
-    private static final int BLOCK = 8;
+    private static final int BLOCK = 6;
+    private static final int UPG_BLOCK = 2;
 
     public Crustle() {
         super(cardInfo,CustomTags.GRASS);
-        setBlock(BLOCK);
+        setBlock(BLOCK,UPG_BLOCK);
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillGrass.png","pokemonmaster/character/cardback/bg_skillGrass_p.png");
 
@@ -46,6 +47,9 @@ public class Crustle extends FinalEvolutionCard {
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         AbstractCard s = (new Withdraw());
         AbstractCard t = (new Shellsmash());
+        if (this.upgraded){
+            s.upgrade();
+        }
         ArrayList<AbstractCard> ATTACKA = new ArrayList<>();
         s.applyPowers();
         t.applyPowers();

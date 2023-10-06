@@ -26,10 +26,10 @@ public class DeoxysD extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 5;
-    private static final int UPG_BLOCK= 3;
+    private static final int BLOCK = 4;
+    private static final int UPG_BLOCK= 2;
     private static final int DAMAGED= 3;
-    private static final int DAMAGEDUP= 3;
+    private static final int DAMAGEDUP= 2;
 
 
 

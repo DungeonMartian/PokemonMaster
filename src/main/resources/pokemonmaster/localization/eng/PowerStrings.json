@@ -202,7 +202,7 @@
     "NAME": "Spark",
     "DESCRIPTIONS": [
       "At the start of your turn gain #b",
-      " Energy."
+      " Energy. If you have 4 or more Spark, lose 1 HP for every 4."
     ]
   },
   "${modID}:OricorioPower": {
@@ -484,6 +484,13 @@
       "At the start of your turn draw #b",
       " cards and add #b",
       " #yDazed to your discard pile."
+    ]
+  },
+  "${modID}:Refined": {
+    "NAME": "Refined",
+    "DESCRIPTIONS": [
+      "At the start of your turn add #b",
+      " #yRalts to your hand."
     ]
   },
   "${modID}:ToxicSpikes": {

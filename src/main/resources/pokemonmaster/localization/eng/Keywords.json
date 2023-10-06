@@ -169,7 +169,7 @@
       ""
 
     ],
-    "DESCRIPTION": "0 Cost attack with *Retain and *Exhaust that deals damage based on your current energy."
+    "DESCRIPTION": "0 Cost attack with Retain and Exhaust that deals damage based on your current energy."
   },
   {
     "PROPER_NAME": "Firework",
@@ -182,7 +182,7 @@
       ""
 
     ],
-    "DESCRIPTION": "0 cost status card that usually deals damage to an enemy and exhausts."
+    "DESCRIPTION": "0 cost status card that usually deals damage to an enemy and Exhaust."
   },
   {
     "PROPER_NAME": "Choose",
@@ -208,7 +208,7 @@
       ""
 
     ],
-    "DESCRIPTION": "Gain Energy at the start of your turn. Can go negative, you will lose Energy."
+    "DESCRIPTION": "Gain Energy at the start of your turn. Can go negative, you will lose Energy. If you have 4 or more Spark, lose 1 HP for every 4."
   },
   {
     "PROPER_NAME": "Blur",

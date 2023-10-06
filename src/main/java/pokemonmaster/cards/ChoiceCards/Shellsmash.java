@@ -27,8 +27,8 @@ public class Shellsmash extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int SMASHNUMS = 5;
-
+    private static final int SMASHNUMS = 3;
+    private static final int UPG_SMASHNUMS = 2;
 
 
 

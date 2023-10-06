@@ -26,8 +26,8 @@ public class Withdraw extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 8;
-
+    private static final int BLOCK = 6;
+    private static final int UPG_BLOCK = 2;
 
     private static final int BLOCKNEXT = 6;
 
@@ -35,7 +35,7 @@ public class Withdraw extends BaseCard {
 
     public Withdraw() {
         super(cardInfo);
-        setBlock(BLOCK);
+        setBlock(BLOCK,UPG_BLOCK);
         setMagic(BLOCKNEXT);
     }
 

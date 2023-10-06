@@ -28,8 +28,8 @@ public class Turtonator extends BasePokemonCard {
 
     private static final int BLOCK = 8;
     private static final int UPG_BLOCK= 3;
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC= 1;
+    private static final int MAGIC = 2;
+    private static final int UPG_MAGIC= 2;
 
 
     public Turtonator() {

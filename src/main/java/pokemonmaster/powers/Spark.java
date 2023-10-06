@@ -1,9 +1,13 @@
 package pokemonmaster.powers;
 
 import basemod.interfaces.CloneablePowerInterface;
+import com.megacrit.cardcrawl.actions.animations.VFXAction;
+import com.megacrit.cardcrawl.actions.common.LoseHPAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
+import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
+import com.megacrit.cardcrawl.vfx.combat.RedFireballEffect;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -27,10 +31,19 @@ public class Spark extends BasePower implements CloneablePowerInterface {
     }
       public void updateDescription() {
       this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
+          if (this.amount >= 4){
+              this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
+              updateDescription();
+          }
     }
 
     public void onEnergyRecharge() {
         AbstractDungeon.player.gainEnergy(this.amount);
+
+        if (this.amount >= 4){
+            addToTop(new LoseHPAction(owner,owner,this.amount/4));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new RedFireballEffect(owner.hb.cX-5* Settings.scale,owner.hb.cY,owner.hb.cX+5* Settings.scale,owner.hb.cY, 0), 0.1F));
+        }
     }
 
 

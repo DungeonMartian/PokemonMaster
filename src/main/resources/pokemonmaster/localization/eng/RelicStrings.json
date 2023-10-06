@@ -7,7 +7,7 @@
     ]
   },
   "${modID}:ShortFuse": {
-  "NAME": "ShortFuse",
+  "NAME": "Short Fuse",
   "FLAVOR": "It's about to blow!",
   "DESCRIPTIONS": [
     "At the end of your turn #yExhaust a random card in your discard pile and gain 1 #ypokemonmaster:Spark."
@@ -59,7 +59,7 @@
     "NAME": "First Edition",
     "FLAVOR": "It's a collector item Mom!",
     "DESCRIPTIONS": [
-      "Gain #b50 #yGold for each Rare card in your deck."
+      "Gain #b100 #yGold for each Rare card in your deck."
     ]
   },
   "${modID}:Pokedex": {
@@ -91,7 +91,7 @@
     ]
   },
   "${modID}:ChoiceBand": {
-    "NAME": "ChoiceBand",
+    "NAME": "Choice Band",
     "FLAVOR": "One Punch!",
     "DESCRIPTIONS": [
       "If you play exactly #b1 card on your turn, remove ALL of your debuffs."

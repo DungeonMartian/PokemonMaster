@@ -929,7 +929,7 @@
   "${modID}:Crustle": {
     "NAME": "Crustle",
     "DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !B! Block, NL Next turn gain !B! Block. NL OR Gain 5 Frail, Vulnerable and Strength.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !B! Block and !B! Block next turn NL OR Gain 5 Frail, Vulnerable and Strength.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !B! Block, NL Next turn gain !B! Block. NL OR Gain 5 Frail, Vulnerable and Strength.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1158,8 +1158,8 @@
   },
   "${modID}:Parasect": {
     "NAME": "Parasect",
-    "DESCRIPTION": "{@@}Apply !M! Poison and Stun the target. NL End your turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Apply !M! Poison and Stun the target. NL End your turn. NL Exhaust.",
+    "DESCRIPTION": "{@@}Apply !M! Poison and *Stunned. NL End your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Apply !M! Poison and *Stunned. NL End your turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1237,8 +1237,8 @@
 },
   "${modID}:Magcargo": {
   "NAME": "Magcargo",
-  "DESCRIPTION": "{@@}Deal !D! damage. NL Lose ALL your pokemonmaster:Spark.",
-  "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Lose ALL your pokemonmaster:Spark.",
+  "DESCRIPTION": "{@@}Deal !D! damage. NL Remove ALL your pokemonmaster:Spark.",
+  "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage. NL Remove ALL your pokemonmaster:Spark.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -1247,8 +1247,8 @@
 },
   "${modID}:Pansear": {
   "NAME": "Pansear",
-  "DESCRIPTION": "{@@}Draw !M! cards.",
-  "UPGRADE_DESCRIPTION": "{@@}Draw !M! cards.",
+  "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}.",
+  "UPGRADE_DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -1257,8 +1257,8 @@
 },
   "${modID}:Simisear": {
   "NAME": "Simisear",
-  "DESCRIPTION": "{@@}Draw !M! cards.",
-  "UPGRADE_DESCRIPTION": "{@@}Draw !M! cards.",
+  "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}.",
+  "UPGRADE_DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}.",
   "EXTENDED_DESCRIPTION": [
     "",
     "",
@@ -1418,7 +1418,7 @@
   "${modID}:OricorioFire": {
     "NAME": "OricorioF",
     "DESCRIPTION": "{@@}At the start of your turn gain !M! Strength and add !M! burn{!M!|>1=s} to your hand.",
-    "UPGRADE_DESCRIPTION": "{@@}Innate. At the start of your turn gain !M! Strength and add !M! burn{!M!|>1=s} to your hand.",
+    "UPGRADE_DESCRIPTION": "{@@}Innate. NL At the start of your turn gain !M! Strength and add !M! burn{!M!|>1=s} to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3915,8 +3915,8 @@
   },
   "${modID}:RaikouV": {
     "NAME": "Raikou V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage for each attack in hand.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Deal !D! damage for each attack in hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage for each other attack in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Deal !D! damage for each other attack in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (You have ",
       " attack)",
@@ -3925,8 +3925,8 @@
   },
   "${modID}:EnteiV": {
     "NAME": "Entei V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage for each attack in hand.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Deal !D! damage for each attack in hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage for each other attack in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Deal !D! damage for each other attack in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (You have ",
       " attack)",
@@ -3935,8 +3935,8 @@
   },
   "${modID}:SuicuneV": {
     "NAME": "Suicune V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage for each attack in hand.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Deal !D! damage for each attack in hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Deal !D! damage for each other attack in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Deal !D! damage for each other attack in your hand.",
     "EXTENDED_DESCRIPTION": [
       " NL (You have ",
       " attack)",
@@ -4815,8 +4815,8 @@
   },
   "${modID}:DialgaGX": {
     "NAME": "Dialga GX",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized Deal !D! damage. NL Take an extra turn after this one. NL End your turn. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized Deal !D! damage. NL Take an extra turn after this one. NL End your turn. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Take an extra turn after this one. NL End your turn. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !D! damage. NL Take an extra turn after this one. NL End your turn. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

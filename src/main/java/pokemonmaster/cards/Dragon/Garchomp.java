@@ -17,7 +17,7 @@ public class Garchomp extends BasePokemonCard {
             "Garchomp",
             2,
             CardType.ATTACK,
-            CardTarget.ENEMY,
+            CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
             PokemonMaster.Enums.CARD_COLOR);
 

@@ -32,10 +32,10 @@ public class Crobat extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 4;
-    private static final int POISOND = 7;
-    private static final int POISONDUP = 4;
+    private static final int DAMAGE = 7;
+    private static final int UPG_DAMAGE = 3;
+    private static final int POISOND = 5;
+    private static final int POISONDUP = 3;
 
 
 
