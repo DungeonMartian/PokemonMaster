@@ -5003,6 +5003,16 @@
       ""
     ]
   },
+  "${modID}:CorruptHeart": {
+    "NAME": "Capt. Corrupt Heart",
+    "DESCRIPTION": "{@@}Capture ALL enemies.",
+    "UPGRADE_DESCRIPTION":"{@@}Capture ALL enemies.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:GardeniasVigor": {
     "NAME": "Gardenia's Vigor",
     "DESCRIPTION": "{@@}pokemonmaster:Supporter. NL Draw !M! cards. NL Any Powers drawn this way cost 1 less this turn.",

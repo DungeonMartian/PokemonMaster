@@ -490,7 +490,8 @@
     "NAME": "Refined",
     "DESCRIPTIONS": [
       "At the start of your turn add #b",
-      " #yRalts to your hand."
+      " #yRalts to your hand and draw #b",
+      " cards."
     ]
   },
   "${modID}:ToxicSpikes": {

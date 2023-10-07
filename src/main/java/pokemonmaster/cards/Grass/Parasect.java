@@ -28,8 +28,8 @@ public class Parasect extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int POISOND = 7;
-    private static final int POISONDUP = 3;
+    private static final int POISOND = 4;
+    private static final int POISONDUP = 2;
 
 
 

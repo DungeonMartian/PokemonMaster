@@ -31,7 +31,7 @@ public class Ninetales extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 16;
+    private static final int BLOCK = 12;
     private static final int UPG_BLOCK= 4;
 
 
