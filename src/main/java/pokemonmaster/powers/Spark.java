@@ -32,8 +32,7 @@ public class Spark extends BasePower implements CloneablePowerInterface {
       public void updateDescription() {
       this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
           if (this.amount >= 4){
-              this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1] + DESCRIPTIONS[2];
-              updateDescription();
+              this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
           }
     }
 

@@ -45,7 +45,7 @@ public class PorygonEX extends BasePokemonCard {
 
     public PorygonEX() {
         super(cardInfo);
-        setDamage(DAMAGE);
+        setMagic(DAMAGE);
         setCostUpgrade(1);
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.POKEMON);
@@ -102,6 +102,17 @@ public class PorygonEX extends BasePokemonCard {
     @Override
     public float calculateModifiedCardDamage(AbstractPlayer player, AbstractMonster mo, float tmp) {
         this.baseDamage=0;
+        DRAGON = false;
+        DARK = false;
+        FIRE = false;
+        FIGHTING = false;
+        GRASS = false;
+        LIGHTNING = false;
+        FAIRY = false;
+        NORMAL = false;
+        METAL = false;
+        WATER = false;
+        PSYCHIC = false;
         for (AbstractCard J : player.hand.group){
             if (J.hasTag(CustomTags.POKEMON) && J.hasTag(CustomTags.DRAGON)){
                 this.DRAGON = true;
@@ -170,7 +181,8 @@ public class PorygonEX extends BasePokemonCard {
         if (this.PSYCHIC){
             this.baseDamage+= DAMAGE;
         }
-        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+
+        this.rawDescription =cardStrings.DESCRIPTION+ cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
         return super.calculateModifiedCardDamage(player, mo, tmp);
     }
@@ -178,6 +190,17 @@ public class PorygonEX extends BasePokemonCard {
     @Override
     public void applyPowers() {
         this.baseDamage=0;
+        DRAGON = false;
+        DARK = false;
+        FIRE = false;
+        FIGHTING = false;
+        GRASS = false;
+        LIGHTNING = false;
+        FAIRY = false;
+        NORMAL = false;
+        METAL = false;
+        WATER = false;
+        PSYCHIC = false;
         for (AbstractCard J : AbstractDungeon.player.hand.group){
             if (J.hasTag(CustomTags.POKEMON) && J.hasTag(CustomTags.DRAGON)){
                 this.DRAGON = true;
@@ -246,10 +269,11 @@ public class PorygonEX extends BasePokemonCard {
         if (this.PSYCHIC){
             this.baseDamage+= DAMAGE;
         }
-        this.rawDescription = cardStrings.EXTENDED_DESCRIPTION[0];
+        this.rawDescription =cardStrings.DESCRIPTION+ cardStrings.EXTENDED_DESCRIPTION[0];
         this.initializeDescription();
         super.applyPowers();
     }
+
     @Override
     public AbstractCard makeCopy() { //Optional
         return new PorygonEX();

@@ -1,6 +1,7 @@
 package pokemonmaster.cards.Normal;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -36,6 +37,7 @@ public class Cheren extends BasePokemonCard {
         setCostUpgrade(0);
         tags.add(CustomTags.NORMAL);
         tags.add(CustomTags.SUPPORTER);
+        tags.add(CardTags.HEALING);
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillNormal.png","pokemonmaster/character/cardback/bg_skillNormal_p.png");
 
@@ -46,6 +48,8 @@ public class Cheren extends BasePokemonCard {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
             addToBot(new FetchAction(p.exhaustPile, card -> card.hasTag(POKEMON) && card.hasTag(NORMAL),1, abstractCards -> {}));
+            addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p, 1)));
+
         }
 
     }

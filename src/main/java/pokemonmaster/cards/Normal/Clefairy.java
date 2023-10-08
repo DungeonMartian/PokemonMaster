@@ -33,7 +33,7 @@ public class Clefairy extends BasicPokemonCard {
         super(cardInfo,new Clefable(), new Clefable(),CustomTags.NORMAL);
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillNormal.png","pokemonmaster/character/cardback/bg_skillNormal_p.png");
-
+        setCostUpgrade(0);
     }
 
 

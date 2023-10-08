@@ -2,7 +2,7 @@ package pokemonmaster.Potions;
 
 import basemod.abstracts.CustomPotion;
 import com.badlogic.gdx.graphics.Color;
-import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -10,12 +10,12 @@ import com.megacrit.cardcrawl.helpers.PowerTip;
 import com.megacrit.cardcrawl.localization.PotionStrings;
 import com.megacrit.cardcrawl.potions.AbstractPotion;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
-import pokemonmaster.powers.Burned;
+import pokemonmaster.util.Actions.CatchAction;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class BurnPotion extends CustomPotion {
-    public static final String POTION_ID = makeID("BurnPotion");
+public class ParkBall extends CustomPotion {
+    public static final String POTION_ID = makeID("ParkBall");
 
     private static final PotionStrings potionStrings = CardCrawlGame.languagePack.getPotionString(POTION_ID);
 
@@ -23,8 +23,8 @@ public class BurnPotion extends CustomPotion {
 
     public static final String[] DESCRIPTIONS = potionStrings.DESCRIPTIONS;
 
-    public BurnPotion() {
-        super(NAME, POTION_ID, AbstractPotion.PotionRarity.UNCOMMON, AbstractPotion.PotionSize.S, AbstractPotion.PotionColor.SMOKE);
+    public ParkBall() {
+        super(NAME, POTION_ID, PotionRarity.RARE, PotionSize.FAIRY, PotionColor.NONE);
         this.potency = getPotency();
         this.labOutlineColor = Color.YELLOW.cpy();
 
@@ -36,15 +36,16 @@ public class BurnPotion extends CustomPotion {
     }
 
     public void use(AbstractCreature target) {
-        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT)
-            AbstractDungeon.actionManager.addToBottom(new ApplyPowerAction(target, AbstractDungeon.player, new Burned(target, this.potency), this.potency));
+        if ((AbstractDungeon.getCurrRoom()).phase == AbstractRoom.RoomPhase.COMBAT) {
+            addToBot(new CatchAction(target,new DamageInfo(AbstractDungeon.player, this.potency, DamageInfo.DamageType.HP_LOSS)));
+        }
     }
 
     public AbstractPotion makeCopy() {
-        return new BurnPotion();
+        return new ParkBall();
     }
 
     public int getPotency(int potency) {
-        return 4;
+        return 5;
     }
 }

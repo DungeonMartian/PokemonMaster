@@ -52,10 +52,13 @@ public class Miltank extends BasePokemonCard {
         defenseCurl.magicNumber = this.magicNumber;
         defenseCurl.applyPowers();
         defenseCurl.isCostModified=true;
-        defenseCurl.upgrade();
-        ATTACK.add(defenseCurl);
         Rollout rollout = new Rollout();
-        rollout.upgrade();
+        if (this.upgraded) {
+            defenseCurl.upgrade();
+            rollout.upgrade();
+        }
+        ATTACK.add(defenseCurl);
+
         rollout.baseDamage = this.baseDamage;
         rollout.calculateCardDamage(m);
         ATTACK.add(rollout);

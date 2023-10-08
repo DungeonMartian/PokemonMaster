@@ -30,6 +30,7 @@ public class Zigzagoon extends BasicPokemonCard {
         super(cardInfo,new Linoone(), new Linoone(), CustomTags.NORMAL);
 
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillNormal.png","pokemonmaster/character/cardback/bg_skillNormal_p.png");
+        tags.add(CardTags.HEALING);
 
     }
 

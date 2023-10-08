@@ -48,7 +48,8 @@ public class RaikouV extends BasePokemonCard {
 
         addToBot(new RondoAction(m, new DamageInfo(p, this.damage, this.damageTypeForTurn)));
         addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
-
+        this.rawDescription = cardStrings.DESCRIPTION;
+        initializeDescription();
     }
     public void applyPowers() {
         super.applyPowers();

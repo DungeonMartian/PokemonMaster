@@ -1,6 +1,7 @@
 package pokemonmaster.cards.Normal;
 
 import com.evacipated.cardcrawl.mod.stslib.actions.common.FetchAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -11,8 +12,6 @@ import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.SupporterPlayed;
 import pokemonmaster.util.CardInfo;
-
-import java.util.function.Predicate;
 
 import static pokemonmaster.CustomTags.NORMAL;
 import static pokemonmaster.CustomTags.POKEMON;
@@ -47,6 +46,8 @@ public class Winona extends BasePokemonCard {
         AbstractPower pow = AbstractDungeon.player.getPower(SupporterPlayed.POWER_ID);
         if (pow == null) {
             addToBot(new FetchAction(p.drawPile, card -> card.hasTag(POKEMON) &&card.hasTag(NORMAL),3, abstractCards -> {
+                addToBot(new ApplyPowerAction(p, p, new SupporterPlayed(p, 1)));
+
             }));
         }
 

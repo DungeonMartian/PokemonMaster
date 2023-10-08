@@ -72,5 +72,12 @@
       " #yBurn.",
       "It's a rock."
     ]
+  },
+  "${modID}:ParkBall": {
+    "NAME": "Park Ball",
+    "DESCRIPTIONS": [
+      "Capture an enemy with #b",
+      " or less HP."
+    ]
   }
 }

@@ -5515,8 +5515,8 @@
   },
   "${modID}:Clefairy": {
     "NAME": "Clefairy",
-    "DESCRIPTION": "{@@}Lose 25% of your max hp. Gain that amount as Temp HP.",
-    "UPGRADE_DESCRIPTION":"{@@}Lose 25% of your max hp. Gain that amount as Temp HP.",
+    "DESCRIPTION": "{@@}Lose 25% of your max HP. Gain that amount as Temp HP.",
+    "UPGRADE_DESCRIPTION":"{@@}Lose 25% of your max HP. Gain that amount as Temp HP.",
     "EXTENDED_DESCRIPTION": [
       " NL (Lose !M! HP)",
       "",
@@ -5775,10 +5775,10 @@
   },
   "${modID}:PorygonEX": {
     "NAME": "Porygon EX",
-    "DESCRIPTION": "{@@}Deal !D! damage for each unique type of pokemon in your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each unique type of pokemon in your hand.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !M! damage for each unique type of pokemon in your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !M! damage for each unique type of pokemon in your hand.",
     "EXTENDED_DESCRIPTION": [
-      "Deal !D! damage.",
+      " NL ( Deal !D! damage)",
       "",
       ""
     ]
