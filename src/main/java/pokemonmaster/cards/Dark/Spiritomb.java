@@ -30,7 +30,7 @@ public class Spiritomb extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 12;
+    private static final int BLOCK = 10;
     private static final int UPG_BLOCK= 4;
     private static final int MAGIC = 1;
     private static final int UPG_MAGIC= 1;

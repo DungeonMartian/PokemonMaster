@@ -202,7 +202,7 @@
     "NAME": "Spark",
     "DESCRIPTIONS": [
       "At the start of your turn gain #b",
-      " Energy. If you have 4 or more Spark, lose 1 HP for every 4."
+      " Energy and lose 1 HP for every 4 Spark you have."
     ]
   },
   "${modID}:OricorioPower": {
@@ -534,6 +534,7 @@
   "${modID}:SudowoodoPower": {
     "NAME": "Squirt Bottle",
     "DESCRIPTIONS": [
+      "If you play a Water type card lose ALL of your temp HP and gain #b",
       "If you play a Water type card lose ALL of your temp HP and gain #b",
       " Strength."
 

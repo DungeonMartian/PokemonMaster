@@ -1,7 +1,6 @@
 package pokemonmaster;
 
-import basemod.AutoAdd;
-import basemod.BaseMod;
+import basemod.*;
 import basemod.interfaces.*;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Color;
@@ -10,6 +9,7 @@ import com.badlogic.gdx.utils.GdxRuntimeException;
 import com.evacipated.cardcrawl.modthespire.Loader;
 import com.evacipated.cardcrawl.modthespire.ModInfo;
 import com.evacipated.cardcrawl.modthespire.Patcher;
+import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
 import com.megacrit.cardcrawl.cards.CardGroup;
@@ -17,6 +17,7 @@ import com.megacrit.cardcrawl.cards.status.Slimed;
 import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.helpers.FontHelper;
 import com.megacrit.cardcrawl.localization.*;
 import com.megacrit.cardcrawl.unlock.UnlockTracker;
 import org.apache.logging.log4j.LogManager;
@@ -33,10 +34,7 @@ import pokemonmaster.util.KeywordInfo;
 import pokemonmaster.util.TextureLoader;
 
 import java.nio.charset.StandardCharsets;
-import java.util.Arrays;
-import java.util.Collections;
-import java.util.Optional;
-import java.util.Set;
+import java.util.*;
 
 import static basemod.BaseMod.addRelic;
 
@@ -61,6 +59,25 @@ public class PokemonMasterMod implements
     public static boolean selectedCards = false;
     public static final Logger logger = LogManager.getLogger(modID); //Used to output to the console.
     private static final String resourcesFolder = "pokemonmaster";
+    private static Properties PokemonMasterModSettings = new Properties();
+
+    private static final String ENABLE_PLACEHOLDER_SETTINGS = "enablePlaceholder";
+
+    private static boolean RandomizeTypes = true;
+    private static boolean DarkType = true;
+    private static boolean DragonType = true;
+    private static boolean FightingType = true;
+    private static boolean FireType = true;
+    private static boolean GrassType = true;
+    private static boolean LightningType = true;
+    private static boolean MetalType = true;
+    private static boolean NormalType = true;
+    private static boolean PsychicType = true;
+    private static boolean WaterType = true;
+    public static ModLabeledToggleButton enableNormalsButton;
+
+
+
 
     //This is used to prefix the IDs of various objects like cards and relics,
     //to avoid conflicts between different mods using the same name for things.
@@ -96,8 +113,40 @@ public class PokemonMasterMod implements
     }
 
     public PokemonMasterMod() {
-        BaseMod.subscribe(this); //This will make BaseMod trigger all the subscribers at their appropriate times.
-        logger.info(modID + " subscribed to BaseMod.");
+        BaseMod.subscribe(this);
+
+        //This will make BaseMod trigger all the subscribers at their appropriate times.
+        PokemonMasterModSettings.setProperty("RandomizeTypes", "TRUE");
+        PokemonMasterModSettings.setProperty("DarkType", "TRUE");
+        PokemonMasterModSettings.setProperty("DragonType", "TRUE");
+        PokemonMasterModSettings.setProperty("FightingType", "TRUE");
+        PokemonMasterModSettings.setProperty("FireType", "TRUE");
+        PokemonMasterModSettings.setProperty("GrassType", "TRUE");
+        PokemonMasterModSettings.setProperty("LightningType", "TRUE");
+        PokemonMasterModSettings.setProperty("MetalType", "TRUE");
+        PokemonMasterModSettings.setProperty("NormalType", "TRUE");
+        PokemonMasterModSettings.setProperty("PsychicType", "TRUE");
+        PokemonMasterModSettings.setProperty("WaterType", "TRUE");
+
+        try {
+            SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+            config.load();
+            RandomizeTypes = Boolean.valueOf(config.getBool("RandomizeTypes"));
+            DarkType = Boolean.valueOf(config.getBool("DarkType"));
+            DragonType = Boolean.valueOf(config.getBool("DragonType"));
+            FightingType = Boolean.valueOf(config.getBool("FightingType"));
+            FireType = Boolean.valueOf(config.getBool("FireType"));
+            GrassType = Boolean.valueOf(config.getBool("GrassType"));
+            LightningType = Boolean.valueOf(config.getBool("LightningType"));
+            MetalType = Boolean.valueOf(config.getBool("MetalType"));
+            NormalType = Boolean.valueOf(config.getBool("NormalType"));
+            PsychicType = Boolean.valueOf(config.getBool("PsychicType"));
+            WaterType = Boolean.valueOf(config.getBool("WaterType"));
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        logger.info("Done adding mod settings");
     }
 
     public static String getModID() {
@@ -112,14 +161,159 @@ public class PokemonMasterMod implements
     @Override
     public void receivePostInitialize() {
         //This loads the image used as an icon in the in-game mods menu.
-        Texture badgeTexture = TextureLoader.getTexture(resourcePath("badge.png"));
+        //Texture badgeTexture = TextureLoader.getTexture(resourcePath("badge.png"));
         //Set up the mod information displayed in the in-game mods menu.
         //The information used is taken from your pom.xml file.
-        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
+        //BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString(info.Authors), info.Description, null);
 
 
         addPotions();
+        createConfigMenu();
 
+
+    }
+
+    public void createConfigMenu() {
+        logger.info("Loading badge image and mod options");
+        Texture badgeTexture = TextureLoader.getTexture(characterPath("Pokeball.png"));
+        ModPanel settingsPanel = new ModPanel();
+
+
+        ModLabeledToggleButton enableNormalsButton = new ModLabeledToggleButton("Randomize your types at the start of the run (Overides other options).", 350.0F, 800.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            RandomizeTypes = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("RandomizeTypes", RandomizeTypes);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)enableNormalsButton);
+
+        ModLabeledToggleButton darkButton = new ModLabeledToggleButton("Dark types will be available.", 350.0F, 750.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            DarkType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("DarkType", DarkType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)darkButton);
+
+        ModLabeledToggleButton dragonButton = new ModLabeledToggleButton("Dragon types will be available.", 350.0F, 700.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            DragonType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("DragonType", DragonType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)dragonButton);
+
+        ModLabeledToggleButton fightingButton = new ModLabeledToggleButton("Fighting types will be available.", 350.0F, 650.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            FightingType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("FightingType", FightingType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)fightingButton);
+
+        ModLabeledToggleButton fireButton = new ModLabeledToggleButton("Fire types will be available.", 350.0F, 600.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            FireType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("FireType", FireType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)fireButton);
+
+        ModLabeledToggleButton grassButton = new ModLabeledToggleButton("Grass types will be available.", 350.0F, 550.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            GrassType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("GrassType", GrassType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)grassButton);
+
+        ModLabeledToggleButton lightningButton = new ModLabeledToggleButton("Lightning types will be available.", 350.0F, 500.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            LightningType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("LightningType", LightningType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)lightningButton);
+
+        ModLabeledToggleButton metalButton = new ModLabeledToggleButton("Metal types will be available.", 350.0F, 450.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            MetalType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("MetalType", MetalType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)metalButton);
+
+        ModLabeledToggleButton normalButton = new ModLabeledToggleButton("Normal types will be available.", 350.0F, 400.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            NormalType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("NormalType", NormalType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)normalButton);
+
+        ModLabeledToggleButton psychicButton = new ModLabeledToggleButton("Psychic types will be available.", 350.0F, 350.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            PsychicType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("PsychicType", PsychicType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)psychicButton);
+
+        ModLabeledToggleButton waterButton = new ModLabeledToggleButton("Water types will be available.", 350.0F, 300.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+            WaterType = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("WaterType", WaterType);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)waterButton);
+
+
+        BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString((Object[])info.Authors), info.Description, settingsPanel);
+        logger.info("Done loading badge Image and mod options");
     }
 
     /*----------Localization----------*/

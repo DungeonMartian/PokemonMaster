@@ -27,7 +27,9 @@ public class TypeRemoverClass {
 
     public static boolean DOTHIS = true;
     public static boolean TOADD = true;
-
+    private static Integer randInt1 =0;
+    private static Integer randInt2 =0;
+    private static Integer randInt3 =0;
     private static AbstractCard TOADD1;
     private static AbstractCard TOADD2;
 
@@ -43,17 +45,19 @@ public class TypeRemoverClass {
                 Random randNum = new Random();
                 randNum.setSeed(Settings.seed);
                 Set<Integer> set = new LinkedHashSet<Integer>();
+                //this is allegedly the problem
+            if (PokemonMasterMod.enableNormalsButton.toggle.enabled) {
+                randInt1 = randNum.nextInt(10) + 1;
+                randInt2 = randNum.nextInt(10) + 1;
 
-                Integer randInt1 = randNum.nextInt(10) + 1;
-                Integer randInt2 = randNum.nextInt(10) + 1;
-                while (randInt2.equals(randInt1)){
+                while (randInt2.equals(randInt1)) {
                     randInt2 = randNum.nextInt(10) + 1;
                 }
-                Integer randInt3 = randNum.nextInt(10) + 1;
+                randInt3 = randNum.nextInt(10) + 1;
                 while (randInt3.equals(randInt1) || randInt3.equals(randInt2)) {
                     randInt3 = randNum.nextInt(10) + 1;
                 }
-
+            }
 
             //this could very easily be done much better, but I didn't want to
             //you can theoretically lose your starting bonus if you use it to remove your bonus cards, then save load

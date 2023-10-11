@@ -25,7 +25,7 @@ public class CrystalCave extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int CRYSTAL = 7;
+    private static final int CRYSTAL = 5;
     private static final int CRYSTALUP= 2;
 
 

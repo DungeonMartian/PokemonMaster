@@ -17,7 +17,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class AlolanDiglet extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "AlolanDiglet",
-            0,
+            1,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.COMMON,
@@ -27,7 +27,7 @@ public class AlolanDiglet extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 3;
+    private static final int BLOCK = 4;
     private static final int UPG_BLOCK= 2;
     private static final int SCRY = 3;
     private static final int SCRYUP= 2;

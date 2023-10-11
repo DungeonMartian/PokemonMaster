@@ -649,8 +649,8 @@
   },
   "${modID}:Gholdengo": {
     "NAME": "Gholdengo",
-    "DESCRIPTION": "{@@}Deal !D! damage and apply 2 weak to ALL enemies. NL Gain a random relic. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage and apply 2 weak to ALL enemies. NL Gain a random relic. NL Exhaust.",
+    "DESCRIPTION": "{@@}Deal !D! damage and apply 2 Weak to ALL enemies. NL Gain a random Relic. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage and apply 2 Weak to ALL enemies. NL Gain a random Relic. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3177,7 +3177,7 @@
   "${modID}:Sentries": {
     "NAME": "Capt. Sentries",
     "DESCRIPTION": "{@@}Gain !B! Block. NL Add 2 Dazed to your discard pile.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block. NL Add 2 Dazed to your discard pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !B! Block and 1 Artifact. NL Add 2 Dazed to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5235,8 +5235,8 @@
   },
   "${modID}:Sneasel": {
     "NAME": "Sneasel",
-    "DESCRIPTION": "{@@}Deal !D! damage for each  [E]  the *Pokemon in your hand cost.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each  [E]  the *Pokemon in your hand cost.",
+    "DESCRIPTION": "{@@}Deal !D! damage for each  [E]  the other *Pokemon in your hand cost.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage for each  [E]  the other *Pokemon in your hand cost.",
     "EXTENDED_DESCRIPTION": [
       "Deal !D! damage. NL (You have !M! [E] of *Pokemon)",
       "",
