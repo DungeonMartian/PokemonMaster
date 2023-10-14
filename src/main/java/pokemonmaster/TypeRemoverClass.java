@@ -32,7 +32,7 @@ public class TypeRemoverClass {
     private static Integer randInt3 =0;
     private static AbstractCard TOADD1;
     private static AbstractCard TOADD2;
-
+    private static Set<Integer> set;
     public TypeRemoverClass() {
         TOADD = true;
     }
@@ -42,11 +42,10 @@ public class TypeRemoverClass {
         if (DOTHIS) {
             if (!AbstractDungeon.player.hasRelic("PrismaticShard")) {
                 TOADD = true;
+                if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
                 Random randNum = new Random();
                 randNum.setSeed(Settings.seed);
-                Set<Integer> set = new LinkedHashSet<Integer>();
-                //this is allegedly the problem
-            if (PokemonMasterMod.enableNormalsButton.toggle.enabled) {
+                set = new LinkedHashSet<Integer>();
                 randInt1 = randNum.nextInt(10) + 1;
                 randInt2 = randNum.nextInt(10) + 1;
 
@@ -57,7 +56,7 @@ public class TypeRemoverClass {
                 while (randInt3.equals(randInt1) || randInt3.equals(randInt2)) {
                     randInt3 = randNum.nextInt(10) + 1;
                 }
-            }
+
 
             //this could very easily be done much better, but I didn't want to
             //you can theoretically lose your starting bonus if you use it to remove your bonus cards, then save load
@@ -126,34 +125,33 @@ public class TypeRemoverClass {
 
 
 
-            if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
 
-
-                if (AbstractDungeon.floorNum < 1) {
-                    for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
-                        if (Objects.equals(c.cardID, TOADD1.cardID)) {
-                            TOADD = false;
-                            break;
+                if (PokemonMasterMod.enableNormalsButton.toggle.enabled) {
+                    if (AbstractDungeon.floorNum < 1) {
+                        for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                            if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                TOADD = false;
+                                break;
+                            }
                         }
-                    }
-                    if (TOADD) {
-                        AbstractDungeon.player.masterDeck.addToTop(TOADD1);
-                    }
-
-                }
-                if (AbstractDungeon.floorNum < 1) {
-                    for (AbstractCard t : (AbstractDungeon.player).masterDeck.group) {
-                        if (Objects.equals(t.cardID, TOADD2.cardID)) {
-                            TOADD = false;
-                            break;
+                        if (TOADD) {
+                            AbstractDungeon.player.masterDeck.addToTop(TOADD1);
                         }
-                    }
-                    if (TOADD) {
-                        AbstractDungeon.player.masterDeck.addToTop(TOADD2);
-                    }
 
+                    }
+                    if (AbstractDungeon.floorNum < 1) {
+                        for (AbstractCard t : (AbstractDungeon.player).masterDeck.group) {
+                            if (Objects.equals(t.cardID, TOADD2.cardID)) {
+                                TOADD = false;
+                                break;
+                            }
+                        }
+                        if (TOADD) {
+                            AbstractDungeon.player.masterDeck.addToTop(TOADD2);
+                        }
+
+                    }
                 }
-            }
                 // add all integers from 1 to 30 except for the two random ones to the set
                 //had to make this arbitrarily large to future proof for more added buckets
                 if (AbstractDungeon.player.hasRelic(PuzzleCube.ID)) {
@@ -170,7 +168,187 @@ public class TypeRemoverClass {
                         }
                     }
                 }
+            }
+                if (!PokemonMasterMod.enableNormalsButton.toggle.enabled) {
+                    set = new LinkedHashSet<Integer>();
+                    if (!PokemonMasterMod.darkButton.toggle.enabled) {
+                        set.add(7);
 
+                    }
+                    if (PokemonMasterMod.darkButton.toggle.enabled) {
+                        TOADD1 = new Zorua();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+
+                        }
+                    }
+                    if (!PokemonMasterMod.dragonButton.toggle.enabled) {
+                        set.add(9);
+                    }
+                    if (PokemonMasterMod.dragonButton.toggle.enabled) {
+                        TOADD1 = new Noibat();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+
+                        }
+                    }
+                    if (!PokemonMasterMod.fightingButton.toggle.enabled) {
+                        set.add(4);
+                    }
+                    if (PokemonMasterMod.fightingButton.toggle.enabled) {
+                        TOADD1 = new Rockruff();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+                        }
+                    }
+                    if (!PokemonMasterMod.fireButton.toggle.enabled) {
+                        set.add(3);
+                    }
+                    if (PokemonMasterMod.fireButton.toggle.enabled) {
+                        TOADD1 = new Litleo();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+
+                        }
+                    }
+                    if (!PokemonMasterMod.grassButton.toggle.enabled) {
+                        set.add(5);
+                    }
+                    if (PokemonMasterMod.grassButton.toggle.enabled) {
+                        TOADD1 = new Skiddo();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+
+                        }
+                    }
+                    if (!PokemonMasterMod.lightningButton.toggle.enabled) {
+                        set.add(6);
+                    }
+                    if (PokemonMasterMod.lightningButton.toggle.enabled) {
+                        TOADD1 = new Yamper();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+                        }
+                    }
+                    if (!PokemonMasterMod.metalButton.toggle.enabled) {
+                        set.add(2);
+                    }
+                    if (PokemonMasterMod.metalButton.toggle.enabled) {
+                        TOADD1 = new Meltan();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+
+                        }
+                    }
+                    if (!PokemonMasterMod.normalButton.toggle.enabled) {
+                        set.add(10);
+                    }
+                    if (PokemonMasterMod.normalButton.toggle.enabled) {
+                        TOADD1 = new Bidoof();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+                        }
+                    }
+                    if (!PokemonMasterMod.psychicButton.toggle.enabled) {
+                        set.add(1);
+                    }
+                    if (PokemonMasterMod.psychicButton.toggle.enabled) {
+                        TOADD1 = new Elgyem();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+                        }
+                    }
+                    if (!PokemonMasterMod.waterButton.toggle.enabled) {
+                        set.add(8);
+                    }
+                    if (PokemonMasterMod.waterButton.toggle.enabled) {
+                        TOADD1 = new Clamperl();
+                        if (AbstractDungeon.floorNum < 1) {
+                            for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
+                                if (Objects.equals(c.cardID, TOADD1.cardID)) {
+                                    TOADD = false;
+                                    break;
+                                }
+                            }
+                            if (TOADD) {
+                                AbstractDungeon.player.masterDeck.addToTop(TOADD1);
+                            }
+                        }
+                    }
+
+                }
 
                 ArrayList<String> DARKTYPE = new ArrayList<>();
                 DARKTYPE.add(Absol.ID);

@@ -72,5 +72,12 @@
       " #y点燃.",
       "是一种进化之石."
     ]
+  },
+  "pokemonmaster:ParkBall": {
+    "NAME": "公园球",
+    "DESCRIPTIONS": [
+      "捕获 1 个当前生命值小于 #b ",
+      "的敌人."
+    ]
   }
 }

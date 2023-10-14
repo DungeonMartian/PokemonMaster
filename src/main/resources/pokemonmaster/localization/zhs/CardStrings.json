@@ -3177,7 +3177,7 @@
   "pokemonmaster:Sentries": {
     "NAME": "捕获的 哨卫",
     "DESCRIPTION": "{@@}获得 !B! 点 格挡 . NL 将 2 张 晕眩 放入你的弃牌堆中.",
-    "UPGRADE_DESCRIPTION":"{@@}获得 !B! 点 格挡 . NL 将 2 张 晕眩 放入你的弃牌堆中.",
+    "UPGRADE_DESCRIPTION":"{@@}获得 !B! 点 格挡和 1 层 人工制品 . NL 将 2 张 晕眩 放入你的弃牌堆中.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4997,6 +4997,16 @@
     "NAME": "捕获的 尖尖",
     "DESCRIPTION": "{@@}造成 !D! 点伤害 2 次.",
     "UPGRADE_DESCRIPTION":"{@@}造成 !D! 点伤害 2 次.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:CorruptHeart": {
+    "NAME": "捕获的 腐化之心",
+    "DESCRIPTION": "{@@}捕获所有敌人.",
+    "UPGRADE_DESCRIPTION":"{@@}捕获所有敌人.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
