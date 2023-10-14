@@ -22,6 +22,8 @@ import pokemonmaster.relics.*;
 
 import java.util.*;
 
+import static pokemonmaster.PokemonMasterMod.*;
+
 
 public class TypeRemoverClass {
 
@@ -49,13 +51,52 @@ public class TypeRemoverClass {
                 randInt1 = randNum.nextInt(10) + 1;
                 randInt2 = randNum.nextInt(10) + 1;
 
-                while (randInt2.equals(randInt1)) {
-                    randInt2 = randNum.nextInt(10) + 1;
-                }
-                randInt3 = randNum.nextInt(10) + 1;
-                while (randInt3.equals(randInt1) || randInt3.equals(randInt2)) {
+                    if (!psychicButton.toggle.enabled){
+                        set.add(1);
+                    }
+                    if (!metalButton.toggle.enabled){
+                        set.add(2);
+                    }
+                    if (!fireButton.toggle.enabled){
+                        set.add(3);
+                    }
+                    if (!fightingButton.toggle.enabled){
+                        set.add(4);
+                    }
+                    if (!grassButton.toggle.enabled){
+                        set.add(5);
+                    }
+                    if (!lightningButton.toggle.enabled){
+                        set.add(6);
+                    }
+                    if (!darkButton.toggle.enabled){
+                        set.add(7);
+                    }
+                    if (!waterButton.toggle.enabled){
+                        set.add(8);
+                    }
+                    if (!dragonButton.toggle.enabled){
+                        set.add(9);
+                    }
+                    if (!normalButton.toggle.enabled){
+                        set.add(10);
+                    }
+
+                for (int HELP : set) {
+                    while (randInt1.equals(HELP)) {
+                        randInt1 = randNum.nextInt(10) + 1;
+                    }
+                    while (randInt2.equals(randInt1) || randInt2.equals(HELP)) {
+                        randInt2 = randNum.nextInt(10) + 1;
+                    }
                     randInt3 = randNum.nextInt(10) + 1;
+                    while (randInt3.equals(randInt1) || randInt3.equals(randInt2)) {
+                        randInt3 = randNum.nextInt(10) + 1;
+                    }
                 }
+
+
+
 
 
             //this could very easily be done much better, but I didn't want to
@@ -64,62 +105,62 @@ public class TypeRemoverClass {
                 if (randInt1 == 1){
                     TOADD1 = new Elgyem();
                 }
-                if (randInt1 == 2){
+                else if (randInt1 == 2){
                     TOADD1 = new Meltan();
                 }
-                if (randInt1 == 3){
+                else if (randInt1 == 3){
                     TOADD1 = new Litleo();
                 }
-                if (randInt1 == 4){
+                else if (randInt1 == 4){
                     TOADD1 = new Rockruff();
                 }
-                if (randInt1 == 5){
+                else if (randInt1 == 5){
                     TOADD1 = new Skiddo();
                 }
-                if (randInt1 == 6){
+                else if (randInt1 == 6){
                     TOADD1 = new Yamper();
                 }
-                if (randInt1 == 7){
+                else if (randInt1 == 7){
                     TOADD1 = new Zorua();
                 }
-                if (randInt1 == 8){
+                else if (randInt1 == 8){
                     TOADD1 = new Clamperl();
                 }
-                if (randInt1 == 9){
+                else if (randInt1 == 9){
                     TOADD1 = new Noibat();
                 }
-                if (randInt1 == 10){
+                else if (randInt1 == 10){
                     TOADD1 = new Bidoof();
                 }
 
                 if (randInt2 == 1){
                     TOADD2 = new Elgyem();
                 }
-                if (randInt2 == 2){
+                else if (randInt2 == 2){
                     TOADD2 = new Meltan();
                 }
-                if (randInt2 == 3){
+                else if (randInt2 == 3){
                     TOADD2 = new Litleo();
                 }
-                if (randInt2 == 4){
+                else if (randInt2 == 4){
                     TOADD2 = new Rockruff();
                 }
-                if (randInt2 == 5){
+                else if (randInt2 == 5){
                     TOADD2 = new Skiddo();
                 }
-                if (randInt2 == 6){
+                else if (randInt2 == 6){
                     TOADD2 = new Yamper();
                 }
-                if (randInt2 == 7){
+                else if (randInt2 == 7){
                     TOADD2 = new Zorua();
                 }
-                if (randInt2 == 8){
+                else if (randInt2 == 8){
                     TOADD2 = new Clamperl();
                 }
-                if (randInt2 == 9){
+                else if (randInt2 == 9){
                     TOADD2 = new Noibat();
                 }
-                if (randInt2 == 10){
+                else if (randInt2 == 10){
                     TOADD2 = new Bidoof();
                 }
 
@@ -313,10 +354,10 @@ public class TypeRemoverClass {
                             }
                         }
                     }
-                    if (!PokemonMasterMod.psychicButton.toggle.enabled) {
+                    if (!psychicButton.toggle.enabled) {
                         set.add(1);
                     }
-                    if (PokemonMasterMod.psychicButton.toggle.enabled) {
+                    if (psychicButton.toggle.enabled) {
                         TOADD1 = new Elgyem();
                         if (AbstractDungeon.floorNum < 1) {
                             for (AbstractCard c : (AbstractDungeon.player).masterDeck.group) {
