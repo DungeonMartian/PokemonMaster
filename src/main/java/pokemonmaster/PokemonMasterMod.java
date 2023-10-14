@@ -125,17 +125,17 @@ public class PokemonMasterMod implements
         BaseMod.subscribe(this);
 
         //This will make BaseMod trigger all the subscribers at their appropriate times.
-        PokemonMasterModSettings.setProperty("RandomizeTypes", "TRUE");
-        PokemonMasterModSettings.setProperty("DarkType", "TRUE");
-        PokemonMasterModSettings.setProperty("DragonType", "TRUE");
-        PokemonMasterModSettings.setProperty("FightingType", "TRUE");
-        PokemonMasterModSettings.setProperty("FireType", "TRUE");
-        PokemonMasterModSettings.setProperty("GrassType", "TRUE");
-        PokemonMasterModSettings.setProperty("LightningType", "TRUE");
-        PokemonMasterModSettings.setProperty("MetalType", "TRUE");
-        PokemonMasterModSettings.setProperty("NormalType", "TRUE");
-        PokemonMasterModSettings.setProperty("PsychicType", "TRUE");
-        PokemonMasterModSettings.setProperty("WaterType", "TRUE");
+        //PokemonMasterModSettings.setProperty("RandomizeTypes", "TRUE");
+        //PokemonMasterModSettings.setProperty("DarkType", "TRUE");
+        //PokemonMasterModSettings.setProperty("DragonType", "TRUE");
+        //PokemonMasterModSettings.setProperty("FightingType", "TRUE");
+        //PokemonMasterModSettings.setProperty("FireType", "TRUE");
+        //PokemonMasterModSettings.setProperty("GrassType", "TRUE");
+        //PokemonMasterModSettings.setProperty("LightningType", "TRUE");
+        //PokemonMasterModSettings.setProperty("MetalType", "TRUE");
+        //PokemonMasterModSettings.setProperty("NormalType", "TRUE");
+        //PokemonMasterModSettings.setProperty("PsychicType", "TRUE");
+        //PokemonMasterModSettings.setProperty("WaterType", "TRUE");
 
         try {
             SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
