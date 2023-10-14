@@ -188,7 +188,7 @@ public class PokemonMasterMod implements
         ModPanel settingsPanel = new ModPanel();
 
 
-        enableNormalsButton = new ModLabeledToggleButton("Randomize your types at the start of the run (Overides other options).", 350.0F, 800.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        enableNormalsButton = new ModLabeledToggleButton("Randomize your types at the start of the run.", 350.0F, 800.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
             RandomizeTypes = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
