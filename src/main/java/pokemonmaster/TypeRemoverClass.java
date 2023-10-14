@@ -7,6 +7,8 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
 import pokemonmaster.Potions.*;
 import pokemonmaster.cards.Base.ExtraStarters.*;
+import pokemonmaster.cards.Base.RockyHelmet;
+import pokemonmaster.cards.Base.VitalityBand;
 import pokemonmaster.cards.Dark.*;
 import pokemonmaster.cards.Dragon.*;
 import pokemonmaster.cards.Fighting.*;
@@ -81,19 +83,35 @@ public class TypeRemoverClass {
                     if (!normalButton.toggle.enabled){
                         set.add(10);
                     }
-
-                for (int HELP : set) {
-                    while (randInt1.equals(HELP)) {
+                    boolean answer = set.stream().anyMatch(s -> set.contains(randInt1));
+                    int T=0;
+                    while (answer) {
                         randInt1 = randNum.nextInt(10) + 1;
+                        answer = set.stream().anyMatch(s -> set.contains(randInt1));
+                        T++;
+                        if (T == 14){
+                            randInt1 =15;
+                            break;
+                        }
                     }
-                    while (randInt2.equals(randInt1) || randInt2.equals(HELP)) {
+                    T=0;
+                    boolean answer2 = set.stream().anyMatch(s -> set.contains(randInt2));
+                    while (randInt2.equals(randInt1) || answer2) {
                         randInt2 = randNum.nextInt(10) + 1;
+                        answer2 = set.stream().anyMatch(s -> set.contains(randInt2));
+                        T++;
+                        if (T == 14){
+                            randInt2 = 15;
+                            break;
+                        }
                     }
+
+
                     randInt3 = randNum.nextInt(10) + 1;
                     while (randInt3.equals(randInt1) || randInt3.equals(randInt2)) {
                         randInt3 = randNum.nextInt(10) + 1;
                     }
-                }
+
 
 
 
@@ -131,6 +149,8 @@ public class TypeRemoverClass {
                 }
                 else if (randInt1 == 10){
                     TOADD1 = new Bidoof();
+                }else {
+                    TOADD1 = new RockyHelmet();
                 }
 
                 if (randInt2 == 1){
@@ -162,6 +182,9 @@ public class TypeRemoverClass {
                 }
                 else if (randInt2 == 10){
                     TOADD2 = new Bidoof();
+                }
+                else {
+                    TOADD2 = new VitalityBand();
                 }
 
 
@@ -388,6 +411,7 @@ public class TypeRemoverClass {
                             }
                         }
                     }
+
 
                 }
 
