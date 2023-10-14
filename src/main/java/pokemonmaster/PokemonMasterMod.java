@@ -200,7 +200,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)enableNormalsButton);
 
-        darkButton = new ModLabeledToggleButton("Dark types will be available.", 350.0F, 750.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        darkButton = new ModLabeledToggleButton("Dark types will be available.", 350.0F, 750.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, DarkType, settingsPanel,  label -> {}, button -> {
             DarkType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -212,7 +212,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)darkButton);
 
-        dragonButton = new ModLabeledToggleButton("Dragon types will be available.", 350.0F, 700.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        dragonButton = new ModLabeledToggleButton("Dragon types will be available.", 350.0F, 700.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, DragonType, settingsPanel,  label -> {}, button -> {
             DragonType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -224,7 +224,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)dragonButton);
 
-        fightingButton = new ModLabeledToggleButton("Fighting types will be available.", 350.0F, 650.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        fightingButton = new ModLabeledToggleButton("Fighting types will be available.", 350.0F, 650.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, FightingType, settingsPanel,  label -> {}, button -> {
             FightingType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -236,7 +236,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)fightingButton);
 
-        fireButton = new ModLabeledToggleButton("Fire types will be available.", 350.0F, 600.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        fireButton = new ModLabeledToggleButton("Fire types will be available.", 350.0F, 600.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, FireType, settingsPanel,  label -> {}, button -> {
             FireType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -248,7 +248,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)fireButton);
 
-        grassButton = new ModLabeledToggleButton("Grass types will be available.", 350.0F, 550.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        grassButton = new ModLabeledToggleButton("Grass types will be available.", 350.0F, 550.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, GrassType, settingsPanel,  label -> {}, button -> {
             GrassType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -260,7 +260,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)grassButton);
 
-        lightningButton = new ModLabeledToggleButton("Lightning types will be available.", 350.0F, 500.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        lightningButton = new ModLabeledToggleButton("Lightning types will be available.", 350.0F, 500.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, LightningType, settingsPanel,  label -> {}, button -> {
             LightningType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -272,7 +272,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)lightningButton);
 
-        metalButton = new ModLabeledToggleButton("Metal types will be available.", 350.0F, 450.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        metalButton = new ModLabeledToggleButton("Metal types will be available.", 350.0F, 450.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, MetalType, settingsPanel,  label -> {}, button -> {
             MetalType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -284,7 +284,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)metalButton);
 
-        normalButton = new ModLabeledToggleButton("Normal types will be available.", 350.0F, 400.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        normalButton = new ModLabeledToggleButton("Normal types will be available.", 350.0F, 400.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, NormalType, settingsPanel,  label -> {}, button -> {
             NormalType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -296,7 +296,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)normalButton);
 
-        psychicButton = new ModLabeledToggleButton("Psychic types will be available.", 350.0F, 350.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        psychicButton = new ModLabeledToggleButton("Psychic types will be available.", 350.0F, 350.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, PsychicType, settingsPanel,  label -> {}, button -> {
             PsychicType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
@@ -308,7 +308,7 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)psychicButton);
 
-        waterButton = new ModLabeledToggleButton("Water types will be available.", 350.0F, 300.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, RandomizeTypes, settingsPanel,  label -> {}, button -> {
+        waterButton = new ModLabeledToggleButton("Water types will be available.", 350.0F, 300.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, WaterType, settingsPanel,  label -> {}, button -> {
             WaterType = button.enabled;
             try {
                 SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
