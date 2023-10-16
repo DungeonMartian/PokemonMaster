@@ -74,6 +74,7 @@ public class PokemonMasterMod implements
     private static boolean NormalType = true;
     private static boolean PsychicType = true;
     private static boolean WaterType = true;
+    private static boolean PokeBalls = false;
     public static ModLabeledToggleButton enableNormalsButton;
     public static ModLabeledToggleButton darkButton;
     public static ModLabeledToggleButton dragonButton;
@@ -85,7 +86,7 @@ public class PokemonMasterMod implements
     public static ModLabeledToggleButton normalButton;
     public static ModLabeledToggleButton psychicButton;
     public static ModLabeledToggleButton waterButton;
-
+    public static ModLabeledToggleButton PokeButton;
 
 
     //This is used to prefix the IDs of various objects like cards and relics,
@@ -320,6 +321,17 @@ public class PokemonMasterMod implements
         });
         settingsPanel.addUIElement((IUIElement)waterButton);
 
+        PokeButton = new ModLabeledToggleButton("Infinite Pokeballs.", 1100.0F, 800.0F, Settings.CREAM_COLOR, FontHelper.charDescFont, PokeBalls, settingsPanel,  label -> {}, button -> {
+            PokeBalls = button.enabled;
+            try {
+                SpireConfig config = new SpireConfig(getModID(), getModID() + "Config", PokemonMasterModSettings);
+                config.setBool("InfPokeballs", PokeBalls);
+                config.save();
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+        settingsPanel.addUIElement((IUIElement)PokeButton);
 
         BaseMod.registerModBadge(badgeTexture, info.Name, GeneralUtils.arrToString((Object[])info.Authors), info.Description, settingsPanel);
         logger.info("Done loading badge Image and mod options");

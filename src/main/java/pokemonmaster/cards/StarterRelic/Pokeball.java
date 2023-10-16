@@ -38,13 +38,8 @@ public class Pokeball extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         if (m.currentHealth <=10) {
-            //addToBot(new DamageAction(m, new DamageInfo(p, 10, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
             addToBot(new CatchAction(m,new DamageInfo(p, this.damage, this.damageTypeForTurn)));
-           //if (((m).isDying || m.currentHealth <= 0) && !m.halfDead &&
-           //        !m.hasPower("Minion")) {
-           //    addToTop(new AddCardToDeckAction(AddThis(m.id)));
-           //    addToBot(new MakeTempCardInDiscardAction(AddThis(m.id), 1));
-           //}
+
         }
 
     }

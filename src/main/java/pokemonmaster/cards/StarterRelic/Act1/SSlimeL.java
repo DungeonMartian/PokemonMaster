@@ -35,7 +35,7 @@ public class SSlimeL extends BasePokemonCard {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
         tags.add(CustomTags.BAIT);
-        this.misc=25;
+
 
     }
 

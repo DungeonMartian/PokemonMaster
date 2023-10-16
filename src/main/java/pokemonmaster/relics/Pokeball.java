@@ -4,6 +4,7 @@ import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
+import pokemonmaster.PokemonMasterMod;
 import pokemonmaster.jar.PokemonMaster;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -18,7 +19,6 @@ public class Pokeball extends BaseRelic implements ClickableRelic {
     public Pokeball() {
         super(ID, NAME, PokemonMaster.Enums.CARD_COLOR, RARITY, SOUND);
         this.counter = 1;
-
     }
 
     public void setCounter(int setCounter) {
@@ -36,6 +36,15 @@ public class Pokeball extends BaseRelic implements ClickableRelic {
     public void atBattleStart() {
         if (this.counter ==0) {
             this.grayscale = true;
+        }
+    }
+    @Override
+    public void onEnterRoom(AbstractRoom room) {
+        if (PokemonMasterMod.PokeButton.toggle.enabled) {
+            this.counter = 1;
+            this.usedUp=false;
+            this.grayscale = false;
+            super.onEnterRoom(room);
         }
     }
     @Override

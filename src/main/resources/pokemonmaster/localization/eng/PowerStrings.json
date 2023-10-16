@@ -236,6 +236,13 @@
       " Block."
     ]
   },
+  "${modID}:SlimeBossPower": {
+    "NAME": "Slime Crush",
+    "DESCRIPTIONS": [
+      "At the end of your next turn deal #b",
+      " damage to a random enemy."
+    ]
+  },
   "${modID}:WoundedPower": {
     "NAME": "Wounded",
     "DESCRIPTIONS": [

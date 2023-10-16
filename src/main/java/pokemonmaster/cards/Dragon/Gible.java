@@ -1,5 +1,6 @@
 package pokemonmaster.cards.Dragon;
 
+import com.megacrit.cardcrawl.actions.common.GainBlockAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -24,6 +25,7 @@ public class Gible extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
+    private static final int BLOCK = 3;
 
 
 
@@ -36,6 +38,7 @@ public class Gible extends BasePokemonCard {
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillDragon.png","pokemonmaster/character/cardback/bg_skillDragon_p.png");
         this.evolve=new Garchomp();
         this.purgeOnUse = this.evolve !=null;
+        setBlock(BLOCK);
 
         this.cardsToPreview=this.evolve;
     }
@@ -44,6 +47,8 @@ public class Gible extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractCard s = new Gabite();
         if (this.upgraded) {
+            addToBot(new GainBlockAction(p, p, block));
+
             s.upgrade();
         }
         addToBot(new MakeTempCardInHandAction(s, 1));

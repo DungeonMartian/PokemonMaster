@@ -4706,7 +4706,7 @@
   "pokemonmaster:Gible": {
     "NAME": "圆陆鲨",
     "DESCRIPTION": "{@@}pokemonmaster:进化 加入你的手牌中.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:进化 加入你的手牌中. 升级 它.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:进化 加入你的手牌中. NL 获得 !B! 点 格挡 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4716,7 +4716,7 @@
   "pokemonmaster:Gabite": {
     "NAME": "尖牙陆鲨",
     "DESCRIPTION": "{@@}pokemonmaster:进化 加入你的手牌中.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:进化 加入你的手牌中. 升级 它.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:进化 加入你的手牌中. NL 获得 !B! 点 格挡 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

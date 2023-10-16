@@ -4706,7 +4706,7 @@
   "${modID}:Gible": {
     "NAME": "Gible",
     "DESCRIPTION": "{@@}pokemonmaster:Evolve this into your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Evolve this into your hand. Upgrade it.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Evolve this into your hand. NL Gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4716,7 +4716,7 @@
   "${modID}:Gabite": {
     "NAME": "Gabite",
     "DESCRIPTION": "{@@}pokemonmaster:Evolve this into your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Evolve this into your hand. Upgrade it.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Evolve this into your hand. NL Gain !B! Block.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
