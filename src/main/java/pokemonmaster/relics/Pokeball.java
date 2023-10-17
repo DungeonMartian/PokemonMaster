@@ -44,8 +44,9 @@ public class Pokeball extends BaseRelic implements ClickableRelic {
             this.counter = 1;
             this.usedUp=false;
             this.grayscale = false;
-            super.onEnterRoom(room);
+            
         }
+        super.onEnterRoom(room);
     }
     @Override
     public void onRightClick() {

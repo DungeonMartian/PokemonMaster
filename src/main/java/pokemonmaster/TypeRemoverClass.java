@@ -232,7 +232,7 @@ public class TypeRemoverClass {
                         }
                     }
                 }
-            }
+
                 if (!PokemonMasterMod.enableNormalsButton.toggle.enabled) {
                     set = new LinkedHashSet<Integer>();
                     if (!PokemonMasterMod.darkButton.toggle.enabled) {
@@ -931,5 +931,6 @@ public class TypeRemoverClass {
             }
             DOTHIS = false;
         }
+}
     }
 }
