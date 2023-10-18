@@ -5,7 +5,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.cards.BaseCard;
-import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -17,7 +16,7 @@ public class Dud extends BaseCard {
             CardType.STATUS,
             CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
-            PokemonMaster.Enums.CARD_COLOR);
+            AbstractCard.CardColor.COLORLESS);
 
 
 

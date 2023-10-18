@@ -6,7 +6,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
-import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -18,7 +17,7 @@ public class Magnet extends BaseCard {
             CardType.STATUS,
             CardTarget.SELF,
             CardRarity.SPECIAL,
-            PokemonMaster.Enums.CARD_COLOR);
+            AbstractCard.CardColor.COLORLESS);
 
 
 

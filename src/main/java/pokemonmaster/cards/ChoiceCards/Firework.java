@@ -9,7 +9,6 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.vfx.combat.ExplosionSmallEffect;
 import pokemonmaster.cards.BaseCard;
-import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -21,7 +20,7 @@ public class Firework extends BaseCard {
             CardType.STATUS,
             CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
-            PokemonMaster.Enums.CARD_COLOR);
+            AbstractCard.CardColor.COLORLESS);
 
 
 

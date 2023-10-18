@@ -2,21 +2,15 @@ package pokemonmaster.cards.Base;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.DrawCardAction;
 import com.megacrit.cardcrawl.actions.common.ModifyDamageAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.actions.common.DiscardSpecificCardAction;
-import com.megacrit.cardcrawl.actions.common.DrawCardAction;
-
-// import com.megacrit.cardcrawl.powers.GainStrengthPower;
-// import com.megacrit.cardcrawl.powers.StrengthPower;
-
-// import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
-import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -28,7 +22,7 @@ public class Toxin extends BaseCard {
             CardType.STATUS,
             CardTarget.SELF,
             CardRarity.SPECIAL,
-            PokemonMaster.Enums.CARD_COLOR);
+            AbstractCard.CardColor.COLORLESS);
 
     public static final String ID = makeID(cardInfo.baseId);
 
