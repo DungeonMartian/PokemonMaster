@@ -45,7 +45,7 @@ public class SlaverRed extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(p, magicNumber, false), magicNumber));
+        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new VulnerablePower(m, magicNumber, false), magicNumber));
 
             }
 

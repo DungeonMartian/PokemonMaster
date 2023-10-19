@@ -22,8 +22,16 @@
   "pokemonmaster:DrawDownPower": {
     "NAME": "抽牌减少",
     "DESCRIPTIONS": [
-      "下回合少抽 #b 张牌.",
+      "下回合少抽 #b 张牌 .",
       "",
+      ""
+    ]
+  },
+  "pokemonmaster:SlimeBossPower": {
+    "NAME": "黏液碾压",
+    "DESCRIPTIONS": [
+      "在你的下回合结束时 ,  随机对一个敌人造成 #b  ",
+      "点伤害 .",
       ""
     ]
   },

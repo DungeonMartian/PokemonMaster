@@ -46,7 +46,7 @@ public class ASlimeL extends BasePokemonCard {
     public void use(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(p, magicNumber, false), magicNumber));
+        addToBot(new ApplyPowerAction(m, AbstractDungeon.player, new WeakPower(m, magicNumber, false), magicNumber));
         addToBot(new MakeTempCardInDiscardAction(new ASlimeM(),2));
 
             }

@@ -42,7 +42,7 @@ public class FungiBeast extends BasePokemonCard {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
                 if (!monster.isDead && !monster.isDying) {
-                    addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new VulnerablePower(p, 2, false),2));
+                    addToBot(new ApplyPowerAction(monster, AbstractDungeon.player, new VulnerablePower(monster, 2, false),2));
 
                 }
             }
