@@ -3304,6 +3304,26 @@
       ""
     ]
   },
+  "${modID}:SlaverBlue": {
+    "NAME": "Capt. Blue Slaver",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Apply !M! Weak.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Apply !M! Weak.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:SlaverRed": {
+    "NAME": "Capt. Red Slaver",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Apply !M! Vulnerable.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Apply !M! Vulnerable.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Taskmaster": {
     "NAME": "Capt. Task Master",
     "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Strength. NL pokemonmaster:Return.",
