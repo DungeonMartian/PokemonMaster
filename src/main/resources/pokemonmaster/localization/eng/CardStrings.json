@@ -3076,8 +3076,8 @@
   },
   "${modID}:GremlinMad": {
     "NAME": "Capt. Mad Gremlin",
-    "DESCRIPTION": "{@@}Deal !D! damage. Gain !M! Angry.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. Gain !M! Angry.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Angry.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Angry.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3346,8 +3346,8 @@
   },
   "${modID}:GremlinLeader": {
     "NAME": "Capt. Gremlin Leader",
-    "DESCRIPTION": "{@@}At the start of your turn add 2 Random Gremlis to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Innate. At the start of your turn add 2 Random Gremlis to your hand.",
+    "DESCRIPTION": "{@@}At the start of your turn add 2 Random Gremlins to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL At the start of your turn add 2 Random Gremlins to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3475,8 +3475,8 @@
   },
   "${modID}:Reptomancer": {
     "NAME": "Capt. Reptomancer",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Add !M! *Dagger to your hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Add !M! *Daggers to your hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Add !M! *Dagger{!M!|>1=s} to your hand.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Add !M! *Dagger{!M!|>1=s} to your hand.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

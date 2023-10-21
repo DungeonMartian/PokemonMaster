@@ -30,8 +30,8 @@
   "pokemonmaster:SlimeBossPower": {
     "NAME": "黏液碾压",
     "DESCRIPTIONS": [
-      "在你的下回合结束时 ,  随机对一个敌人造成 #b  ",
-      "点伤害 .",
+      "在你的下回合结束时,随机对一个敌人造成 #b 点",
+      "伤害 .",
       ""
     ]
   },
@@ -210,7 +210,7 @@
     "NAME": "电火花",
     "DESCRIPTIONS": [
       "在你的回合开始时，获得 #b",
-      "点能量."
+      "点能量.每 4 层失去 1 点生命."
     ]
   },
   "pokemonmaster:OricorioPower": {
@@ -492,6 +492,14 @@
       "在你的回合开始时，抽 #b ",
       "张牌并将 #b 张",
       " #y晕眩 放入你的弃牌堆."
+    ]
+  },
+  "pokemonmaster:Refined": {
+    "NAME": "洗练",
+    "DESCRIPTIONS": [
+      "在你的回合开始时，将 #b ",
+      "张 #y拉鲁拉丝 置入你的手牌中并抽 #b ",
+      "张牌."
     ]
   },
   "pokemonmaster:ToxicSpikes": {

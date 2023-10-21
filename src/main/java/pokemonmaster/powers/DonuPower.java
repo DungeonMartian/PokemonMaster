@@ -37,7 +37,7 @@ public class DonuPower extends BasePower implements CloneablePowerInterface {
 
     public void atStartOfTurn() {
         addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new StrengthPower(owner,this.amount)));
-        addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new ArtifactPower(owner,1)));
+        addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new ArtifactPower(owner,this.amount/3)));
         addToBot(new MakeTempCardInHandAction(new Beam(), this.amount/3));
 
 

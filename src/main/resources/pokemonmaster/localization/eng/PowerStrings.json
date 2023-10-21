@@ -71,6 +71,13 @@
       " additional damage."
     ]
   },
+  "${modID}:GremlinWizardPower": {
+    "NAME": "Ultimate Blast!",
+    "DESCRIPTIONS": [
+      "In #b",
+      " turns, deal #b20 damage to a random enemy."
+    ]
+  },
   "${modID}:ConstrictedPokemonPower": {
     "NAME": "Constricted",
     "DESCRIPTIONS": [

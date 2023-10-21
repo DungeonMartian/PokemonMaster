@@ -4,7 +4,6 @@ import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageRandomEnemyAction;
 import com.megacrit.cardcrawl.actions.common.ReducePowerAction;
-import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -16,6 +15,8 @@ public class GremlinWizardPower extends BasePower implements NonStackablePower {
     public static final String POWER_ID = makeID("GremlinWizardPower");
     private static final PowerType TYPE = PowerType.BUFF;
     private static final boolean TURN_BASED = false;
+
+    private int damage;
     public boolean DISABLE;
     //The only thing this controls is the color of the number on the power icon.
     //Turn based powers are white, non-turn based powers are red or green depending on if they're a buff or debuff.
@@ -31,7 +32,7 @@ public class GremlinWizardPower extends BasePower implements NonStackablePower {
         this.priority = 99;
         if (this.amount >= 999)
             this.amount = 999;
-
+        this.damage = 20;
     }
 
     public void updateDescription() {
@@ -41,15 +42,14 @@ public class GremlinWizardPower extends BasePower implements NonStackablePower {
 
 
     public void atStartOfTurn() {
-
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
-            addToBot((new ReducePowerAction(this.owner, this.owner, this, 1)));
-            if (this.amount <= 0) {
-                addToBot(new DamageRandomEnemyAction(new DamageInfo(this.owner, 20, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
-                addToBot(new RemoveSpecificPowerAction(owner,owner, this));
-            }
+            addToBot(new ReducePowerAction(this.owner, this.owner, this, 1));
+            if (this.amount == 1)
+
+                addToBot(new DamageRandomEnemyAction(new DamageInfo(this.owner, 20, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
 
         }
+
 
     }
 

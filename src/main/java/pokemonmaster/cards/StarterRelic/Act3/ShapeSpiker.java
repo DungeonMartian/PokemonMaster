@@ -15,7 +15,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class ShapeSpiker extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "ShapeSpiker",
-            1,
+            0,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.SPECIAL,

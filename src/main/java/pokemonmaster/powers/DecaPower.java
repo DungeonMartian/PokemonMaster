@@ -38,7 +38,7 @@ public class DecaPower extends BasePower implements CloneablePowerInterface {
     public void atStartOfTurn() {
         addToBot(new GainBlockAction(owner, this.amount*5));
         addToBot(new ApplyPowerAction(owner, AbstractDungeon.player, new PlatedArmorPower(owner,this.amount)));
-        addToBot(new MakeTempCardInHandAction(new Beam(), this.amount/3));
+        addToBot(new MakeTempCardInHandAction(new Beam(), this.amount));
 
 
     }

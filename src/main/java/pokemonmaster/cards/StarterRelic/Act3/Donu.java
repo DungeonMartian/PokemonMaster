@@ -37,7 +37,7 @@ public class Donu extends BasePokemonCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new ApplyPowerAction(p, AbstractDungeon.player, new DonuPower(p,1)));
+        addToBot(new ApplyPowerAction(p, AbstractDungeon.player, new DonuPower(p,3)));
 
     }
 

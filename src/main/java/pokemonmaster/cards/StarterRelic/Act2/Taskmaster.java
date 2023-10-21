@@ -46,7 +46,7 @@ public class Taskmaster extends BasePokemonCard {
 
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         addToBot(new ApplyPowerAction(p, p, new StrengthPower(p, this.magicNumber), this.magicNumber));
-
+        this.costForTurn=1;
             }
 
     @Override

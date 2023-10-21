@@ -1897,7 +1897,7 @@
   },
   "pokemonmaster:Emolga": {
     "NAME": "电飞鼠",
-    "DESCRIPTION": "{@@}抽 !M! 张牌{!M!|>1=s}. NL 在本场战斗中，你每打出过一张 *电飞鼠 ，抽牌的数量增加 1 .",
+    "DESCRIPTION": "{@@}抽 !M! 张牌. NL 在本场战斗中，你每打出过一张 *电飞鼠 ，抽牌的数量增加 1 .",
     "UPGRADE_DESCRIPTION": "{@@}抽 !M! 张牌. NL 在本场战斗中，你每打出过一张 *电飞鼠 ，抽牌的数量增加 1 .",
     "EXTENDED_DESCRIPTION": [
       "",
@@ -2117,8 +2117,8 @@
   },
   "pokemonmaster:UrsalunaV": {
     "NAME": "月月熊 V",
-    "DESCRIPTION": "{@@}pokemonmaster:极巨化 NL 你每失去 1 点生命，这张牌的伤害减少 !D! 点 NL 获得 !M! 层 pokemonmaster:抵抗",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:极巨化 NL 你每失去 1 点生命，这张牌的伤害减少 !D! 点 NL 获得 !M! 层 pokemonmaster:抵抗",
+    "DESCRIPTION": "{@@}pokemonmaster:极巨化 NL 造成 !D! 点伤害, 你每失去 1 点生命，减少 1 点该伤害. NL 获得 !M! 层 pokemonmaster:抵抗",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:极巨化 NL 造成 !D! 点伤害, 你每失去 1 点生命，减少 1 点该伤害. NL 获得 !M! 层 pokemonmaster:抵抗",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2906,8 +2906,8 @@
   },
   "pokemonmaster:Buzzwole": {
     "NAME": "爆肌蚊",
-    "DESCRIPTION": "{@@}造成 !D! 点伤害. NL 力量 本次发挥 !M! 倍效果. NL 获得 !M! 点 力量 . NL 将 1 张 伤口 置入你的手牌中.",
-    "UPGRADE_DESCRIPTION":"{@@}造成 !D! 点伤害. NL 力量 本次发挥 !M! 倍效果. NL 获得 !M! 点 力量 . NL 将 1 张 伤口 置入你的手牌中.",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害. NL 力量 本次发挥 !M! 倍效果 NL 获得 !M! 点 力量 . NL 将 1 张 伤口 置入你的手牌中.",
+    "UPGRADE_DESCRIPTION":"{@@}造成 !D! 点伤害. NL 力量 本次发挥 !M! 倍效果 NL 获得 !M! 点 力量 . NL 将 1 张 伤口 置入你的手牌中.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3298,6 +3298,26 @@
     "NAME": "捕获的 圆球守护者",
     "DESCRIPTION": "{@@}在回合结束时，你将不会失去 格挡 .",
     "UPGRADE_DESCRIPTION":"{@@}获得 !B! 点 格挡 . NL 在回合结束时，你将不会失去 格挡 .",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:SlaverBlue": {
+    "NAME": "捕获的 蓝奴隶主",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害. NL 给予 !M! 层 虚弱 .",
+    "UPGRADE_DESCRIPTION":"{@@}造成 !D! 点伤害. NL 给予 !M! 层 虚弱 .",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:SlaverRed": {
+    "NAME": "捕获的 红奴隶主",
+    "DESCRIPTION": "{@@}造成 !D! 点伤害. NL 给予 !M! 层 易伤 .",
+    "UPGRADE_DESCRIPTION":"{@@}造成 !D! 点伤害. NL 给予 !M! 层 易伤 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5785,8 +5805,8 @@
   },
   "pokemonmaster:GiratinaGX": {
     "NAME": "骑拉帝纳 GX",
-    "DESCRIPTION": "{@@}pokemonmaster:极巨化 pokemonmaster:扭曲之门 NL 造成 !D! 点伤害. NL 如果这张牌被丢弃，随机对一名敌人造成 !D! 点伤害.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:极巨化 pokemonmaster:扭曲之门 NL 造成 !D! 点伤害. NL 如果这张牌被丢弃，随机对一名敌人造成 !D! 点伤害.",
+    "DESCRIPTION": "{@@}pokemonmaster:极巨化 NL pokemonmaster:扭曲之门 NL 造成 !D! 点伤害. NL 如果这张牌被丢弃，随机对一名敌人造成 !D! 点伤害.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:极巨化 NL pokemonmaster:扭曲之门 NL 造成 !D! 点伤害. NL 如果这张牌被丢弃，随机对一名敌人造成 !D! 点伤害.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5853,6 +5873,26 @@
       ""
     ]
   },
+  "pokemonmaster:Zigzagoon": {
+    "NAME": "蛇纹熊",
+    "DESCRIPTION": "{@@}获得一个随机 pokemonmaster:携带道具 的增益.",
+    "UPGRADE_DESCRIPTION":"{@@}获得一个升级后的随机 pokemonmaster:携带道具 的增益.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "pokemonmaster:Linoone": {
+    "NAME": "直冲熊",
+    "DESCRIPTION": "{@@}获得一个随机 pokemonmaster:携带道具 的增益. NL 消耗 .",
+    "UPGRADE_DESCRIPTION":"{@@}获得一个升级后的随机 pokemonmaster:携带道具 的增益. NL 消耗 .",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "pokemonmaster:": {
     "NAME": "",
     "DESCRIPTION": "{@@}",
@@ -5874,3 +5914,4 @@
     ]
   }
 }
+	

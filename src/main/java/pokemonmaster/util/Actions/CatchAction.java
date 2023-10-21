@@ -178,8 +178,8 @@ public class CatchAction extends AbstractGameAction {
                 return new Doublade();
             case "SpireSpear":
                 return new Honedge();
-            //case "CorruptHeart":
-            //    return new SpireSpear();
+            case "CorruptHeart":
+                return new CorruptHeart();
             default:
                 return new LouseGreen();
         }
