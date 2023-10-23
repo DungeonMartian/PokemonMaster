@@ -3,6 +3,7 @@ package pokemonmaster.powers;
 import basemod.interfaces.CloneablePowerInterface;
 import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.LoseHPAction;
+import com.megacrit.cardcrawl.actions.common.RemoveSpecificPowerAction;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -25,15 +26,27 @@ public class Spark extends BasePower implements CloneablePowerInterface {
 
     }
     public void stackPower(int stackAmount) {
-        super.stackPower(stackAmount);
+        this.fontScale = 8.0F;
+        this.amount += stackAmount;
+        if (this.amount == 0)
+            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         if (this.amount >= 999)
             this.amount = 999;
+        if (this.amount <= -999)
+            this.amount = -999;
+    }
+    public void reducePower(int reduceAmount) {
+        this.fontScale = 8.0F;
+        this.amount -= reduceAmount;
+        if (this.amount == 0)
+            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+        if (this.amount >= 999)
+            this.amount = 999;
+        if (this.amount <= -999)
+            this.amount = -999;
     }
       public void updateDescription() {
       this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-          if (this.amount >= 4){
-              this.description = DESCRIPTIONS[0] + this.amount + DESCRIPTIONS[1];
-          }
     }
 
     public void onEnergyRecharge() {

@@ -31,7 +31,7 @@ public class ShapeSpiker extends BasePokemonCard {
 
     public ShapeSpiker() {
         super(cardInfo);
-
+        //MultiCardPreview.add(this, new Pikachu(), new Pineco());
         setMagic(MAGIC,UPG_MAGIC);
     }
 
