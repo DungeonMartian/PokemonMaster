@@ -22,7 +22,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class FlygonV extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "FlygonV",
-            2,
+            1,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.UNCOMMON,
@@ -34,7 +34,7 @@ public class FlygonV extends BasePokemonCard {
 
     private static final int DAMAGE = 24;
 
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 2;
     private static final int UPG_MAGIC = -1;
 
 

@@ -46,9 +46,10 @@ public class Axew extends BasicPokemonCard {
             if (j.type == AbstractMonster.EnemyType.BOSS || j.type == AbstractMonster.EnemyType.ELITE) {
                 ISELITE = true;
             }
-            if (ISELITE) {
-            addToBot(new EvolveActionCombat(this, AbstractDungeon.player.hand));
+
         }
+        if (ISELITE) {
+            addToBot(new EvolveActionCombat(this, AbstractDungeon.player.hand));
         }
 
     }

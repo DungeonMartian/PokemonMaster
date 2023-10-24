@@ -28,7 +28,7 @@ public class Noibat extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 6;
+    private static final int DAMAGE = 8;
     private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 1;
 
@@ -51,7 +51,9 @@ public class Noibat extends BasicPokemonCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-        addToBot(new DrawCardAction(this.magicNumber, new DiscardDrawnAction()));
+        if (p.drawPile.size() >=this.magicNumber) {
+            addToBot(new DrawCardAction(this.magicNumber, new DiscardDrawnAction()));
+        }
     }
 
     @Override

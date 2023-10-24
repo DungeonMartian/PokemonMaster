@@ -90,11 +90,16 @@ public class FishAction extends AbstractGameAction {
 
 
 
-                FIRSTNUM = (int) Math.floor(Math.random() * (NEWFISHPOWER - (this.BAIT * 0.006) + 1) + (this.BAIT * 0.006));
+                FIRSTNUM = (int) Math.floor(Math.random() * (NEWFISHPOWER - (this.BAIT * 0.008) + 1) + (this.BAIT * 0.008));
 
                 int CARD1 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
                 int CARD2 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
                 int CARD3 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
+                System.out.println(FIRSTNUM);
+                System.out.println(CARD1);
+                System.out.println(CARD2);
+                System.out.println(CARD3);
+
                 if (CARD1 >= FISHMONS.size()) {
                     CARD1 = FISHMONS.size() - 1;
                 }
@@ -152,11 +157,11 @@ public class FishAction extends AbstractGameAction {
 
 
 
-            FIRSTNUM = (int) Math.floor(Math.random() * (NEWFISHPOWER - (this.BAIT * 0.005) + 1) + (this.BAIT * 0.005));
+            FIRSTNUM = (int) Math.floor(Math.random() * (NEWFISHPOWER - (this.BAIT * 0.008) + 1) + (this.BAIT * 0.008));
 
-            int CARD1 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.005)) + 1) + (FISHMONS.size() * (this.BAIT * 0.005)));
-            int CARD2 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.005)) + 1) + (FISHMONS.size() * (this.BAIT * 0.005)));
-            int CARD3 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.005)) + 1) + (FISHMONS.size() * (this.BAIT * 0.005)));
+            int CARD1 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
+            int CARD2 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
+            int CARD3 = (int) Math.floor(Math.random() * ((FISHMONS.size() * (FIRSTNUM * .01)) - (FISHMONS.size() * (this.BAIT * 0.006)) + 1) + (FISHMONS.size() * (this.BAIT * 0.006)));
             if (CARD1 >= FISHMONS.size()) {
                 CARD1 = FISHMONS.size() - 1;
             }

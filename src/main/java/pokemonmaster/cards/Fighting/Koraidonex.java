@@ -28,7 +28,7 @@ public class Koraidonex extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 30;
+    private static final int DAMAGE = 45;
     private static final int UPG_DAMAGE = 10;
 
 

@@ -27,7 +27,7 @@ public class Dugtrio extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 22;
     private static final int UPG_DAMAGE = 10;
 
 

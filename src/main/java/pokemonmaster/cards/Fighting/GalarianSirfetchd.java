@@ -30,7 +30,7 @@ public class GalarianSirfetchd extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 15;
+    private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 5;
 
 

@@ -33,7 +33,7 @@ public class Claydol extends FinalEvolutionCard {
     public Claydol() {
         super(cardInfo,CustomTags.FIGHTING);
         setMagic(MAGIC);
-
+        setCostUpgrade(0);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerFighting.png","pokemonmaster/character/cardback/bg_powerFighting_p.png");
 
     }

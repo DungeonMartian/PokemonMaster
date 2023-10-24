@@ -16,14 +16,14 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class StrongEnergy extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "StrongEnergy",
-            0,
+            1,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.RARE,
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int STRENGTH =2;
+    private static final int STRENGTH =1;
     private static final int UPG_STRENGTH =2;
     public StrongEnergy() {
         super(cardInfo);

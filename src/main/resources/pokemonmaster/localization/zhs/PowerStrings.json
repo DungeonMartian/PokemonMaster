@@ -79,6 +79,13 @@
       "点伤害."
     ]
   },
+  "pokemonmaster:GremlinWizardPower": {
+    "NAME": "终极大爆炸!",
+    "DESCRIPTIONS": [
+      "在 #b",
+      " 回合后, 随机对一个敌人造成 #b20 点伤害."
+    ]
+  },
   "pokemonmaster:ConstrictedPokemonPower": {
     "NAME": "缠绕",
     "DESCRIPTIONS": [

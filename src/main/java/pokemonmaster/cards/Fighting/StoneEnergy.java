@@ -16,14 +16,14 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class StoneEnergy extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "StoneEnergy",
-            0,
+            1,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.RARE,
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int SHIELD =4;
+    private static final int SHIELD =3;
     private static final int SHIELDUP =2;
     public StoneEnergy() {
         super(cardInfo);
