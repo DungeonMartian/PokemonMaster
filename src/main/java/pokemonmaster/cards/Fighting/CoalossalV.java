@@ -8,6 +8,7 @@ import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.CoalossalPower;
+import pokemonmaster.powers.Prized;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -48,6 +49,8 @@ public class CoalossalV extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         addToBot(new ApplyPowerAction(p, p, new CoalossalPower(p,magicNumber)));
+        addToBot(new ApplyPowerAction(p, p, new Prized(p,1)));
+
     }
 
     @Override
