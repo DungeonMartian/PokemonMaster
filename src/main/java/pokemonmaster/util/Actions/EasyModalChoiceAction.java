@@ -16,7 +16,7 @@ public class EasyModalChoiceAction extends SelectCardsCenteredAction {
                 q.onChoseThisOption();
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(q, true));
                 if (POTIONADD){
-                    AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(q));
+                    AbstractDungeon.actionManager.addToBottom(new AddCardToDeckAction(q.makeCopy()));
                 }
             }
         });
