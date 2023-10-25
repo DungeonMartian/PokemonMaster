@@ -95,7 +95,7 @@
   "${modID}:CurlUpPokemonPower": {
     "NAME": "Curl Up",
     "DESCRIPTIONS": [
-      "The next time you take unblocked attack damage, gain #b.",
+      "The next time you take unblocked attack damage, gain #b",
       " Block."
     ]
   },

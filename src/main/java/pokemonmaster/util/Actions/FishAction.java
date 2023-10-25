@@ -75,7 +75,7 @@ public class FishAction extends AbstractGameAction {
             }
         }
         if (TODO) {
-            addToTop(new SelectCardsInHandAction(1, "exhaust", false, true, card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
+            addToTop(new SelectCardsInHandAction(1, "exhaust", true, true, card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
                 for (AbstractCard i : abstractCards) {
                     this.BAIT += i.misc;
                     addToBot(new ExhaustSpecificCardAction(i, AbstractDungeon.player.hand));

@@ -120,6 +120,7 @@ public class TypeRemoverClass {
             //this could very easily be done much better, but I didn't want to
             //you can theoretically lose your starting bonus if you use it to remove your bonus cards, then save load
             //in the neow room
+
                 if (randInt1 == 1){
                     TOADD1 = new Elgyem();
                 }
@@ -234,6 +235,7 @@ public class TypeRemoverClass {
                 }
 
                 if (!PokemonMasterMod.enableNormalsButton.toggle.enabled) {
+                    AbstractDungeon.rareRelicPool.remove(PuzzleCube.ID);
                     set = new LinkedHashSet<Integer>();
                     if (!PokemonMasterMod.darkButton.toggle.enabled) {
                         set.add(7);

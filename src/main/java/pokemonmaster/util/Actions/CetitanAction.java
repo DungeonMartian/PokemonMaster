@@ -30,7 +30,7 @@ public class CetitanAction extends AbstractGameAction {
             }
         }
         if (TODO) {
-                addToTop(new SelectCardsInHandAction(1, "exhaust", false, true, card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
+                addToTop(new SelectCardsInHandAction(1, "exhaust", true, true, card -> card.hasTag(CustomTags.BAIT), abstractCards -> {
                     for (AbstractCard i : abstractCards) {
                         int NEWMAGIC = this.amount * (i.misc / 10)+(BAIT/10);
                         addToBot(new AddTemporaryHPAction(AbstractDungeon.player,AbstractDungeon.player,NEWMAGIC));
