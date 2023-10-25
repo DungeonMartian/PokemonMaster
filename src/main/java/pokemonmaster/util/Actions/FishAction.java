@@ -29,9 +29,11 @@ public class FishAction extends AbstractGameAction {
     public int FIRSTNUM = 0;
     public int NEWFISHPOWER = 0;
     public boolean TODO = true;
+    public boolean POTIONADD = false;
     public FishAction(int FISHING) {
         this.POWER = FISHING;
         TODO =false;
+        POTIONADD = false;
     }
 
 
@@ -39,8 +41,14 @@ public class FishAction extends AbstractGameAction {
         this.POWER = FISHING;
         this.BAIT = FISH;
         TODO =false;
+        POTIONADD = false;
     }
-
+    public FishAction(int FISH, int FISHING, boolean POTION) {
+        this.POWER = FISHING;
+        this.BAIT = FISH;
+        TODO =false;
+        POTIONADD = POTION;
+    }
     @Override
     public void update() {
         ArrayList<AbstractCard> FISHMONS = new ArrayList<>();
@@ -142,7 +150,7 @@ public class FishAction extends AbstractGameAction {
                 }
                 FISHING.add(c);
 
-                addToBot(new EasyModalChoiceAction(FISHING, 1, "Fish"));
+                addToBot(new EasyModalChoiceAction(FISHING, 1, "Fish", POTIONADD));
             }));
 
 
@@ -204,7 +212,7 @@ public class FishAction extends AbstractGameAction {
             }
             FISHING.add(c);
 
-            addToBot(new EasyModalChoiceAction(FISHING, 1, "Fish"));
+            addToBot(new EasyModalChoiceAction(FISHING, 1, "Fish", POTIONADD));
         }
         this.isDone = true;
     }

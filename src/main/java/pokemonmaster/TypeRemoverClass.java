@@ -818,7 +818,7 @@ public class TypeRemoverClass {
                             AbstractDungeon.srcCommonCardPool.removeCard(G);
                             AbstractDungeon.srcUncommonCardPool.removeCard(G);
                             AbstractDungeon.srcRareCardPool.removeCard(G);
-                            AbstractDungeon.rareRelicPool.remove(ChoiceBand.ID);
+                            AbstractDungeon.commonRelicPool.remove(ChoiceBand.ID);
                             AbstractDungeon.shopRelicPool.remove(ChoiceBand.ID);
                             //PotionHelper.potions.remove(G);
 

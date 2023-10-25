@@ -12,8 +12,6 @@ import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
-import java.util.function.Predicate;
-
 import static pokemonmaster.CustomTags.POKEMON;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -30,7 +28,7 @@ public class Muk extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 5;
     private static final int UPG_MAGIC = 3;
 
 

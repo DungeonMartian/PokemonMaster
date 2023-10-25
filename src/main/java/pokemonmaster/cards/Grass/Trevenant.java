@@ -38,8 +38,8 @@ public class Trevenant extends FinalEvolutionCard {
         super(cardInfo,CustomTags.GRASS);
         setDamage(DAMAGE, UPG_DAMAGE);
 
-        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 3);
-        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 3);
+        ExhaustiveField.ExhaustiveFields.baseExhaustive.set(this, 2);
+        ExhaustiveField.ExhaustiveFields.exhaustive.set(this, 2);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackGrass.png","pokemonmaster/character/cardback/bg_attackGrass_p.png");
 
     }

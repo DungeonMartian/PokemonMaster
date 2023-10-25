@@ -409,7 +409,8 @@ public class PokemonMasterMod implements
     }
 
     public static void addPotions() {
-        BaseMod.addPotion(ParkBall.class, Color.GOLDENROD, Color.WHITE, null, ParkBall.POTION_ID, PokemonMaster.Enums.POKE_MASTER);
+        BaseMod.addPotion(ParkBall.class, Color.ORANGE, Color.WHITE, null, ParkBall.POTION_ID, PokemonMaster.Enums.POKE_MASTER);
+        BaseMod.addPotion(DiveBall.class, Color.BLUE, Color.WHITE, null, DiveBall.POTION_ID, PokemonMaster.Enums.POKE_MASTER);
         BaseMod.addPotion(ThunderStone.class, Color.YELLOW, Color.GREEN, null, ThunderStone.POTION_ID, PokemonMaster.Enums.POKE_MASTER);
         BaseMod.addPotion(FireStone.class, Color.RED, Color.YELLOW, null, FireStone.POTION_ID, PokemonMaster.Enums.POKE_MASTER);
         BaseMod.addPotion(MindStone.class, Color.PURPLE, Color.PINK, null, MindStone.POTION_ID, PokemonMaster.Enums.POKE_MASTER);

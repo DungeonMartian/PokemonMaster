@@ -49,6 +49,14 @@
       "It's a rock."
     ]
   },
+  "${modID}:DiveBall": {
+    "NAME": "Dive Ball",
+    "DESCRIPTIONS": [
+      "#yFish. #b",
+      "% Power. Permanently add the card to your deck.",
+
+    ]
+  },
   "${modID}:LeafStone": {
     "NAME": "Leaf Stone",
     "DESCRIPTIONS": [

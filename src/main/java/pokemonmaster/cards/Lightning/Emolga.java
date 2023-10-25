@@ -32,7 +32,7 @@ public class Emolga extends BaseCard {
         tags.add(CustomTags.LIGHTNING);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
-        baseMagicNumber=magicNumber=1;
+        baseMagicNumber=magicNumber=0;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillLightning.png","pokemonmaster/character/cardback/bg_skillLightning_p.png");
 
     }

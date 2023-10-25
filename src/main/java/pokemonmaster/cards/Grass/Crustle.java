@@ -49,6 +49,7 @@ public class Crustle extends FinalEvolutionCard {
         AbstractCard t = (new Shellsmash());
         if (this.upgraded){
             s.upgrade();
+            t.upgrade();
         }
         ArrayList<AbstractCard> ATTACKA = new ArrayList<>();
         s.applyPowers();
