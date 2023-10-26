@@ -5866,8 +5866,8 @@
   },
   "${modID}:Furret": {
     "NAME": "Furret",
-    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Discard 2 card.",
-    "UPGRADE_DESCRIPTION":"{@@}Draw !M! card{!M!|>1=s}. NL Discard 2 card.",
+    "DESCRIPTION": "{@@}Draw !M! card{!M!|>1=s}. NL Discard 2 cards.",
+    "UPGRADE_DESCRIPTION":"{@@}Draw !M! card{!M!|>1=s}. NL Discard 2 cards.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
