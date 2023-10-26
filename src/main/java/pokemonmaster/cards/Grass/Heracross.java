@@ -16,7 +16,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Heracross extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Heracross",
-            1,
+            2,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.UNCOMMON,

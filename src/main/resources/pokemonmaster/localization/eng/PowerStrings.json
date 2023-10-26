@@ -253,7 +253,7 @@
   "${modID}:WoundedPower": {
     "NAME": "Wounded",
     "DESCRIPTIONS": [
-      "At the start of your next turn add 7 Wounds to your hand.",
+      "At the start of your next turn add #b7 Wounds to your hand.",
       ""
     ]
   },

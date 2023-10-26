@@ -5,6 +5,7 @@ import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.PotionHelper;
+import com.megacrit.cardcrawl.potions.AttackPotion;
 import pokemonmaster.Potions.*;
 import pokemonmaster.cards.Base.ExtraStarters.*;
 import pokemonmaster.cards.Base.RockyHelmet;
@@ -416,6 +417,22 @@ public class TypeRemoverClass {
 
 
                 }
+                Set<Integer> set2= new HashSet<Integer>();
+                    set2.add(1);
+                    set2.add(2);
+                    set2.add(3);
+                    set2.add(4);
+                    set2.add(5);
+                    set2.add(6);
+                    set2.add(7);
+                    set2.add(8);
+                    set2.add(9);
+                    set2.add(10);
+
+
+                    boolean BANSWER = set.stream().anyMatch(s -> set.containsAll(set2));
+                    PotionHelper.potions.remove(AttackPotion.POTION_ID);
+                    System.out.println("removed the attack potion");
 
                 ArrayList<String> DARKTYPE = new ArrayList<>();
                 DARKTYPE.add(Absol.ID);
