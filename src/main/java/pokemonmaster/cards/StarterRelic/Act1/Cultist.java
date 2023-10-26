@@ -1,7 +1,9 @@
 package pokemonmaster.cards.StarterRelic.Act1;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.megacrit.cardcrawl.actions.animations.TalkAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.utility.SFXAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -41,12 +43,21 @@ public class Cultist extends BasePokemonCard {
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
-
+        playSfx();
         AbstractDungeon.actionManager.addToBottom(new TalkAction(true, Byrd.DIALOG[0], 1.2F, 1.2F));
         addToBot(new ApplyPowerAction(p, AbstractDungeon.player, new RitualPower(p, magicNumber, true), magicNumber));
 
     }
-
+    private void playSfx() {
+        int roll = MathUtils.random(2);
+        if (roll == 0) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1A"));
+        } else if (roll == 1) {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1B"));
+        } else {
+            AbstractDungeon.actionManager.addToBottom(new SFXAction("VO_CULTIST_1C"));
+        }
+    }
     @Override
     public AbstractCard makeCopy() { //Optional
         return new Cultist();

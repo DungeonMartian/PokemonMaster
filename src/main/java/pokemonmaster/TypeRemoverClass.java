@@ -417,7 +417,7 @@ public class TypeRemoverClass {
 
 
                 }
-                Set<Integer> set2= new HashSet<Integer>();
+                Set<Integer> set2= new HashSet<>();
                     set2.add(1);
                     set2.add(2);
                     set2.add(3);
@@ -431,8 +431,10 @@ public class TypeRemoverClass {
 
 
                     boolean BANSWER = set.stream().anyMatch(s -> set.containsAll(set2));
-                    PotionHelper.potions.remove(AttackPotion.POTION_ID);
-                    System.out.println("removed the attack potion");
+                    if (BANSWER){PotionHelper.potions.remove(AttackPotion.POTION_ID);
+                        System.out.println("removed the attack potion");
+                    }
+
 
                 ArrayList<String> DARKTYPE = new ArrayList<>();
                 DARKTYPE.add(Absol.ID);

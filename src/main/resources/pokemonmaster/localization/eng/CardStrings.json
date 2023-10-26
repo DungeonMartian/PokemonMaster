@@ -3156,7 +3156,7 @@
   },
   "${modID}:GremlinNob": {
     "NAME": "Capt. Gremlin Nob",
-    "DESCRIPTION": "{@@}Whenever you play a skill gain !M! Strength.",
+    "DESCRIPTION": "{@@}Whenever you play a skill gain !M! Strength. NL End Your Turn.",
     "UPGRADE_DESCRIPTION":"{@@}Whenever you play a skill gain !M! Strength.",
     "EXTENDED_DESCRIPTION": [
       "",

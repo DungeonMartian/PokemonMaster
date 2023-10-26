@@ -3156,7 +3156,7 @@
   },
   "pokemonmaster:GremlinNob": {
     "NAME": "捕获的 地精大块头",
-    "DESCRIPTION": "{@@}每当你打出一张技能牌，获得 !M! 点 力量 .",
+    "DESCRIPTION": "{@@}每当你打出一张技能牌，获得 !M! 点 力量 . NL 结束你的回合 .",
     "UPGRADE_DESCRIPTION":"{@@}每当你打出一张技能牌，获得 !M! 点 力量 .",
     "EXTENDED_DESCRIPTION": [
       "",
