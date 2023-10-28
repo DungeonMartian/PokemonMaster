@@ -31,10 +31,15 @@ public class EvolveActionCombat extends AbstractGameAction {
                 if (baseCard.upgraded){
                     this.toEvolve.upgrade();
                 }
-                if (baseCard.isCostModified || baseCard.isCostModifiedForTurn){
+                if (baseCard.isCostModified){
                     this.toEvolve.cost=baseCard.costForTurn;
                     this.toEvolve.costForTurn=baseCard.costForTurn;
                     this.toEvolve.isCostModified=true;
+                    this.toEvolve.isCostModifiedForTurn=true;
+                }
+                if (baseCard.isCostModifiedForTurn){
+                    this.toEvolve.costForTurn=baseCard.costForTurn;
+                    this.toEvolve.isCostModifiedForTurn=true;
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(this.toEvolve, 1));
                 //addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.discardPile,true));
@@ -45,10 +50,15 @@ public class EvolveActionCombat extends AbstractGameAction {
                 if (baseCard.upgraded){
                     this.toEvolve.upgrade();
                 }
-                if (baseCard.isCostModified || baseCard.isCostModifiedForTurn){
+                if (baseCard.isCostModified){
                     this.toEvolve.cost=baseCard.costForTurn;
                     this.toEvolve.costForTurn=baseCard.costForTurn;
                     this.toEvolve.isCostModified=true;
+                    this.toEvolve.isCostModifiedForTurn=true;
+                }
+                if (baseCard.isCostModifiedForTurn){
+                    this.toEvolve.costForTurn=baseCard.costForTurn;
+                    this.toEvolve.isCostModifiedForTurn=true;
                 }
 
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.toEvolve, 1));
@@ -60,10 +70,15 @@ public class EvolveActionCombat extends AbstractGameAction {
                 if (baseCard.upgraded){
                     this.toEvolve.upgrade();
                 }
-                if (baseCard.isCostModified || baseCard.isCostModifiedForTurn){
+                if (baseCard.isCostModified){
                     this.toEvolve.cost=baseCard.costForTurn;
                     this.toEvolve.costForTurn=baseCard.costForTurn;
                     this.toEvolve.isCostModified=true;
+                    this.toEvolve.isCostModifiedForTurn=true;
+                }
+                if (baseCard.isCostModifiedForTurn){
+                    this.toEvolve.costForTurn=baseCard.costForTurn;
+                    this.toEvolve.isCostModifiedForTurn=true;
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.toEvolve, 1,true,false));
                // addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.drawPile,true));
