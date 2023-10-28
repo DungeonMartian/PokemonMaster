@@ -73,6 +73,13 @@
       "是一种进化之石."
     ]
   },
+  "pokemonmaster:DiveBall": {
+    "NAME": "潜水球",
+    "DESCRIPTIONS": [
+      "#y钓鱼. #b",
+      "% 渔力.将此牌永久添加到你的牌组中"
+    ]
+  },
   "pokemonmaster:ParkBall": {
     "NAME": "公园球",
     "DESCRIPTIONS": [

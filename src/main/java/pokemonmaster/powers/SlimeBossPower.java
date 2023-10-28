@@ -39,18 +39,16 @@ public class SlimeBossPower extends BasePower implements NonStackablePower {
 
 
 
-
-
     @Override
-    public void atEndOfTurn(boolean isPlayer) {
+    public void atStartOfTurn() {
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
 
             addToBot(new DamageRandomEnemyAction(new DamageInfo(this.owner, 35, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             addToBot(new RemoveSpecificPowerAction(owner,owner, this));
         }
-        super.atEndOfTurn(isPlayer);
+        super.atStartOfTurn();
     }
-//Optional, for CloneablePowerInterface.
+    //Optional, for CloneablePowerInterface.
 
     public AbstractPower makeCopy() {
         return new SlimeBossPower(owner, amount);

@@ -1,5 +1,6 @@
 package pokemonmaster.cards.Dragon;
 
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -7,7 +8,6 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -49,7 +49,14 @@ public class Axew extends BasicPokemonCard {
 
         }
         if (ISELITE) {
-            addToBot(new EvolveActionCombat(this, AbstractDungeon.player.hand));
+            AbstractCard P = new Fraxure();
+            if (this.upgraded) {
+                P.upgrade();
+
+
+            }
+            addToBot(new MakeTempCardInHandAction(P, 1));
+
         }
 
     }
