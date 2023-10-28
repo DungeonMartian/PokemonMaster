@@ -1467,8 +1467,8 @@
   },
   "pokemonmaster:FalinksV": {
     "NAME": "列阵兵 V",
-    "DESCRIPTION": "{@@}获得 !B! 点 格挡 . NL 每当你打出一张耗能为 0 的攻击牌时,获得 !M! 点 格挡 .",
-    "UPGRADE_DESCRIPTION": "{@@}获得 !B! 点 格挡 . NL 每当你打出一张耗能为 0 的攻击牌时,获得 !M! 点 格挡 .",
+    "DESCRIPTION": "{@@}pokemonmaster:极巨化 NL 获得 !B! 点 格挡 . NL 每当你打出一张耗能为 0 的攻击牌时,获得 !M! 点 格挡 .",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:极巨化 NL 获得 !B! 点 格挡 . NL 每当你打出一张耗能为 0 的攻击牌时,获得 !M! 点 格挡 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

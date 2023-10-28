@@ -32,6 +32,7 @@ public class MagmaBasin extends BasePokemonCard {
     public MagmaBasin() {
         super(cardInfo);
         setMagic(MAGIC);
+        setCostUpgrade(0);
         tags.add(CustomTags.FIRE);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerFire.png","pokemonmaster/character/cardback/bg_powerFire_p.png");
 

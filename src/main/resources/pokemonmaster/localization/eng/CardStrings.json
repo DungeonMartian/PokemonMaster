@@ -1467,8 +1467,8 @@
   },
   "${modID}:FalinksV": {
     "NAME": "Falinks V",
-    "DESCRIPTION": "{@@}Gain !B! Block. NL Whenever you play an attack that costs 0, gain !M! Block.",
-    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Whenever you play an attack that costs 0, gain !M! Block.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !B! Block. NL Whenever you play an attack that costs 0, gain !M! Block.",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !B! Block. NL Whenever you play an attack that costs 0, gain !M! Block.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

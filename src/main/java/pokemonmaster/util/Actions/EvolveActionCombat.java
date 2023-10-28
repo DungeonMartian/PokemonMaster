@@ -1,7 +1,6 @@
 package pokemonmaster.util.Actions;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
@@ -33,21 +32,27 @@ public class EvolveActionCombat extends AbstractGameAction {
                     this.toEvolve.upgrade();
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(this.toEvolve, 1));
-                addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.discardPile,true));
+                //addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.discardPile,true));
+                addToTop(new purgeSpecificCard(baseCard,AbstractDungeon.player.discardPile,true));
+
             }
             if (SORT == AbstractDungeon.player.hand){
                 if (baseCard.upgraded){
                     this.toEvolve.upgrade();
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInHandAction(this.toEvolve, 1));
-                addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.hand,true));
+                //addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.hand,true));
+                addToTop(new purgeSpecificCard(baseCard,AbstractDungeon.player.hand,true));
+
             }
             if (SORT== AbstractDungeon.player.drawPile) {
                 if (baseCard.upgraded){
                     this.toEvolve.upgrade();
                 }
                 AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDrawPileAction(this.toEvolve, 1,true,false));
-                addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.drawPile,true));
+               // addToTop(new ExhaustSpecificCardAction(baseCard,AbstractDungeon.player.drawPile,true));
+                addToTop(new purgeSpecificCard(baseCard,AbstractDungeon.player.drawPile,true));
+
             }
 
             }
