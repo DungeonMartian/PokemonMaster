@@ -2,8 +2,7 @@ package pokemonmaster.powers;
 
 import com.evacipated.cardcrawl.mod.stslib.powers.interfaces.NonStackablePower;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.utility.UseCardAction;
-import com.megacrit.cardcrawl.cards.AbstractCard;
+import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.IntangiblePlayerPower;
@@ -26,16 +25,18 @@ public class VoltAbsorb extends BasePower implements NonStackablePower {
     public Boolean TODO = true;
 
 
-    public void onUseCard(AbstractCard card, UseCardAction action) {
-        if (card.type == AbstractCard.CardType.ATTACK) {
-            this.amount += card.damage;
-        }
+
+
+    @Override
+    public void onAttack(DamageInfo info, int damageAmount, AbstractCreature target) {
+        this.amount+= damageAmount;
         if (this.amount >= 40 && TODO ){
             addToBot(new ApplyPowerAction(owner, owner, new IntangiblePlayerPower(owner,1)));
             TODO =false;
         }
-
+        super.onAttack(info, damageAmount, target);
     }
+
     public void atStartOfTurn() {
         TODO = true;
         this.amount =0;
