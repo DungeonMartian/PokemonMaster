@@ -1,11 +1,13 @@
 package pokemonmaster.cards.Fighting;
 
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.unique.SetupAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.ArtifactPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -47,6 +49,8 @@ public class Riolu extends BasicPokemonCard {
         if (this.upgraded) {
             addToBot(new SetupAction());
         }
+        addToBot(new ApplyPowerAction(p, p, new ArtifactPower(p,magicNumber)));
+
         AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Lucario(), 1));
     }
 

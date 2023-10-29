@@ -1767,8 +1767,8 @@
   },
   "${modID}:Riolu": {
     "NAME": "Riolu",
-    "DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} in your hand on top of your draw pile. NL They cost 0 until played.",
-    "UPGRADE_DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} in your hand on top of your draw pile. NL They cost 0 until played.",
+    "DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} in your hand on top of your draw pile. NL It costs 0 until played. NL Gain !M! Artifact.",
+    "UPGRADE_DESCRIPTION": "{@@}Put !M! card{!M!|>1=s} in your hand on top of your draw pile. NL They cost 0 until played. NL Gain !M! Artifact.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

@@ -41,9 +41,10 @@ public class Firework extends BaseCard {
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
-        addToBot(new DamageAction(randomMonster, new DamageInfo(p, damage, DamageInfo.DamageType.THORNS)));
-        AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ExplosionSmallEffect(randomMonster.hb.cX, randomMonster.hb.cY), 0.1F));
-
+        if (randomMonster !=null) {
+            addToBot(new DamageAction(randomMonster, new DamageInfo(p, damage, DamageInfo.DamageType.THORNS)));
+            AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new ExplosionSmallEffect(randomMonster.hb.cX, randomMonster.hb.cY), 0.1F));
+        }
     }
 
     @Override

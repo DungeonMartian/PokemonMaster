@@ -7,7 +7,6 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
-import com.megacrit.cardcrawl.powers.BufferPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -52,7 +51,6 @@ public class Lucario extends FinalEvolutionCard {
 
         addToBot(new GainEnergyAction(magicNumber));
         addToBot(new ApplyPowerAction(p, p, new EnergyDownPower(p,magicNumber)));
-        addToBot(new ApplyPowerAction(p, p, new BufferPower(p,magicNumber)));
         AbstractCard TOADD = new Riolu();
         if (this.upgraded){
             TOADD.upgrade();

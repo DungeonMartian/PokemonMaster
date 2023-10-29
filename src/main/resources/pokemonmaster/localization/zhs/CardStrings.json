@@ -1767,8 +1767,8 @@
   },
   "pokemonmaster:Riolu": {
     "NAME": "利欧路",
-    "DESCRIPTION": "{@@}将手牌中的 !M! 张牌放入你的抽牌堆顶部. NL 它们在被打出之前，耗能为 0 .",
-    "UPGRADE_DESCRIPTION": "{@@}将手牌中的 !M! 张牌放入你的抽牌堆顶部. NL 它们在被打出之前，耗能为 0 .",
+    "DESCRIPTION": "{@@}将手牌中的 !M! 张牌放入你的抽牌堆顶部. NL 它们在被打出之前，耗能为 0 . NL 获得 !M! 层 人工制品 .",
+    "UPGRADE_DESCRIPTION": "{@@}将手牌中的 !M! 张牌放入你的抽牌堆顶部. NL 它们在被打出之前，耗能为 0 . NL 获得 !M! 层 人工制品 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
