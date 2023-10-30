@@ -3785,8 +3785,8 @@
   },
   "pokemonmaster:Gulpin": {
     "NAME": "溶食兽",
-    "DESCRIPTION": "{@@}获得等同所有敌人意图的 格挡 . NL 给予所有敌人 !M! 层 中毒 . NL pokemonmaster:诱饵 -25.",
-    "UPGRADE_DESCRIPTION":"{@@}获得等同所有敌人意图的 格挡 . NL 给予所有敌人 !M! 层 中毒 . NL pokemonmaster:诱饵 -25.",
+    "DESCRIPTION": "{@@}获得等同于所以敌人 中毒 层数的 格挡  . NL 给予所有敌人 !M! 层 中毒 . NL pokemonmaster:诱饵 -25.",
+    "UPGRADE_DESCRIPTION":"{@@}获得等同于所以敌人 中毒 层数的 格挡  . NL 给予所有敌人 !M! 层 中毒 . NL pokemonmaster:诱饵 -25.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3795,8 +3795,8 @@
   },
   "pokemonmaster:Swalot": {
     "NAME": "吞食兽",
-    "DESCRIPTION": "{@@}获得等同所有敌人意图的 格挡 . NL 给予所有敌人 !M! 层 中毒 .",
-    "UPGRADE_DESCRIPTION":"{@@}获得等同所有敌人意图的 格挡 . NL 给予所有敌人 !M! 层 中毒 .",
+    "DESCRIPTION": "{@@}获得等同于所以敌人 中毒 层数的 格挡  . NL 给予所有敌人 !M! 层 中毒 .",
+    "UPGRADE_DESCRIPTION":"{@@}获得等同于所以敌人 中毒 层数的 格挡  . NL 给予所有敌人 !M! 层 中毒 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
