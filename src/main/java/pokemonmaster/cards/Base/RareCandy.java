@@ -6,13 +6,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
+import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class RareCandy extends BasePokemonCard {
+public class RareCandy extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "RareCandy",
             1,

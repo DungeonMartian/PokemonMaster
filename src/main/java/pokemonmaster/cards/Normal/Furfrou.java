@@ -34,7 +34,7 @@ public class Furfrou extends BasePokemonCard {
         super(cardInfo);
         setMagic(MAGIC,UPG_MAGIC);
         tags.add(CustomTags.NORMAL);
-
+        tags.add(CustomTags.POKEMON);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerNormal.png","pokemonmaster/character/cardback/bg_powerNormal_p.png");
 
     }

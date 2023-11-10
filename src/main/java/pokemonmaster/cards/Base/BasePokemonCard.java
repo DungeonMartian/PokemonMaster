@@ -9,7 +9,6 @@ public abstract class BasePokemonCard extends BaseCard {
     protected AbstractCard evolve;
     public BasePokemonCard(CardInfo cardInfo) {
         super(cardInfo);
-
     }
     public Object evolve(){
         return this.evolve;}

@@ -10,17 +10,15 @@ import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
+import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.SupporterPlayed;
 import pokemonmaster.util.CardInfo;
 
-import java.util.function.Predicate;
-
 import static pokemonmaster.CustomTags.POKEMON;
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Roxie extends BasePokemonCard {
+public class Roxie extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Roxie",
             1,

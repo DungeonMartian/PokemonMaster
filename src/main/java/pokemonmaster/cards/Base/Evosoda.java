@@ -7,13 +7,14 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
+import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
-public class Evosoda extends BasePokemonCard {
+public class Evosoda extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Evosoda",
             1,
