@@ -30,7 +30,7 @@ public class Luxray extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 12;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
     private static final int DAMAGEDOWN= 2;
     private static final int DAMAGEDOWNUP= 1;
