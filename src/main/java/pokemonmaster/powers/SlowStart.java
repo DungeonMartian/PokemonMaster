@@ -51,6 +51,7 @@ public class SlowStart extends BasePower implements CloneablePowerInterface {
         REGISTEEL=true;
         }
         if (REGICE && REGIROCK && REGIDRAGO && REGIELEC && REGISTEEL){
+
             addToBot(new MoveCardsAction(AbstractDungeon.player.hand, AbstractDungeon.player.exhaustPile, (Predicate<AbstractCard>) ((c) -> c.hasTag(CustomTags.REGIGIGAS))));
             addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 

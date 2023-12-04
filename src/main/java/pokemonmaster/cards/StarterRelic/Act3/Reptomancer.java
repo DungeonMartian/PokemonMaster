@@ -36,6 +36,7 @@ public class Reptomancer extends BasePokemonCard {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
+        this.cardsToPreview = new Dagger();
     }
 
     @Override

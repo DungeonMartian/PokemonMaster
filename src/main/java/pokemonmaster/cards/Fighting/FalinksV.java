@@ -27,10 +27,10 @@ public class FalinksV extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGS = 3;
-    private static final int MAGSUP = 2;
-    private static final int BLOCK = 3;
-    private static final int BLOCKUP = 2;
+    private static final int MAGS = 2;
+    private static final int MAGSUP = 1;
+    private static final int BLOCK = 2;
+    private static final int BLOCKUP = 1;
 
 
 

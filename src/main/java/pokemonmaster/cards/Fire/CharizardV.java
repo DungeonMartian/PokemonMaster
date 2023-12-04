@@ -33,7 +33,7 @@ public class CharizardV extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 40;
+    private static final int DAMAGE = 50;
     private static final int DAMAGEUP = 15;
 
 

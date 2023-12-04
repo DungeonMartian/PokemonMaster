@@ -53,9 +53,8 @@ public class Salamence extends FinalEvolutionCard {
 
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         addToBot(new GainBlockAction(p, p, block));
-
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.FIRE));
         if (!AbstractDungeon.getMonsters().areMonstersBasicallyDead()) {
             for (AbstractMonster monster : (AbstractDungeon.getMonsters()).monsters) {
                 if (!monster.isDead && !monster.isDying) {

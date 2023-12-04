@@ -27,8 +27,8 @@ public class Charcoal extends HeldItemCard{
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private final static int MAGIC = 8;
-    private final static int UPG_MAGIC = -4;
+    private final static int MAGIC = 6;
+    private final static int UPG_MAGIC = -3;
 
     public Charcoal() {
         super(cardInfo);
@@ -42,7 +42,7 @@ public class Charcoal extends HeldItemCard{
 
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new DamageAction(p, new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        addToBot(new HeldItemAction(new ApplyPowerAction(p, p, new Spark(p, 1))));
+        addToBot(new HeldItemAction(new ApplyPowerAction(p, p, new Spark(p, 2))));
     }
 
 

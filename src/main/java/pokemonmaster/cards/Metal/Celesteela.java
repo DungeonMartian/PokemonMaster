@@ -40,6 +40,8 @@ public class Celesteela extends BaseCard {
         this.isMultiDamage = true;
         this.baseMagicNumber=0;
         isMagicNumberModified = baseMagicNumber != magicNumber;
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
+
     }
 
     @Override

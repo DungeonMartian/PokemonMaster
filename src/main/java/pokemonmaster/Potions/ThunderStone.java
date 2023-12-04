@@ -59,7 +59,7 @@ public class ThunderStone extends CustomPotion {
                     if (c.uuid == c2.uuid) {
 
                         if (c2.cardsToPreview !=null ){
-                            AbstractCard TOADD = c2.cardsToPreview;
+                            AbstractCard TOADD = c2.cardsToPreview.makeCopy();
                             if (c2.upgraded){
                                 TOADD.upgrade();
                             }

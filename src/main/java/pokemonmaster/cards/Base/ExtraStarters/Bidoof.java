@@ -1,12 +1,13 @@
 package pokemonmaster.cards.Base.ExtraStarters;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.unique.ExpertiseAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
+import com.megacrit.cardcrawl.powers.RegenPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -29,7 +30,7 @@ public class Bidoof extends BasicPokemonCard {
 
     private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE= 3;
-    private static final int MAGIC = 3;
+    private static final int MAGIC = 1;
     private static final int UPG_MAGIC = 1;
 
 
@@ -46,7 +47,7 @@ public class Bidoof extends BasicPokemonCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
-        addToBot(new ExpertiseAction(p, magicNumber));
+        addToBot(new ApplyPowerAction(p, p, new RegenPower(p, magicNumber)));
     }
 
     @Override

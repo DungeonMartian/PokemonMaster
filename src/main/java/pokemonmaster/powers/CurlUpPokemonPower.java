@@ -28,12 +28,12 @@ public class CurlUpPokemonPower extends BasePower implements CloneablePowerInter
     public int onAttacked(DamageInfo info, int damageAmount) {
         if (damageAmount < this.owner.currentHealth && damageAmount > 0 && info.owner != null && info.type == DamageInfo.DamageType.NORMAL) {
             this.flash();
-            this.addToBot(new GainBlockAction(this.owner, this.owner, this.amount));
+            this.addToTop(new GainBlockAction(this.owner, this.owner, this.amount));
             AbstractPower pow = AbstractDungeon.player.getPower(BlurPower.POWER_ID);
             if (pow == null) {
                 this.addToTop(new ApplyPowerAction(owner, owner, new BlurPower(owner, 1)));
             }
-            this.addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+            this.addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
 
         }
 

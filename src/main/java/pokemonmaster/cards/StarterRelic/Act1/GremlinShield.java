@@ -13,7 +13,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class GremlinShield extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "GremlinShield",
-            1,
+            0,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.SPECIAL,

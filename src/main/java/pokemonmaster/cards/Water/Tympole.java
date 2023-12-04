@@ -38,7 +38,9 @@ public class Tympole extends BasicPokemonCard {
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);
         tags.add(CustomTags.ROUND);
+        tags.add(CustomTags.BAIT);
         this.isMultiDamage = true;
+        this.misc = 20;
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
 
     }

@@ -65,6 +65,12 @@ public class Clefairy extends BasicPokemonCard {
     }
 
     @Override
+    public void onMoveToDiscard() {
+        this.rawDescription = cardStrings.DESCRIPTION;
+        this.initializeDescription();
+    }
+
+    @Override
     public AbstractCard makeCopy() { //Optional
         return new Clefairy();
     }

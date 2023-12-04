@@ -18,7 +18,7 @@ public class Pokedex extends BaseRelic  {
     private static final RelicTier RARITY = RelicTier.BOSS; //The relic's rarity.
     private static final LandingSound SOUND = LandingSound.MAGICAL; //The sound played when the relic is clicked.
 
-    ArrayList<AbstractCard> Added = new ArrayList<>();
+    ArrayList<String> Added = new ArrayList<>();
     public Pokedex() {
         super(ID, NAME, PokemonMaster.Enums.CARD_COLOR, RARITY, SOUND);
 
@@ -35,8 +35,8 @@ public class Pokedex extends BaseRelic  {
         this.grayscale = false;
         for (AbstractCard j : AbstractDungeon.player.masterDeck.group){
             if (j.hasTag(CustomTags.POKEMON)) {
-                if (!Added.contains(j)) {
-                    Added.add(j);
+                if (!Added.contains(j.cardID)) {
+                    Added.add(j.cardID);
                 }
             }
         }

@@ -42,7 +42,10 @@ public class Registeel extends BaseCard {
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         tags.add(CustomTags.REGISTEEL);
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
+
     }
+
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {

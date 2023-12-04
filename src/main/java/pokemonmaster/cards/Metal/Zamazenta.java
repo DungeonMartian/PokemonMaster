@@ -22,8 +22,8 @@ public class Zamazenta extends BaseCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    public static int ZAMNUM =3;
-    public static int ZAMNUP =2;
+    public static int ZAMNUM =2;
+    public static int ZAMNUP =1;
     public Zamazenta() {
         super(cardInfo);
         tags.add(CustomTags.POKEMON);

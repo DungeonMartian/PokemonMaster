@@ -167,6 +167,10 @@ public class PokemonMasterMod implements
         return null;
     }
 
+    public static String makeEventPath(String resourcePath) {
+        return getModID() + "Resources/images/events/" + resourcePath;
+    }
+
 
     @Override
     public void receivePostInitialize() {
@@ -179,7 +183,7 @@ public class PokemonMasterMod implements
 
         addPotions();
         createConfigMenu();
-
+        //BaseMod.addEvent(FisherMan.ID, FisherMan.class);
 
     }
 

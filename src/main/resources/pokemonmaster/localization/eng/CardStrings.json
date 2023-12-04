@@ -21,8 +21,8 @@
 },
   "${modID}:Bidoof": {
     "NAME": "Bidoof",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw until you have !M! card{!M!|>1=s} in hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw until you have !M! card{!M!|>1=s} in hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Regen.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Regen.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -31,8 +31,8 @@
   },
   "${modID}:Bibarel": {
     "NAME": "Bibarel",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Draw until you have !M! card{!M!|>1=s} in hand.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Draw until you have !M! card{!M!|>1=s} in hand.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Barrier.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! pokemonmaster:Barrier.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -92,7 +92,7 @@
   "${modID}:Gogoat": {
     "NAME": "Gogoat",
     "DESCRIPTION": "{@@}Deal !D! damage. NL Gain Block equal to the unblocked damage dealt.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to unblocked the damage dealt.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain Block equal to the unblocked damage dealt.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -569,8 +569,8 @@
   },
   "${modID}:AlolanDiglet": {
     "NAME": "Alolan Diglet",
-    "DESCRIPTION": "{@@}Scry !M!. NL Gain !B! Block. NL Put an *Alolan *Dugtrio on top of your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Scry !M!. NL Gain !B! Block. NL Put an *Alolan *Dugtrio+ on top of your draw pile. NL Exhaust.",
+    "DESCRIPTION": "{@@}Scry !M!. NL Gain !B! Block. NL pokemonmaster:Evolve top of draw pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Scry !M!. NL Gain !B! Block. NL pokemonmaster:Evolve top of draw pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -579,8 +579,8 @@
   },
   "${modID}:AlolanDugtrio": {
     "NAME": "Alolan Dugtrio",
-    "DESCRIPTION": "{@@}Discard your hand. NL Deal !D! damage for each card discarded this way. NL pokemonmaster:Devolve Top of your draw pile.",
-    "UPGRADE_DESCRIPTION": "{@@}Discard your hand. NL Deal !D! damage for each card discarded this way. NL pokemonmaster:Devolve Top of your draw pile.",
+    "DESCRIPTION": "{@@}Discard your hand. NL Deal !D! damage for each card discarded this way. NL pokemonmaster:Devolve top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Discard your hand. NL Deal !D! damage for each card discarded this way. NL pokemonmaster:Devolve top of your draw pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -670,7 +670,7 @@
   "${modID}:MetagrossEX": {
     "NAME": "Metagross EX",
     "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Seek !M! card{!M!|>1=s} from your draw pile. NL Shuffle !M! pokemonmaster:Magnets into your draw pile. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Innate. NL pokemonmaster:Prized. NL Seek !M! card{!M!|>1=s} from your draw pile. NL Shuffle !M! pokemonmaster:Magnets into your draw pile. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Innate. pokemonmaster:Prized. NL Seek !M! card{!M!|>1=s} from your draw pile. NL Shuffle !M! pokemonmaster:Magnets into your draw pile. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -768,8 +768,8 @@
   },
   "${modID}:RotomDex": {
     "NAME": "Rotom-Dex",
-    "DESCRIPTION": "{@@}Scry !M!. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Scry !M!. NL Exhaust.",
+    "DESCRIPTION": "{@@}Scry !M!. NL Hover to preview Enemy Captures. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Scry !M!. NL Hover to preview Enemy Captures. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1568,7 +1568,7 @@
   "${modID}:Gligar": {
     "NAME": "Gligar",
     "DESCRIPTION": "{@@}Apply !M! Poison and *Stunned.",
-    "UPGRADE_DESCRIPTION": "{@@}Apply !M! Poison snd *Stunned.",
+    "UPGRADE_DESCRIPTION": "{@@}Apply !M! Poison and *Stunned.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -1647,8 +1647,8 @@
   },
   "${modID}:DeoxysS": {
     "NAME": "Deoxys-S",
-    "DESCRIPTION": "{@@}Innate. NL *Seek 2 Cards. NL Add a Dazed to the top of your draw pile and to your discard pile.",
-    "UPGRADE_DESCRIPTION": "{@@}Innate. NL *Seek 2 Cards. NL Add a Dazed to the top of your draw pile and to your discard pile.",
+    "DESCRIPTION": "{@@}Innate. NL *Seek !M! Card{!M!|>1=s}. NL Add a Dazed to the top of your draw pile and to your discard pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Innate. NL *Seek !M! Card{!M!|>1=s}. NL Add a Dazed to the top of your draw pile and to your discard pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2345,6 +2345,16 @@
       ""
     ]
   },
+  "${modID}:Ampharos": {
+    "NAME": "Ampharos",
+    "DESCRIPTION": "{@@}Deal !D! damage and apply *Stunned to a random enemy twice. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Deal !D! damage and apply *Stunned to a random enemy twice. NL Exhaust.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
   "${modID}:Voltorb": {
     "NAME": "Voltorb",
     "DESCRIPTION": "{@@}Exhaust your hand. NL Gain !M! pokemonmaster:Spark.",
@@ -2457,6 +2467,16 @@
   },
   "${modID}:Prinplup": {
     "NAME": "Prinplup",
+    "DESCRIPTION": "{@@}Gain !B! Block. NL Put a card from your discard pile on top of your draw pile.",
+    "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Put a card from your discard pile on top of your draw pile.",
+    "EXTENDED_DESCRIPTION": [
+      "",
+      "",
+      ""
+    ]
+  },
+  "${modID}:Empoleon": {
+    "NAME": "Empoleon",
     "DESCRIPTION": "{@@}Gain !B! Block. NL Put a card from your discard pile on top of your draw pile.",
     "UPGRADE_DESCRIPTION": "{@@}Gain !B! Block. NL Put a card from your discard pile on top of your draw pile.",
     "EXTENDED_DESCRIPTION": [
@@ -2816,8 +2836,8 @@
   },
   "${modID}:Cryogonal": {
     "NAME": "Cryogonal",
-    "DESCRIPTION": "{@@}Scry !M!. Exhaust any number of them. NL Gain  [E]  and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}Scry !M!. Exhaust any number of them. NL Gain  [E]  and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Surveil !M!. NL Gain  [E]  and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Surveil !M!. NL Gain  [E]  and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3366,8 +3386,8 @@
   },
   "${modID}:BronzeAutomaton": {
     "NAME": "Capt. Bronze Automaton",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Lose !M!  [E]  next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Lose !M!  [E]  next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M!  [E]  next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M!  [E]  next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3506,7 +3526,7 @@
   "${modID}:TimeEater": {
     "NAME": "Capt. Time Eater",
     "DESCRIPTION": "{@@}Gain 2 Strength each time you play a card each turn, up to twelve cards.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain 2 Strength each time you play a card each turn, up to twelve cards.",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Gain 2 Strength each time you play a card each turn, up to twelve cards.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4795,8 +4815,8 @@
   },
   "${modID}:DragoniteV": {
     "NAME": "Dragonite V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized NL Scry !M!. Exhaust any number of them. NL Gain pokemonmaster:Spark and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL Scry !M!. Exhaust any number of them. NL Gain pokemonmaster:Spark and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized NL pokemonmaster:Surveil !M!. NL Gain pokemonmaster:Spark and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized NL pokemonmaster:Surveil !M!. NL Gain pokemonmaster:Spark and draw 1 additional card next turn for each card Exhausted. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5626,8 +5646,8 @@
   },
   "${modID}:Tympole": {
     "NAME": "Tympole",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round. NL pokemonmaster:Bait 20.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Gain !M! pokemonmaster:Round. NL pokemonmaster:Bait 20.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5799,7 +5819,7 @@
     "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Deal !M! damage for each unique type of pokemon in your hand.",
     "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Deal !M! damage for each unique type of pokemon in your hand.",
     "EXTENDED_DESCRIPTION": [
-      " NL ( Deal !D! damage)",
+      " NL (Deal !D! damage)",
       "",
       ""
     ]

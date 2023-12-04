@@ -18,7 +18,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Snorlax extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Snorlax",
-            3,
+            4,
             CardType.SKILL,
             CardTarget.SELF,
             CardRarity.UNCOMMON,

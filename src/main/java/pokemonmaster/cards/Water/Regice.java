@@ -29,14 +29,14 @@ public class Regice extends BasePokemonCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 2;
+    private static final int UPG_DAMAGE = 9;
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+
 
     public Regice() {
         super(cardInfo);
         setDamage(DAMAGE, UPG_DAMAGE);
-        setMagic(MAGIC,UPG_MAGIC);
+        setMagic(MAGIC);
         tags.add(CustomTags.WATER);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);

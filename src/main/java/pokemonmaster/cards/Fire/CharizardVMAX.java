@@ -34,7 +34,7 @@ public class CharizardVMAX extends FinalEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 70;
-    private static final int DAMAGEUP = 15;
+    private static final int DAMAGEUP = 30;
 
 
 

@@ -18,23 +18,16 @@
       "Select card to remove. (You can also stick extra text like this in here.)"
     ]
   },
-  "${modID}:BirdMan": {
-    "NAME": "Bird Keeper",
+  "${modID}:FisherMan": {
+    "NAME": "Master Fisherman",
     "DESCRIPTIONS": [
-      "This is event text, generally used to describe what's happening.",
-      "#g~This~ #g~text~ #g~is~ #g~green~ #g~and~ #g~wavy.~",
-      "#r@RED@ #r@AND@ #r@VIBRATING@ #r@TEXT.@",
-      "#rRed #gGreen #yYellow #bBlue #pPurple. ~Wavy~ @vibrating.@",
-      "You have to mark every word individually.",
-      "You can also use [#ffffff]white[] hex color codes like this to color text.",
-      "This also works in card text! But not on keywords."
+      "There's a fishing guy.",
+      "Take this with you!.",
+      "He looks disappointed."
     ],
     "OPTIONS": [
-      "[Leave]",
-      "[Denial] #rLose #r1 #rMax #rHP. Bad stuff is red.",
-      "[Acceptance] #gGain #gApotheosis. Good stuff is green.",
-      "[Leave]",
-      "Select card to remove. (You can also stick extra text like this in here.)"
+      "Take the Fishing Rod",
+      "Leave."
     ]
   },
   "${modID}:EeveeEvolve": {

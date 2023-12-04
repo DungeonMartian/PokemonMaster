@@ -23,7 +23,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class InfernapeV extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "InfernapeV",
-            3,
+            2,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.RARE,
@@ -33,8 +33,8 @@ public class InfernapeV extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 35;
-    private static final int DAMAGEUP = 5;
+    private static final int DAMAGE = 40;
+    private static final int DAMAGEUP = 10;
 
 
 

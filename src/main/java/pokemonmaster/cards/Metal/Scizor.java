@@ -45,6 +45,8 @@ public class Scizor extends BaseCard {
         tags.add(CustomTags.UNEVOLVED);
         this.returnToHand=true;
         tags.add(CardTags.STRIKE);
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackMetal.png","pokemonmaster/character/cardback/bg_attackMetal_p.png");
+
     }
    
     @Override

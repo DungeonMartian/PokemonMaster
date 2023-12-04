@@ -49,9 +49,9 @@ public class Vullaby extends BasicPokemonCard {
     public void onUse(AbstractPlayer p, AbstractMonster m) {
             addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
         if (m != null && m.getIntentBaseDmg() >= 0) {
-            addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false)));
-            addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false)));
 
+            addToBot(new ApplyPowerAction(m, p, new WeakPower(m, magicNumber, false)));
+            addToBot(new ApplyPowerAction(m, p, new VulnerablePower(m, magicNumber, false)));
 
         }
     }

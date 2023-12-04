@@ -18,7 +18,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class GremlinFat extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
             "GremlinSneaky",
-            1,
+            0,
             CardType.ATTACK,
             CardTarget.ENEMY,
             CardRarity.SPECIAL,

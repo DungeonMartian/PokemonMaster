@@ -28,8 +28,8 @@ public class BurningScarf extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BURNED = 2;
-    private static final int UPG_BURNED= 2;
+    private static final int BURNED = 1;
+    private static final int UPG_BURNED= 1;
 
 
 

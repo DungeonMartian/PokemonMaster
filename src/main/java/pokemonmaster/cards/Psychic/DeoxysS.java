@@ -28,18 +28,18 @@ public class DeoxysS extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DEOSEEK= 2;
+    private static final int DEOSEEK= 1;
 
-
+    private static final int DEOSEEKUP= 1;
 
     public DeoxysS() {
         super(cardInfo);
-        setMagic(DEOSEEK);
+        setMagic(DEOSEEK,DEOSEEKUP);
         tags.add(CustomTags.PSYCHIC);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         this.isInnate=true;
-        setCostUpgrade(0);
+
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillPsychic.png","pokemonmaster/character/cardback/bg_skillPsychic_p.png");
 
     }

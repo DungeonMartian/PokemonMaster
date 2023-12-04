@@ -208,7 +208,7 @@
       ""
 
     ],
-    "DESCRIPTION": "Gain Energy at the start of your turn. Can go negative, you will lose Energy. If you have 4 or more Spark, lose 1 HP for every 4."
+    "DESCRIPTION": "Gain Energy at the start of your turn and lose 1 HP for every 4. Can go negative, you will lose Energy. "
   },
   {
     "PROPER_NAME": "Blur",
@@ -222,6 +222,19 @@
 
     ],
     "DESCRIPTION": "You do not lose block at the end of this turn."
+  },
+  {
+    "PROPER_NAME": "Surveil",
+    "NAMES": [
+      "surveil",
+      "",
+      "",
+      "",
+      "",
+      ""
+
+    ],
+    "DESCRIPTION": "Look at the top X cards of your draw pile. You may Exhaust any of them."
   },
   {
     "PROPER_NAME": "Buffer",
