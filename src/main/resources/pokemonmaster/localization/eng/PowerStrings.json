@@ -351,7 +351,7 @@
       ""
     ]
   },
-  "${modID}:SirfetchSnooze": {
+  "${modID}:SirFetchSnooze": {
     "NAME": "SirFetchSnooze",
     "DESCRIPTIONS": [
       "You can't play ANY attacks until you restore HP",
