@@ -1,6 +1,7 @@
 package pokemonmaster.cards.Lightning;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -11,6 +12,7 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.FinalEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
+import pokemonmaster.powers.Resistant;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -28,15 +30,16 @@ public class Luxray extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 13;
+    private static final int DAMAGE = 12;
     private static final int UPG_DAMAGE = 3;
-
+    private static final int DAMAGEDOWN= 2;
+    private static final int DAMAGEDOWNUP= 1;
 
 
     public Luxray() {
         super(cardInfo,CustomTags.LIGHTNING);
         setDamage(DAMAGE, UPG_DAMAGE);
-
+        setMagic(DAMAGEDOWN,DAMAGEDOWNUP);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackLightning.png","pokemonmaster/character/cardback/bg_attackLightning_p.png");
 
     }
@@ -46,7 +49,7 @@ public class Luxray extends FinalEvolutionCard {
     @Override
     public void onUse(AbstractPlayer p, AbstractMonster m) {
         addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.BLUNT_LIGHT));
-
+        addToBot(new ApplyPowerAction(p, p, new Resistant(p,magicNumber)));
     }
 
     @Override

@@ -30,8 +30,10 @@ public class EntangleNext extends BasePower implements CloneablePowerInterface {
     }
 
     public void atEndOfTurn(boolean isPlayer) {
-        addToBot(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
+
+            addToBot(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
+
+        addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
     }
     public void updateDescription() {
         this.description = DESCRIPTIONS[0];

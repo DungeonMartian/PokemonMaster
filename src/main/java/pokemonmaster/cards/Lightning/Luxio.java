@@ -2,7 +2,6 @@ package pokemonmaster.cards.Lightning;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.utility.DiscardToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
@@ -10,7 +9,6 @@ import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.IntermediateEvolutionCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -30,8 +28,8 @@ public class Luxio extends IntermediateEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 12;
+    private static final int UPG_DAMAGE = 4;
 
 
 

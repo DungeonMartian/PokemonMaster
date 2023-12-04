@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.powers.AbstractPower;
 import com.megacrit.cardcrawl.powers.EntanglePower;
+import com.megacrit.cardcrawl.powers.RegenPower;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -31,16 +32,18 @@ public class SirFetchSnooze extends BasePower implements CloneablePowerInterface
     }
 
     public void atEndOfTurn(boolean isPlayer) {
+        AbstractPower pow = AbstractDungeon.player.getPower(RegenPower.POWER_ID);
+        if(pow == null) {
         addToBot(new ApplyPowerAction(this.owner, this.owner, new EntanglePower(this.owner)));
-
+}
     }
 
     @Override
     public int onHeal(int healAmount) {
         AbstractPower pow = AbstractDungeon.player.getPower(EntanglePower.POWER_ID);
         if (pow != null) {
-            addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, pow));
-
+            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, pow));
+            addToTop(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         }
         addToBot(new RemoveSpecificPowerAction(this.owner, this.owner, this));
         return super.onHeal(healAmount);

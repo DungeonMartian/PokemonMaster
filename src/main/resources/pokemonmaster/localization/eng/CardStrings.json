@@ -282,7 +282,7 @@
   "${modID}:Scyther": {
     "NAME": "Scyther",
     "DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !D! damage. Increase the damage of ALL *Strikes this turn by !M!. NL pokemonmaster:Return.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !D! damage. Increase the damage of ALL *Strikes this turn by !M!. NL pokemonmaster:Return",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Strike NL Deal !D! damage. Increase the damage of ALL *Strikes this turn by !M!. NL pokemonmaster:Return.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -928,7 +928,7 @@
   },
   "${modID}:Crustle": {
     "NAME": "Crustle",
-    "DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !B! Block, NL Next turn gain !B! Block. NL OR Gain 5 Frail, Vulnerable and Strength.",
+    "DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !B! Block, NL Next turn gain !B! Block. NL OR Gain 3 Frail, Vulnerable and Strength.",
     "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Choose. NL Gain !B! Block, NL Next turn gain !B! Block. NL OR Gain 5 Frail, Vulnerable and Strength.",
     "EXTENDED_DESCRIPTION": [
       "",
@@ -2208,7 +2208,7 @@
   "${modID}:ElectrodeV": {
     "NAME": "Electrode V",
     "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Block for each card you've played this turn.",
-    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Block for each card you've played this turn..",
+    "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:Prized. NL Gain !M! Block for each card you've played this turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4035,8 +4035,8 @@
   },
   "${modID}:MagmaBasin": {
     "NAME": "Magma Basin",
-    "DESCRIPTION": "{@@}At the start of your turn gain !M! pokemonmaster:Spark and lose 4 HP.",
-    "UPGRADE_DESCRIPTION":"{@@}At the start of your turn gain !M! pokemonmaster:Spark and lose 4 HP.",
+    "DESCRIPTION": "{@@}At the start of your turn gain !M! pokemonmaster:Spark and lose 2 HP.",
+    "UPGRADE_DESCRIPTION":"{@@}At the start of your turn gain !M! pokemonmaster:Spark and lose 2 HP.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4205,8 +4205,8 @@
   },
   "${modID}:Luxray": {
     "NAME": "Luxray",
-    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Volt-Turn NL Deal !D! damage.",
+    "DESCRIPTION": "{@@}pokemonmaster:Volt-Turn NL Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Volt-Turn NL Deal !D! damage. NL Gain !M! pokemonmaster:Resistant.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

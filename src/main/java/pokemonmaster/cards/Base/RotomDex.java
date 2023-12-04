@@ -89,18 +89,17 @@ public class RotomDex extends BaseCard {
     @Override
     public void applyPowers() {
         for (AbstractMonster m : getEnemies()) {
+            if (!m.isDeadOrEscaped() && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss && (m.id.equals("AcidSlime_L") || m.id.equals("SpikeSlime_L") || m.id.equals("SpikeSlime_M") || m.id.equals("AcidSlime_M"))) {
+                    if (!this.cardToPreview.add(AddThis("SlimeBoss"))) {
+                        this.cardToPreview.add(AddThis("SlimeBoss"));
+                    }
+                }
             if (!this.cardToPreview.contains(AddThis(m.id))) {
                 this.cardToPreview.add(AddThis(m.id));
             }
-            if (!m.isDeadOrEscaped() && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
-                if (m.id.equals("AcidSlime_L") || m.id.equals("SpikeSlime_L") || m.id.equals("SpikeSlime_M") || m.id.equals("AcidSlime_M")) {
-                    if (!this.cardToPreview.add(AddThis(m.id))) {
-                        this.cardToPreview.add(AddThis(m.id));
-                    }
-                }
             }
 
-        }}
+        }
 
     public AbstractCard AddThis(String id){
         if (id == null){

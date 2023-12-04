@@ -33,7 +33,7 @@ public class MagmaBasinPower extends BasePower {
     public void atStartOfTurn() {
         AbstractDungeon.actionManager.addToTop(new VFXAction(AbstractDungeon.player, new RedFireballEffect(this.owner.hb.cX-5,this.owner.hb.cY,this.owner.hb.cX+5,this.owner.hb.cY, 3), 0.1F));
 
-        addToTop(new LoseHPAction(owner,owner,4));
+        addToTop(new LoseHPAction(owner,owner,2*this.amount));
         addToTop(new ApplyPowerAction(this.owner, this.owner, new Spark(this.owner, this.amount), this.amount));
     }
     public AbstractPower makeCopy() {

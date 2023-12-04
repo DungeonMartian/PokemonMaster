@@ -103,8 +103,8 @@ public class SafariBall extends BasePokemonCard {
             }
             if (!m.isDeadOrEscaped() && AbstractDungeon.getCurrRoom() instanceof MonsterRoomBoss) {
                 if (m.id.equals("AcidSlime_L") || m.id.equals("SpikeSlime_L") || m.id.equals("SpikeSlime_M") || m.id.equals("AcidSlime_M")) {
-                    if (!this.cardToPreview.add(AddThis(m.id))) {
-                        this.cardToPreview.add(AddThis(m.id));
+                    if (!this.cardToPreview.add(AddThis("SlimeBoss"))) {
+                        this.cardToPreview.add(AddThis("SlimeBoss"));
                     }
                 }
             }

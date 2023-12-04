@@ -29,12 +29,11 @@ public class HorrorEnergy extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
     private static final int THORNS = 4;
-    private static final int UPG_THORNS = 2;
     public HorrorEnergy() {
         super(cardInfo);
         tags.add(CustomTags.PSYCHIC);
         setCostUpgrade(0);
-        setMagic(THORNS,UPG_THORNS);
+        setMagic(THORNS);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerPsychic.png","pokemonmaster/character/cardback/bg_powerPsychic_p.png");
 
     }

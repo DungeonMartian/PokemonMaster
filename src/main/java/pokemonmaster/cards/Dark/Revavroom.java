@@ -17,7 +17,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Revavroom extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Revavroom",
-            1,
+            2,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.SPECIAL,

@@ -35,7 +35,7 @@ public class Shellsmash extends BaseCard {
 
     public Shellsmash() {
         super(cardInfo);
-        setMagic(SMASHNUMS);
+        setMagic(SMASHNUMS, UPG_SMASHNUMS);
     }
     public void use(AbstractPlayer p, AbstractMonster m) {
         onChoseThisOption();

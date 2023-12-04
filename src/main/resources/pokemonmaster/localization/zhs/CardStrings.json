@@ -928,7 +928,7 @@
   },
   "pokemonmaster:Crustle": {
     "NAME": "岩殿居蟹",
-    "DESCRIPTION": "{@@}pokemonmaster:抉择 NL 获得 !B! 点 格挡 , NL 下回合获得 !B! 点 格挡 . NL 或者获得 5 层 脆弱 , 易伤 和 力量 .",
+    "DESCRIPTION": "{@@}pokemonmaster:抉择 NL 获得 !B! 点 格挡 , NL 下回合获得 !B! 点 格挡 . NL 或者获得 3 层 脆弱 , 易伤 和 力量 .",
     "UPGRADE_DESCRIPTION": "{@@}pokemonmaster:抉择 NL 获得 !B! 点 格挡 , NL 下回合获得 !B! 点 格挡 . NL 或者获得 5 层 脆弱 , 易伤 和 力量 .",
     "EXTENDED_DESCRIPTION": [
       "",
@@ -4025,8 +4025,8 @@
   },
   "pokemonmaster:MagmaBasin": {
     "NAME": "熔岩的瀑布深潭",
-    "DESCRIPTION": "{@@}在你的回合开始时，获得 !M! 层 pokemonmaster:电火花 并失去 4 点生命.",
-    "UPGRADE_DESCRIPTION":"{@@}在你的回合开始时，获得 !M! 层 pokemonmaster:电火花 并失去 4 点生命.",
+    "DESCRIPTION": "{@@}在你的回合开始时，获得 !M! 层 pokemonmaster:电火花 并失去 2 点生命.",
+    "UPGRADE_DESCRIPTION":"{@@}在你的回合开始时，获得 !M! 层 pokemonmaster:电火花 并失去 2 点生命.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4195,8 +4195,8 @@
   },
   "pokemonmaster:Luxray": {
     "NAME": "伦琴猫",
-    "DESCRIPTION": "{@@}pokemonmaster:伏转 NL 造成 !D! 点伤害.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:伏转 NL 造成 !D! 点伤害.",
+    "DESCRIPTION": "{@@}pokemonmaster:伏转 NL 造成 !D! 点伤害. NL 获得 !M! 层 pokemonmaster:抵抗 .",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:伏转 NL 造成 !D! 点伤害. NL 获得 !M! 层 pokemonmaster:抵抗 .",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
