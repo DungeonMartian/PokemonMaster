@@ -35,7 +35,7 @@ public class FocusSash extends BaseCard {
         setMagic(FIGHT,FIGHTUP);
         tags.add(CustomTags.FIGHTING);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_powerFighting.png","pokemonmaster/character/cardback/bg_powerFighting_p.png");
-
+        tags.add(CardTags.HEALING);
     }
 
     @Override

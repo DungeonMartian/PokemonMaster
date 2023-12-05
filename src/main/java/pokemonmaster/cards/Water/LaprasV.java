@@ -32,12 +32,12 @@ public class LaprasV extends BasicPokemonCard {
     private static final int DAMAGE = 14;
     private static final int UPG_DAMAGE = 5;
     private static final int MAGIC = 3;
-
+    private static final int UPG_MAGIC = 1;
 
     public LaprasV() {
         super(cardInfo,new LaprasVMAX(),new LaprasVMAX(),CustomTags.WATER);
         setDamage(DAMAGE, UPG_DAMAGE);
-        setMagic(MAGIC);
+        setMagic(MAGIC,UPG_MAGIC);
 
 
 

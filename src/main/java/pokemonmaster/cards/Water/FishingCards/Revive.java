@@ -33,8 +33,6 @@ public class Revive extends BasePokemonCard {
     public Revive() {
         super(cardInfo);
         tags.add(CustomTags.WATER);
-        tags.add(CustomTags.POKEMON);
-        tags.add(CustomTags.UNEVOLVED);
         this.exhaust=true;
         setCostUpgrade(0);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_skillWater.png","pokemonmaster/character/cardback/bg_skillWater_p.png");

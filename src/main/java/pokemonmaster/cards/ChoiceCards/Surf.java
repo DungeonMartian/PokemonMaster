@@ -1,14 +1,11 @@
 package pokemonmaster.cards.ChoiceCards;
 
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.animations.VFXAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.ui.panels.EnergyPanel;
-import com.megacrit.cardcrawl.vfx.combat.RedFireballEffect;
 import pokemonmaster.CustomTags;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
@@ -29,7 +26,7 @@ public class Surf extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
     private static final int DAMAGE= 1;
-    private static final int UPG_DAMAGE= 1;
+    private static final int UPG_DAMAGE= 2;
 
 
 
@@ -41,14 +38,17 @@ public class Surf extends BaseCard {
         this.exhaust = true;
         tags.add(CustomTags.CHOICE);
         this.isMultiDamage = true;
-        this.rawDescription = cardStrings.DESCRIPTION ;
+        this.rawDescription = cardStrings.DESCRIPTION;
+        tags.add(CustomTags.WATER);
+        this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackWater.png","pokemonmaster/character/cardback/bg_attackWater_p.png");
+
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
 
-        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
+        addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.SLASH_HORIZONTAL));
             }
 
     @Override
