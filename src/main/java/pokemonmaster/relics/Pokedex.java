@@ -46,7 +46,7 @@ public class Pokedex extends BaseRelic  {
 
     @Override
     public void atTurnStart() {
-        if (this.counter >=0) {
+        if (this.counter >0) {
             addToBot(new DrawCardAction(AbstractDungeon.player, 1));
             addToBot(new GainEnergyAction(1));
             this.counter -= 1;
