@@ -38,11 +38,14 @@ public abstract class BasicPokemonCard extends PokemonCard {
             //this.cardsToPreview = this.finalEvolution.makeCopy();
             //this.cardToPreview.add(this.finalEvolution.makeCopy());
             //this.cardToPreview.add(this.nextEvolution.makeCopy());
-            MultiCardPreview.add((AbstractCard)this, true, (AbstractCard)this.finalEvolution);
-            if (this.finalEvolution.name != this.nextEvolution.name){
-                MultiCardPreview.add((AbstractCard)this, true, (AbstractCard)this.nextEvolution);
 
+            if (this.finalEvolution.name != this.nextEvolution.name){
+                MultiCardPreview.add((AbstractCard)this, true,  (AbstractCard)this.nextEvolution);
+                //System.out.println("help " + finalEvolution + " me" + nextEvolution);
             }
+
+                this.cardsToPreview = this.finalEvolution;
+
             //, (AbstractCard)this.nextEvolution
             // MultiCardPreview.add(this.finalEvolution, true, this.nextEvolution);
         }
