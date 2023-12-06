@@ -1,5 +1,6 @@
 package pokemonmaster.util.Actions;
 
+import basemod.patches.com.megacrit.cardcrawl.cards.AbstractCard.MultiCardPreview;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
@@ -8,10 +9,13 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 
+import java.util.ArrayList;
+
 public class EvolveActionCombat extends AbstractGameAction {
 
     public final AbstractCard toEvolve;
     public final AbstractCard baseCard;
+    private final ArrayList<AbstractCard> toEvolveList;
 
     public CardGroup SORT;
 
@@ -19,9 +23,10 @@ public class EvolveActionCombat extends AbstractGameAction {
 
     public EvolveActionCombat(AbstractCard c, CardGroup where) {
         this.baseCard= c;
-        this.toEvolve = c.cardsToPreview;
+        //this.toEvolve = c.cardsToPreview;
         this.SORT = where;
-
+        this.toEvolveList = MultiCardPreview.multiCardPreview.get(this.baseCard);
+        this.toEvolve = toEvolveList.get(0);
     }
 
     public void update(){

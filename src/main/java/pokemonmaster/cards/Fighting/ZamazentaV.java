@@ -16,7 +16,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class ZamazentaV extends BaseCard {
     private final static CardInfo cardInfo = new CardInfo(
             "ZamazentaV",
-            2,
+            3,
             CardType.POWER,
             CardTarget.SELF,
             CardRarity.UNCOMMON,

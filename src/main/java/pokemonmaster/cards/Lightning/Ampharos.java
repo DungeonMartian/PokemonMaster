@@ -18,7 +18,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Ampharos extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Ampharos",
-            2,
+            5,
             CardType.ATTACK,
             CardTarget.ALL_ENEMY,
             CardRarity.SPECIAL,
@@ -29,7 +29,7 @@ public class Ampharos extends FinalEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 8;
-    private static final int UPG_DAMAGE = 6;
+    private static final int UPG_DAMAGE = 4;
 
 
 
@@ -49,8 +49,8 @@ public class Ampharos extends FinalEvolutionCard {
         for (int i = 0; i<=1; i++){
             AbstractMonster randomMonster = AbstractDungeon.getMonsters().getRandomMonster(null, true, AbstractDungeon.cardRandomRng);
             if (randomMonster != null) {
-                addToBot(new StunMonsterAction(randomMonster, p));
                 addToBot(new DamageAction(randomMonster, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.LIGHTNING));
+                addToBot(new StunMonsterAction(randomMonster, p));
             }
         }
     }

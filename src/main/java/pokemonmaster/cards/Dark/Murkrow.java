@@ -25,8 +25,8 @@ public class Murkrow extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC = 4;
-    private static final int UPG_MAGIC= 2;
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC= 3;
 
 
 

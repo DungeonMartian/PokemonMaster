@@ -32,8 +32,8 @@ public class Scizor extends BaseCard {
 
     private static final int DAMAGE = 2;
 
-    private static final int FURY = 2;
-    private static final int FURYUP = 2;
+    private static final int FURY = 1;
+    private static final int FURYUP = 1;
 
 
     public Scizor() {

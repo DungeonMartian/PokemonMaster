@@ -29,7 +29,7 @@ public class JolteonGX extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 21;
-    private static final int UPG_DAMAGE = 4;
+    private static final int UPG_DAMAGE = 6;
     private static final int RECOIL = 4;
     private static final int RECOILUP = -1;
 
