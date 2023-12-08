@@ -19,7 +19,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 public class Salamence extends FinalEvolutionCard {
     private final static CardInfo cardInfo = new CardInfo(
             "Salamence",
-            1,
+            2,
             CardType.ATTACK,
             CardTarget.ALL,
             CardRarity.SPECIAL,

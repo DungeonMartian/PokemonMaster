@@ -19,13 +19,9 @@ import pokemonmaster.util.CardInfo;
 public abstract class BasicPokemonCard extends PokemonCard {
     private final PokemonCard nextEvolution;
     private final PokemonCard finalEvolution;
+    private AbstractCard NextEvo;
     private boolean isDuplicate = false;
-    //private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
-    //protected float getRotationTimeNeeded() {
-    //    return 1.0F;
-    //}
-    //private float rotationTimer;
-    //private int previewIndex = 0;
+
 
     public BasicPokemonCard(CardInfo cardinfo, PokemonCard nextEvolution, PokemonCard finalEvolution, CardTags pokemonType) {
         super(cardinfo, pokemonType);
@@ -35,52 +31,26 @@ public abstract class BasicPokemonCard extends PokemonCard {
         this.finalEvolution = finalEvolution;
         // if this,finalEvolution is not None
         if (this.finalEvolution != null) {
-            //this.cardsToPreview = this.finalEvolution.makeCopy();
-            //this.cardToPreview.add(this.finalEvolution.makeCopy());
-            //this.cardToPreview.add(this.nextEvolution.makeCopy());
+
 
             if (this.finalEvolution.name != this.nextEvolution.name){
-                MultiCardPreview.add((AbstractCard)this, true,  (AbstractCard)this.nextEvolution);
+                NextEvo = this.nextEvolution;
+                MultiCardPreview.add((AbstractCard)this, true,  (AbstractCard)NextEvo);
                 //System.out.println("help " + finalEvolution + " me" + nextEvolution);
             }
 
                 this.cardsToPreview = this.finalEvolution;
 
-            //, (AbstractCard)this.nextEvolution
-            // MultiCardPreview.add(this.finalEvolution, true, this.nextEvolution);
+
         }
         // if this.nextEvolution is not None
         if (this.nextEvolution != null) {
             purgeOnUse = true;
         }
-        //MultiCardPreview.add(this. finalEvolution, true, this.nextEvolution);
+
     }
 
 
-    //public void update() {
-    //    super.update();
-    //    if (!cardToPreview.isEmpty() && AbstractDungeon.actionManager.isEmpty()) {
-    //        if (hb.hovered) {
-    //            if (rotationTimer <= 0F) {
-    //                rotationTimer = getRotationTimeNeeded();
-    //                if (previewIndex == cardToPreview.size() - 1) {
-    //                    previewIndex = 0;
-    //                } else {
-    //                    previewIndex++;
-    //                }
-    //                if (previewIndex >= cardToPreview.size()){
-    //                    previewIndex = cardToPreview.size()-1;
-    //                }
-    //                cardsToPreview = cardToPreview.get(previewIndex);
-    //            } else {
-    //                rotationTimer -= Gdx.graphics.getDeltaTime();
-    //            }
-    //        }
-    //        if (!hb.hovered) {
-    //            cardsToPreview = cardToPreview.get(0);
-    //        }
-    //    }
-    //}
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
         onUse(p, m);
@@ -152,6 +122,7 @@ public abstract class BasicPokemonCard extends PokemonCard {
 
     public void upgrade() {
         this.cardsToPreview.upgrade();
+        NextEvo.upgrade();
         super.upgrade();
     }
 
