@@ -15,6 +15,8 @@ import com.megacrit.cardcrawl.powers.DuplicationPower;
 import pokemonmaster.CustomTags;
 import pokemonmaster.util.CardInfo;
 
+import java.util.Objects;
+
 
 public abstract class BasicPokemonCard extends PokemonCard {
     private final PokemonCard nextEvolution;
@@ -33,7 +35,7 @@ public abstract class BasicPokemonCard extends PokemonCard {
         if (this.finalEvolution != null) {
 
 
-            if (this.finalEvolution.name != this.nextEvolution.name){
+            if (!Objects.equals(this.finalEvolution.name, this.nextEvolution.name)){
                 NextEvo = this.nextEvolution;
                 MultiCardPreview.add((AbstractCard)this, true,  (AbstractCard)NextEvo);
                 //System.out.println("help " + finalEvolution + " me" + nextEvolution);
@@ -122,7 +124,9 @@ public abstract class BasicPokemonCard extends PokemonCard {
 
     public void upgrade() {
         this.cardsToPreview.upgrade();
-        NextEvo.upgrade();
+        if (!Objects.equals(this.finalEvolution.name, this.nextEvolution.name)) {
+            this.nextEvolution.upgrade();
+        }
         super.upgrade();
     }
 
