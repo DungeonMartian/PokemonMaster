@@ -161,8 +161,8 @@
   },
   "${modID}:Noibat": {
     "NAME": "Noibat",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard the top card of your deck.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard the top card of your deck.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Discard the top card of your Draw pile.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Discard the top card of your Draw pile.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4846,7 +4846,7 @@
   "${modID}:PalkiaGX": {
     "NAME": "Palkia GX",
     "DESCRIPTION": "{@@}pokemonmaster:Prized. Exhaust any number of cards in your hand. Gain  [E] [E]  and draw 2 additional cards next turn for each card Exhausted. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. Exhaust any number of cards in your hand. Gain  [E] [E]  and draw 2 additionals card next turn for each card Exhausted. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. Exhaust any number of cards in your hand. Gain  [E] [E]  and draw 2 additional cards next turn for each card Exhausted. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
