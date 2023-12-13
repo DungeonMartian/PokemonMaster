@@ -1947,8 +1947,8 @@
   },
   "${modID}:Zamazenta": {
     "NAME": "Zamazenta",
-    "DESCRIPTION": "{@@}At end of your turn gain !M! pokemonmaster:Resistant for each unspent  [E].",
-    "UPGRADE_DESCRIPTION": "{@@}At end of your turn gain !M! pokemonmaster:Resistant for each unspent  [E].",
+    "DESCRIPTION": "{@@}At end of your turn spend ALL your  [E]  and gain !M! pokemonmaster:Resistant for each spent this way.",
+    "UPGRADE_DESCRIPTION": "{@@}At end of your turn spend ALL your  [E]  and gain !M! pokemonmaster:Resistant for each spent this way.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -2727,8 +2727,8 @@
   },
   "${modID}:HeatEnergy": {
     "NAME": "Heat Energy",
-    "DESCRIPTION": "{@@}At the start of your turn gain [E]. NL Gain !M! Temporary HP.",
-    "UPGRADE_DESCRIPTION":"{@@}Innate. NL At the start of your turn gain [E]. NL Gain !M! Temporary HP.",
+    "DESCRIPTION": "{@@}Gain !M! Temporary HP. NL At the start of your turn gain [E].",
+    "UPGRADE_DESCRIPTION":"{@@}Innate. NL Gain !M! Temporary HP. NL At the start of your turn gain [E].",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3625,8 +3625,8 @@
   },
   "${modID}:Murkrow": {
     "NAME": "Murkrow",
-    "DESCRIPTION": "{@@}pokemonmaster:Evolve Draw pile. NL Scry !M!.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Evolve Draw pile. NL Scry !M!.",
+    "DESCRIPTION": "{@@}pokemonmaster:Evolve top of Draw pile. NL Scry !M!.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Evolve top of Draw pile. NL Scry !M!.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -3635,8 +3635,8 @@
   },
   "${modID}:Honchkrow": {
     "NAME": "Honchkrow",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL pokemonmaster:Devolve Draw pile. NL Scry !M!.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL pokemonmaster:Devolve Draw pile. NL Scry !M!.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL pokemonmaster:Devolve top of Draw pile. NL Scry !M!.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL pokemonmaster:Devolve top of Draw pile. NL Scry !M!.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

@@ -1,5 +1,6 @@
 package pokemonmaster.cards.Dark;
 
+import com.evacipated.cardcrawl.mod.stslib.damagemods.DamageModifierManager;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.DamageAction;
@@ -14,6 +15,7 @@ import pokemonmaster.CustomTags;
 import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Prized;
+import pokemonmaster.util.Actions.PiercingDamage;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
@@ -32,7 +34,7 @@ public class DarkraiGX extends BasePokemonCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 25;
-    private static final int UPG_DAMAGE = 5;
+    private static final int UPG_DAMAGE = 8;
 
 
 
@@ -43,13 +45,13 @@ public class DarkraiGX extends BasePokemonCard {
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackDark.png","pokemonmaster/character/cardback/bg_attackDark_p.png");
-
+        DamageModifierManager.addModifier(this, new PiercingDamage());
     }
 
     @Override
     public void use(AbstractPlayer p, AbstractMonster m) {
 
-        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.HP_LOSS), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
+        addToBot(new DamageAction(m, new DamageInfo(p, damage, DamageInfo.DamageType.NORMAL), AbstractGameAction.AttackEffect.SLASH_DIAGONAL));
         addToBot(new ApplyPowerAction(AbstractDungeon.player, AbstractDungeon.player, new Prized(AbstractDungeon.player,1)));
 
     }

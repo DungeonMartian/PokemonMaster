@@ -28,7 +28,7 @@ public class LiepardEX extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC = 6;
+    private static final int MAGIC = 8;
     private static final int UPG_MAGIC= 4;
 
 

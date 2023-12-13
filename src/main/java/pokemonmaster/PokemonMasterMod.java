@@ -12,9 +12,6 @@ import com.evacipated.cardcrawl.modthespire.Patcher;
 import com.evacipated.cardcrawl.modthespire.lib.SpireConfig;
 import com.evacipated.cardcrawl.modthespire.lib.SpireInitializer;
 import com.google.gson.Gson;
-import com.megacrit.cardcrawl.cards.CardGroup;
-import com.megacrit.cardcrawl.cards.status.Slimed;
-import com.megacrit.cardcrawl.core.CardCrawlGame;
 import com.megacrit.cardcrawl.core.Settings;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.helpers.FontHelper;
@@ -25,8 +22,6 @@ import org.apache.logging.log4j.Logger;
 import org.scannotation.AnnotationDB;
 import pokemonmaster.Potions.*;
 import pokemonmaster.cards.BaseCard;
-import pokemonmaster.cards.Metal.Magnet;
-import pokemonmaster.cards.Water.FishingCards.Cursola;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.relics.BaseRelic;
 import pokemonmaster.util.GeneralUtils;
@@ -508,34 +503,26 @@ public class PokemonMasterMod implements
 
     @Override
     public void receiveStartGame() {
-        TypeRemoverClass.DOTHIS = true;
-        TypeRemoverClass.removeCards();
-
+        if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
+            TypeRemoverClass.DOTHIS = true;
+            TypeRemoverClass.removeCards();
+        }
     }
 
     @Override
     public void receiveStartAct() {
-        TypeRemoverClass.DOTHIS=true;
-        TypeRemoverClass.removeCards();
+        if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
+            TypeRemoverClass.DOTHIS = true;
+            TypeRemoverClass.removeCards();
+        }
     }
 
-    private static void TypeChoice() {
-        logger.info("Total packs: ");
-        CardGroup RUNTYPEs = new CardGroup(CardGroup.CardGroupType.UNSPECIFIED);
-        RUNTYPEs.addToTop(new Cursola());
-        RUNTYPEs.addToTop(new Slimed());
-        RUNTYPEs.addToTop(new Magnet());
 
-
-
-        AbstractDungeon.gridSelectScreen.open(RUNTYPEs, 3, true, "bree");
-        selectedCards = true;
-        CardCrawlGame.dungeon.initializeCardPools();
-    }
     @Override
     public void receivePostDungeonInitialize() {
-        TypeRemoverClass.DOTHIS=true;
-        TypeRemoverClass.removeCards();
-
+        if (AbstractDungeon.player.chosenClass == PokemonMaster.Enums.POKE_MASTER) {
+            TypeRemoverClass.DOTHIS = true;
+            TypeRemoverClass.removeCards();
+        }
     }
 }

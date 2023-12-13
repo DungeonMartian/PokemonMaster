@@ -1,5 +1,6 @@
 package pokemonmaster.cards.Base;
 
+import com.badlogic.gdx.Gdx;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
 import com.megacrit.cardcrawl.actions.common.BetterDrawPileToHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
@@ -10,6 +11,8 @@ import pokemonmaster.cards.BaseCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.Prized;
 import pokemonmaster.util.CardInfo;
+
+import java.util.ArrayList;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -30,7 +33,12 @@ public class EeveeGX extends BaseCard {
     private static final int EEVEEUP = 1;
 
 
-
+    private float rotationTimer;
+    private int previewIndex = 0;
+    protected float getRotationTimeNeeded() {
+        return 1.0F;
+    }
+    private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
 
     public EeveeGX() {
         super(cardInfo);
@@ -40,6 +48,13 @@ public class EeveeGX extends BaseCard {
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.NORMAL);
         setMagic(EEVEESEEK, EEVEEUP);
+        this.cardToPreview.add(new EspeonGX());
+        this.cardToPreview.add(new FlareonGX());
+        this.cardToPreview.add(new GlaceonGX());
+        this.cardToPreview.add(new JolteonGX());
+        this.cardToPreview.add(new LeafeonGX());
+        this.cardToPreview.add(new UmbreonGX());
+
 
     }
 
@@ -51,7 +66,41 @@ public class EeveeGX extends BaseCard {
 
 
             }
+    @Override
+    public void update() {
+        super.update();
+        if (!cardToPreview.isEmpty()) {
+            if (hb.hovered) {
+                if (rotationTimer <= 0F) {
+                    rotationTimer = getRotationTimeNeeded();
+                    if (previewIndex == cardToPreview.size() - 1) {
+                        previewIndex = 0;
+                    } else {
+                        previewIndex++;
+                    }
+                    if (previewIndex >= cardToPreview.size()){
+                        previewIndex = cardToPreview.size()-1;
+                    }
+                    cardsToPreview = cardToPreview.get(previewIndex);
+                } else {
+                    rotationTimer -= Gdx.graphics.getDeltaTime();
+                }
+            }
+            else{
+                this.cardsToPreview = null;
+            }
+        }
 
+    }
+
+
+    @Override
+    public void upgrade() {
+        for(int i = 0; i < cardToPreview.size(); i++){
+            cardToPreview.get(i).upgrade();
+        }
+        super.upgrade();
+    }
 
     @Override
     public AbstractCard makeCopy() { //Optional

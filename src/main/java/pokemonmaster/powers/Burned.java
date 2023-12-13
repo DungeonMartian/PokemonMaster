@@ -42,6 +42,6 @@ public class Burned extends BasePower implements HealthBarRenderPower {
 
     @Override
     public Color getColor() {
-        return Color.SCARLET;
+        return Color.YELLOW;
     }
 }

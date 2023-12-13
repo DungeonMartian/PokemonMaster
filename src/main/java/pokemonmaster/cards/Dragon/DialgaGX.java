@@ -42,6 +42,7 @@ public class DialgaGX extends BasePokemonCard {
     public DialgaGX() {
         super(cardInfo);
         setDamage(DAMAGE,UPG_DAMAGE);
+        tags.add(CardTags.HEALING);
         tags.add(CustomTags.DRAGON);
         tags.add(CustomTags.POKEMON);
         tags.add(CustomTags.UNEVOLVED);

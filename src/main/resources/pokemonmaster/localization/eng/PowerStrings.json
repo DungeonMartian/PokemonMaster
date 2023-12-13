@@ -362,8 +362,8 @@
   "${modID}:ZamazentaPower": {
     "NAME": "Zamazenta",
     "DESCRIPTIONS": [
-      "Take #b",
-      " less damage from attacks for each unspent Energy.",
+      "Spend ALL your energy. Gain #b",
+      " #yResistant for each.",
       ""
     ]
   },
@@ -512,7 +512,7 @@
     "NAME": "Toxic Spikes",
     "DESCRIPTIONS": [
       "Apply #b",
-      " #yPoison each time an enemy attacks you this turn.."
+      " #yPoison each time an enemy attacks you this turn."
     ]
   },
   "${modID}:OldCemeteryPower": {

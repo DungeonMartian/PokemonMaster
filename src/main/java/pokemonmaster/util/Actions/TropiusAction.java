@@ -18,7 +18,7 @@ public class TropiusAction extends AbstractGameAction {
     public void update() {
         for (int i = 0; i < this.amount; i++) {
             AbstractPotion po = AbstractDungeon.returnRandomPotion(true);
-            while (po instanceof com.megacrit.cardcrawl.potions.SmokeBomb || po instanceof com.megacrit.cardcrawl.potions.FairyPotion || po instanceof com.megacrit.cardcrawl.potions.LiquidMemories || po instanceof pokemonmaster.Potions.BleakStone|| po instanceof pokemonmaster.Potions.FireStone || po instanceof pokemonmaster.Potions.LeafStone || po instanceof pokemonmaster.Potions.MindStone || po instanceof pokemonmaster.Potions.ThunderStone || po instanceof pokemonmaster.Potions.WaterStone)
+            while (po instanceof com.megacrit.cardcrawl.potions.SmokeBomb || po instanceof com.megacrit.cardcrawl.potions.FairyPotion || po instanceof com.megacrit.cardcrawl.potions.LiquidMemories || po instanceof pokemonmaster.Potions.BleakStone|| po instanceof pokemonmaster.Potions.FireStone || po instanceof pokemonmaster.Potions.LeafStone || po instanceof pokemonmaster.Potions.MindStone || po instanceof pokemonmaster.Potions.ThunderStone || po instanceof pokemonmaster.Potions.WaterStone|| po instanceof pokemonmaster.Potions.DiveBall)
                 po = AbstractDungeon.returnRandomPotion(true);
             AbstractPlayer abstractPlayer = AbstractDungeon.player;
             if (po.isThrown && po.targetRequired)

@@ -29,13 +29,13 @@ public class Eelektross extends FinalEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 20;
-
+    private static final int UPG_DAMAGE = 6;
 
 
 
     public Eelektross() {
         super(cardInfo,CustomTags.LIGHTNING);
-        setDamage(DAMAGE);
+        setDamage(DAMAGE,UPG_DAMAGE);
 
 
         this.isMultiDamage = true;

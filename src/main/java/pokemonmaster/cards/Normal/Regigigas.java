@@ -1,8 +1,12 @@
 package pokemonmaster.cards.Normal;
 
+import com.badlogic.gdx.Gdx;
 import com.evacipated.cardcrawl.mod.stslib.cards.interfaces.StartupCard;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
-import com.megacrit.cardcrawl.actions.common.*;
+import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
+import com.megacrit.cardcrawl.actions.common.DamageAction;
+import com.megacrit.cardcrawl.actions.common.ExhaustSpecificCardAction;
+import com.megacrit.cardcrawl.actions.common.MakeTempCardInDrawPileAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -18,6 +22,8 @@ import pokemonmaster.cards.Water.Regice;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.powers.SlowStart;
 import pokemonmaster.util.CardInfo;
+
+import java.util.ArrayList;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -36,7 +42,12 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
 
     private static final int DAMAGE = 100;
 
-
+    private float rotationTimer;
+    private int previewIndex = 0;
+    protected float getRotationTimeNeeded() {
+        return 1.0F;
+    }
+    private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
 
     public Regigigas() {
         super(cardInfo);
@@ -47,6 +58,14 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
         tags.add(CustomTags.REGIGIGAS);
         tags.add(CardTags.HEALING);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackNormal.png","pokemonmaster/character/cardback/bg_attackNormal_p.png");
+        this.cardToPreview.add(new Registeel());
+        this.cardToPreview.add(new Regirock());
+        this.cardToPreview.add(new Regieleki());
+        this.cardToPreview.add(new Regice());
+        this.cardToPreview.add(new Regidrago());
+
+
+
 
     }
 
@@ -59,8 +78,42 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
     }
 
     @Override
+    public void upgrade() {
+        for(int i = 0; i < cardToPreview.size(); i++){
+            cardToPreview.get(i).upgrade();
+        }
+        super.upgrade();
+    }
+
+    @Override
     public AbstractCard makeCopy() { //Optional
         return new Regigigas();
+    }
+    @Override
+    public void update() {
+        super.update();
+        if (!cardToPreview.isEmpty() ) {
+            if (hb.hovered) {
+                if (rotationTimer <= 0F) {
+                    rotationTimer = getRotationTimeNeeded();
+                    if (previewIndex == cardToPreview.size() - 1) {
+                        previewIndex = 0;
+                    } else {
+                        previewIndex++;
+                    }
+                    if (previewIndex >= cardToPreview.size()){
+                        previewIndex = cardToPreview.size()-1;
+                    }
+                    cardsToPreview = cardToPreview.get(previewIndex);
+                } else {
+                    rotationTimer -= Gdx.graphics.getDeltaTime();
+                }
+            }
+            else{
+                this.cardsToPreview = null;
+            }
+        }
+
     }
 
     @Override

@@ -28,8 +28,12 @@ public class ZigzagoonAction extends AbstractGameAction {
         if (pow != null) {
             addToBot(new RemoveSpecificPowerAction(AbstractDungeon.player, AbstractDungeon.player, pow));
         }
+        //AbstractCard card = CardLibrary.getAnyColorCard(AbstractCard.CardType.SKILL, AbstractCard.CardRarity.RARE);
+        //AbstractCard card = AbstractDungeon.returnTrulyRandomCard();
         AbstractCard card = AbstractDungeon.getCardFromPool(AbstractCard.CardRarity.RARE, AbstractCard.CardType.SKILL,true);
         while (!card.hasTag(CustomTags.HELDITEM) )
+            //card = CardLibrary.getAnyColorCard(AbstractCard.CardType.SKILL, AbstractCard.CardRarity.RARE);
+            //card = AbstractDungeon.returnTrulyRandomCard();
             card = AbstractDungeon.getCardFromPool(AbstractCard.CardRarity.RARE, AbstractCard.CardType.SKILL,true);
         if (UPGRADED){
             card.upgrade();

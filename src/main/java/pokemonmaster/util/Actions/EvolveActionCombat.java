@@ -7,6 +7,7 @@ import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.CardGroup;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import pokemonmaster.CustomTags;
 
 import java.util.ArrayList;
 
@@ -32,7 +33,7 @@ public class EvolveActionCombat extends AbstractGameAction {
 
     public void update(){
 //are you happy now? the strings are gone, it's better code, but it's lost its charm
-        if (this.toEvolve !=null){
+        if (this.toEvolve !=null && (!this.baseCard.hasTag(CustomTags.EEVEE) || (!this.baseCard.hasTag(CustomTags.REGIGIGAS)))){
             if (SORT== AbstractDungeon.player.discardPile) {
                 if (baseCard.upgraded){
                     this.toEvolve.upgrade();
@@ -93,7 +94,7 @@ public class EvolveActionCombat extends AbstractGameAction {
             }
 
             }
-        if (this.toEvolve ==null){
+        if (this.toEvolve ==null || this.baseCard.hasTag(CustomTags.EEVEE)){
             if (SORT== AbstractDungeon.player.discardPile) {
                 if (baseCard.canUpgrade()) {
                     baseCard.upgrade();
