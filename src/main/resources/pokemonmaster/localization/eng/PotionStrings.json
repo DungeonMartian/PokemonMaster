@@ -84,7 +84,7 @@
   "${modID}:ParkBall": {
     "NAME": "Park Ball",
     "DESCRIPTIONS": [
-      "Capture an enemy with #b",
+      "Capture a non-minion enemy with #b",
       " or less HP."
     ]
   }

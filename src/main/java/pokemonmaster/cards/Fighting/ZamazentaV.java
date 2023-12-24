@@ -23,8 +23,8 @@ public class ZamazentaV extends BaseCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int SHIELD =8;
-    private static final int SHIELDUP =4;
+    private static final int SHIELD =6;
+    private static final int SHIELDUP =3;
     public ZamazentaV() {
         super(cardInfo);
         tags.add(CustomTags.METAL);

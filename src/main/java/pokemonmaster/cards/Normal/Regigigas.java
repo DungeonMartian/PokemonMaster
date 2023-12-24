@@ -45,7 +45,7 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
     private float rotationTimer;
     private int previewIndex = 0;
     protected float getRotationTimeNeeded() {
-        return 1.0F;
+        return 2.0F;
     }
     private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
 
@@ -114,6 +114,17 @@ public class Regigigas extends BasePokemonCard implements StartupCard {
             }
         }
 
+    }
+
+    @Override
+    public void applyPowers() {
+        this.cardsToPreview = null;
+    }
+
+    @Override
+    public float calculateModifiedCardDamage(AbstractPlayer player, float tmp) {
+        this.cardsToPreview = null;
+        return super.calculateModifiedCardDamage(player, tmp);
     }
 
     @Override

@@ -3,14 +3,11 @@ package pokemonmaster.cards.Fighting;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.ApplyPowerAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
-import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.powers.PoisonPower;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
@@ -30,7 +27,7 @@ public class Gligar extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int POISOND = 7;
+    private static final int POISOND = 5;
     private static final int POISONDUP = 2;
 
 

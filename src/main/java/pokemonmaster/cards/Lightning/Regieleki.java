@@ -26,7 +26,7 @@ public class Regieleki extends BaseCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int ZAP = 2;
-    private static final int UPG_ZAP= 2;
+    private static final int UPG_ZAP= 1;
 
 
 

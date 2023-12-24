@@ -31,7 +31,7 @@
     "NAME": "Pokeball",
     "FLAVOR": "Gotta catch 'em all!!",
     "DESCRIPTIONS": [
-      "Right-click this relic to Capture an enemy with #b10 or less current HP."
+      "Right-click this relic to Capture a non-minion enemy with #b10 or less current HP."
     ]
   },
   "${modID}:SafariBall": {

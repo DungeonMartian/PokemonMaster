@@ -51,8 +51,8 @@ public class GalarianSirfetchd extends FinalEvolutionCard {
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
         addToBot(new AttackDamageRandomEnemyAction(this, AbstractGameAction.AttackEffect.SLASH_VERTICAL));
-        addToBot(new ApplyPowerAction(p, p, new EntanglePower(p)));
         addToBot(new ApplyPowerAction(p, p, new SirFetchSnooze(p,1)));
+        addToBot(new ApplyPowerAction(p, p, new EntanglePower(p)));
         AbstractCard s = (new GalarianFarfetchd()).makeCopy();
         if (this.upgraded) {
             s.upgrade();

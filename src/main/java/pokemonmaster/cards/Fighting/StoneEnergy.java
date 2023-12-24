@@ -23,8 +23,8 @@ public class StoneEnergy extends BaseCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     public static final String ID = makeID(cardInfo.baseId);
-    private static final int SHIELD =3;
-    private static final int SHIELDUP =2;
+    private static final int SHIELD =2;
+    private static final int SHIELDUP =1;
     public StoneEnergy() {
         super(cardInfo);
         tags.add(CustomTags.FIGHTING);

@@ -27,10 +27,10 @@ public class Gliscor extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 15;
-    private static final int BLOCKUP = 5;
-    private static final int POISON = 14;
-    private static final int POISONUP = 5;
+    private static final int BLOCK = 12;
+    private static final int BLOCKUP = 4;
+    private static final int POISON = 11;
+    private static final int POISONUP = 4;
 
 
 

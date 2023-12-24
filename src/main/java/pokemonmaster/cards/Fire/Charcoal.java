@@ -42,7 +42,7 @@ public class Charcoal extends HeldItemCard{
 
         AbstractPlayer p = AbstractDungeon.player;
         addToBot(new DamageAction(p, new DamageInfo(p, magicNumber, DamageInfo.DamageType.THORNS), AbstractGameAction.AttackEffect.FIRE));
-        addToBot(new HeldItemAction(new ApplyPowerAction(p, p, new Spark(p, 2))));
+        addToBot(new HeldItemAction(new ApplyPowerAction(p, p, new Spark(p, 1))));
     }
 
 

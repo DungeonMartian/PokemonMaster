@@ -2986,8 +2986,8 @@
   },
   "${modID}:Pokeball": {
     "NAME": "Pokeball",
-    "DESCRIPTION": "{@@}Capture an enemy with 10 or less HP and add it to your deck. NL Fleeting.",
-    "UPGRADE_DESCRIPTION":"{@@}Capture an enemy with 10 or less HP and add it to your deck. NL Fleeting.",
+    "DESCRIPTION": "{@@}Capture a non-minion enemy with 10 or less HP and add it to your deck. NL Fleeting.",
+    "UPGRADE_DESCRIPTION":"{@@}Capture a non-minion enemy with 10 or less HP and add it to your deck. NL Fleeting.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

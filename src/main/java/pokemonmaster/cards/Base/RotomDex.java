@@ -40,7 +40,7 @@ public class RotomDex extends BaseCard {
     private float rotationTimer;
     private int previewIndex = 0;
     protected float getRotationTimeNeeded() {
-        return 1.0F;
+        return 2.0F;
     }
     private final ArrayList<AbstractCard> cardToPreview = new ArrayList<>();
 
