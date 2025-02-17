@@ -47,7 +47,7 @@ public class Dugtrio extends FinalEvolutionCard {
     public void onUse(AbstractPlayer p, AbstractMonster m) {
 
         addToBot(new DamageAllEnemiesAction(p, this.multiDamage, this.damageTypeForTurn, AbstractGameAction.AttackEffect.NONE));
-        addToBot(new ApplyPowerAction(p, p, new TakeDamagePower(p,5)));
+        addToBot(new ApplyPowerAction(p, p, new TakeDamagePower(p,3)));
 
     }
 

@@ -26,10 +26,10 @@ public class Bouffalant extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 16;
+    private static final int DAMAGE = 18;
     private static final int UPG_DAMAGE = 5;
-    private static final int MAGIC = 6;
-    private static final int UPG_MAGIC = 2;
+    private static final int MAGIC = 5;
+    private static final int UPG_MAGIC = 1;
 
 
     public Bouffalant() {

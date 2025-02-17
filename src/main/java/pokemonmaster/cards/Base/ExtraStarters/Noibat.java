@@ -28,7 +28,7 @@ public class Noibat extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 10;
     private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 1;
 

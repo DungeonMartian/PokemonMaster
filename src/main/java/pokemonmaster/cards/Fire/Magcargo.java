@@ -30,7 +30,7 @@ public class Magcargo extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 22;
+    private static final int DAMAGE = 26;
     private static final int UPG_DAMAGE = 8;
 
 

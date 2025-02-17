@@ -4275,8 +4275,8 @@
   },
   "pokemonmaster:Diglett": {
     "NAME": "地鼠",
-    "DESCRIPTION": "{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 5 点伤害.",
-    "UPGRADE_DESCRIPTION":"{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 5 点伤害.",
+    "DESCRIPTION": "{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 3 点伤害.",
+    "UPGRADE_DESCRIPTION":"{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 3 点伤害.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4285,8 +4285,8 @@
   },
   "pokemonmaster:Dugtrio": {
     "NAME": "三地鼠",
-    "DESCRIPTION": "{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 5 点伤害.",
-    "UPGRADE_DESCRIPTION":"{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 5 点伤害.",
+    "DESCRIPTION": "{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 3 点伤害.",
+    "UPGRADE_DESCRIPTION":"{@@}对所有敌人造成 !D! 点伤害. NL 在你的下回合开始时，受到 3 点伤害.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

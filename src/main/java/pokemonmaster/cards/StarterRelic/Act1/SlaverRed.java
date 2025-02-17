@@ -17,7 +17,7 @@ import static pokemonmaster.PokemonMasterMod.makeID;
 
 public class SlaverRed extends BasePokemonCard {
     private final static CardInfo cardInfo = new CardInfo(
-            "SlaverBlue",
+            "SlaverRed",
             1,
             CardType.ATTACK,
             CardTarget.ENEMY,

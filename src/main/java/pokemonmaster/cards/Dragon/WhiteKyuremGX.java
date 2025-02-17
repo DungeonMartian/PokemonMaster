@@ -31,8 +31,8 @@ public class WhiteKyuremGX extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 4;
+    private static final int DAMAGE = 22;
+    private static final int UPG_DAMAGE = 5;
 
 
 

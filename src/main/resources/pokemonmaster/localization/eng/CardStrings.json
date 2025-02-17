@@ -4285,8 +4285,8 @@
   },
   "${modID}:Diglett": {
     "NAME": "Diglett",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Take 5 damage at the start of your next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Take 5 damage at the start of your next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Take 3 damage at the start of your next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Take 3 damage at the start of your next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -4295,8 +4295,8 @@
   },
   "${modID}:Dugtrio": {
     "NAME": "Dugtrio",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Take 5 damage at the start of your next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Take 5 damage at the start of your next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Take 3 damage at the start of your next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Take 3 damage at the start of your next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

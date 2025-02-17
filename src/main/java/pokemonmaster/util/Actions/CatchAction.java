@@ -6,11 +6,23 @@ import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.core.AbstractCreature;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import pokemonmaster.cards.Dark.Arbok;
+import pokemonmaster.cards.Dragon.DragoniteV;
+import pokemonmaster.cards.Fighting.Diglett;
+import pokemonmaster.cards.Fighting.Dugtrio;
+import pokemonmaster.cards.Fighting.MachoBrace;
+import pokemonmaster.cards.Fighting.Onix;
+import pokemonmaster.cards.Fire.Vulpix;
 import pokemonmaster.cards.Metal.Doublade;
 import pokemonmaster.cards.Metal.Honedge;
+import pokemonmaster.cards.Normal.Zigzagoon;
+import pokemonmaster.cards.Psychic.Gastly;
+import pokemonmaster.cards.Psychic.Gengar;
+import pokemonmaster.cards.Psychic.Haunter;
 import pokemonmaster.cards.StarterRelic.Act1.*;
 import pokemonmaster.cards.StarterRelic.Act2.*;
 import pokemonmaster.cards.StarterRelic.Act3.*;
+import pokemonmaster.cards.Water.Cetitan;
 
 public class CatchAction extends AbstractGameAction {
 
@@ -170,16 +182,42 @@ public class CatchAction extends AbstractGameAction {
                 return new TimeEater();
             case "AwakenedOne":
                 return new AwakenedOne();
-             case "Donu":
-                 return new Donu();
-             case "Deca":
-                 return new Deca();
+            case "Donu":
+                return new Donu();
+            case "Deca":
+                return new Deca();
             case "SpireShield":
                 return new Doublade();
             case "SpireSpear":
                 return new Honedge();
             case "CorruptHeart":
                 return new CorruptHeart();
+            case "pokeRegions:ArbokEnemy":
+                return new Arbok();
+            case "pokeRegions:CloysterEnemy": //finish
+                return new Cetitan();
+            case "pokeRegions:DigletEnemy":
+                return new Diglett();
+            case "pokeRegions:DragoniteEnemy":
+                return new DragoniteV();
+            case "pokeRegions:DugtrioEnemy":
+                return new Dugtrio();
+            case "pokeRegions:GastlyEnemy":
+                return new Gastly();
+            case "pokeRegions:GengarEnemy":
+                return new Gengar();
+            case "pokeRegions:GolemEnemy"://finish
+                return new Onix();
+            case "pokeRegions:HaunterEnemy":
+                return new Haunter();
+            case "pokeRegions:MachampEnemy"://finish
+                return new MachoBrace();
+            case "pokeRegions:RattataEnemy"://finish
+                return new Zigzagoon();
+            case "pokeRegions:RhyhornEnemy"://finish
+                return new Onix();
+            case "pokeRegions:VulpixEnemy":
+                return new Vulpix();
             default:
                 return new LouseGreen();
         }

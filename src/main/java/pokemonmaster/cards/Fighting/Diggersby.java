@@ -28,8 +28,8 @@ public class Diggersby extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 30;
-    private static final int UPG_DAMAGE = 10;
+    private static final int DAMAGE = 35;
+    private static final int UPG_DAMAGE = 8;
 
 
 
