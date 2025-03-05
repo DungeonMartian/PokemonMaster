@@ -9,22 +9,27 @@ import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.MonsterRoomBoss;
 import pokemonmaster.cards.BaseCard;
 import pokemonmaster.cards.Dark.Arbok;
-import pokemonmaster.cards.Dragon.DragoniteV;
-import pokemonmaster.cards.Fighting.Diglett;
-import pokemonmaster.cards.Fighting.Dugtrio;
-import pokemonmaster.cards.Fighting.MachoBrace;
-import pokemonmaster.cards.Fighting.Onix;
+import pokemonmaster.cards.Dark.CrobatV;
+import pokemonmaster.cards.Dark.GalarianMoltres;
+import pokemonmaster.cards.Dragon.*;
+import pokemonmaster.cards.Fighting.*;
+import pokemonmaster.cards.Fire.Hooh;
+import pokemonmaster.cards.Fire.Magcargo;
+import pokemonmaster.cards.Fire.Slugma;
 import pokemonmaster.cards.Fire.Vulpix;
-import pokemonmaster.cards.Metal.Doublade;
-import pokemonmaster.cards.Metal.Honedge;
+import pokemonmaster.cards.Grass.Breloom;
+import pokemonmaster.cards.Grass.Tropius;
+import pokemonmaster.cards.Lightning.Raikou;
+import pokemonmaster.cards.Lightning.Zapdos;
+import pokemonmaster.cards.Metal.*;
+import pokemonmaster.cards.Normal.LugiaGX;
+import pokemonmaster.cards.Normal.Slaking;
 import pokemonmaster.cards.Normal.Zigzagoon;
-import pokemonmaster.cards.Psychic.Gastly;
-import pokemonmaster.cards.Psychic.Gengar;
-import pokemonmaster.cards.Psychic.Haunter;
+import pokemonmaster.cards.Psychic.*;
 import pokemonmaster.cards.StarterRelic.Act1.*;
 import pokemonmaster.cards.StarterRelic.Act2.*;
 import pokemonmaster.cards.StarterRelic.Act3.*;
-import pokemonmaster.cards.Water.Cetitan;
+import pokemonmaster.cards.Water.*;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.CardInfo;
 
@@ -262,8 +267,6 @@ public class RotomDex extends BaseCard {
                 return new Diglett();
             case "pokeRegions:DragoniteEnemy":
                 return new DragoniteV();
-            case "pokeRegions:DugtrioEnemy":
-                return new Dugtrio();
             case "pokeRegions:GastlyEnemy":
                 return new Gastly();
             case "pokeRegions:GengarEnemy":
@@ -278,10 +281,86 @@ public class RotomDex extends BaseCard {
                 return new Zigzagoon();
             case "pokeRegions:RhyhornEnemy"://finish
                 return new Onix();
+            case "pokeRegions:CaterpieEnemy"://finish
+                return new LouseGreen();
+            case "pokeRegions:WeedleEnemy"://finish
+                return new LouseRed();
             case "pokeRegions:VulpixEnemy":
                 return new Vulpix();
+            case "pokeRegions:ArticunoEnemy":
+                return new Articuno();
+            case "pokeRegions:MoltresEnemy":
+                return new GalarianMoltres();
+            case "pokeRegions:ZapdosEnemy":
+                return new Zapdos();
+            case "pokeRegions:DiglettEnemy":
+                return new Diglett();
+            case "pokeRegions:DugtrioEnemy":
+                return new Dugtrio();
+            case "pokeRegions:CrobatEnemy":
+                return new CrobatV();
+            case "pokeRegions:HoOhEnemy":
+                return new Hooh();
+            case "pokeRegions:LanturnEnemy":
+                return new Lanturn();
+            case "pokeRegions:LugiaEnemy":
+                return new LugiaGX();
+            case "pokeRegions:MagcargoEnemy":
+                return new Magcargo();
+            case "pokeRegions:QuagsireEnemy":
+                return new Quagsire();
+            case "pokeRegions:RaikouEnemy":
+                return new Raikou();
+            case "pokeRegions:ScizorEnemy":
+                return new Scizor();
+            case "pokeRegions:SkarmoryEnemy":
+                return new Skarmory();
+            case "pokeRegions:SlugmaEnemy":
+                return new Slugma();
+            case "pokeRegions:SteelixEnemy":
+                return new Steelix();
+            case "pokeRegions:FlygonR":
+                return new FlygonV();
+            case "pokeRegions:RayquazaEnemy":
+                return new Rayquaza();
+            case "pokeRegions:SalamenceR":
+                return new Salamence();
+            case "pokeRegions:AronEnemy":
+                return new Aron();
+            case "pokeRegions:BreloomEnemy":
+                return new Breloom();
+            case "pokeRegions:Deoxys":
+                return new DeoxysD();
+            case "pokeRegions:EspeonAnnie":
+                return new EspeonGX();
+            case "pokeRegions:FlygonEnemy":
+                return new FlygonV();
+            case "pokeRegions:GardevoirEnemy":
+                return new Gardevoir();
+            case "pokeRegions:MetagrossEnemy":
+                return new MetagrossEX();
+            case "pokeRegions:RegiceEnemy":
+                return new Regice();
+            case "pokeRegions:RegisteelEnemy":
+                return new Registeel();
+            case "pokeRegions:Regirock":
+                return new Regirock();
+            case "pokeRegions:SalamenceEnemy":
+                return new Salamence();
+            case "pokeRegions:SlakingEnemy":
+                return new Slaking();
+            case "pokeRegions:TrapinchEnemy":
+                return new FlygonV();
+            case "pokeRegions:TropiusEnemy":
+                return new Tropius();
+            case "pokeRegions:DialgaEnemy":
+                return new DialgaGX();
+            case "pokeRegions:GiratinaEnemy":
+                return new GiratinaGX();
+            case "pokeRegions:PalkiaEnemy":
+                return new PalkiaGX();
             default:
-                return new LouseGreen();
+                return new LouseRed();
         }
     }
 
