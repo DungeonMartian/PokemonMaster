@@ -1,6 +1,7 @@
 package pokemonmaster.cards.StarterRelic;
 
 import com.badlogic.gdx.Gdx;
+import com.evacipated.cardcrawl.mod.stslib.fields.cards.AbstractCard.FleetingField;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
@@ -43,6 +44,7 @@ public class SafariBall extends BasePokemonCard {
         setDamage(CULT);
         this.damageType= DamageInfo.DamageType.HP_LOSS;
         this.damageTypeForTurn= DamageInfo.DamageType.HP_LOSS;
+        FleetingField.fleeting.set(this, true);
     }
 
     @Override
