@@ -13,6 +13,7 @@ import pokemonmaster.cards.Base.EspeonGX;
 import pokemonmaster.cards.Dark.Arbok;
 import pokemonmaster.cards.Dark.CrobatV;
 import pokemonmaster.cards.Dark.GalarianMoltres;
+import pokemonmaster.cards.Dark.TyranitarV;
 import pokemonmaster.cards.Dragon.*;
 import pokemonmaster.cards.Fighting.*;
 import pokemonmaster.cards.Fire.Hooh;
@@ -20,8 +21,11 @@ import pokemonmaster.cards.Fire.Magcargo;
 import pokemonmaster.cards.Fire.Slugma;
 import pokemonmaster.cards.Fire.Vulpix;
 import pokemonmaster.cards.Grass.Breloom;
+import pokemonmaster.cards.Grass.Tangrowth;
 import pokemonmaster.cards.Grass.Tropius;
+import pokemonmaster.cards.Lightning.AlolanGolem;
 import pokemonmaster.cards.Lightning.Raikou;
+import pokemonmaster.cards.Lightning.ToxtricityV;
 import pokemonmaster.cards.Lightning.Zapdos;
 import pokemonmaster.cards.Metal.*;
 import pokemonmaster.cards.Normal.LugiaGX;
@@ -32,6 +36,7 @@ import pokemonmaster.cards.StarterRelic.Act1.*;
 import pokemonmaster.cards.StarterRelic.Act2.*;
 import pokemonmaster.cards.StarterRelic.Act3.*;
 import pokemonmaster.cards.Water.*;
+import pokemonmaster.cards.Water.FishingCards.RedGyarados;
 import pokemonmaster.jar.PokemonMaster;
 import pokemonmaster.util.Actions.CatchAction;
 import pokemonmaster.util.CardInfo;
@@ -126,7 +131,7 @@ public class Pokeball extends BasePokemonCard {
 
     }}
 
-    public AbstractCard AddThis(String id){
+    public static AbstractCard AddThis(String id){
         if (id == null){
             return new BookOfStabbing();
         }
@@ -269,26 +274,63 @@ public class Pokeball extends BasePokemonCard {
                 return new CorruptHeart();
             case "pokeRegions:ArbokEnemy":
                 return new Arbok();
-            case "pokeRegions:CloysterEnemy": //finish
-                return new Cetitan();
             case "pokeRegions:DigletEnemy":
                 return new Diglett();
             case "pokeRegions:DragoniteEnemy":
                 return new DragoniteV();
             case "pokeRegions:GastlyEnemy":
                 return new Gastly();
-            case "pokeRegions:GengarEnemy":
-                return new Gengar();
-            case "pokeRegions:GolemEnemy"://finish
-                return new Onix();
             case "pokeRegions:HaunterEnemy":
                 return new Haunter();
+            case "pokeRegions:GengarEnemy":
+                return new Gengar();
+
+            //
+            //
+            case "pokeRegions:LunatoneEnemy": //finish
+                return new Diancie();
+            case "pokeRegions:SolrockEnemy": //finish
+                return new Diancie();
+            case "pokeRegions:PupitarEnemy": //finish
+                return new TyranitarV();
+            case "pokeRegions:": //finish
+                return new TyranitarV();
+            case "pokeRegions:AriadosOakley": //finish
+                return new ToxtricityV();
+            case "pokeRegions:VictreebelEnemy": //finish
+                return new Tangrowth();
+            case "pokeRegions:SwinubEnemy": //finish
+                return new Slowpoke();
+            case "pokeRegions:PiloswineEnemy": //finish
+                return new Slowbro();
+            case "pokeRegions:MewtwoEnemy": //finish
+                return new MewEX();
+            case "pokeRegions:GroudonEnemy": //finish
+                return new Terrakion();
+            case "pokeRegions:KyogreEnemy": //finish
+                return new RedGyarados();
+            case "pokeRegions:OmastarEnemy": //finish
+                return new Chewtle();
+            case "pokeRegions:KingdraEnemy": //finish
+                return new Keldeo();
+            case "pokeRegions:AzumarillEnemy": //finish
+                return new Crawdaunt();
+            case "pokeRegions:MantineEnemy": //finish
+                return new Quagsire();
+            case "pokeRegions:AlakazamEnemy": //finish
+                return new TapuLele();
+            case "pokeRegions:CloysterEnemy": //finish
+                return new Cetitan();
+            case "pokeRegions:GolemEnemy"://finish
+                return new AlolanGolem();
             case "pokeRegions:MachampEnemy"://finish
                 return new MachoBrace();
             case "pokeRegions:RattataEnemy"://finish
                 return new Zigzagoon();
             case "pokeRegions:RhyhornEnemy"://finish
-                return new Onix();
+                return new JawWorm();
+            case "pokeRegions:TrapinchEnemy"://finish
+                return new FlygonV();
             case "pokeRegions:CaterpieEnemy"://finish
                 return new LouseGreen();
             case "pokeRegions:WeedleEnemy"://finish
@@ -357,8 +399,6 @@ public class Pokeball extends BasePokemonCard {
                 return new Salamence();
             case "pokeRegions:SlakingEnemy":
                 return new Slaking();
-            case "pokeRegions:TrapinchEnemy":
-                return new FlygonV();
             case "pokeRegions:TropiusEnemy":
                 return new Tropius();
             case "pokeRegions:DialgaEnemy":
