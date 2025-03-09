@@ -21,8 +21,8 @@
 },
   "${modID}:Bidoof": {
     "NAME": "Bidoof",
-    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! Regen.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! Regen.",
+    "DESCRIPTION": "{@@}Deal !D! damage. NL Gain !M! *Regen.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage. NL Gain !M! *Regen.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -141,8 +141,8 @@
   },
   "${modID}:Rockruff": {
     "NAME": "Rockruff",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M! Temporary Strength next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M! Temporary Strength next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -151,8 +151,8 @@
   },
   "${modID}:Lycanroc": {
     "NAME": "Lycanroc",
-    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
-    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M! Strength next turn.",
+    "DESCRIPTION": "{@@}Deal !D! damage to ALL enemies. NL Lose !M! Temporary Strength next turn.",
+    "UPGRADE_DESCRIPTION":"{@@}Deal !D! damage to ALL enemies. NL Lose !M! Temporary Strength next turn.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -271,8 +271,8 @@
   },
   "${modID}:UltraBall": {
     "NAME": "Ultra Ball",
-    "DESCRIPTION": "{@@}Discard !M! card{!M!|>1=s} from your hand. NL *Seek 1 Pokemon. NL pokemonmaster:Bait 50. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Discard !M! card{!M!|>1=s} from your hand. NL *Seek 1 Pokemon. NL pokemonmaster:Bait 50. NL Exhaust.",
+    "DESCRIPTION": "{@@}Discard !M! card{!M!|>1=s}. NL *Seek 1 Pokemon. NL pokemonmaster:Bait 50. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}Discard !M! card{!M!|>1=s}. NL *Seek 1 Pokemon. NL pokemonmaster:Bait 50. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -609,8 +609,8 @@
   },
   "${modID}:Aegislash": {
     "NAME": "Aegislash",
-    "DESCRIPTION": "{@@}If the last card you played was an attack deal !D! damage to ALL enemies and gain !M! Strength. NL If it was a skill Gain !B! Block and !M! Dexterity. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}If the last card you played was an attack deal !D! damage to ALL enemies and gain !M! Strength. NL If it was a skill Gain !B! Block and !M! Dexterity. NL Exhaust.",
+    "DESCRIPTION": "{@@}If the last card played was an attack deal !D! damage to ALL enemies and gain !M! Strength. NL If it was a skill Gain !B! Block and !M! Dexterity. NL Exhaust.",
+    "UPGRADE_DESCRIPTION": "{@@}If the last card played was an attack deal !D! damage to ALL enemies and gain !M! Strength. NL If it was a skill Gain !B! Block and !M! Dexterity. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "Gain !B! Block. NL Gain !M! Dexterity. NL Exhaust.",
       "Deal !D! damage to ALL enemies. Gain !M! Strength. NL Exhaust.",
@@ -5456,8 +5456,8 @@
   },
   "${modID}:Audino": {
     "NAME": "Audino",
-    "DESCRIPTION": "{@@}Gain !M! Regen.",
-    "UPGRADE_DESCRIPTION":"{@@}Gain !M! Regen.",
+    "DESCRIPTION": "{@@}Gain !M! *Regen.",
+    "UPGRADE_DESCRIPTION":"{@@}Gain !M! *Regen.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5516,8 +5516,8 @@
   },
   "${modID}:Leftovers": {
     "NAME": "Leftovers",
-    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! Regen.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Held_Item NL Gain !M! Regen.",
+    "DESCRIPTION": "{@@}pokemonmaster:Held_Item NL Gain !M! *Regen.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Held_Item NL Gain !M! *Regen.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",
@@ -5576,8 +5576,8 @@
   },
   "${modID}:BlisseyV": {
     "NAME": "Blissey V",
-    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Remove your Debuffs. NL Double your Regen. NL Exhaust.",
-    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Remove your Debuffs. NL Double your Regen. NL Exhaust.",
+    "DESCRIPTION": "{@@}pokemonmaster:Prized. NL Remove your Debuffs. NL Double your *Regen. NL Exhaust.",
+    "UPGRADE_DESCRIPTION":"{@@}pokemonmaster:Prized. NL Remove your Debuffs. NL Double your *Regen. NL Exhaust.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

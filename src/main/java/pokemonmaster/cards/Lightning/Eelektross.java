@@ -3,7 +3,6 @@ package pokemonmaster.cards.Lightning;
 import com.evacipated.cardcrawl.mod.stslib.actions.common.StunMonsterAction;
 import com.megacrit.cardcrawl.actions.AbstractGameAction;
 import com.megacrit.cardcrawl.actions.common.DamageAllEnemiesAction;
-import com.megacrit.cardcrawl.actions.common.MakeTempCardInDiscardAction;
 import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
@@ -29,7 +28,7 @@ public class Eelektross extends FinalEvolutionCard {
     public static final String ID = makeID(cardInfo.baseId);
 
     private static final int DAMAGE = 20;
-    private static final int UPG_DAMAGE = 6;
+    private static final int UPG_DAMAGE = 7;
 
 
 
@@ -55,9 +54,6 @@ public class Eelektross extends FinalEvolutionCard {
                     addToBot(new StunMonsterAction(monster, p));
                 }
             }
-        }
-        if (this.upgraded) {
-            AbstractDungeon.actionManager.addToBottom(new MakeTempCardInDiscardAction(new Tynamo(),1));
         }
     }
 

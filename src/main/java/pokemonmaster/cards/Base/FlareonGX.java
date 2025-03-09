@@ -27,10 +27,10 @@ public class FlareonGX extends BaseCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 10;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 11;
+    private static final int UPG_DAMAGE = 4;
     private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 1;
+    private static final int UPG_MAGIC = 2;
 
 
     public FlareonGX() {
