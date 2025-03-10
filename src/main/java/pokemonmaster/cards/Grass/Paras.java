@@ -26,8 +26,8 @@ public class Paras extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int POISOND = 6;
-    private static final int POISONDUP = 3;
+    private static final int POISOND = 5;
+    private static final int POISONDUP = 2;
 
 
 

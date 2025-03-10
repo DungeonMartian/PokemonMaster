@@ -1818,7 +1818,7 @@
   "${modID}:Blacephalon": {
     "NAME": "Blacephalon",
     "DESCRIPTION": "{@@}Choose an enemy. NL If you have more current HP than them add 12 pokemonmaster:Fireworks to your hand. NL Otherwise add 4. NL Exhaust.",
-    "UPGRADE_DESCRIPTION": "{@@}Choose an enemy. NL If you have more current HP than them add 12 pokemonmaster:fireworks to your hand. NL Otherwise add 4.",
+    "UPGRADE_DESCRIPTION": "{@@}Choose an enemy. NL If you have more current HP than them add 12 pokemonmaster:Fireworks to your hand. NL Otherwise add 4.",
     "EXTENDED_DESCRIPTION": [
       "",
       "",

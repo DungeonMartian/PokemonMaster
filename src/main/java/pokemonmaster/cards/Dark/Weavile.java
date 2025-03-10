@@ -69,7 +69,7 @@ public class Weavile extends FinalEvolutionCard {
 
         }
         if (this.upgraded){
-            this.baseDamage = DAMAGE+ UPG_DAMAGE + (magicNumber);
+            this.baseDamage = (DAMAGE+ UPG_DAMAGE) * (magicNumber);
 
 
         }
@@ -93,7 +93,7 @@ public class Weavile extends FinalEvolutionCard {
 
         }
         if (this.upgraded){
-            this.baseDamage = DAMAGE+ UPG_DAMAGE + (magicNumber);
+            this.baseDamage = (DAMAGE+ UPG_DAMAGE) * (magicNumber);
 
 
         }

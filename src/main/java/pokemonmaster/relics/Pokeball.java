@@ -2,10 +2,14 @@ package pokemonmaster.relics;
 
 import com.evacipated.cardcrawl.mod.stslib.relics.ClickableRelic;
 import com.megacrit.cardcrawl.actions.common.MakeTempCardInHandAction;
+import com.megacrit.cardcrawl.cards.AbstractCard;
 import com.megacrit.cardcrawl.dungeons.AbstractDungeon;
+import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import com.megacrit.cardcrawl.rooms.AbstractRoom;
 import pokemonmaster.PokemonMasterMod;
 import pokemonmaster.jar.PokemonMaster;
+
+import java.util.ArrayList;
 
 import static pokemonmaster.PokemonMasterMod.makeID;
 
@@ -26,6 +30,32 @@ public class Pokeball extends BaseRelic implements ClickableRelic {
         if (setCounter == -1) {
             usedUp();
             this.counter = -1;
+        }
+    }
+    public static ArrayList<AbstractMonster> getEnemies() {
+        ArrayList<AbstractMonster> monsters = new ArrayList<>(AbstractDungeon.getMonsters().monsters);
+        monsters.removeIf(AbstractMonster::isDeadOrEscaped);
+        return monsters;
+    }
+    @Override
+    public void onPlayCard(AbstractCard c, AbstractMonster m) {
+        super.onPlayCard(c, m);
+        if (!this.grayscale) {
+            boolean flashing = false;
+            for (AbstractMonster mmonster : getEnemies()) {
+
+
+                if (mmonster.currentHealth <= 10) {
+                    flashing = true;
+                    this.beginPulse();
+                    this.pulse = true;
+                }
+                if (!flashing){
+                    this.stopPulse();
+                    this.pulse = false;
+                }
+
+                }
         }
     }
 

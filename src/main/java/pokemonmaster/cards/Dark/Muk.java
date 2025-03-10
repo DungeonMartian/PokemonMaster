@@ -28,8 +28,8 @@ public class Muk extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC = 5;
-    private static final int UPG_MAGIC = 3;
+    private static final int MAGIC = 4;
+    private static final int UPG_MAGIC = 2;
 
 
     public Muk() {

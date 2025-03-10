@@ -67,7 +67,7 @@ public class Sneasel extends BasicPokemonCard {
 
         }
         if (this.upgraded){
-            this.baseDamage = DAMAGE+ UPG_DAMAGE + (magicNumber);
+            this.baseDamage = (DAMAGE+ UPG_DAMAGE) * (magicNumber);
 
 
         }
@@ -91,7 +91,8 @@ public class Sneasel extends BasicPokemonCard {
 
         }
         if (this.upgraded){
-            this.baseDamage = DAMAGE+ UPG_DAMAGE + (magicNumber);
+            this.baseDamage = (DAMAGE+ UPG_DAMAGE) * (magicNumber);
+
 
 
         }

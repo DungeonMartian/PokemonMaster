@@ -26,8 +26,8 @@ public class Zoroark extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 4;
-    private static final int UPG_DAMAGE= 3;
+    private static final int DAMAGE = 3;
+    private static final int UPG_DAMAGE= 1;
 
     private static final int MAGIC= 0;
     private int COUNT;

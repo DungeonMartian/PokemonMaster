@@ -28,7 +28,7 @@ public class Swalot extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int MAGIC =2;
+    private static final int MAGIC =3;
     private static final int UPG_MAGIC= 1;
 
 

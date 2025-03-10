@@ -36,7 +36,7 @@ public class FlareonGX extends BaseCard {
     public FlareonGX() {
         super(cardInfo);
 
-        tags.add(CustomTags.WATER);
+        tags.add(CustomTags.FIRE);
         tags.add(CustomTags.POKEMON);
         setDamage(DAMAGE, UPG_DAMAGE);
         setMagic(MAGIC,UPG_MAGIC);

@@ -26,7 +26,7 @@ public class Mightyena extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int BLOCK = 5;
+    private static final int BLOCK = 4;
     private static final int UPG_BLOCK= 1;
 
     private static final int DDOWN = 3;

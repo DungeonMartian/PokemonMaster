@@ -28,7 +28,7 @@ public class Honchkrow extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 20;
+    private static final int DAMAGE = 24;
     private static final int UPG_DAMAGE = 6;
 
     private static final int MAGIC = 2;
