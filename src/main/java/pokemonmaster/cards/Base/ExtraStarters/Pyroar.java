@@ -25,16 +25,16 @@ public class Pyroar extends FinalEvolutionCard {
             PokemonMaster.Enums.CARD_COLOR);
 
     private static final int DAMAGE = 7;
-    private static final int UPG_DAMAGE = 4;
+    private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 1;
-    private static final int UPG_MAGIC = 1;
+
 
     public static final String ID = makeID(cardInfo.baseId);
 
     public Pyroar() {
         super(cardInfo, CustomTags.FIRE);
         setDamage(DAMAGE, UPG_DAMAGE);
-        setMagic(MAGIC,UPG_MAGIC);
+        setMagic(MAGIC);
         this.setBackgroundTexture("pokemonmaster/character/cardback/bg_attackFire.png","pokemonmaster/character/cardback/bg_attackFire_p.png");
 
         this.isMultiDamage = true;

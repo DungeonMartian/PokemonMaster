@@ -28,7 +28,7 @@ public class Carbink extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 8;
+    private static final int DAMAGE = 9;
     private static final int UPG_DAMAGE = 2;
     private static final int MAGIC = 10;
     private static final int UPG_MAGIC = 2;

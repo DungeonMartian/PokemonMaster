@@ -27,11 +27,11 @@ public class Throh extends BasePokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 6;
-    private static final int UPG_DAMAGE = 3;
+    private static final int DAMAGE = 8;
+    private static final int UPG_DAMAGE = 4;
 
     private static final int MAGIC = 14;
-    private static final int UPG_MAGIC = 3;
+    private static final int UPG_MAGIC = 4;
 
     public Throh() {
         super(cardInfo);

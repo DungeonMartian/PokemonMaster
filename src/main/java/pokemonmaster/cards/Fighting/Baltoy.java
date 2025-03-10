@@ -8,10 +8,8 @@ import com.megacrit.cardcrawl.cards.DamageInfo;
 import com.megacrit.cardcrawl.characters.AbstractPlayer;
 import com.megacrit.cardcrawl.monsters.AbstractMonster;
 import pokemonmaster.CustomTags;
-import pokemonmaster.cards.Base.BasePokemonCard;
 import pokemonmaster.cards.BasicPokemonCard;
 import pokemonmaster.jar.PokemonMaster;
-import pokemonmaster.util.Actions.EvolveActionCombat;
 import pokemonmaster.util.CardInfo;
 
 import static pokemonmaster.CustomTags.POKEMON;
@@ -30,7 +28,7 @@ public class Baltoy extends BasicPokemonCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 2;
+    private static final int DAMAGE = 4;
     private static final int UPG_DAMAGE = 3;
     private static final int MAGIC = 1;
 
