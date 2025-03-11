@@ -27,7 +27,7 @@ public class Pelipper extends FinalEvolutionCard {
 
     public static final String ID = makeID(cardInfo.baseId);
 
-    private static final int DAMAGE = 14;
+    private static final int DAMAGE = 16;
     private static final int UPG_DAMAGE = 4;
     private static final int MAGIC= 2;
 

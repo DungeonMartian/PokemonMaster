@@ -32,6 +32,17 @@ public class Pokeball extends BaseRelic implements ClickableRelic {
             this.counter = -1;
         }
     }
+    public void increment(int amount) {
+        if (this.counter < 0)
+            this.counter = 0;
+        this.counter += amount;
+
+        if (this.counter <=1){
+            this.usedUp=false;
+            this.grayscale = false;
+        }
+        flash();
+    }
     public static ArrayList<AbstractMonster> getEnemies() {
         ArrayList<AbstractMonster> monsters = new ArrayList<>(AbstractDungeon.getMonsters().monsters);
         monsters.removeIf(AbstractMonster::isDeadOrEscaped);
